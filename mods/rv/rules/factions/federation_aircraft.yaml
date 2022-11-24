@@ -1,0 +1,323 @@
+t1_hummingbird.reinforce:
+	Inherits: ^Aircraftshape
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: false
+	Buildable:
+		BuildPaletteOrder: 40
+		Description: Multipurpose VTOL equipped with 2 autocannons and an EMP cannon\n> Strong vs Vehicles, Aircraft\n> Weak vs Infantry
+		BuildDurationModifier: 10
+		IconPalette: Federation.Icon
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Hummingbird
+	Health:
+		HP: 1100
+	AutoCarryall:
+		BeforeLoadDelay: 10
+		BeforeUnloadDelay: 15
+		LocalOffset: 0, 0, -128
+	Aircraft:
+		CruisingCondition: cruising
+		Speed: 205
+		TurnSpeed: 22
+		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete
+		Repulsable: False
+		AirborneCondition: airborne
+		CanSlide: True
+		VTOL: true
+		IdleTurnSpeed: 4
+	Targetable@GROUND:
+		TargetTypes: Ground, Vehicle
+		RequiresCondition: !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne
+	RenderSprites:
+		Image: t1_hummingbird
+	SpawnActorOnDeath:
+		Actor: t1_hummingbird.Husk
+
+t1_hummingbird:
+	Inherits: t1_hummingbird.reinforce
+	UpdatesPlayerStatistics:
+		AddToAssetsValue: true
+	AutoCarryall:
+		BeforeLoadDelay: 10
+		BeforeUnloadDelay: 15
+		LocalOffset: 0, 0, -128
+	Aircraft:
+		MinAirborneAltitude: 400
+	RevealsShroud@lifting_low:
+		Range: 2c512
+		MoveRecalculationThreshold: 0
+		Type: GroundPosition
+		RequiresCondition: !airborne
+	RevealsShroud@lifting_high:
+		Range: 1c256
+		MoveRecalculationThreshold: 0
+		Type: GroundPosition
+		RequiresCondition: !cruising
+	Buildable:
+		BuildPaletteOrder: 120
+		Queue: Aircraft.federation
+
+
+t1_hummingbird.Husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Vulture
+	Aircraft:
+		TurnSpeed: 10
+		Speed: 186
+	RenderSprites:
+		Image: t1_hummingbird
+		
+t1_vulture:
+	Inherits: ^Helicoptershape
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	Buildable:
+		Queue: Aircraft.federation
+		BuildPaletteOrder: 40
+		Description: Multipurpose VTOL equipped with 2 autocannons and an EMP cannon\n> Strong vs Vehicles, Aircraft\n> Weak vs Infantry
+		BuildDurationModifier: 10
+		IconPalette: Federation.Icon
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Vulture
+	Health:
+		HP: 2200
+	Armament@PRIMARY:
+        Name: primary
+		Weapon: vulture.missile
+        AmmoPoolName: primary
+		LocalOffset: 280,-260,20, 280,260,20
+		LocalYaw: 45, -45
+		MuzzleSequence: muzzle
+		PauseOnCondition: !ammo
+	AmmoPool@initial:
+        Name: primary
+        Armaments: primary
+		Ammo: 15
+		SelfReloads: true
+		AmmoCondition: ammo
+    ReloadAmmoPool:
+        AmmoPool: primary
+        Delay: 25
+        Count: 1
+        ResetOnFire: true
+	WithAmmoPipsDecoration:
+        PipCount: 5
+		Margin: 4, 3
+		Position: BottomLeft
+		RequiresSelection: true
+	WithMuzzleOverlay:
+	AttackAircraft:
+		FacingTolerance: 20
+		PersistentTargeting: false
+		AttackType: Hover
+        PauseOnCondition: stunweapons
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 25
+		Speed: 180
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
+	AutoTarget:
+		InitialStance: Defend
+		InitialStanceAI: Defend
+	Selectable:
+		Bounds: 1024, 1024, 0, 0
+	SpawnActorOnDeath:
+		Actor: t1_vulture.Husk
+
+t1_vulture.Husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Nidhogg
+	Aircraft:
+		TurnSpeed: 10
+		Speed: 186
+	RenderSprites:
+		Image: t1_vulture
+		
+t1_mosquito:
+	Inherits: ^Aircraftshape
+	Inherits@Target: ^AutoTargetGround
+	Buildable:
+		Queue: Aircraft.federation
+		BuildPaletteOrder: 50
+		Description: Experimental aircraft armed with a triple fast-firing ion cannon\n> Strong vs Infantry, Vehicles, Structures\n> Weak vs Aircraft
+		BuildDurationModifier: 5
+		IconPalette: Federation.Icon
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Mosquito
+	Health:
+		HP: 800
+	Armament:
+		Weapon: mosquito.autogun
+		LocalOffset: -50,-420,-40, -50,420,-80
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	AttackAircraft:
+		FacingTolerance: 25
+        PauseOnCondition: stunweapons
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 8
+		Speed: 220
+		Repulsable: true
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		EnableStances: false
+		InitialStance: HoldFire
+	RenderSprites:
+		Scale: 1.0
+	Selectable:
+		Bounds: 1024, 1024, 0, 0
+	SpawnActorOnDeath:
+		Actor: t1_mosquito.Husk
+	
+t1_mosquito.Husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Mosquito
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 186
+	RenderSprites:
+		Image: t1_mosquito
+
+t3_trasportfed:
+    Inherits: ^Helicoptershape
+	Buildable:
+		Queue: Aircraft.Federation
+		BuildPaletteOrder: 90
+		BuildDurationModifier: 20
+		Description: Unarmed transport aircraft\nCan transport all types of units\n> Strong vs None\n> Weak vs Everything
+		IconPalette: Federation.Icon
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Armadillo
+	Health:
+		HP: 2800
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 35
+		Speed: 180
+		RepulsionSpeed: 40
+		MaximumPitch: 110
+		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
+		IdleBehavior: Land
+	-AttackMove:
+	Cargo:
+		Types: Infantry, vehicle
+		MaxWeight: 30
+		PipCount: 10
+	Selectable:
+		Bounds: 1524, 1524, 0, 0
+	SpawnActorOnDeath:
+		Actor: t3_trasportfed.husk
+        
+t3_trasportfed.Husk:
+	Inherits: ^AircraftHuskShape
+	Tooltip:
+		Name: Armadillo
+	Aircraft:
+		TurnSpeed: 0
+		Speed: 186
+	RenderSprites:
+		Image: t3_trasportfed
+        
+t3_trasportfed.power:
+    Inherits: ^Helicoptershape
+	Buildable:
+		Queue: Aircraft.Federation
+		BuildPaletteOrder: 90
+		BuildDurationModifier: 20
+		Description: Unarmed transport aircraft\nCan transport all types of units\n> Strong vs None\n> Weak vs Everything
+		IconPalette: Federation.Icon
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Armadillo
+	Health:
+		HP: 2800
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 35
+		Speed: 180
+		RepulsionSpeed: 40
+		MaximumPitch: 110
+		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
+		IdleBehavior: Land
+	ParaDrop:
+		DropRange: 5c0
+        DropInterval: 1
+		ChuteSound:
+	Cargo:
+		MaxWeight: 20
+	-AttackMove:
+	RejectsOrders:
+	-RevealsShroud:
+	-ExternalCondition@Stase.bubble:
+	-SpeedMultiplier@move.bubble:
+	-PowerMultiplier@Stase.bubble:
+	-DamageMultiplier@Stase.bubble:
+    -GrantCondition@Stase.bubble.Bait:
+    -GrantCondition@Stase.bubble.notmobile.turret: 
+    RenderSprites:
+        Image: t3_trasportfed
+	SpawnActorOnDeath:
+		Actor: t3_trasportfed.husk
+
+t3_bombardfed:
+ 	Inherits: ^Aircraftshape
+	Inherits@Target: ^AutoTargetGround
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Venom
+	Health:
+		HP: 3200
+	AttackBomber:
+		Armaments: bombs2, bombs
+	Armament@turret01:
+		Name: bombs
+		Weapon: fed_capertbomb
+		LocalOffset: -20,-1220,40
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	Armament@turret02:
+		Name: bombs2
+		Weapon: fed_capertbomb
+		LocalOffset: -20,1220,40
+		LocalYaw: -40, -24
+		MuzzleSequence: muzzle
+	AttackAircraft:
+		FacingTolerance: 20
+        PauseOnCondition: stunweapons
+	WithMuzzleOverlay:
+	Aircraft:
+		InitialFacing: 192
+		TurnSpeed: 8
+		Speed: 220
+		Repulsable: true
+		RepulsionSpeed: 40
+		MaximumPitch: 56
+	AutoTarget:
+		EnableStances: false
+		InitialStance: HoldFire
+	RenderSprites:
+		Scale: 1.0
+	Selectable:
+		Bounds: 1544, 2509, 0, -289
+	SpawnActorOnDeath:
+		Actor: t3_thor.Husk
