@@ -1,0 +1,102 @@
+tcmcv:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+        Start: 8
+		Facings: 8
+		Length: 33
+		Tick: 35
+	icon: tcmcvicon
+
+prospecteur:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 64
+	harvest: harvest_anim
+		Length: *
+		BlendMode: Additive
+	dock: prospecteur
+	dock-loop: prospecteur
+	icon: prospecticon
+
+arpenteur:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+	aura_phie: aura_phie
+		Length: *
+		BlendMode: Additive
+	aura_omega: aura_omega
+		Length: *
+		BlendMode: Additive
+	icon: arpenteuricon
+
+t3_surveyor:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+        Start: 8
+		Facings: 8
+		Length: 6
+		Tick: 140
+	muzzle: muzzle_bluegun
+		Length: *
+		BlendMode: Additive
+	turret: t3_surveyortur
+		Facings: 64
+	aura_phie: aura_phie
+		Length: *
+		BlendMode: Additive
+	aura_omega: aura_omega
+		Length: *
+		BlendMode: Additive
+	icon: arpenteuricon
+
+t2_rodeur:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+        Start: 8
+		Facings: 8
+		Length: 12
+		Tick: 20
+	turret: t2_rodeurtur
+		Facings: 64
+		Offset: 0, -20
+	turretPhie: t2_rodeurphietur
+		Facings: 64
+		Offset: 0, -20
+	turretOmega: t2_rodeuromegatur
+		Facings: 64
+		Offset: 0, -20
+	muzzle: muzzle_bluegun
+		Length: *
+		BlendMode: Additive
+	muzzle_omega: muzzle_rodeuromega
+		Length: *
+		BlendMode: Additive
+	x_icon: artwork|concl_rodeurrart.png
+        AddExtension: false
+	icon: rebornicon
+
+t2_pilgrim:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_balist_medium
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	damaged-idle:
+		Facings: 64
+	critical-idle:
+		Facings: 64
+    idle-deployed: t2_pilgrimdeployed
+	turret: t2_pilgrimtur
+		Facings: 64
+	make: t2_pilgrimmk
+		Length: *
+		Tick: 30
+	icon: dcatnkicon
+

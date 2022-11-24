@@ -1,0 +1,112 @@
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////// Gibs Sequences //////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# ////////////////////////////////////// Visual Effect Animation ////////////////////////////////// 
+
+gibs_splash:
+	Defaults:
+		Length: *
+	expl_gibs01: expl_gibs01
+		BlendMode: Additive
+    # impact weapons blood infantry
+    impactblood01: impactblood01
+		BlendMode: Additive
+    impactblood02: impactblood02
+		BlendMode: Additive
+    impactblood03: impactblood03
+		BlendMode: Additive
+    impactbloodmin01: impactbloodmin01
+		scale: 0.65
+    impactbloodmin02: impactbloodmin02
+		scale: 0.65
+    impactbloodmin03: impactbloodmin03
+		scale: 0.65
+    impactmaxblood01: impactmaxblood01
+		BlendMode: Additive
+    bloodspawn01: bloodspawn01
+		Tick: 1300
+    bloodspawn02: bloodspawn02
+		Tick: 1250
+    bloodspawn03: bloodspawn03
+		Tick: 1190
+    bloodspawn04: bloodspawn04
+		Tick: 1290
+
+# ////////////////////////////////////// Gibs base organs / Projectiles //////////////////////////////////
+
+gibsproj01:
+	Defaults:
+		Length: *
+
+gibs01:
+	Defaults:
+		Length: *
+	idle:
+
+gibs02:
+	Defaults:
+		Length: *
+	idle:
+    
+gibs03:
+	Defaults:
+		Length: *
+	idle:
+    
+gibs04:
+	Defaults:
+		Length: *
+	idle:
+    
+gibs05:
+	Defaults:
+		Length: *
+	idle:
+    
+gibs06:
+	Defaults:
+		Length: *
+	idle:
+
+# ////////////////////////////////////// Gibs corps full //////////////////////////////////
+
+corps01:
+	Defaults:
+		Length: *
+
+corps02:
+	Defaults:
+		Length: *
+
+corps03:
+	Defaults:
+		Length: *
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////// Débris Sequences ////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# ////////////////////////////////////// Debris base / Projectiles //////////////////////////////////
+
+medium_debris:
+	Defaults:
+		Length: *
+	idle:
+
+medium_debris2:
+	Defaults:
+		Length: *
+	idle: medium_debris2
+
+small_debris2:
+	Defaults:
+		Length: *
+	idle: small_debris2
+
+# ////////////////////////////////////// Light vehicles husk / Projectiles //////////////////////////////////
+
+bike_debris:
+	Defaults:
+		Length: *
+	idle: t1_bike

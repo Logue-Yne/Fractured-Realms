@@ -1,0 +1,369 @@
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////// Abilitie & Power Sequences //////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# ////////////////////////////////////// Abilitie Effect Animation ////////////////////////////////// 
+
+allyrepair:
+	repair: repairing_building
+		Length: *
+		Tick: 160
+		ZOffset: 2047
+
+spyreveal:
+	idle:
+		Start: 0
+		Length: 7
+        
+revealradr:
+	idle: powerradar
+		Start: 0
+		Length: *
+		Offset: -150, 80
+		BlendMode: Additive
+        
+power_repair:
+	idle:
+		Length: *
+
+disorientrayon:
+	idle:
+		Length: *
+		BlendMode: Additive
+		Palette: powereffect
+		Tick: 20
+		Offset: 0, -230
+        
+fusion.missile:
+	up: fusionmissiledown
+		Length: *
+		ZOffset: 1023
+	down: fusionmissiledown
+		Length: *
+		ZOffset: 1023
+
+nuke.alliance.missile:
+	up: nukeallianceup
+		Length: *
+		ZOffset: 1023
+	down: nukealliancedown
+		Length: *
+		ZOffset: 1023
+
+alliance.droppod:
+	up: null
+		Length: *
+		ZOffset: 1023
+	down: null
+		Length: *
+		ZOffset: 1023
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////// Researh & Icon Sequences ////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+testicons:
+	icon: testicons
+        Offset: 32, 32
+
+# ///////////// Icone Vide (pour generez des espace) /////////////
+blankicon:
+	icon: blankicon
+
+# ///////////// Icone Locked (Icone de verroux) /////////////
+lockicon:
+	icon: lockicon
+		Start: 0
+
+# ////////////////////////////////////// RED ALLIANCES ////////////////////////////////////
+
+# ///////////// Weapons Aspect /////////////
+upgrade_ar_railgunicons:
+	icon: upgrade_railgunicon
+aspect_ar_lasericons:
+	icon: aspect_ar_lasericons
+aspect_ar_balisticons:
+	icon: aspect_ar_balisticons
+aspect_ar_flammeicons:
+	icon: aspect_ar_flammeicons
+aspect_ar_railgunicons:
+	icon: aspect_ar_railgunicons
+     
+# ///////////// Stat Aspect /////////////
+aspect_ar_armorinficons:
+	icon:  aspect_ar_armorinficons
+aspect_ar_rangeicons:
+	icon: aspect_ar_rangeicons
+aspect_ar_walkericons:
+    idle:
+    make:
+	icon: aspect_ar_walkericons
+aspect_ar_airicons:
+	icon: aspect_ar_airicons
+    
+# ////////////////////////////////////// BANESLAYER ORDER ////////////////////////////////////
+
+# ///////////// Icone doctrrine/research old /////////////
+aspect_op_infantryicons:
+	icon: doctrinesinficon
+aspect_op_vehicleicons:
+	icon: doctrinesvehicon
+aspect_op_aircrafticons:
+	icon: doctrinesairicon
+aspect_op_defenseicons:
+	icon: doctrinesdeficon
+     
+# ///////////// Icone doctrrine/protocole old /////////////
+aspect_op_locklidnicons:
+	icon: doctrineslocklidnicon
+aspect_op_lockdwarficons:
+	icon: doctrineslockdwarficon
+        Offset: 0, -34
+aspect_op_locklokiicons:
+	icon: doctrineslocklokiicon
+        Offset: 0, -34
+aspect_op_lockaheimdalicon:
+	icon: doctrineslockheimdalicon
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////// Researh/Abilitie & Icon Sequences /////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+# //////////////////////////////////////// Abilitie Icone  /////////////////////////////////////
+icon:
+	Defaults:
+	salveicon: salveicon
+	detecticon: detecticon
+	empstrike_icon: empstrike_icon
+	powergravitconclaveicon: powergravitconclaveicon
+    bubblestaseicon: bubblestaseicon
+	avataricon: avataricon
+	powerrelaisicon: powerrelaisicon
+	aircraftbaneslayerpowericon: aircraftbaneslayerpowericon
+    ionstrike_icon: ionstrike_icon
+    ardroppowericon: ardroppowericon
+	nukeallianceicons: nukeallianceicons
+    arminstrikepowericon: arminstrikepowericon
+	ragnarok_plasmaicon: ragnarok_plasmaicon
+    orbitalstairstrikepowericon: orbitalstairstrikepowericon
+    powereclipseconclaveicon: powereclipseconclaveicon
+    fusionmissileicon: fusion_missile_redallianceicon
+    ragnarokcanonicon: ragnarokcanonicon
+    purification_ray_redallianceicon: purification_ray_redallianceicon
+    nukestrikeaaicon: nukestrikeaaicon
+    shakenukeicon: shakenukeicon
+    fedthunderstrikeicon: fedthunderstrikeicon
+    paradropfedicon: paradropfedicon
+    bomberfedicon: bomberfedicon
+    chargedfedicon: chargedfedicon
+    xxicon: artwork|comon_generiqueart.png
+        AddExtension: false
+    emptyicon: default
+    
+# //////////////////////////////////////// Benslayer Researh /////////////////////////////////////
+# //////___________________________________________________________________________________///////
+
+lockedicon:
+	icon: lockedicon
+		Start: 0
+
+empstrike_unlockicon:
+	icon: empstrike_unlockicon
+		Start: 0
+
+fusionmissileicon:
+	icon: fusion_missile_redallianceicon
+		Start: 0
+        
+empstrike_icon:
+	icon: empstrike_icon
+		Start: 0
+
+detectrange_icons:
+	icon: detectrange_icons
+		Start: 0
+
+speedboosticon:
+	idle: null
+	icon: speedboosticon
+		Start: 0
+
+rangeboosticon:
+	idle: null
+	icon: targetupgrade
+		Start: 0
+
+upgrade_doctrine_artemienicon:
+	idle: null
+	icon: upgrade_doctrine_artemienicon
+		Start: 0
+
+upgrade_doctrine_valkyricon:
+	idle: null
+	icon: upgrade_doctrine_valkyricon
+		Start: 0
+
+heidruncasematicon:
+	idle: null
+	icon: heidruncasematicon
+		Start: 0
+
+plasmaengineicon:
+	idle: null
+	icon: plasmaengineicon
+		Start: 0
+
+kevlarbaneslayericon:
+	idle: null
+	icon: kevlarbaneslayericon
+		Start: 0
+
+thorupgradeicon:
+	idle: null
+	icon: thorupgradeicon
+		Start: 0
+
+roquettebaneupgradeicon:
+	idle: null
+	icon: roquettebaneupgradeicon
+		Start: 0
+        
+armorpackicon:
+	idle: null
+	icon: armorpackicon
+		Start: 0
+    
+ 
+# ////////////////////////////////////// Red Alliance Researh ////////////////////////////////////
+# //////___________________________________________________________________________________///////
+
+upgrade_armor_redalliance_icon:
+	idle: null
+	icon: upgrade_armor_redalliance_icon
+		Start: 0
+
+upgrade_supersonic_redalliance_icon:
+	idle: null
+	icon: upgrade_supersonic_redalliance_icon
+		Start: 0
+
+blueflameicon:
+	idle: null
+	icon: blueflameicon
+
+fusion_engineicon:
+	idle: null
+	icon: fusion_engineicon
+
+nukeammo_icon:
+	idle: null
+	icon: nukeammoicon
+    
+repairtrainingicon:
+	idle: null
+	icon: repairtrainingicon
+
+serumicon:
+	idle: null
+	icon: serumicon
+
+arflakicon:
+	idle: null
+	icon: arflakicon
+    
+# /////////////////////////////////////// Conclave Researh /////////////////////////////////////
+# //////_________________________________________________________________________________///////
+
+holoup_alpelerin:
+	icon: holoup_alpelerin
+
+holoup_ompelerin:
+	icon: holoup_ompelerin
+
+holoup_alcomete:
+	icon: holoup_alcomete
+
+holoup_omcomete:
+	icon: holoup_omcomete
+
+holoup_alrodeur:
+	icon: holoup_alrodeur
+
+holoup_omrodeur:
+	icon: holoup_omrodeur
+
+holoup_alarpenteur:
+	icon: holoup_alarpenteur
+
+holoup_omarpenteur:
+	icon: holoup_omarpenteur
+
+holoup_alzenith:
+	icon: holoup_alzenith
+
+holoup_omzenith:
+	icon: holoup_omzenith
+
+holoup_alquasar:
+	icon: holoup_alquasar
+
+holoup_omquasar:
+	icon: holoup_omquasar
+
+holoup_alnavigator:
+	icon: holoup_alnavigator
+
+holoup_omnavigator:
+	icon: holoup_omnavigator
+
+# ////////////////////////////////////// Federation Researh Icon ////////////////////////////////////
+# //////______________________________________________________________________________________///////
+
+upgrade_fed_electroshieldicon:
+	icon: upgrade_fed_electroshieldicon
+
+upgrade_fedtogether_icon:
+	icon: upgrade_fedtogether_icon
+
+upgrade_fedautoloader_icon:
+	icon: upgrade_fedautoloader_icon
+    
+upgrade_fedrangearty_icon:
+	icon: upgrade_fedrangearty_icon
+    
+upgrade_fedpowr_icon:
+	icon: upgrade_fedpowr_icon
+
+tech2icon:
+	icon: tech2icon
+    
+fedfortressicon:
+	idle: null
+	icon: fedfortressicon
+
+# ////////////////////////////////////// Icon Doctrines Sequences ////////////////////////////////////
+
+doctrines_com_rangeicon:
+	icon: doctrines_com_rangeicon
+doctrines_com_terroricon:
+	icon: doctrines_com_terroricon
+doctrines_inf_armoricon:
+	icon: doctrines_inf_armoricon
+doctrines_inf_rangeicon:
+	icon: doctrines_inf_rangeicon
+doctrines_inf_regenicon:
+	icon: doctrines_inf_regenicon
+doctrines_inf_stealhicon:
+	icon: doctrines_inf_stealhicon
+doctrines_veh_armoricon:
+	icon: doctrines_veh_armoricon
+doctrines_veh_rangeicon:
+	icon: doctrines_veh_rangeicon
+doctrines_veh_speedicon:
+	icon: doctrines_veh_speedicon
+doctrines_veh_speedicon:
+	icon: doctrines_veh_speedicon
+doctrines_build_bonusicon:
+	icon: doctrines_build_bonusicon
+doctrines_air_bonusicon:
+	icon: doctrines_air_bonusicon

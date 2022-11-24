@@ -1,0 +1,2150 @@
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////// Animate Stat Unite Sequences /////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+^HeavySmokeEffect:
+	SmokeMove: smoke_vehiclemove
+		Length: *
+		ZOffset: -100
+		BlendMode: Additive
+
+^StatInfantryEffect:
+	AuraHeal: heal_aurared
+		Length: *
+		Tick: 18
+		ZOffset: -10
+		BlendMode: Additive
+    heal_effect: heal_effect
+		Length: *
+		Tick: 20
+		ZOffset: 1
+	heat_flame: flameinf
+		Length: *
+		Tick: 20
+		ZOffset: 1
+	aura_inffluence: aura_inffluence
+		Length: *
+		Tick: 25
+		ZOffset: 1
+		BlendMode: Additive
+	shadow.infantry: shadow_infantry
+		Offset: 0, 0
+		ZOffset: -70
+		BlendMode: Subtractive
+	auracover: auracover
+		Length: *
+		Tick: 28
+		ZOffset: -50
+		BlendMode: Additive
+	aura.avatar.conclave: minlight_avatar
+		Length: *
+		Tick: 28
+		ZOffset: -40
+		BlendMode: Additive
+
+^StatVehicleEffect:
+	VehicleRepair: repair_effet
+		Length: *
+		Tick: 24
+		ZOffset: -100
+		BlendMode: Additive
+	VehicleStun: stun_elect_stat_effet
+		ZOffset: -100
+		BlendMode: Additive
+	shadow.small: shadow_vehiclemedium
+		Offset: 4, -4
+		ZOffset: -50
+		BlendMode: Subtractive
+	heat_flame: flame_husk
+		Length: *
+		Tick: 30
+		Offset: 0, -20
+	shadow.medium: shadow_vehiclelarge
+		Offset: 4, -4
+		ZOffset: -50
+		BlendMode: Subtractive
+	shadow.large: shadow_vehiclelarge
+		Offset: 4, -4
+		ZOffset: -50
+		BlendMode: Subtractive
+	aura_inffluence: aura_inffluence
+		Length: *
+		Tick: 25
+		ZOffset: 1
+		BlendMode: Additive
+	VehicleElectro: small_sismic_impact
+		Length: *
+		Tick: 15
+		ZOffset: -50
+		BlendMode: Additive
+	disableiem: iem_stat_veh
+		Length: *
+		Tick: 15
+		ZOffset: 20
+		BlendMode: Additive
+    target.blue: blue_target
+		Length: *
+		Tick: 45
+		ZOffset: 5
+    hover_move: hovermove
+		Length: *
+		ZOffset: -10
+		BlendMode: Additive
+    hover_moveLarge: hovermovelarge
+		Length: *
+		ZOffset: -10
+    smoke_move: smoke_vehiclemove
+		Length: *
+		ZOffset: -20
+	aura.avatar.conclave: minlight_avatar
+		Length: *
+		Tick: 28
+		ZOffset: -40
+		BlendMode: Additive
+
+^StatAircraftEffect:
+	Flak.Area: flakarea
+		Length: *
+		BlendMode: Additive
+	AircraftRepair: repair_effet
+		Length: *
+		Tick: 24
+		ZOffset: -100
+		BlendMode: Additive
+	shadow.medium: shadow_vehiclemedium
+		Offset: 0, 0
+		ZOffset: -50
+		BlendMode: Subtractive
+	aura_inffluence: aura_inffluence
+		Length: *
+		Tick: 25
+		ZOffset: 1
+		BlendMode: Additive
+	shadow.large: shadow_vehiclelarge
+		Offset: 0, 0
+		ZOffset: -50
+		BlendMode: Subtractive
+  
+^StatBuildingEffect:
+	disableiem: iem_stat_veh
+		Length: *
+		Tick: 15
+		ZOffset: 20
+		BlendMode: Additive
+    
+# /////////////////////////////////// Mine Sequences ///////////////////////////////   
+
+plasmine:
+    idle:
+	icon: blueflameicon
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# /////////////////////////////////// Explosion & Projectile Sequences ///////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+explosion:
+	Defaults:
+		Length: *
+		ZOffset: 511
+		scale: 0.98
+	water_piffs: impact_water_small
+    #Building Explosion
+    builddestruc01: builddestruc01
+		Offset: 0, -50
+        Tick: 45
+    builddestruc02: builddestruc02
+		Offset: 0, -50
+        Tick: 45
+    builddestruc03: builddestruc03
+		Offset: 0, -50
+        Tick: 45
+	explbuilding01: buildexpl01
+        Tick: 65
+		Offset: 0, -20
+    explbuilding02: buildexpl02
+        Tick: 65
+		Offset: 0, -20
+    explbuilding03: buildexpl03
+        Tick: 65
+		Offset: 0, -20
+	explbuilding04: buildexpl04
+        Tick: 40
+		Offset: 0, -20
+    explbuilding05: buildexpl05
+        Tick: 45
+		Offset: 0, -20
+    smoke_gaz: smoke_gaz
+		Offset: 0, -20
+    bomb_expl01: bomb_expl01
+		Offset: 0, -20
+    bomb_expl02: bomb_expl02
+		Offset: 0, -20
+    bomb_expl03: bomb_expl03
+		Offset: 0, -20
+    balisimpact01: balisimpact01
+		Offset: 0, -24
+    balisimpact02: balisimpact02
+		Offset: 0, -24
+    balisimpact03: balisimpact03
+		Offset: 0, -24
+    balisimpact04: balisimpact04
+		Offset: 0, -24
+    balisimpact05: balisimpact05
+		Offset: 0, -24
+    balisimpact06: balisimpact06
+		Offset: 0, -24
+    balisimpact07: balisimpact07
+		Offset: 0, -24
+    #Unite "Small" Impact
+	piff: piff
+		BlendMode: Additive
+	piffs: impact_balist_small
+    shockwave_min: shockwave_min
+		BlendMode: Additive
+		Offset: 0, -24
+        Tick: 15
+    shockwave_medium: shockwave_medium
+		BlendMode: Additive
+		Offset: 0, -24
+        Tick: 15
+    shockwave_large: shockwave_large
+		BlendMode: Additive
+		Offset: 0, -24
+        Tick: 15
+    shockwave_large_temp: shockwave_large_temp
+		BlendMode: Additive
+		Offset: 0, -24
+        Tick: 15
+    #Unite "Medium" Impact
+	autogun_expl: autogun_expl
+		BlendMode: Additive
+	minigun_impact: minigun_impact
+		BlendMode: Additive
+    impact_flashspeedmin01: impact_flashmin01
+		BlendMode: Additive
+        Tick: 4
+    impact_flashspeedmin02: impact_flashmin02
+		BlendMode: Additive
+        Tick: 4
+    impact_flashspeedmin03: impact_flashmin03
+		BlendMode: Additive
+        Tick: 4
+    impact_flashmin01: impact_flashmin01
+		BlendMode: Additive
+        Tick: 8
+    impact_flashmin02: impact_flashmin02
+		BlendMode: Additive
+        Tick: 8
+    impact_flashmin03: impact_flashmin03
+		BlendMode: Additive
+        Tick: 8
+    impact_flashlarge01: impact_flashlarge01
+		BlendMode: Additive
+        Tick: 10
+    impact_flashlarge02: impact_flashlarge02
+		BlendMode: Additive
+        Tick: 10
+    impact_flashlarge03: impact_flashlarge03
+		BlendMode: Additive
+        Tick: 10
+    #Unite "Sabot" Impact
+	apo_expl: apo_expl
+		Offset: 0, -20
+		BlendMode: Additive
+    arty_massexpl01: arty_massexpl01
+        Offset: 0, 0
+    arty_massexpl02: arty_massexpl02
+        Offset: 0, 0
+    arty_massexpl03: arty_massexpl03
+        Offset: 0, 0
+    apo_expl01: apo_expl01
+        Offset: 0, -50
+    apo_expl02: apo_expl02
+        Offset: 0, -50
+    apo_expl03: apo_expl03
+        Offset: 0, -50
+    flak_expl01: flak_expl01
+		BlendMode: Additive
+    flak_expl02: flak_expl02
+		BlendMode: Additive
+    flak_expl03: flak_expl03
+		BlendMode: Additive
+    flak_expl04: flak_expl04
+		BlendMode: Additive
+	obus_ballexpl: obus_ballexpl
+		BlendMode: Additive
+	obus_expl01: obus_expl01
+		BlendMode: Additive
+        Offset: 0, -35
+	obus_expl02: obus_expl02
+		BlendMode: Additive
+        Offset: 0, -35
+	obus_expl03: obus_expl03
+		BlendMode: Additive
+        Offset: 0, -35
+	obus_smoke01: obus_smoke01
+		BlendMode: Additive
+        Offset: 0, -35
+	obus_smoke02: obus_smoke02
+		BlendMode: Additive
+        Offset: 0, -35
+	obus_smoke03: obus_smoke03
+		BlendMode: Additive
+        Offset: 0, -35
+    clusterimpact01: clusterimpact01
+		BlendMode: Additive
+        Tick: 15
+        Offset: 0, -10
+    clusterimpact02: clusterimpact02
+		BlendMode: Additive
+        Tick: 15
+        Offset: 0, -10
+    clusterimpact03: clusterimpact03
+		BlendMode: Additive
+        Tick: 15
+        Offset: 0, -10
+    clusterimpact04: clusterimpact04
+		BlendMode: Additive
+        Tick: 15
+        Offset: 0, -10
+    trail_smoke01: trail_smoke01
+		BlendMode: Additive
+    trail_smoke02: trail_smoke02
+    trail_smoke03: trail_smoke03
+		BlendMode: Additive  
+    trail_smokemin01: trail_smokemin01
+		BlendMode: Additive
+    trail_smokemin02: trail_smokemin02
+		BlendMode: Additive
+    trail_smokemin03: trail_smokemin03
+		BlendMode: Additive
+    #Smoke damage effet:
+    artyshocksmoke_large: artyshocksmoke_large
+		BlendMode: Additive
+    artyshocksmoke_min: artyshocksmoke_min
+		BlendMode: Additive
+    shock_smokelarge01: shock_smokelarge01
+    shock_smokelarge02: shock_smokelarge02
+    shock_smokelarge03: shock_smokelarge03
+    shock_smokemin01: shock_smokemin01
+        Tick: 10
+    shock_smokemin02: shock_smokemin02
+        Tick: 10
+    shock_smokemin03: shock_smokemin03 
+        Tick: 10
+    smoke_damage01: damage_smokelarge01
+        Offset: 0, -40
+    smoke_damage02: damage_smokelarge02
+        Offset: 0, -40
+    smoke_damage03: damage_smokelarge03
+        Offset: 0, -40
+    smoke_damage04: damage_smokelarge04
+        Offset: 0, -40
+    large_bomb_expl01: large_bomb_expl01
+        Offset: 0, -40
+    large_bomb_expl02: large_bomb_expl02
+        Offset: 0, -40
+    large_bomb_expl03: large_bomb_expl03
+        Offset: 0, -40
+    bomb_pulse01: bomb_pulse01
+		BlendMode: Additive
+    mediumexplimpact01: mediumexplimpact01
+		BlendMode: Additive
+		Tick: 21
+    mediumexplimpact02: mediumexplimpact02
+		BlendMode: Additive
+		Tick: 28
+    mediumexplimpact03: mediumexplimpact03
+		BlendMode: Additive
+    flakimpact01: flakimpact01
+		BlendMode: Additive
+		Tick: 21
+    flakimpact02: flakimpact02
+		BlendMode: Additive
+		Tick: 28
+    flakimpact03: flakimpact03
+		BlendMode: Additive
+    flakimpactmin01: flakimpactmin01
+		BlendMode: Additive
+		Tick: 21
+    flakimpactmin02: flakimpactmin02
+		BlendMode: Additive
+		Tick: 28
+    flakimpactmin03: flakimpactmin03
+		BlendMode: Additive
+    flame_impact01: flame_impact01
+		BlendMode: Additive
+    flame_impact02: flame_impact02
+		BlendMode: Additive
+    flame_impact03: flame_impact03
+		BlendMode: Additive
+    expl_tank01: expl_tank01
+        Offset: 0, -20
+    expl_tank02: expl_tank02
+        Offset: 0, -20
+    expl_tank03: expl_tank03
+        Offset: 0, -20
+    # Rocket Explosion
+	exlp_rocket01: exlp_rocket01
+		BlendMode: Additive
+		Tick: 12
+	exlp_rocket02: exlp_rocket02
+		BlendMode: Additive
+		Tick: 12
+	exlp_rocket03: exlp_rocket03
+		BlendMode: Additive
+		Tick: 12
+	exlp_rocket01_shad: exlp_rocket01
+		BlendMode: Subtractive
+        ZOffset: -50
+		Tick: 24
+	exlp_rocket02_shad: exlp_rocket02
+		BlendMode: Subtractive
+        ZOffset: -50
+		Tick: 24
+	exlp_rocket03_shad: exlp_rocket03
+		BlendMode: Subtractive
+        ZOffset: -50
+		Tick: 24
+    # Shade Smoke Weapon Animation
+    shad_smoke01: shad_smoke01
+		BlendMode: Subtractive
+		Tick: 14
+        ZOffset: -50
+    shad_arty_largesmoke01: shad_arty_largesmoke01
+		BlendMode: Subtractive
+		Tick: 32
+        ZOffset: -50
+    shad_arty_largesmoke02: shad_arty_largesmoke02
+		BlendMode: Subtractive
+		Tick: 32
+        ZOffset: -50
+    shad_medium_smoke01: shad_arty_largesmoke01
+        Scale: 0.50
+		BlendMode: Subtractive
+		Tick: 12
+        ZOffset: -50
+    shad_medium_smoke02: shad_arty_largesmoke02
+        Scale: 0.50
+		BlendMode: Subtractive
+		Tick: 12
+        ZOffset: -50
+    # Rocket Plasma upgrade Explosion
+	exlp_plasmarocket01: exlp_plasmarocket01
+		BlendMode: Additive
+		Tick: 12
+	exlp_plasmarocket02: exlp_plasmarocket02
+		BlendMode: Additive
+		Tick: 12
+	exlp_plasmarocket03: exlp_plasmarocket03
+		BlendMode: Additive
+		Tick: 12
+    #Unite "ballistique" Explosion
+	blast_expl: blast_expl
+	frag_expl: frag_expl
+		BlendMode: Additive
+	thermoexpl: thermoexpl
+		Offset: 0, -30
+		BlendMode: Additive
+	doomexpl75: doomexpl75
+		BlendMode: Additive
+	grenade_expl: grenade_expl
+		BlendMode: Additive
+	impact_balist_medium: impact_balist_medium
+		BlendMode: Additive
+    smoke_bigexpl: smoke_bigexpl
+    souffle: souffle
+    target.impact: blue_target
+		BlendMode: Additive
+		Length: *
+		Tick: 25
+		ZOffset: 5
+    # Note: ratatosk seulement
+	impact_balist_large: impact_balist_large
+		BlendMode: Additive
+    #Unite Flamme Impact
+	burnimpact: burnimpact
+    burning: flame_husk
+		Length: *
+		Tick: 30
+		Offset: 0, -20
+	burn_flam: burn_flam
+		BlendMode: Additive
+    fire_incinerator: fire_incinerator
+	napalmhydraexpl: napalmhydraexpl
+		BlendMode: Additive
+    flamezoneres01: flamezoneres01
+		BlendMode: Additive
+    flamezoneres02: flamezoneres02
+		BlendMode: Additive
+    flamezoneres03: flamezoneres03
+		BlendMode: Additive
+    expl_balistzone01: expl_balistzone01
+		BlendMode: Additive
+    expl_balistzone02: expl_balistzone02
+		BlendMode: Additive
+    expl_balistzone03: expl_balistzone03
+		BlendMode: Additive
+    #Unite Electric Impact
+	small_sismic_impact: small_sismic_impact
+	normal_sismic_impact: normal_sismic_impact
+    electric_residual01: electric_residual01
+		Tick: 34
+		Offset: 0, -20
+        BlendMode: Additive
+    electric_residual02: electric_residual02
+		Tick: 36
+		Offset: 0, -20
+        BlendMode: Additive
+    electric_residual03: electric_residual03
+		Tick: 30
+		Offset: 0, -20
+        BlendMode: Additive
+    electric_residual04: electric_residual01
+		Tick: 35
+		Offset: 0, -20
+        BlendMode: Additive
+    electric_residual05: electric_residual02
+		Tick: 40
+		Offset: 0, -20
+        BlendMode: Additive
+    electric_residual06: electric_residual03
+		Tick: 45
+		Offset: 0, -20
+        BlendMode: Additive
+    absorbimpact01: absorbimpact01
+		Tick: 22
+        BlendMode: Additive
+    absorbimpact02: absorbimpact02
+        BlendMode: Additive
+    absorbimpact03: absorbimpact03
+		Tick: 29
+        BlendMode: Additive
+    zapimpactmin: zapimpactmin
+		BlendMode: Additive
+    railcharge01: railcharge01
+		BlendMode: Additive
+    railbomb_expl01: railbomb_expl01
+		BlendMode: Additive
+        Offset: 0, -45
+    railbomb_expl02: railbomb_expl02
+		BlendMode: Additive
+        Offset: 0, -45
+    railbomb_expl03: railbomb_expl03
+		BlendMode: Additive
+        Offset: 0, -45
+    railbomb_explmin01: railbomb_explmin01
+		BlendMode: Additive
+        Offset: 0, -20
+    railbomb_explmin02: railbomb_explmin02
+		BlendMode: Additive
+        Offset: 0, -20
+    railbomb_explmin03: railbomb_explmin03
+		BlendMode: Additive
+        Offset: 0, -20
+    railgun_trailshot01: railgun_trailshot01
+		BlendMode: Additive
+        Offset: 0, -5
+    railgun_trailshot02: railgun_trailshot02
+		BlendMode: Additive
+        Offset: 0, -5
+    railgun_trailshot03: railgun_trailshot03
+		BlendMode: Additive
+        Offset: 0, -5
+    zapimpact: zapimpact
+        BlendMode: Additive
+    laser_spark01: laser_spark01
+        BlendMode: Additive
+        Offset: 0, -25
+    laser_spark02: laser_spark02
+        BlendMode: Additive
+        Offset: 0, -25
+    laser_spark03: laser_spark03
+        BlendMode: Additive
+        Offset: 0, -25
+    expl_railgun01: expl_railgun01
+        BlendMode: Additive
+        Offset: 0, -25        
+    expl_railgun02: expl_railgun02
+        BlendMode: Additive
+        Offset: 0, -25        
+    expl_railgun03: expl_railgun03
+        BlendMode: Additive
+        Offset: 0, -25
+    aircraft_blastexpl01: aircraft_blastexpl01
+        BlendMode: Additive
+    aircraft_blastexpl02: aircraft_blastexpl02
+        BlendMode: Additive
+    #Unite Ion Impact
+    orbital_strike: orbital_strike
+		BlendMode: Additive
+        Tick: 25
+		Offset: 0, -250
+    orbital_strikemin: orbital_strikemin
+		BlendMode: Additive
+        Tick: 25
+		Offset: 0, -250
+	ion_expl: ion_expl
+    ionlaser_impact01: ionlaser_impact01
+		BlendMode: Additive
+    ionlaser_impact02: ionlaser_impact02
+		BlendMode: Additive
+    ionlaser_impact03: ionlaser_impact03
+		BlendMode: Additive
+    impact_particle01: impact_particle01
+		BlendMode: Additive
+    impact_particle02: impact_particle02
+		BlendMode: Additive
+    impact_particle03: impact_particle03
+		BlendMode: Additive
+    ion_impact01: ion_impact01
+        BlendMode: Additive
+    ion_impact02: ion_impact02
+        Tick: 30
+        BlendMode: Additive
+    ion_impact03: ion_impact03
+        Tick: 28
+        BlendMode: Additive
+    #Unite Plasma Impact
+    unit_expl01: unit_expl01
+		BlendMode: Additive
+    unit_expl02: unit_expl02
+		BlendMode: Additive
+    navig_expl01: navig_expl01
+		BlendMode: Additive
+    navig_expl02: navig_expl02
+		BlendMode: Additive
+    navig_expl03: navig_expl03
+		BlendMode: Additive
+    plasma_expl01min: plasma_expl01min
+		BlendMode: Additive
+		Offset: 0, -15
+    plasma_expl02min: plasma_expl02min
+		BlendMode: Additive
+		Offset: 0, -15
+    plasma_expl03min: plasma_expl03min
+		BlendMode: Additive
+		Offset: 0, -15
+    plasma_expl01: plasma_expl01
+		BlendMode: Additive
+		Offset: 0, -45
+    plasma_expl02: plasma_expl02
+		BlendMode: Additive
+		Offset: 0, -45
+    plasma_expl03: plasma_expl03
+		BlendMode: Additive
+		Offset: 0, -45
+    plasma_explmin01: plasma_expl01
+		BlendMode: Additive
+		Offset: 0, -45
+        Scale: 0.55
+    plasma_explmin02: plasma_expl02
+		BlendMode: Additive
+		Offset: 0, -45
+        Scale: 0.55
+    plasma_explmin03: plasma_expl03
+		BlendMode: Additive
+		Offset: 0, -45
+        Scale: 0.55
+    nimnukeimpact01: nimnukeimpact01
+		BlendMode: Additive
+		Offset: 0, -45
+    nimnukeimpact02: nimnukeimpact02
+		BlendMode: Additive
+		Offset: 0, -45
+    nimnukeimpact03: nimnukeimpact03
+		BlendMode: Additive
+		Offset: 0, -45
+    plasma_pulseminex2: plasma_pulseminex2
+		BlendMode: Additive
+	plasma_pulseminx2: plasma_pulseminx2
+		BlendMode: Additive
+	plasma_impact: plasma_impact
+		BlendMode: Additive
+	bigplasma_impact: bigplasma_impact
+		BlendMode: Screen
+        Tick: 65
+	bigplasma_expl: bigplasma_expl
+		BlendMode: Screen
+    sonic_impact: sonic_impact
+		BlendMode: Additive
+        Tick: 20
+    #Unite Conclave blue Effect Weapons
+	photo_expl: photo_expl
+		BlendMode: Additive
+	quasarshotmin: quasarshotmin
+		BlendMode: Additive
+	quasarshotmax: quasarshotmax
+		BlendMode: Additive
+    phierodeurimpact01: phierodeurimpact01
+		BlendMode: Additive
+    phierodeurimpact02: phierodeurimpact02
+		BlendMode: Additive
+    phierodeurimpact03: phierodeurimpact03
+		BlendMode: Additive
+    phase_expl01: phase_expl01
+		BlendMode: Additive
+    phase_expl02: phase_expl02
+		BlendMode: Additive
+    phase_expl03: phase_expl03
+		BlendMode: Additive
+    #Impact Air Weapons Balistic
+	air_expl01: air_expl01
+	air_expl02: air_expl02
+	air_expl03: air_expl03
+	air_impact: air_impact
+		Offset: 0, -30
+		BlendMode: Additive
+    #Light Effect Weapons
+	baselight: baselight
+		BlendMode: Additive
+	baselightcub: baselightcub
+		BlendMode: Additive
+	minbaselightcub: minbaselightcub
+		BlendMode: Additive
+	mediumlight: mediumlight
+		BlendMode: Additive
+	light_bot: light_bot
+		BlendMode: Additive
+	light_projup: light_projup
+		BlendMode: Additive
+    lens_flare_light01: lens_flare_light01
+        BlendMode: Additive
+    #Smoke Effect Weapons
+	smokehusk: smokehusk
+	obus_smokeexpl: obus_smokeexpl
+		BlendMode: Additive
+		Tick: 85
+	ring_pulse: ring_pulse
+		BlendMode: Additive
+	ring_pulsemin: ring_pulsemin
+		BlendMode: Additive
+	ring_pulsemedium: ring_pulsemedium
+		BlendMode: Additive
+    grav_impact: grav_impact
+		BlendMode: Additive
+	punch_massive: punch_massive
+		BlendMode: Additive
+		Offset: 0, -10
+		Tick: 85
+    #Superweapons Impact
+    emporbital: emporbital
+		Tick: 32
+		Offset: 0, -230
+		BlendMode: Additive
+    orbital_strikeexpl: orbital_strikeexpl
+		Tick: 32
+		Offset: 0, -100
+		BlendMode: Additive
+	ragnarok_plasmaimpact: ragnarok_plasmaimpact
+		BlendMode: Additive
+	ragnarok_plasmaaura: ragnarok_plasmaaura
+		BlendMode: Additive
+	nuke_impact: nuke_impact
+		Offset: 0, -160
+		Tick: 25
+		BlendMode: Additive
+	nuke_impactmin: nuke_impactmin
+		Offset: 0, -60
+		Tick: 40
+		BlendMode: Additive
+    shake_effectbase: shake_effectbase
+		Tick: 85
+		BlendMode: Additive
+    shake_effectshade: shake_effectbase
+		Tick: 125
+		BlendMode: Subtractive
+    nuke_lens: nuke_lens
+		Tick: 65
+		BlendMode: Additive
+    nuke_lensmin: nuke_lensmin
+		Tick: 35
+		BlendMode: Additive
+    blast_nuke: blast_nuke
+		Tick: 55
+		BlendMode: Additive
+    nuke_strikeaa_base: nuke_strikeaa
+		BlendMode: Additive
+		Tick: 20
+		Offset: 0, -180
+    nuke_strikeaa_shade: nuke_strikeaa
+		BlendMode: Subtractive
+		Tick: 20
+		Offset: 0, 0
+    nuke_shake_power_base: nuke_shake_power
+		Tick: 70
+		BlendMode: Additive
+    nuke_shake_power_shade: nuke_shake_power
+		Tick: 70
+		Offset: 0, 10
+		BlendMode: Subtractive
+    #Water Impact Weapons
+	impact_water_small: impact_water_small
+		BlendMode: Additive
+	impact_water_medium: impact_water_medium
+		BlendMode: Additive
+	impact_water_large: impact_water_large
+		BlendMode: Additive
+    #Other Weapons Impact
+	matter_expl: matter_expl
+		BlendMode: Additive
+		Tick: 50
+	matter_explmin: matter_explmin
+		BlendMode: Additive
+	emp_impact: emp_impact
+		BlendMode: Additive
+	mininuke_impact: mininuke_impact
+		BlendMode: Additive
+		Offset: 0, -40
+		Tick: 50
+	doomtowershield: doomtowershield
+		BlendMode: Additive
+	doomtowerelectro: doomtowerelectro
+		BlendMode: Additive
+    #No classed
+	debrisexplode: debrisexplode
+		BlendMode: Additive
+	laserimpact: laserimpact
+		BlendMode: Additive
+    mantis_explo: mantis_explo
+        BlendMode: Additive
+    eplosionfire01: eplosionfire01
+    fusionimpactfire: fusionimpactfire
+		BlendMode: Additive
+    zenithimpact: zenithimpact
+		BlendMode: Additive
+
+particles:
+	largesmoke.cruiser: trail_smoke01
+		Length: *
+		Tick: 10
+	largesmoke: trail_smokemin01
+		Length: *
+		Tick: 40
+	smallsmoke: trail_smoke02
+		Length: *
+		Tick: 10
+	fire: flame_husk
+		Length: *
+
+120mm:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle: 120mm
+    
+120mmplasma:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle: 120mmplasma
+
+80mm:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle: 80mm
+    
+spike_proj:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle:
+
+20mm:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle: 20mm
+    
+graviton_ball:
+	Defaults:
+		Length: *
+		BlendMode: Additive
+	idle: navig_ball
+
+jotunballmode:
+	idle:
+		Length: *
+		BlendMode: Additive
+
+gaussringmin:
+	idle:
+		Length: 35
+		BlendMode: Additive
+        
+quasarballgun:
+	idle: charge_ballquasargun
+        Start: 39
+		Length: 10
+        Scale: 0.60
+		BlendMode: Additive
+
+gaussringminx2:
+	idle:
+		Length: 35
+		BlendMode: Additive
+        
+railgun_spark:
+	idle: muzzle_railgunmin
+		Facings: 16
+		Length: 25
+		Tick: 20
+		BlendMode: Additive
+        
+smoke_missile:
+	idle:
+		Length: 25
+		BlendMode: Additive
+        
+smoke_missile_large:
+	idle:
+        Length: *
+		BlendMode: Additive
+    idle2: smoke_missile_large2
+        Length: *
+		BlendMode: Screen
+    idle3: smoke_missile_large3
+        Length: *
+		BlendMode: Screen
+        
+smoke_missile_min:
+	idle: smoke_missile_min1
+        Length: *
+		Tick: 15
+		BlendMode: Screen
+    idle2: smoke_missile_min1
+        Length: *
+		Tick: 15
+		BlendMode: Screen
+    idle3: smoke_missile_min1
+        Length: *
+		Tick: 15
+		BlendMode: Screen
+
+largesmoke:
+	idle:
+		Length: *
+        
+trail_smokemin03:
+	idle:
+		Length: *
+		BlendMode: Additive
+
+midsmoke:
+	idle:
+		Length: *
+
+minsmoke:
+	idle:
+		Length: *
+        
+smoke_gaz:
+	idle:
+		Tick: 30
+		Length: *
+
+redalliance_smoke:
+	smoke_ar01: smoke_ar01
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar02: smoke_ar02
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar03: smoke_ar03
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar01min: smoke_ar01min
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar02min: smoke_ar02min
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+	smoke_ar03min: smoke_ar03min
+		Tick: 55
+		Length: *
+		Offset: 0, -15
+
+damage_smoke.min:
+	smoke_damage01: damage_smokemin01
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+	smoke_damage02: damage_smokemin01
+		Tick: 32
+		Length: *
+		Offset: 0, -12
+	smoke_damage03: damage_smokemin01
+		Tick: 28
+		Length: *
+		Offset: 0, -12
+	smoke_damage04: damage_smokemin01
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+        
+damage_smoke.large:
+	smoke_damage01: damage_smokeLarge01
+		Tick: 30
+		Length: *
+		Offset: 0, -15
+	smoke_damage02: damage_smokeLarge02
+		Tick: 32
+		Length: *
+		Offset: 0, -15
+	smoke_damage03: damage_smokeLarge03
+		Tick: 28
+		Length: *
+		Offset: 0, -15
+	smoke_damage04: damage_smokeLarge04
+		Tick: 30
+		Length: *
+		Offset: 0, -15
+        
+smoke_movemin:
+	smoke_movemin01: smoke_movemin01
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+	smoke_movemin02: smoke_movemin02
+		Tick: 32
+		Length: *
+		Offset: 0, -12
+	smoke_movemin03: smoke_movemin03
+		Tick: 28
+		Length: *
+		Offset: 0, -12
+	smoke_movemin04: smoke_movemin04
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+
+smoke_moveminspeed:
+	smoke_movemin01: smoke_movemin01
+		Tick: 20
+		Length: *
+		Offset: 0, -12
+	smoke_movemin02: smoke_movemin02
+		Tick: 18
+		Length: *
+		Offset: 0, -12
+	smoke_movemin03: smoke_movemin03
+		Tick: 16
+		Length: *
+		Offset: 0, -12
+	smoke_movemin04: smoke_movemin04
+		Tick: 19
+		Length: *
+		Offset: 0, -12
+        
+        
+smoke_movelarge:
+	smoke_movelarge01: smoke_movelarge01
+		Tick: 45
+		Length: *
+		Offset: 0, -16
+	smoke_movelarge02: smoke_movelarge02
+		Tick: 46
+		Length: *
+		Offset: 0, -16
+	smoke_movelarge03: smoke_movelarge03
+		Tick: 45
+		Length: *
+		Offset: 0, -16
+	smoke_movelarge04: smoke_movelarge04
+		Tick: 42
+		Length: *
+		Offset: 0, -16
+        
+flametank:
+    idle:
+
+scorch_flamming:
+    idle01: terrain_flamming01
+		Length: *
+        BlendMode: Additive
+		Tick: 80
+    idle02: terrain_flamming02
+		Length: *
+        BlendMode: Additive
+		Tick: 80
+    idle03: terrain_flamming03
+		Length: *
+        BlendMode: Additive
+		Tick: 80
+    
+smudge_smoke:
+    idle01: terrain_smoke01
+		Length: *
+        BlendMode: Additive
+		Tick: 80
+    idle02: terrain_smoke02
+		Length: *
+        BlendMode: Additive
+		Tick: 80
+    idle03: terrain_smoke03
+		Length: *
+        BlendMode: Additive
+		Tick: 80
+    idle04: terrain_smoke04
+		Length: *
+        BlendMode: Additive
+		Tick: 80   
+
+smoke_walkerlarge:
+	walk_smoke01: walk_smoke01
+		Tick: 45
+		Length: *
+		Offset: 0, -5
+	walk_smoke02: walk_smoke02
+		Tick: 42
+		Length: *
+		Offset: 0, -5
+	walk_smoke03: walk_smoke03
+		Tick: 45
+		Length: *
+		Offset: 0, -5
+        
+        
+move_smoke.burning:
+	move_burning01: expl_tank01
+		Tick: 30
+		Length: *
+		Offset: 0, -12
+	move_burning02: expl_tank02
+		Tick: 32
+		Length: *
+		Offset: 0, -12
+	move_burning03: expl_tank03
+		Tick: 28
+		Length: *
+		Offset: 0, -12
+
+smoke_hovermove:
+	smoke_hovermove02: smoke_hovermove02
+		Tick: 45
+		Length: *
+		BlendMode: Additive
+	smoke_hovermove03: smoke_hovermove03
+		Tick: 46
+		Length: *
+		BlendMode: Additive
+	smoke_hovermove04: smoke_hovermove04
+		Tick: 45
+		Length: *
+		BlendMode: Additive
+        
+spark_effect:
+	spark_husk01: shake_gerseyflame01
+		Tick: 24
+		Length: *
+		BlendMode: Additive
+	spark_husk02: shake_gerseyflame02
+		Tick: 24
+		Length: *
+		BlendMode: Additive
+	spark_husk03: shake_gerseyflame01
+		Tick: 15
+		Length: *
+		BlendMode: Additive
+        
+warp_portail:
+    idle: warp_weapon
+		Length: *
+        
+zenithball:
+	idle:
+		Length: *
+		Tick: 15
+		BlendMode: Additive
+
+plasma_ball:
+	idle:
+		Length: 17
+		Tick: 80
+		BlendMode: Additive
+        
+photo_ball:
+	idle:
+		Length: *
+		Tick: 20
+		BlendMode: Additive
+        
+photo_balltrail:
+	idle: muzzle_bluegun
+		Length: *
+		Tick: 8
+		BlendMode: Additive
+
+plasma_ballmin:
+	idle:
+		Length: 17
+		Tick: 80
+		BlendMode: Additive
+
+plasma_expl01:
+	idle:
+		Length: 16
+		Tick: 90
+		BlendMode: Additive
+
+plasma_pulseminx2:
+	idle:
+		Length: 17
+		Tick: 35
+		BlendMode: Additive
+
+plasmaarty.ball:
+	idle: plasma_ballmin
+		Start: 0
+		Length: 1
+		BlendMode: Additive
+
+matter_bullet:
+	idle:
+		Length: *
+		BlendMode: Additive
+        
+matter_bullet02:
+	idle:
+		Length: *
+		BlendMode: Additive
+
+quasarshotmin:
+	idle:
+		Length: *
+		BlendMode: Additive
+        
+plasma_projectile:
+	idle:
+		Length: *
+		BlendMode: Additive
+        
+plasma_jotun: 
+	idle: plasma_projectile
+		Length: *
+		BlendMode: Additive
+        Scale: 0.55
+        
+smoke_plasmamin:
+	idle: plasma_ball
+		Length: 17
+		Tick: 80
+        Scale: 0.55
+		BlendMode: Additive
+        
+plasmaball:
+	idle:
+		Length: *
+		BlendMode: Additive
+        
+plasmatrail:
+	idle:
+		Length: *
+		BlendMode: Additive
+        
+plasma_projectilemin:
+	idle:
+		Length: *
+		BlendMode: Additive
+
+quasarshotmax:
+	idle:
+		Length: *
+		BlendMode: Additive
+
+impuls_ball:
+	idle:
+		Length: *
+		BlendMode: Additive    
+        
+        
+bullet:
+	Defaults: saber_proj
+		ZOffset: 1023
+		Length: 10
+		Tick: 25
+	1:
+		Start: 10
+
+# ///////////////////// Projectile Facing x32 ////////////////////////
+minball_gun:
+	idle:
+		Facings: 32
+		BlendMode: Additive
+        
+saber_proj:
+	idle:
+		Facings: 32
+		BlendMode: Additive
+        
+flame_projectile:
+	idle:
+		Facings: -32
+        Offset: 0, 5
+		BlendMode: Additive
+        
+ball_gun:
+	idle:
+		Facings: 32
+		BlendMode: Additive
+
+obus_gun:
+	idle:
+		Facings: 32
+		BlendMode: Additive
+        
+obus_gun_min:
+	idle:
+		Facings: 32
+		BlendMode: Additive
+
+plasma_gun:
+	idle:
+		Facings: 32
+		BlendMode: Additive
+
+plasma_gunmin:
+	idle:
+		Facings: 32
+		BlendMode: Additive
+
+bigplasma_gun:
+	idle:
+		Facings: 32
+		BlendMode: Additive
+
+muzzle_railgun:
+	idle:
+		Facings: 32
+		BlendMode: Additive
+
+# ///////////////////// Projectile Facing x64 ////////////////////////
+
+pulse_laser_projectile_red:
+	idle:
+		Facings: 64
+		ZOffset: 60
+        
+pulse_laser_projectile_blue:
+	idle:
+		Facings: 64
+		ZOffset: 60
+        
+impuls_proj:
+	idle:
+		Facings: 64
+		BlendMode: Additive
+
+mantis_miss:
+	idle:
+		Facings: 64
+		ZOffset: 128
+        
+psyblast:
+	idle:
+		Length: 17
+		Tick: 60
+
+smokecamo: #power
+	idle:
+		Length: *
+		Tick: 18
+		BlendMode: Additive
+		Offset: 0, -125
+
+# ///////////////////// Projectile Facing x128 ////////////////////////
+
+20mm128proj:
+	idle:
+		Facings: 128
+		BlendMode: Additive
+		ZOffset: 128
+        
+40mm128proj:
+	idle: 20mm128proj
+		Facings: 128
+		BlendMode: Additive
+		ZOffset: 128
+        Scale: 1.25
+
+80mm128proj:
+	idle:
+		Facings: 128
+		BlendMode: Additive
+		ZOffset: 128
+
+# ////////////////////////////////// Smoke Particle Effet Sequences ///////////////////////////////  
+
+smoke_part:
+	idle:
+		Length: *
+		Tick: 90
+
+# ////////////////////////////////// Lithning Specific Effet Sequences ///////////////////////////////  
+litning:
+	bright: litning
+		Length: 4
+		ZOffset: 2048
+        BlendMode: Additive
+	dim: litning
+		Start: 4
+		Length: 4
+		ZOffset: 2048
+        BlendMode: Additive
+  
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# /////////////////////////////////////// Terrain Effet Sequences ////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////// 
+dig:
+	idle: obus_smokeexpl
+		Length: *
+		ZOffset: 511
+		Offset: 0, 0, 24
+        
+burning:
+	idle:
+		Length: 17
+        
+minburning:
+	flameball1: flame_ball01
+		Length: *
+        Tick: 23
+	flameball2: flame_ball02
+		Length: *
+        Tick: 23
+	flameball3: flame_ball03
+		Length: *
+        Tick: 23
+        
+minburningspeed:
+	idle: minburning
+		Length: *
+		Tick: 5
+
+fire:
+	1: smokehusk
+		Length: *
+		Offset: 0,-30
+		ZOffset: 100
+	2: smokehusk
+		Length: *
+		Offset: 0,-30
+		ZOffset: 100
+	3: smokehusk
+		Length: *
+		Offset: 0,-30
+		ZOffset: 100
+	4: smokehusk
+		Length: *
+		Offset: 0,-30
+		ZOffset: 100
+
+craters:
+	Defaults:
+	crater01: crater02
+	crater02: crater04
+	crater03: crater05
+	crater04: crater07
+	crater05: crater08
+	crater06: crater09
+	crater07: crater10
+	crater08: crater11
+    
+craters_clear:
+	Defaults:
+	crater01: crater_clear01
+	crater02: crater_clear02
+	crater03: crater_clear03
+	crater04: crater_clear04
+	crater05: crater_clear05
+	crater06: crater_clear06
+	crater07: crater_clear07
+	crater08: crater_clear08
+    crater09: crater_clear09
+
+largecraters_clear:
+	Defaults:
+	crater01: largecrater_clear01
+	crater02: largecrater_clear02
+	crater03: largecrater_clear03
+	crater04: largecrater_clear04
+	crater05: largecrater_clear05
+	crater06: largecrater_clear06
+	crater07: largecrater_clear07
+	crater08: largecrater_clear08
+    
+craters_concrete:
+	Defaults:
+	crater01: crater_concrete01
+	crater02: crater_concrete02
+	crater03: crater_concrete03
+	crater04: crater_concrete04
+	crater05: crater_concrete05
+	crater06: crater_concrete06
+	crater07: crater_concrete07
+	crater08: crater_concrete08
+    crater09: crater_concrete09
+    crater10: crater_concrete10
+
+largecraters_concrete:
+	Defaults:
+	crater01: largecrater_concrete01
+	crater02: largecrater_concrete02
+	crater03: largecrater_concrete03
+	crater04: largecrater_concrete04
+	crater05: largecrater_concrete05
+	crater06: largecrater_concrete06
+	crater07: largecrater_concrete07
+	crater08: largecrater_concrete08
+	crater09: largecrater_concrete09
+
+
+craters_large:
+	Defaults:
+	crater01: crater01
+	crater02: crater03
+	crater03: crater06
+	crater04: crater12
+
+scorchs:
+	Defaults:
+	scorche01: scorche01
+	scorche02: scorche02
+	scorche03: scorche03
+	scorche04: scorche04
+	scorche05: scorche05
+	scorche06: scorche06
+	scorche07: scorche07
+	scorche08: scorche08
+	scorche09: scorche09
+	scorche10: scorche10
+
+ghusk:
+	Defaults:
+	ghusk01: ghusk01
+		Offset: 9, 5
+	ghusk02: ghusk02
+		Offset: -4, 0
+	ghusk03: ghusk03
+		Offset: -8, -6
+	ghusk04: ghusk04
+		Offset: 4, -10
+	ghusk05: ghusk05
+		Offset: -4, -6
+	ghusk06: ghusk06
+		Offset: -4, 6
+	ghusk07: ghusk07
+		Offset: 4, -4
+	ghusk08: ghusk08
+    
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////// Smoke Effet Sequences /////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+building_smokeparticle:
+    idle01: smokebuilding_paricle01
+		Length: *
+        Tick: 33
+		BlendMode: Additive
+    idle02: smokebuilding_paricle02
+		Length: *
+        Tick: 33
+		BlendMode: Additive
+        
+buildingcivil_smokeparticle:
+    idle01: smokebuilding_paricle01
+		Length: *
+        Tick: 33
+        Scale: 1.25
+		BlendMode: Additive
+    idle02: smokebuilding_paricle02
+		Length: *
+        Tick: 33
+        Scale: 1.25
+		BlendMode: Additive
+
+smoke_railgun:
+    idle01: smoke_railgun01
+		Length: *
+        Tick: 73
+        Scale: 0.15
+    idle02: smoke_railgun02
+		Length: *
+        Tick: 72
+        Scale: 0.15
+
+smoke_plasmaparticle:
+    idle01: smoke_plasmaparticle01
+		Length: *
+        Tick: 33
+		BlendMode: Additive
+    idle02: smoke_plasmaparticle02
+		Length: *
+        Tick: 33
+		BlendMode: Additive
+    idle03: smoke_plasmaparticle03
+		Length: *
+        Tick: 33
+		BlendMode: Additive
+    idlemin01: smoke_plasmaparticlemin01
+		Length: *
+        Tick: 33
+		BlendMode: Additive
+    idlemin02: smoke_plasmaparticlemin02
+		Length: *
+        Tick: 33
+		BlendMode: Additive
+    idlemin03: smoke_plasmaparticlemin03
+		Length: *
+        Tick: 33
+		BlendMode: Additive
+        
+smoke_flameparticle:
+    idle01: smoke_plasmaparticle01
+		Length: *
+        Tick: 33
+    idle02: smoke_plasmaparticle02
+		Length: *
+        Tick: 33
+    idle03: smoke_plasmaparticle03
+		Length: *
+        Tick: 33
+    idlemin01: smoke_plasmaparticlemin01
+		Length: *
+        Tick: 33
+    idlemin02: smoke_plasmaparticlemin02
+		Length: *
+        Tick: 33
+    idlemin03: smoke_plasmaparticlemin03
+		Length: *
+        Tick: 33
+
+smoke_flamejotuun:
+    idlemin01: smoke_plasmaparticlemin01
+		Length: *
+        Tick: 25
+        BlendMode: Additive
+    idlemin02: smoke_plasmaparticlemin02
+		Length: *
+        Tick: 25
+        BlendMode: Additive
+    idlemin03: smoke_plasmaparticlemin03
+		Length: *
+        Tick: 25
+        BlendMode: Additive
+
+heat_smokeparticle:
+    idle01: heat_smokeparticle01
+		Length: *
+        Tick: 26
+        BlendMode: LowAdditive
+    idle02: heat_smokeparticle02
+		Length: *
+        Tick: 26
+        BlendMode: LowAdditive
+        
+smoke_fireplace:
+	Defaults:
+		Offset: 0, -40
+	idle: smokebuilding
+		Length: 20
+        Tick: 25
+		BlendMode: DoubleMultiplicative
+	loop: smokebuilding
+		Start: 20
+		Length: 25
+        Tick: 25
+		BlendMode: DoubleMultiplicative
+	end: smokebuilding
+		Start: 45
+		Length: 5
+        Tick: 25
+		BlendMode: DoubleMultiplicative
+
+smoke_building:
+	Defaults:
+		Offset: 0, -40
+	idle: smokebuilding
+		Length: 20
+        Tick: 25
+		BlendMode: Additive
+	loop: smokebuilding
+		Start: 20
+		Length: 25
+        Tick: 25
+		BlendMode: Additive
+	end: smokebuilding
+		Start: 45
+		Length: 5
+        Tick: 25
+		BlendMode: Additive
+
+smoke_m:
+	Defaults:
+		Offset: 0, 0
+	idle: smokebuildingdamage
+		Length: 20
+        Tick: 25
+		BlendMode: Additive
+	loop: smokebuildingdamage
+		Start: 20
+		Length: 25
+        Tick: 25
+		BlendMode: Additive
+	end: smokebuildingdamage
+		Start: 45
+		Length: 5
+        Tick: 25
+		BlendMode: Additive
+
+trail_smokemin01:
+	idle: trail_smokemin01
+		Length: *
+        Tick: 10
+		ZOffset: 512
+
+trail_smoke01:
+	idle:
+		Length: *
+		ZOffset: 512
+        
+trail_smoke03:
+	idle:
+		Length: *
+		ZOffset: 512
+
+smokey:
+	idle: smokeymin
+		Length: *
+		BlendMode: Additive
+		ZOffset: 1023
+
+smokeymin:
+	idle: smokeymin
+		Length: *
+		BlendMode: Additive
+		ZOffset: 1023
+
+smokeyelectro:
+	idle: smokeyelectro
+		Length: *
+		BlendMode: Additive
+
+gibs_smoke:
+	idle:
+		Length: *
+		ZOffset: 1023
+
+smoke_husk:
+	idle: smokeymin
+		Length: *
+		BlendMode: Alpha
+		ZOffset: 1023
+    
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////// Stat Visual Sequences /////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+stat-effect:
+	stun-overlay: stun_effet
+	QuakeLow: quakelow
+	Level21: level21
+	Level22: level22
+
+mine_weapon:
+	idle: mine_stun
+		BlendMode: Additive
+
+overlay: overlay
+	build-valid:
+		BlendMode: Additive
+	build-invalid:
+		Start: 1
+		BlendMode: Additive
+	target-select:
+		Start: 2
+		BlendMode: Additive
+	target-valid:
+		BlendMode: Additive
+	target-invalid:
+		Start: 1
+		BlendMode: Additive
+
+editor-overlay:
+	copy: overlay
+		Start: 0
+	paste: overlay
+		Start: 1
+
+pips:
+	groups:
+		Start: 8
+		Length: 10
+		Offset: 9, 5
+	medic:
+		Start: 20
+	tag-fake:
+		Start: 18
+		Offset: 0, 2
+	tag-primary:
+		Start: 2
+		Offset: 0, 2
+	pip-empty: pips2
+	pip-green: pips2
+		Start: 1
+	pip-yellow: pips2
+		Start: 2
+	pip-gray: pips2
+		Start: 3
+	pip-red: pips2
+		Start: 4
+	pip-blue: pips2
+		Start: 5
+	pip-ammofull: pipsammo
+		Start: 0
+	pip-ammoempty: pipsammo
+		Start: 1
+	pip-disguise: pip-disguise
+		Length: *
+		Tick: 300
+		Offset: 0, -6
+
+pips.large.ammo:
+	empty: pips3
+	green: pips3
+		Start: 1
+	yellow: pips3
+		Start: 2
+	gray: pips3
+		Start: 3
+	red: pips3
+		Start: 4
+	blue: pips3
+
+clock:
+	idle: clock
+		Length: *
+        
+selection.point:
+    infantry: select_inf
+		Length: *
+    vehicle.light: select_vehlight
+		Length: *
+    vehicle: select_veh
+
+powerdown:
+	disabled: speed
+		Start: 3
+
+poweroff:
+	offline: poweroff
+		Length: *
+		Tick: 160
+
+rank:
+	rank-veteran-1:
+	rank-veteran-2:
+		Start: 1
+	rank-veteran-3:
+		Start: 2
+	rank-elite:
+		Start: 3
+        
+mirror:
+	mirror-1: damaged
+        
+icon_mobile_building:
+	Building:
+		Start: 0
+		Offset: 0,-20
+	Infantry:
+		Start: 1
+		Offset: 0,-20
+	Proc:
+		Start: 3
+		Offset: 0,-20
+	Weap:
+		Start: 2
+		Offset: 0,-20
+	T2:
+		Start: 4
+		Offset: 0,-20
+	T3:
+		Start: 5
+		Offset: 0,-20
+	Aircraft:
+		Start: 6 
+		Offset: 0,-20   
+        
+rallypoint:
+	flag: arrow_beacon
+		Length: *
+		Offset: 0,-20
+	circles: fpls
+		Length: *
+		Offset: 0,0
+
+beacon:
+	arrow: arrow_beacon
+		Length: *
+		Offset: 0,-20
+	circles: fpls
+		Length: *
+
+mpspawn:
+	idle: mpspawn
+
+soundambiance:
+	idle: sound_amb
+
+waypoint:
+	idle: waypoint
+		Length: *
+
+camera:
+	idle: camera
+		Length: *
+
+ico_light:
+	idle: null
+		Length: *    
+    Light: light_zone_base
+        BlendMode: Additive
+
+shroud:
+	shroud: shadow
+		Length: *
+
+moveflsh:
+	idle: moveflh
+		Length: *
+		Tick: 80
+		Offset: 0,-5
+
+stase_effect:
+    idle: null
+    stase_range: bubble_stase
+        Scale: 0.50
+        BlendMode: Additive
+		Length: *
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////////// Wolrd Cloud Sequences ///////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+clouds:
+	Defaults:
+		ZOffset: 7500
+	idle1: clouds01
+        Length: *
+        BlendMode: Additive
+		IgnoreWorldTint: true
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////////// Effets Particles Sequences ///////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+spark_diast_particle: diast_spark01
+	diast_spark01: diast_spark01
+		Length: *
+        BlendMode: Additive
+		Tick: 30
+	diast_spark02: diast_spark02
+		Length: *
+        BlendMode: Additive
+		Tick: 30
+	diast_spark03: diast_spark03
+		Length: *
+        BlendMode: Additive
+		Tick: 30
+ 
+water_wave_particle:
+	Defaults:
+		Length: 20  
+		Tick: 150
+        BlendMode: Additive
+        Scale: 0.50
+	idle: null
+		Length: *  
+	wave_n:
+		Start: 0
+	wave_nw:
+		Start: 20
+	wave_nw_iso:
+		Start: 160
+	wave_w:
+		Start: 40
+	wave_sw:
+		Start: 60
+	wave_sw_iso:
+		Start: 180
+	wave_s:
+		Start: 80
+	wave_se:
+		Start: 100
+	wave_se_iso:
+		Start: 200
+	wave_e:
+		Start: 120
+	wave_ne:
+		Start: 140
+	wave_ne_iso:
+		Start: 220
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////////// Ressource Sequences //////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+diastore:
+	idle: diast
+		Length: *
+        Tick: 65
+
+gisement:
+	idle:
+		Length: *
+        Tick: 65
+
+resources:
+	Defaults:
+		Length: *
+	diast01: diast01
+	diast02: diast02
+	diast03: diast03
+	diast04: diast04
+	diast05: diast05
+	diast06: diast06
+	diast07: diast07
+
+null:
+	idle: null
+	icon: null
+
+crate-effects:
+	speed: speed
+	dollar: dollar
+	reveal-map: earth
+	hide-map: empulse
+	fpower: fpower
+	gps: gpsbox
+	invuln: invulbox
+	heal: invun
+	nuke: missile2
+	parabombs: parabox
+	sonar: sonarbox
+	stealth: stealth2
+	timequake: tquake
+	armor: armor
+	chrono: chronbox
+	airstrike: deviator
+	levelup: levelup
+		Tick: 200
+
+powerdirection:
+	arrow-t: mouse
+		Start: 2
+		Y: -7
+		Offset: 0, -19, 0
+	arrow-tr: mouse
+		Start: 3
+		X: 6
+		Y: -5
+		Offset: 15, -15, 0
+	arrow-r: mouse
+		Start: 4
+		X: 7
+		Offset: 19, 0, 0
+	arrow-br: mouse
+		Start: 5
+		X: 6
+		Y: 5
+		Offset: 15, 15, 0
+	arrow-b: mouse
+		Start: 6
+		Y: 7
+		Offset: 0, 19, 0
+	arrow-bl: mouse
+		Start: 7
+		X: -6
+		Y: 5
+		Offset: -15, 15, 0
+	arrow-l: mouse
+		Start: 8
+		X: -8
+		Offset: -19, 0, 0
+	arrow-tl: mouse
+		Start: 9
+		X: -6
+		y: 5
+		Offset: -15, -15, 0
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////    WORLD EFFECT CLOUD    ////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CloudWorldEffect:
+	Defaults:
+		ZOffset: 7500
+	idle0: cloud01.png
+		BlendMode: DoubleMultiplicative
+		IgnoreWorldTint: true
+        
+flamebeam:
+	idle:
+        Length: *
+		Offset: 0, -250
+		BlendMode: Additive
+        Tick: 15
+    flameActorEffect: flamebeameffect
+        Length: *
+		Offset: 0, 0
+		BlendMode: Additive
+        
+target_conclave_actor:
+	idle: target_mine
+        Length: *
+		Offset: 0, 0
+		BlendMode: Additive
+        Tick: 25
+        Scale: 0.60
+    directon: targetpowerdirection
+        Length: *
+        Tick: 28
+		BlendMode: Additive
+
+target_mine:
+	idle: target_alliancemine
+        Length: *
+		Offset: 0, 0
+		BlendMode: Additive
+        Tick: 25
+        Scale: 0.60
+    directon: targetpowerdirection
+        Length: *
+        Tick: 28
+		BlendMode: Additive
+
+droppod:
+	Defaults:
+		Length: *
+        Scale: 0.65
+	idle: droppod
+		Length: *
+        Scale: 0.65
+
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+# ////////////////////////////////////// Stat & Effet Decoration ////////////////////////////////////
+# ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+heal.infantry:
+    idle: healstat
+    
+repair.heavy:
+    idle: repairing
+        Length: *

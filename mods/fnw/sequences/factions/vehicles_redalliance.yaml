@@ -1,0 +1,299 @@
+armcv:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+        Start: 8
+		Facings: 8
+		Length: 6
+		Tick: 120
+	icon: armcvicon
+    
+t1_scarab:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+        Start: 8
+		Facings: 8
+		Length: 8
+		Tick: 50
+    make: t1_scarabmk
+		Length: *
+        Offset: 0,-10
+	idle-deployed: t1_scarabmk
+        Start: 7
+        Offset: 0,-10
+	muzzle: flamer_directional
+		Facings: 8
+		Length: 38
+		Tick: 50
+        BlendMode: Additive
+	icon: droneicon
+
+arnahand:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+	icon: arbarricon
+
+t1_defence_hq:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+	icon: arlabicon
+
+arnaweap:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+	icon: arweapicon
+
+mobilerelay:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+	icon: artechicon
+
+refinery:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+	icon: arprocicon
+
+t2_airfield:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+	icon: arheliicon
+
+t1_harvester:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.65
+    idle: t1_arharv
+        Facings: 64
+	turret: t2_salamandertur
+		Facings: 64
+	harvest: harvest_anim
+		Length: *
+		BlendMode: Additive
+	dock: t1_arharv
+	dock-loop: t1_arharv
+	icon: arharvicon
+
+t1_bike:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_balist_small
+		Length: *
+		BlendMode: Additive
+    idle:
+        Facings: 64
+	icon: bikeicon
+
+t1_raider:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+	icon: raidericon
+
+t2_basilisk:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+    Defaults:
+        Scale: 0.82
+    muzzle_charge: railguncharge
+		Length: *
+		BlendMode: Additive
+	muzzlebase: muzzle_railguncanon
+		Length: *
+		BlendMode: Additive
+		Tick: 12
+	muzzle: muzzle_railgun
+		Facings: 16
+		Length: 25
+		Tick: 25
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	idle.fe: t2_basilisk_fe
+		Facings: 64
+	turret: t2_basilisktur
+		Facings: 64
+        Offset: 0,10
+	turret.upaa: t2_basilisktur_upaa
+		Facings: 64
+        Offset: 0,10
+	turret.upif: t2_basilisktur_upif
+		Facings: 64
+        Offset: 0,10
+	turret.full: t2_basilisktur_upaaif
+		Facings: 64
+        Offset: 0,10
+	icon: artnkicon
+
+t2_basilisk.husk:
+    Defaults:
+        Scale: 0.82
+	idle: null
+
+t2_manticore:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+    Defaults:
+        Scale: 0.82
+	muzzle: muzzle_fireann
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	idle.fe: t2_manticore_fe
+		Facings: 64
+	turret: t2_manticoretur
+		Facings: 64
+	turret.up: t2_manticoreturup
+		Facings: 64
+	icon: manticoreicon
+
+t2_salamander:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+    Defaults:
+        Scale: 0.92
+	idle:
+		Facings: 64
+	idle.amp: t2_salamanderamp
+		Facings: 64
+	turret: t2_salamandertur
+		Facings: 64
+	icon: salamandericon
+
+t2_hydra:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+    Defaults:
+        Scale: 0.82
+	muzzle: lasermuzzlemin
+		Facings: 16
+		Length: 16
+		Tick: 18
+		BlendMode: Additive
+	idle:
+		Facings: 64
+    idle.fe:
+		Facings: 64
+	turret: t2_hydraturh
+		Facings: 64
+	turretup: t2_hydraturuph
+		Facings: 64
+	turreth: t2_hydratur
+		Facings: 64
+	turretuph: t2_hydraturup
+		Facings: 64
+	turretdeploy: t2_hydraturupdeploy
+		Facings: 64
+	icon: hydraicon
+
+t3_apocalypse:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+	muzzlebase: muzzle_railgunbase01
+		Length: *
+		BlendMode: Additive
+		Tick: 15
+	muzzle: muzzle_railgun
+		Facings: 16
+		Length: 25
+		Tick: 20
+		BlendMode: Additive
+	frag-muzzle: muzzlesabbot
+		Facings: 16
+		Length: 10
+		Tick: 20
+		BlendMode: Additive
+	idle:
+		Facings: 64
+    aura: aura_apoc
+        Length: *
+	turret: t3_apocalypsetur
+		Facings: 64
+	turret.null: null
+		Facings: 32
+	icon: apocicon
+
+t3_annihilator:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.90
+	idle:
+		Facings: 8
+	walk:
+        Start: 8
+		Facings: 8
+		Length: 21
+		Tick: 80
+	turret: t3_annihilatortur
+		Facings: 64
+	muzzle: firegunmuzzle
+		Facings: -16
+		Length: 14
+		Tick: 16
+		BlendMode: Additive
+	icon: annicon
+
+t3_purifier:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+    Defaults:
+        Scale: 0.92
+	idle:
+		Facings: 64
+	turret: t3_purifiertur
+		Facings: 64
+	icon: purifiericon
+
+t3_harbinger_mobile:
+	Inherits@Stat: ^StatVehicleEffect
+	Inherits@1: ^HeavySmokeEffect
+	idle:
+	deployed: t3_harbinger_deployed
+	icon: harbingicon
+
+t2_basiliskhusk:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.85
+	idle:
+
+t2_manticorehusk:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.85
+	idle:
+
+t3_apocalypsehusk:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.85
+	idle:
+
+t2_predator_mobile:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+        Start: 8
+        Facings: 8
+        Length: 25
+		Tick: 30
+	dead:
+	make: t2_predator_deployedmk
+		Length: *
+	icon: defpredatoricon
+
+t2_tarantula_mobile:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 8
+	walk:
+        Start: 8
+        Facings: 8
+        Length: 25
+		Tick: 30
+	dead:
+	make:t2_tarantula_deployedmk
+		Length: *
+	icon: tarantulaicon

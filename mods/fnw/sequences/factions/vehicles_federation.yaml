@@ -1,0 +1,137 @@
+t1_fedharv:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 64
+	harvest: harvest_anim
+		Length: *
+		BlendMode: Additive
+	dock: t1_fedharv
+	dock-loop: t1_fedharv
+	icon: t1_fedgharvicon
+    
+t1_stalker:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 64
+	icon: t1_stalkericon
+
+t1_tick:
+	Inherits@Stat: ^StatVehicleEffect
+    muzzle: muzzle_60mm
+        Length: *
+        BlendMode: Additive
+	idle:
+		Facings: 64
+	turret: t1_ticktur
+		Facings: 64
+    shield: electricshield
+		Length: *
+		BlendMode: Additive
+    barrel: t1_tickbarl
+		Facings: 64
+	icon: t1_tickicon
+    
+t1_suricate:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_riflegun_20mm
+		Facings: 16
+		Length: 11
+		Tick: 25
+		BlendMode: Additive
+	idle:
+		Facings: 64
+    shield: electricshield
+		Length: *
+		BlendMode: Additive
+	turret: t1_suricatetur
+		Facings: 64
+	icon: t1_surricateicon
+    
+t2_cobra:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_autogun_small
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	turretair: t2_cobratur
+		Facings: 64
+	turretground: t2_cobraturg
+		Facings: 64
+    shield: electricshield
+		Length: *
+		BlendMode: Additive
+	icon: t2_cobraicon
+    
+t2_lynx:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_autogun_small
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	turret: t2_lynxtur
+		Facings: 64
+    circle_effet: circle_effet_federation_charge
+		Length: *
+        BlendMode: additive
+    shield: electricshield
+		Length: *
+		BlendMode: Additive
+	icon: t2_lynxicon
+    
+t3_rhino:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_80mm01
+		Length: *
+	idle:
+		Facings: 64
+	turret: t3_rhinotur
+		Facings: 64
+	icon: t3_rhinoicon
+    
+t3_porcupine:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_190mm
+		Length: *
+	idle:
+		Facings: 64
+	turret: t3_porcupinetur
+		Facings: 64
+	icon: t3_porcupineicon
+    
+t3_mantis:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_190mm
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	empty-idle: t3_mantislaunch
+		Facings: 64
+	icon: t3_mantisicon
+
+t4_colossus:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_autogun_small
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	turret: t4_colossustur
+		Facings: 64
+	icon: t4_colossusicon
+
+t2_mongoose:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+        Facings: 64
+    muzzle: muzzle_60mm
+        Length: *
+        BlendMode: Additive
+    shield: electricshield
+		Length: *
+		BlendMode: Additive
+	turret: t2_mongoosetur
+		Facings: 64
+	icon: t2_mongooseicon

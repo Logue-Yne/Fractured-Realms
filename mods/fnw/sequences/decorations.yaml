@@ -1,0 +1,840 @@
+tree01:
+	Defaults:
+	idle:
+
+tree02:
+	Defaults:
+	idle:
+
+tree03:
+	Defaults:
+	idle:
+
+tree04:
+	Defaults:
+	idle:
+
+tree05:
+	Defaults:
+	idle:
+
+tree06:
+	Defaults:
+	idle:
+
+tree07:
+	Defaults:
+	idle:
+
+tree08:
+	Defaults:
+	idle:
+
+tree09:
+	Defaults:
+	idle:
+
+tree10:
+	Defaults:
+	idle:
+
+tree11:
+	Defaults:
+	idle:
+
+tree12:
+	Defaults:
+	idle:
+
+tree13:
+	Defaults:
+	idle:
+
+tree14:
+	Defaults:
+	idle:
+
+tree15:
+	Defaults:
+	idle:
+
+tree16:
+	Defaults:
+	idle:
+
+tree17:
+	Defaults:
+	idle:
+
+tree18:
+	Defaults:
+	idle:
+
+tree19:
+	Defaults:
+	idle:
+
+tree20:
+	Defaults:
+	idle:
+
+tree21:
+	Defaults:
+	idle:
+
+tree22:
+	Defaults:
+	idle:
+
+tree23:
+	Defaults:
+	idle:
+
+tree24:
+	Defaults:
+	idle:
+
+tree25:
+	Defaults:
+	idle:
+
+tree26:
+	Defaults:
+	idle:
+
+tree27:
+	Defaults:
+	idle:
+
+tree28:
+	Defaults:
+	idle:
+
+tree29:
+	Defaults:
+	idle:
+
+tree30:
+	Defaults:
+	idle:
+
+tree31:
+	Defaults:
+	idle:
+
+tree32:
+	Defaults:
+	idle:
+
+tree33:
+	Defaults:
+	idle:
+
+tree34:
+	Defaults:
+	idle:
+
+tree35:
+	Defaults:
+	idle:
+
+tree36:
+	Defaults:
+	idle:
+    
+tree37:
+	Defaults:
+	idle:
+    
+tree38:
+	Defaults:
+	idle:
+    
+tree39:
+	Defaults:
+	idle:
+    
+tree40:
+	Defaults:
+	idle:
+    
+treebionte01:
+	Defaults:
+	idle:
+    
+treebionte02:
+	Defaults:
+	idle:
+    
+treebionte03:
+	Defaults:
+	idle:
+    
+treebionte04:
+	Defaults:
+	idle:
+    
+orga_tree01:
+    treeroot:
+        Start: 1
+	idle:
+        ShadowStart: 2
+    
+orga_tree02:
+    treeroot:
+        Start: 1
+	idle:
+        ShadowStart: 2
+    
+orga_tree03:
+    treeroot:
+        Start: 1
+	idle:
+        ShadowStart: 2
+    
+orga_tree04:
+    treeroot:
+        Start: 1
+	idle:
+        ShadowStart: 2
+    
+orga_tree05:
+    treeroot:
+        Start: 1
+	idle:
+        ShadowStart: 2
+    
+orga_tree06:
+    treeroot:
+        Start: 1
+	idle:
+        ShadowStart: 2
+    
+orga_tree07:
+    treeroot:
+        Start: 1
+	idle:
+        ShadowStart: 2
+    
+orga_tree08:
+    treeroot:
+        Start: 1
+	idle:
+        ShadowStart: 2
+    
+orga_tree09:
+    treeroot:
+        Start: 1
+	idle:
+    
+orga_tree10:
+	Defaults:
+        ShadowStart: 2
+    treeroot:
+        Start: 1
+	idle:
+        ShadowStart: 2
+        
+toxintree01:
+	idle:
+    treeroot:
+        Start: 1
+        
+toxintree02:
+	idle:
+    treeroot:
+        Start: 1
+        
+toxintree03:
+	idle:
+    treeroot:
+        Start: 1
+        
+toxintree04:
+	idle:
+    treeroot:
+        Start: 1
+        
+toxintree05:
+	idle:
+    treeroot:
+        Start: 1
+        
+toxintree06:
+	idle:
+    treeroot:
+        Start: 1
+
+crystal_tree01:
+    treeroot:
+        Start: 1
+    light:
+        Start: 3
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 0
+		Length: *
+        BlendMode: Additive
+	idle:
+        ShadowStart: 2
+        
+crystal_rockfly01:
+    idle:
+        Start: 0
+        Tick: 40
+		Length: 120
+    idle02:
+        Start: 0
+        Tick: 50
+		Length: 120
+    idle03:
+        Start: 0
+        Tick: 55
+		Length: 120
+    effect: crystal_rockflyeffect1
+		Length: *
+        BlendMode: Additive
+
+crystal_tree02:
+    treeroot:
+        Start: 1
+    light:
+        Start: 3
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 0
+		Length: *
+        BlendMode: Additive
+	idle:
+        ShadowStart: 2
+
+crystal_tree03:
+    treeroot:
+        Start: 1
+    light:
+        Start: 3
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 0
+		Length: *
+        BlendMode: Additive
+	idle:
+        ShadowStart: 2
+
+crystal_tree04:
+    treeroot:
+        Start: 1
+    light:
+        Start: 3
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 0
+		Length: *
+        BlendMode: Additive
+	idle:
+        ShadowStart: 2
+
+crystal_tree05:
+    treeroot:
+        Start: 1
+    light:
+        Start: 3
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 0
+		Length: *
+        BlendMode: Additive
+	idle:
+        ShadowStart: 2
+
+crystal_tree06:
+    treeroot:
+        Start: 1
+    light:
+        Start: 3
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 0
+		Length: *
+        BlendMode: Additive
+	idle:
+        ShadowStart: 2
+
+crystal_tree07:
+    treeroot:
+        Start: 1
+    light:
+        Start: 3
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 0
+		Length: *
+        BlendMode: Additive
+	idle:
+        ShadowStart: 2
+
+crystal_tree08:
+    treeroot:
+        Start: 1
+    light:
+        Start: 3
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 0
+		Length: *
+        BlendMode: Additive
+	idle:
+        ShadowStart: 2
+        
+crystal_prisoners01:
+	idle:
+    
+crystal_prisoners02:
+	idle:
+    
+crystal_prisoners03:
+	idle:
+    
+bluefaune01:
+	idle:
+    light:
+        Start: 1
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 2
+        Offset: 0, -75
+        Tick: 15
+		Length: 7
+        BlendMode: Additive
+    spore:
+		Start: 2
+		Length: 7
+        BlendMode: Additive
+        
+bluefaune02:
+	idle:
+    light:
+        Start: 1
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 2
+        Offset: 0, -75
+        Tick: 15
+		Length: 7
+        BlendMode: Additive
+    spore:
+		Start: 2
+		Length: 7
+        BlendMode: Additive
+        
+bluefaune03:
+	idle:
+    light:
+        Start: 1
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 2
+        Offset: 0, -75
+        Tick: 15
+		Length: 7
+        BlendMode: Additive
+    spore:
+		Start: 2
+		Length: 7
+        BlendMode: Additive
+        
+bluefaune04:
+	idle:
+    light:
+        Start: 1
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 2
+        Offset: 0, -75
+        Tick: 15
+		Length: 7
+        BlendMode: Additive
+    spore:
+		Start: 2
+		Length: 7
+        BlendMode: Additive
+        
+bluefaune05:
+	idle:
+    light:
+        Start: 1
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 2
+        Offset: 0, -75
+        Tick: 15
+		Length: 7
+        BlendMode: Additive
+    spore:
+		Start: 2
+		Length: 7
+        BlendMode: Additive
+        
+bluefaune06:
+	idle:
+    light:
+        Start: 1
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 2
+        Offset: 0, -75
+        Tick: 15
+		Length: 7
+        BlendMode: Additive
+    spore:
+		Start: 2
+		Length: 7
+        BlendMode: Additive
+        
+bluefaune07:
+	idle:
+    light:
+        Start: 1
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 2
+        Offset: 0, -75
+        Tick: 15
+		Length: 7
+        BlendMode: Additive
+    spore:
+		Start: 2
+		Length: 7
+        BlendMode: Additive
+        
+bluefaune08:
+	idle:
+    light:
+        Start: 1
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 2
+        Offset: 0, -75
+        Tick: 15
+		Length: 7
+        BlendMode: Additive
+    spore:
+		Start: 2
+		Length: 7
+        BlendMode: Additive
+        
+bluefaune09:
+	idle:
+    light:
+        Start: 1
+        BlendMode: Additive
+    effect: crystaltree_effet
+		Start: 2
+        Offset: 0, -75
+        Tick: 15
+		Length: 7
+        BlendMode: Additive
+    spore:
+		Start: 2
+		Length: 7
+        BlendMode: Additive
+        
+rock_olitrax1:
+	idle:
+
+rock_olitrax2:
+	idle:
+
+rock_olitrax3:
+	idle:
+    
+toxinegg01:
+	idle:
+    spore: spore01
+        Length: *
+		Tick: 55
+		BlendMode: Additive
+    
+toxinegg02:
+	idle:
+    spore: spore02
+        Length: *
+		Tick: 75
+		BlendMode: Additive
+    
+toxinegg03:
+	idle:
+    spore: spore03
+        Length: *
+		Tick: 50
+		BlendMode: Additive
+    
+toxinegg04:
+	idle:
+    spore: spore01
+        Length: *
+		Tick: 65
+		BlendMode: Additive
+    
+toxinegg05:
+	idle:
+    spore: spore02
+        Length: *
+		Tick: 55
+		BlendMode: Additive
+        
+
+    
+massif_rock01:
+	idle: rocks
+        Start: 0    
+        
+massif_rock02:
+	idle: rocks
+        Start: 1   
+        
+massif_rock03:
+	idle: rocks
+        Start: 2   
+        
+massif_rock04:
+	idle: rocks
+        Start: 3
+        
+destructible_rocks01:
+	idle: destructiblerocks
+        Start: 0
+	damaged-build: destructiblerocks
+		Start: 1
+        
+destructible_rocks02:
+	idle: destructiblerocks
+        Start: 2
+	damaged-build: destructiblerocks
+		Start: 3
+        
+destructible_rocks03:
+	idle: destructiblerocks
+        Start: 4
+	damaged-build: destructiblerocks
+		Start: 5
+    
+skulldecoy01:
+	idle:
+    
+skulldecoy02:
+	idle:
+    
+skulldecoy03:
+	idle:
+     
+urbanlamp_01:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: lamp01
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+        
+megaspot01:
+    Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+
+megaspot02:
+    Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+        
+megaspot03:
+    Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+        
+megaspot04:
+    Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+	Neon1:
+		Start: 1
+		BlendMode: Additive
+
+urbandecoy_01:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+	idle:
+	damaged-idle:
+		Start: 1
+	Neon1:
+		Start: 2
+		Length: 2
+		BlendMode: Additive
+	Neon2:
+		Start: 5
+		Length: 2
+		BlendMode: Additive
+
+urbandecoy_02:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+	idle:
+	damaged-idle:
+		Start: 1
+	Neon1:
+		Start: 2
+		Length: 2
+		BlendMode: Additive
+	Neon2:
+		Start: 5
+		Length: 2
+		BlendMode: Additive
+
+urbandecoy_03:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+	idle:
+	damaged-idle:
+		Start: 1
+	idle2:
+		Start: 2
+	damaged-idle2:
+		Start: 3
+
+panel_road01:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 0
+	light:
+		Start: 1
+		Length: 2
+		BlendMode: Additive
+
+panel_road02:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 3
+	damaged-idle:
+		Start: 3
+	light:
+		Start: 4
+		Length: 2
+		BlendMode: Additive  
+
+panel_road03:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 6
+	damaged-idle:
+		Start: 6
+	light:
+		Start: 7
+		Length: 2
+		BlendMode: Additive  
+
+panel_road04:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 9
+	damaged-idle:
+		Start: 9
+	light:
+		Start: 10
+		Length: 2
+		BlendMode: Additive        
+
+panel_popup01:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 12
+		Offset: 0, -10
+	damaged-idle:
+		Start: 13
+		Offset: 0, -10
+
+panel_popup02:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 14
+		Offset: 0, -10
+	damaged-idle:
+		Start: 15
+		Offset: 0, -10
+
+panel_popup03:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 16
+		Offset: 0, -10
+	damaged-idle:
+		Start: 17
+		Offset: 0, -10
+
+panel_popup04:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 18
+		Offset: 0, -10
+	damaged-idle:
+		Start: 19
+		Offset: 0, -10
+
+panel_popupiso01:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 20
+	damaged-idle:
+		Start: 21
+
+panel_popupiso02:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 22
+	damaged-idle:
+		Start: 23
+
+panel_popupiso03:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 24
+	damaged-idle:
+		Start: 25
+        
+relais01:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 26
+	damaged-idle:
+		Start: 26
+	light:
+		Start: 27
+		BlendMode: Additive
+
+relais02:
+    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults: urbandecoy_04
+	idle:
+		Start: 28
+	damaged-idle:
+		Start: 28
+	light:
+		Start: 29
+		BlendMode: Additive  

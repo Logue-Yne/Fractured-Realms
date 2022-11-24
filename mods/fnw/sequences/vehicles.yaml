@@ -1,0 +1,220 @@
+t1_heidrun:
+	Inherits@Stat: ^StatVehicleEffect	
+    Defaults:
+        Scale: 0.75
+    idle:
+        Facings: 64
+	turret: t1_heidruntur
+		Facings: 64
+    turret_miss: t1_heidrun_misstur
+		Facings: 64
+    turret_gun: t1_heidrun_guntur
+		Facings: 64
+	muzzle: muzzle_autogun_small
+		Length: *
+		BlendMode: Additive
+	icon: artemisicon
+    
+t1_utgard:
+	Inherits@Stat: ^StatVehicleEffect	
+    idle:
+        Facings: 64
+	muzzle: muzzle_autogun_small
+		Length: *
+		BlendMode: Additive
+	icon: utgardicon
+
+t2_dwarf:
+	Inherits@Stat: ^StatVehicleEffect
+	muzzle: muzzle_autogun_medium
+		Length: *
+		BlendMode: Additive
+	idle:
+        Facings: 64
+	lightgun: minbaselightcub
+		Length: 4
+		BlendMode: Additive
+	icon: achilleicon
+    
+t2_dwarf2:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+	muzzle: muzzle_autogun_medium
+		Length: *
+		BlendMode: Additive
+	idle:
+        Facings: 64
+	lightgun: minbaselightcub
+		Length: 4
+		BlendMode: Additive
+	icon: achilleicon
+
+t2_troll:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 1.0
+	muzzle: trollplasmaball
+		Length: *
+		BlendMode: Additive
+	idle:
+        Facings: 64
+	icon: achilledoomicon
+
+t1_ratatoskr:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 64
+	muzzle: muzzle_autogun_small
+		Length: *
+		BlendMode: Additive
+	icon: prometheeicon
+
+t2_garm:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.80
+	muzzle: muzzle_bluegun
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+	turret: t2_garmtur
+		Facings: 64
+        Offset: 0,10
+	icon: minauticon
+
+t2_warg:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.82
+	idle:
+		Facings: 64
+	turret: t2_wargtur
+		Facings: 64
+	idleamp: t2_wargamp
+		Facings: 64
+	muzzle: firegunmuzzlemin
+		Facings: -16
+		Length: 14
+		BlendMode: Additive
+	icon: wargicon
+
+t2_warg.husk:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.82
+	idle:
+
+t2_yggdrasil:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+	idle:
+		Facings: 64
+	icon: yggdrasilicon
+
+t2_lindwyrm:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.82
+	idle:
+		Facings: 64
+	turret: t2_lindwyrmtur
+		Facings: 64
+	muzzle: muzzle_190mm
+		Length: *
+	icon: lindwyrnicon
+
+t2_lindwyrm.husk:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.82
+	idle:
+
+t3_doomtower_mobile:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+
+t3_fafnir:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 0.85
+	muzzle: muzzle_autogun_small
+		Length: *
+		BlendMode: Additive
+    secturret: fafnir_secturret
+        Facings: 64
+    secturret2: fafnir_secturret2
+        Facings: 64
+	idle:
+		Facings: 64
+	icon: fafniricon
+
+t3_loki:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+	idle:
+		Facings: 64
+	idle-deployed: null
+	muzzle: muzzle_autogun_small
+		Length: *
+		BlendMode: Additive
+    turret: t3_lokideployed
+        Facings: 64
+	make: t3_lokimake
+		Length: *
+		Tick: 30
+	icon: lokiicon
+
+t3_heimdall:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 1.0
+	muzzle: muzzle_balist_large
+		Length: *
+		BlendMode: Additive
+	idle:
+		Facings: 64
+    idle-deployed: t3_heimdall_deploy
+	turret: t3_heimdall_deploytur
+		Facings: 64
+	make: t3_heimdall_deploymk
+		Length: 17
+		Tick: 30
+	icon: heimicon
+
+t4_odin:
+	Inherits@Stat: ^StatVehicleEffect
+    Defaults:
+        Scale: 1.0
+	idle:
+		Facings: 64
+    muzzle: odin_muzzlefire
+		Length: *
+		BlendMode: Additive
+    muzzle_charge: odin_muzzlecharge
+		Length: *
+		BlendMode: Additive
+	turret: t4_odintur
+		Facings: 64
+	turretmode: t4_odinturmode
+		Facings: 64
+	icon: odinicon
+
+t1_dainn:
+	Inherits@Stat: ^StatVehicleEffect
+	idle: null
+        Scale: 0.75
+	harvest: harvest_anim
+		Length: *
+		BlendMode: Additive
+	dock: null
+	dock-loop: null
+	icon: opharvicon
+    
+# Federation Vehicle Sequences
+
+bull:
+	Inherits@Stat: ^StatVehicleEffect
+	idle:
+		Facings: 64
+	icon: null
