@@ -1,0 +1,223 @@
+t1_guardmen:
+	Inherits@1: ^Infantry
+    # / Inherit Stat / effect - upgrade Unite /
+    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
+    Inherits@Effect01: ^affect.Officer.influence.Federation
+    # / Inherit Stats Unit /
+	Inherits@StatUnite: ^t1_guardmen.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Infantry.federation, Infantry.federationT2, Infantry.federationT3
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~techlevel.infonly
+		IconPalette: Federation.Icon
+	AttackFrontal:
+        PauseOnCondition: stunweapons
+    # //// Garrisoner Condition Infantry ////
+    Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+        GarrisonCondition: GarrisonWeaponRange
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: GuardMen.MG
+		LocalOffset: 700,0,420
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	WithMuzzleOverlay:
+	Armament@PRIMARY:
+		Weapon: GuardMen.MG
+		LocalOffset: 700,0,420
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	HitShape:
+
+t1_guardmenat:
+	Inherits@1: ^Infantry
+    # / Inherit Stat / effect - upgrade Unite /
+    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
+    Inherits@Effect01: ^affect.Officer.influence.Federation
+	Inherits@StatUnite: ^t1_guardmen_at.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Infantry.federation, Infantry.federationT2, Infantry.federationT3
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~techlevel.infonly
+		IconPalette: Federation.Icon
+	AttackFrontal:
+        PauseOnCondition: stunweapons
+    # //// Garrisoner Condition Infantry ////
+    Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+        GarrisonCondition: GarrisonWeaponRange
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: GuardMen.missile
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	WithMuzzleOverlay:
+	Armament@PRIMARY:
+		Weapon: GuardMen.missile
+		LocalOffset: 700,0,420
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	Armament@GARRISONEDFAFNIR:
+		Name: garrisoned.fafnir
+		Weapon: GuardMen.missile
+		MuzzleSequence: garrison-muzzle
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	RenderSprites:
+	HitShape:
+
+    
+t2_officer:
+	Inherits@1: ^Infantry
+    # / Inherit Stat / effect - upgrade Unite /
+    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
+	Inherits@StatUnite: ^t2_officier.stat.unite
+    # / Inherit Option Unite /
+	Inherits@CaptureRules: ^Unite.CaptureRules
+    Inherits@UnitePlayStat:^UnitPlayerStat
+	Inherits@3: ^Infantry.Upgrade.baneslayer
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / < Stat Unite Actor > /
+	Buildable:
+		Queue: Infantry.federation, Infantry.federationT2, Infantry.federationT3
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~techlevel.infonly
+		IconPalette: Federation.Icon
+    ProximityExternalCondition@affect.Officer.influence.Federation:
+        Condition: Officer.influence
+		Range: 5c0
+        AffectsParent: false
+	WithIdleOverlay@Circle_effet:
+		Offset: -15,0,0
+		Sequence: circle_effet
+		Palette: flammeeffectblue50
+    -AttackMove:
+    Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+
+t2_locust:
+	Inherits@1: ^Infantry
+    # / Inherit Stat / effect - upgrade Unite /
+    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
+    Inherits@Effect01: ^affect.Officer.influence.Federation
+	Inherits@StatUnite: ^t2_locust.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+    # / < Stat Unite Base > /
+	Buildable:
+		Queue: Infantry.federation, Infantry.federationT2, Infantry.federationT3
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~techlevel.infonly
+		IconPalette: Federation.Icon
+	AttackFrontal:
+        PauseOnCondition: stunweapons
+    # //// Garrisoner Condition Infantry ////
+    Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+        GarrisonCondition: GarrisonWeaponRange
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: locustGrenade
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	WithMuzzleOverlay:
+	Armament@Grenade:
+		Weapon: locustGrenade
+		LocalOffset: 700,0,480
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	Armament@Autocanona:
+		Weapon: locustAutocanon
+		LocalOffset: 0,0,220
+	Armament@GARRISONEDFAFNIR:
+		Name: garrisoned.fafnir
+		Weapon: locustGrenade
+		MuzzleSequence: garrison-muzzle
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	HitShape:
+    
+t3_silverwolf:
+	Inherits@1: ^Infantry
+    # / Inherit Stat / effect - upgrade Unite /
+    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
+    Inherits@Effect01: ^affect.Officer.influence.Federation
+    # / Inherit Stats Unit /
+	Inherits@StatUnite: ^t3_wolf.stat.unite
+    # / Inherit option Unit /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetGroundAssaultMove
+    # / < Stat Actor Unit > /
+	Buildable:
+		Queue: Infantry.federation, Infantry.federationT2, Infantry.federationT3
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~techlevel.infonly
+		IconPalette: Federation.Icon
+	AttackFrontal:
+        PauseOnCondition: stunweapons
+    # //// Garrisoner Condition Infantry ////
+    Garrisoner:
+		Voice: Move
+		GarrisonType: Garrisoner
+        GarrisonCondition: GarrisonWeaponRange
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: SniperWolf.Gun
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	Armament@PRIMARY:
+		Weapon: SniperWolf.Gun
+		LocalOffset: 700,0,420
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	Armament@GARRISONEDFAFNIR:
+		Name: garrisoned.fafnir
+		Weapon: SniperWolf.Gun
+		LocalOffset: 700,0,420
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	WithMuzzleOverlay:
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
+		DefaultAttackSequence: shoot
+	RenderSprites:
+	HitShape:

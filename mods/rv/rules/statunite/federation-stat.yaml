@@ -1,0 +1,857 @@
+# =======================================================================================================================================================================================================================
+# ============================================================================================ |     Infantry Federation      | =========================================================================================
+# =======================================================================================================================================================================================================================
+
+# |------------------------------| - GUARDMEN - |------------------------------|
+#--Stat Unite--
+^t1_guardmen.stat.unite:
+	Tooltip:
+		Name: GuardMen
+	Buildable:
+		Description: Basic infantryman armed with an assault rifle\nCan capture neutral structures\n> Strong vs Infantry\n> Weak vs Vehicles, Aircraft
+		BuildDurationModifier: 2
+	Valued:
+		Cost: 100
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 250
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 9c0
+        
+#--Weapons01--
+^GuardMen.MG.Federation.Stat.weapons:
+    Range: 7c0
+	ReloadDelay: 20
+    Burst: 5
+    BurstDelay: 1
+	Warhead@1Dam: SpreadDamage
+		Damage: 25
+		Spread: 65
+		Versus:
+			Infantry: 100
+			LightVehicle: 40
+			ArmorTank: 35
+			LightAerial: 0
+			HeavyAerial: 0
+			Concrete: 35
+            
+# |------------------------------| - OFFICIER - |------------------------------|
+#--Stat Unite--
+^t2_officier.stat.unite:
+	Tooltip:
+		Name: GuardMen AT
+	Buildable:
+		Description: ...
+		BuildDurationModifier: 5
+	Valued:
+		Cost: 500
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 9c0
+
+# |------------------------------| - GUARDMEN AT - |------------------------------|
+#--Stat Unite--
+^t1_guardmen_at.stat.unite:
+	Tooltip:
+		Name: GuardMen AT
+	Buildable:
+		Description: ...
+		BuildDurationModifier: 3
+	Valued:
+		Cost: 300
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 9c0
+        
+#--Weapons01--
+^GuardMen.Missile.Federation.Stat.weapons:
+    ValidTargets: Ground, Air, Water
+    Range: 8c0
+	ReloadDelay: 75
+	Projectile: Missile
+		Speed: 860
+		PointDefenseType: Missile
+    Warhead@1Dam: SpreadDamage
+		Damage: 400
+		Spread: 1c0
+		Versus:
+			Infantry: 15
+			LightVehicle: 85
+			ArmorTank: 90
+			LightAerial: 100
+			HeavyAerial: 100
+			Concrete: 60
+        ValidTargets: Ground, Air, Water
+
+
+# |------------------------------| - OFFICER - |------------------------------|
+#--Stat Unite--
+^t3_wolf.stat.unite:
+	Tooltip:
+		Name: Sniper Wolf
+	Buildable:
+		Description: ...
+		Prerequisites:
+		BuildDurationModifier: 8
+	Valued:
+		Cost: 700
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 12c0
+        
+#--Weapons01--
+^SniperWolf.Gun.Federation.Stat.weapons:
+    Range: 14c0
+	ReloadDelay: 60
+	Warhead@1Dam: SpreadDamage
+		Damage: 800
+		Versus:
+			Infantry: 150
+			LightVehicle: 10
+			ArmorTank: 10
+			LightAerial: 0
+			HeavyAerial: 0
+			Concrete: 10
+
+# |------------------------------| - LOCUST - |------------------------------|
+#--Stat Unite--
+^t2_locust.stat.unite:
+	Tooltip:
+		Name: Locust
+	Buildable:
+		Description: Basic infantryman armed with an assault rifle\nCan capture neutral structures\n> Strong vs Infantry\n> Weak vs Vehicles, Aircraft
+		Prerequisites:
+		BuildDurationModifier: 6
+	Valued:
+		Cost: 650
+	Armor:
+		Type: Infantry
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 10c0
+        
+#--Weapons01--
+^locust.Grenade.Federation.Stat.weapons:
+	Range: 7c0
+	ReloadDelay: 50
+	Warhead@1Dam: SpreadDamage
+		Damage: 190
+		Versus:
+			Infantry: 100
+			LightVehicle: 82
+			ArmorTank: 80
+			Concrete: 60
+            
+#--Weapons02 AA--
+^locust.Autocanon.Federation.Stat.weapons:
+    ValidTargets: Air
+	Range: 10c0
+	ReloadDelay: 12
+	Warhead@1Dam: SpreadDamage
+		Damage: 50
+		Versus:
+			Infantry: 60
+			LightVehicle: 85
+			ArmorTank: 35
+			Concrete: 30
+        ValidTargets: Air
+        
+#--Weapons01--
+
+# =======================================================================================================================================================================================================================
+# ============================================================================================ |     Vehicle Federation      | ==========================================================================================
+# =======================================================================================================================================================================================================================
+
+# |------------------------------| - SURICATE - |------------------------------|
+#--Stat Unite--
+^t1_stalker.stat.unite:
+	Tooltip:
+		Name:
+	Buildable:
+		Description: Light Reconnaissance Vehicle"\nVery light and fast reconnaissance vehicle armed with a light machine gun.\n\n* Can carry up to 2 infantry units.\n\n> Strong vs Infantry.\n> Weak vs Vehicles, Aircraft, Structures.
+		Prerequisites: fedbarr
+		BuildDurationModifier: 14
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: LightVehicle
+	Health:
+		HP: 1000
+	Mobile:
+		Speed: 100
+ 
+# |------------------------------| - SURICATE - |------------------------------|
+#--Stat Unite--
+^t1_suricate.stat.unite:
+	Tooltip:
+		Name: Meerkat
+	Buildable:
+		Description: Very light and fast reconnaissance vehicle armed with a light machine gun.\n\n* Can carry up to 2 infantry units.\n\n> Strong vs Infantry.\n> Weak vs Vehicles, Aircraft, Structures.
+		BuildDurationModifier: 8
+	Valued:
+		Cost: 500
+	Armor:
+		Type: LightVehicle
+	Health:
+		HP: 400
+	Mobile:
+		Speed: 110
+	RevealsShroud:
+		Range: 12c0
+        
+#--Weapons01--
+^Surricate.M60.Federation.Stat.weapons:
+	Range: 6c0
+	ReloadDelay: 50
+	Burst: 3
+	BurstDelays: 2
+	Warhead@1Dam: SpreadDamage
+		Damage: 60
+		Versus:
+			Infantry: 100
+			LightVehicle: 42
+			ArmorTank: 40
+			Concrete: 40
+
+# |------------------------------| - TICK LIGHT TANK - |------------------------------|
+#--Stat Unite--
+^t1_tick.stat.unite:
+	Tooltip:
+		Name: Tick
+	Buildable:
+		Description: Cheap and easy to produce light tank armed with a low-velocity gun.\n\n> Strong vs Light Vehicles, Structures.\n> Weak vs Infantry, Heavy Vehicles, Aircraft.
+		BuildDurationModifier: 8
+	Valued:
+		Cost: 600
+	Armor:
+		Type: LightVehicle
+	Health:
+		HP: 3000
+	Mobile:
+		Speed: 90
+	Turreted:
+		TurnSpeed: 15
+		RealignDelay: 20
+	RevealsShroud:
+		Range: 10c0
+        
+#--Weapons01--
+^Tick.gun.Federation.Stat.weapons:
+	Range: 10c0
+	ReloadDelay: 35
+	Warhead@1Dam: SpreadDamage
+		Damage: 320
+		Versus:
+			Infantry: 30
+			LightVehicle: 100
+			ArmorTank: 110
+			Concrete: 70
+
+# |------------------------------| - COBRA AA TANK - |------------------------------|
+#--Stat Unite--
+^t2_cobra.stat.unite:
+	Tooltip:
+		Name: Cobra
+	Buildable:
+		Description: Lightly armored vehicle fitted with an autocannon.\n\n> Strong vs Infantry, Aircraft.\n> Weak vs Vehicles, Structures.
+		BuildDurationModifier: 12
+	Valued:
+		Cost: 850
+	Armor:
+		Type: LightVehicle
+	Health:
+		HP: 2000
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 12c0
+        
+#--Weapons01--
+^Cobra_Dca.Federation.Stat.weapons:
+	Range: 12c0
+	ReloadDelay: 6
+	Warhead@1Dam: SpreadDamage
+		Damage: 40
+		Versus:
+			Infantry: 60
+			LightVehicle: 85
+			ArmorTank: 35
+			Concrete: 30
+
+# |------------------------------| - LYNX COMMAND VEHICLE - |------------------------------|
+#--Stat Unite--
+^t2_lynx.stat.unite:
+	Tooltip:
+		Name: Lynx
+	Buildable:
+		Description: Armored field command vehicle fitted with a light machine gun.\n\n* Allied units around the Lynx deal 25% more damage and are 25% more resilient.\n* Can detect stealthed units.\n\n> Strong vs Infantry.\n> Weak vs Vehicles, Aircraft, Structures.
+		BuildDurationModifier: 11
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 1800
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 10c0
+        
+#--Weapons01--
+^Lynx.M60.Federation.Stat.weapons:
+	Range: 6c0
+	ReloadDelay: 50
+	Burst: 4
+	BurstDelays: 2
+	Range: 5c256
+	Warhead@1Dam: SpreadDamage
+		Damage: 60
+		Versus:
+			Infantry: 100
+			LightVehicle: 42
+			ArmorTank: 40
+			Concrete: 40
+
+# |------------------------------| - MONGOOSE ARTY SUPPORT - |------------------------------|
+#--Stat Unite--
+^t2_mongoose.stat.unite:
+	Tooltip:
+		Name: Mongoose
+	Buildable:
+		Description: Lightly armored self-propelled mortar that fires high-explosive fragmentation shells.\n\n> Strong vs Infantry, Light Vehicles, Structures.\n> Weak vs Heavy Vehicles, Aircraft.
+		Prerequisites: fedlabtech
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 1100
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 1500
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 12c0
+        
+#--Weapons01--
+^120mm.mongoose.Federation.Stat.weapons:
+	Range: 14c0
+	ReloadDelay: 65
+	MinRange: 2c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 450
+		Versus:
+			Infantry: 35
+			LightVehicle: 100
+			ArmorTank: 70
+			Concrete: 80
+# |------------------------------| - RHINO TANK STEALH VEHICLE - |------------------------------|
+#--Stat Unite--
+^t3_rhino.stat.unite:
+	Tooltip:
+		Name: Rhino
+	Buildable:
+		Description: Advanced tank destroyer armed with a powerful gun.\n\n* Stealthed when not attacking.\n\n> Strong vs Vehicles, Structures.\n> Weak vs Infantry, Aircraft.
+		BuildDurationModifier: 25
+	Valued:
+		Cost: 1300
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 5800
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 12c0
+    # Idle Cloack statut 
+	Cloak:
+		CloakDelay: 30
+        
+#--Weapons01--
+^Rhino_gun.Federation.Stat.weapons:
+	Range: 10c0
+	ReloadDelay: 50
+	Range: 9c512
+	Warhead@1Dam: SpreadDamage
+		Damage: 980
+		Versus:
+			Infantry: 30
+			LightVehicle: 100
+			ArmorTank: 110
+			Concrete: 45
+
+^Rhino_gunspeed.Federation.Stat.weapons:
+	Range: 10c0
+	ReloadDelay: 25
+	Range: 9c512
+	Warhead@1Dam: SpreadDamage
+		Damage: 950
+		Versus:
+			Infantry: 30
+			LightVehicle: 100
+			ArmorTank: 110
+			Concrete: 45
+
+
+# |------------------------------| - ANACONDA AA SUPPORT VEHICLE - |------------------------------|
+#--Stat Unite--
+^t3_porcupine.stat.unite:
+	Tooltip:
+		Name: Anaconda
+	Buildable:
+		Description: Advanced anti-aircraft artillery system armed with a high-caliber rotary cannon.\n\n* Can reveal any enemy aircraft within a very large radius around itself.\n* Can detect stealthed units.\n\n> Strong vs Aircraft.\n> Weak vs Infantry, Vehicles, Structures.
+		BuildDurationModifier: 28
+	Valued:
+		Cost: 1200
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 2200
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 14c0
+    # Detect Cloack
+	DetectCloaked:
+		Range: 10c0
+        
+#--Weapons01--
+^Anaconda_gatling.Federation.Stat.weapons:
+	ValidTargets: Air
+	ReloadDelay: 0
+	Range: 12c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 95
+		Spread: 1c128
+        ValidTargets: Air
+		Versus:
+			Infantry: 60
+			LightVehicle: 85
+			ArmorTank: 80
+			Concrete: 60
+
+#--Weapons0._target/malus--
+^Anaconda.Target.Federation.Stat.weapons:
+	Range: 11c0
+	ReloadDelay: 6
+	Range: 14c512
+	MinRange: 2c0
+
+# |------------------------------| - CROCODILE ARTY SUPPORT - |------------------------------|
+#--Stat Unite--
+^t3_mantis.stat.unite:
+	Tooltip:
+		Name: Crocodile
+	Buildable:
+		Description: Slow and lightly armored self-propelled artillery that fires inaccurate but tremendously powerful high-explosive shells at extremely long range.\nFor those who like big artillery barrages. ;)\n\n> Strong vs Infantry, Vehicles, Structures.\n> Weak vs Aircraft.
+		BuildDurationModifier: 28
+	Valued:
+		Cost: 1800
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 2200
+	Mobile:
+		Speed: 75
+	RevealsShroud:
+		Range: 14c0
+        
+#--Weapons01--
+^Mantis.missile.Federation.Stat.weapons:
+	Range: 28c0
+    MinRange: 6c0
+	ReloadDelay: 180
+	Warhead@1Dam: SpreadDamage
+		Damage: 980
+        Spread: 1c512
+		Versus:
+			Infantry: 20
+			LightVehicle: 110
+			ArmorTank: 100
+			Concrete: 100
+
+#--Animation stat Weapons01--      
+^Mantis.missile.Federation.Shock.weapons:
+	Range: 28c0
+    MinRange: 6c0
+	ReloadDelay: 180
+
+# |------------------------------| - COLOSSUS ARTY SUPPORT - |------------------------------|
+#--Stat Unite--
+^t4_colossus.stat.unite:
+	Tooltip:
+		Name: Mastodon
+	Buildable:
+		Description: Massive experimental super-unit armed with 3 battleship-grade turrets and countless anti-air batteries.\n\n* Can deploy infantry units and assemble ground vehicles and aircraft.\n* Passively damages every enemy aircraft within a certain radius.\n* Allied units around the Mastodon deal 25% more damage and are 20% more resilient.\n\n> Strong vs Everything.\n> Weak vs None.
+		Prerequisites: fedtech
+		BuildDurationModifier: 45
+	Valued:
+		Cost: 5000
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 23000
+	Mobile:
+		Speed: 92
+	RevealsShroud:
+		Range: 12c0
+    # Detect Cloack
+	DetectCloaked:
+		Range: 5c0
+        
+#--Weapons01 Cannon Primary--
+^Goliath.PrimaryGunCanon.Stat.weapons:
+	Range: 9c512
+	ReloadDelay: 35
+	Burst: 2
+	BurstDelay: 10
+	Warhead@1Dam: SpreadDamage
+		Damage: 950
+        Spread: 1c512
+		Versus:
+			Infantry: 30
+			LightVehicle: 100
+			ArmorTank: 110
+			Concrete: 45
+
+#--Weapons01 Cannon Secondary--
+^Goliath.SecondaryGunCanon.Stat.weapons:
+	Range: 9c512
+	ReloadDelay: 25
+	Burst: 2
+	BurstDelay: 10
+	Warhead@1Dam: SpreadDamage
+		Damage: 450
+        Spread: 1c512
+		Versus:
+			Infantry: 30
+			LightVehicle: 100
+			ArmorTank: 110
+			Concrete: 45
+
+# =======================================================================================================================================================================================================================
+# ============================================================================================ |     Aircraft Federation      | =========================================================================================
+# =======================================================================================================================================================================================================================
+
+# =======================================================================================================================
+# ============================================== | Research Federation |  ==============================================
+# =======================================================================================================================   
+
+# |------------------------------| - Electric Reactive Armor - |------------------------------|
+#--Stat Research--
+^Upgrade.InfantryTogether.federation.stat:
+	Tooltip:
+		Name: Stronger Together!
+	Buildable:
+		Description: Weapon damage and range increased by 10% when 10 ground units or more are close to each other.
+		Prerequisites:
+		BuildDurationModifier: 120
+	Valued:
+		Cost: 1000
+
+# |------------------------------| - Electric Reactive Armor - |------------------------------|
+#--Stat Research--
+^Upgrade.ElectricShield.federation.stat:
+	Tooltip:
+		Name: Electric Reactive Armor
+	Buildable:
+		Description: Ground vehicles’ armor can fully absorb 1 hit. /n Electric Reactive Armor takes 25 sec to recharge.
+		Prerequisites:
+		BuildDurationModifier: 120
+	Valued:
+		Cost: 1000
+        
+# |------------------------------| - Improved Autoloader  - |------------------------------|
+#--Stat Research--
+^Upgrade.Ramjet.federation.stat:
+	Tooltip:
+		Name: Ramjet Technology
+	Buildable:
+		Description: Missiles and artillery shells have increased range.
+		Prerequisites:
+		BuildDurationModifier: 120
+	Valued:
+		Cost: 1000
+      
+# |------------------------------| - Improved Autoloader  - |------------------------------|
+#--Stat Research--
+^Upgrade.ImprovedLoader.federation.stat:
+	Tooltip:
+		Name: Improved Autoloader 
+	Buildable:
+		Description: Ticks, Cobras, Mongooses, Crocodiles and Rhinos fire 50% faster.
+		Prerequisites:
+		BuildDurationModifier: 120
+	Valued:
+		Cost: 1000
+            
+# |------------------------------| - Fusion Reactor  - |------------------------------|
+#--Stat Research--
+^Upgrade.FusionReactor.federation.stat:
+	Tooltip:
+		Name: Fusion Reactor
+	Buildable:
+		Description: Doubles the power output of every Reactor
+		Prerequisites:
+		BuildDurationModifier: 100
+	Valued:
+		Cost: 1000
+    
+# =================================================================================================================================================================
+# =========================================================== |     Abillity Power Federation       |  ===============================================================
+# =================================================================================================================================================================
+
+# |------------------------------| - Federation ThunderStrike Artilery - |------------------------------|
+^Mantis.missile.AbillityPower.Federation.Stat.weapons:
+	Range: 1c0
+    MinRange: 6c0
+	ReloadDelay: 180
+	Warhead@1Dam: SpreadDamage
+		Damage: 600
+        Spread: 1c512
+		Versus:
+			Infantry: 20
+			LightVehicle: 110
+			ArmorTank: 100
+			Concrete: 80
+
+# |------------------------------| - Federation Carpet bomb power - |------------------------------|
+^Carpetbomb.Federation.Stat.weapons:
+	ReloadDelay: 10
+	Range: 5c512
+	Warhead@1Dam: SpreadDamage
+		Damage: 420
+		Versus:
+			Infantry: 120
+			LightVehicle: 100
+			ArmorTank: 95
+			Concrete: 90
+
+# =================================================================================================================================================================
+# =========================================================== |     Defence Federation       |  ===============================================================
+# =================================================================================================================================================================
+
+# |------------------------------| - Bunker - |------------------------------|
+^Bunker.federation.stat.building:
+	Tooltip:
+		Name: Bunker
+	Buildable:
+		Description: garrison structure that can accommodate 5 infantry units
+		BuildDurationModifier: 50
+	Valued:
+		Cost: 500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+
+# =================================================================================================================================================================
+# =========================================================== |     Structure Federation       |  ===============================================================
+# =================================================================================================================================================================
+
+# |------------------------------| - Construction Yard - |------------------------------|
+^Mcv.federation.stat.building:
+	Tooltip:
+		Name: Field Fortress (Construction Yard)
+	Buildable:
+		Description: The Federation’s primary building.\n\n* Limited to one at a time per player.\n* Cannot redeploy.
+		BuildDurationModifier: 50
+	Valued:
+		Cost: 2500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 14000
+
+# |------------------------------| - Power Plant - |------------------------------|
+^Powerplant.federation.stat.building:
+	Tooltip:
+		Name: Field Power Plant
+	Buildable:
+		Description: Provides power to other structures.
+		BuildDurationModifier: 8
+	Valued:
+		Cost: 500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 5000
+        
+# |------------------------------| - Refinery - |------------------------------|
+^Refinery.federation.stat.building:
+	Tooltip:
+		Name: Field Refinery
+	Buildable:
+		Description: Refines Diastim into credits.
+		Prerequisites: fedpowr
+		BuildDurationModifier: 25
+	Valued:
+		Cost: 1600
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+        
+# |------------------------------| - Barrack - |------------------------------|
+^Barrack.federation.stat.building:
+	Tooltip:
+		Name: Field Barracks
+        RequiresCondition: !UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT2:
+		Name: Field Barracks (T2)
+        RequiresCondition: UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT3:
+		Name: Field Barracks (T3)
+        RequiresCondition: UnlockTech3
+	Buildable:
+		Description: Produces tier 1 infantry units.
+		BuildDurationModifier: 8
+	Valued:
+		Cost: 500
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 5000
+        
+# |------------------------------| - Weapon Factory - |------------------------------|
+^Factory.federation.stat.building:
+	Tooltip:
+		Name: Field War Factory
+        RequiresCondition: !UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT2:
+		Name: Field War Factory (T2)
+        RequiresCondition: UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT3:
+		Name: Field War Factory (T3)
+        RequiresCondition: UnlockTech3
+	Buildable:
+		Description: Produces tier 1 vehicles.
+		Prerequisites: fedproc
+		BuildDurationModifier: 35
+	Valued:
+		Cost: 2000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 8000
+        
+# |------------------------------| - Airpad - |------------------------------|
+^Airpad.federation.stat.building:
+	Tooltip:
+		Name: Field Air Base
+        RequiresCondition: !UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT2:
+		Name: Field Air Base (T2)
+        RequiresCondition: UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT3:
+		Name: Field Air Base (T3)
+        RequiresCondition: UnlockTech3
+	Buildable:
+		Description: Produces tier 1 aircraft.
+		Prerequisites: fedproc
+		BuildDurationModifier: 25
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 5000
+
+# |------------------------------| - Research - |------------------------------|
+^Research.federation.stat.building:
+	Tooltip:
+		Name: Field research Center
+        RequiresCondition: !UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT2:
+		Name: Field research Center (T2)
+        RequiresCondition: UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT3:
+		Name: Field research Center (T3)
+        RequiresCondition: UnlockTech3
+	Buildable:
+		Description: ---
+		Prerequisites: fedproc
+		BuildDurationModifier: 20
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 14000
+
+# |------------------------------| - Tech center - |------------------------------|
+^Tech.federation.stat.building:
+	Tooltip:
+		Name: Field research Center
+        RequiresCondition: !UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT2:
+		Name: Field research Center (T2)
+        RequiresCondition: UnlockTech2 || !UnlockTech3
+	Tooltip@UpgradeT3:
+		Name: Field research Center (T3)
+        RequiresCondition: UnlockTech3
+	Buildable:
+		Description: ---
+		Prerequisites: fedproc
+		BuildDurationModifier: 45
+	Valued:
+		Cost: 2000
+	Armor:
+		Type: Concrete
+	Health:
+		HP: 14000
+  
+# |------------------------------| - Unlock DualProd - |------------------------------|
+^UpgradeDual.federation.stat.upgrade:
+	Tooltip:
+		Name: Production dual
+	Buildable:
+		Description: ...
+		Prerequisites: fedlabtech
+		BuildDurationModifier: 12
+	Valued:
+		Cost: 600
+        
+# |------------------------------| - Unlock T2 - |------------------------------|
+^UpgradeT2.federation.stat.upgrade:
+	Tooltip:
+		Name: Production Building Upgrade (T2) [Upgrade]
+	Buildable:
+		Description: Grants the authorization to produce tier 2 units.\n\n* Can only be placed on a pre-existing production building (T1).
+		Prerequisites: fedproc
+		BuildDurationModifier: 12
+	Valued:
+		Cost: 700
+
+# |------------------------------| - Unlock T3 - |------------------------------|
+^UpgradeT3.federation.stat.upgrade:
+	Tooltip:
+		Name: Production Building Upgrade (T3) [Upgrade]
+	Buildable:
+		Description: Grants the authorization to produce tier 3 units.\n\n* Can only be placed on a pre-existing production building (T2).
+		Prerequisites: Tier 2 upgrade building
+		BuildDurationModifier: 25
+	Valued:
+		Cost: 1000  
+        
+
