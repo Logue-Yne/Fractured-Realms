@@ -1,27 +1,29 @@
 t1_fedharv:
 	Inherits: ^ShapeHoverMedium
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t1_dainn.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
 	Inherits@harvester: ^Harvester.rules
+	Inherits@Carryable: ^UniteCarryable
+    # / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
+    Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+    Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableEconomicUnit
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Vehicle.federation, Vehicle.federation.T2, Vehicle.federation.T3
 		BuildPaletteOrder: 10
 		InitialActivity: FindResources
-		Description: Harvester with average protection\n> Strong vs None\n Weak vs Everything
 		IconPalette: Federation.Icon
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
-	Tooltip:
-		Name: Harvester
-		GenericName: Harvester
-	Selectable:
-		Priority: 7
-		DecorationBounds: 1544, 2509, 0, -289
 	Mobile:
 		Locomotor: jumpjet
 	WithHarvestOverlay:
-	Health:
-		HP: 4000
-	RenderSprites:
-		Scale: 1.0
 	-AutoTarget:
 	WithDockingAnimation:
 
@@ -73,24 +75,24 @@ t1_stalker:
 
 t1_suricate:
 	Inherits: ^ShapeVehicleLight
-    # / Inherit Stat Unite /
-	Inherits@StatUnite: ^t1_suricate.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetAllAssaultMove
-	Inherits@SoundMove: ^tracked.vehicle.move
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t1_suricate.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-    Inherits@Upgrade01: ^affect.electroShield.Federation
+	Inherits@Upgrade.Federation01: ^affect.electroShield.Federation
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 1648, 1648, 0, 0
 	Buildable:
 		Queue: Vehicle.federation, Vehicle.federation.T2, Vehicle.federation.T3
 		BuildPaletteOrder: 30
 		IconPalette: Federation.Icon
-	Selectable:
-		Bounds: 1544, 2509, 0, -289
 	DetectCloaked:
 		Range: 5c0
 		CloakTypes: Cloak, Mine
@@ -117,36 +119,24 @@ t1_suricate:
 		RealignDelay: 20
 		Offset: -40,0,620
         PauseOnCondition: stunweapons
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,525,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,-525,-10
 
 t1_tick:
 	Inherits@1: ^ShapeVehicleMedium
-    # / Inherit Stat Unite /
-	Inherits@StatUnite: ^t1_tick.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetAllAssaultMove
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t1_tick.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-    Inherits@Upgrade01: ^affect.ImprovedLoader.Federation
-    Inherits@Upgrade02: ^affect.electroShield.Federation
+	Inherits@Upgrade.Federation01: ^affect.electroShield.Federation
+	Inherits@Upgrade.Federation02: ^affect.ImprovedLoader.Federation
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 1848, 1848, 0, 0
 	Buildable:
 		Queue: Vehicle.federation.T2, Vehicle.federation.T3
 		BuildPaletteOrder: 40
@@ -167,36 +157,24 @@ t1_tick:
 		Recoil: 85
 		RecoilRecovery: 25
 	WithMuzzleOverlay:
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,525,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,-525,-10
-	RenderSprites:
-		Scale: 1.0
 	WithSpriteTurret:
 
 t2_cobra:
 	Inherits: ^ShapeVehicleMedium
-    # / Inherit Stat Unite /
-	Inherits@StatUnite: ^t2_cobra.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetAllAssaultMove
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t2_cobra.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-    Inherits@Upgrade01: ^affect.ImprovedLoader.Federation
-    Inherits@Upgrade02: ^affect.electroShield.Federation
+	Inherits@Upgrade.Federation01: ^affect.electroShield.Federation
+	Inherits@Upgrade.Federation02: ^affect.ImprovedLoader.Federation
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
     # / < Stat Unite Base > /
 	Selectable:
 		Bounds: 1848, 1848, 0, 0
@@ -259,18 +237,20 @@ t2_cobra:
 	
 t2_lynx:
 	Inherits: ^ShapeVehicleMedium
-    # / Inherit Stat Unite /
-	Inherits@StatUnite: ^t2_lynx.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetAllAssaultMove
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t2_lynx.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-    Inherits@Upgrade01: ^affect.electroShield.Federation
+	Inherits@Upgrade.Federation01: ^affect.electroShield.Federation
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.federation.T2, Vehicle.federation.T3
 		BuildPaletteOrder: 50
@@ -306,37 +286,25 @@ t2_lynx:
 		RealignDelay: 20
 		Offset: 20,0,420
         PauseOnCondition: stunweapons
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,525,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,-525,-10
 
 t2_mongoose:
 	Inherits: ^ShapeVehicleLight
-    # / Inherit Stat Unite /
-	Inherits@StatUnite: ^t2_mongoose.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetGroundAssaultMove
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t2_mongoose.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-    Inherits@Upgrade01: ^affect.ImprovedLoader.Federation
-    Inherits@Upgrade02: ^affect.Ramjet.Federation
-    Inherits@Upgrade03: ^affect.electroShield.Federation
+	Inherits@Upgrade.Federation01: ^affect.electroShield.Federation
+	Inherits@Upgrade.Federation02: ^affect.ImprovedLoader.Federation
+	Inherits@Upgrade.Federation03: ^affect.Ramjet.Federation
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.federation.T2, Vehicle.federation.T3
 		BuildPaletteOrder: 60
@@ -356,37 +324,23 @@ t2_mongoose:
 		Offset: 0,0,10
         PauseOnCondition: stunweapons
 	WithMuzzleOverlay:
-	RenderSprites:
-		Scale: 1.0
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,525,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,-525,-10
 
 t3_rhino:
 	Inherits: ^ShapeVehicleMedium
-    # / Inherit Stat Unite /
-	Inherits@StatUnite: ^t3_rhino.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetGroundAssaultMove
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t3_rhino.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-    Inherits@Upgrade01: ^affect.ImprovedLoader.Federation
+	Inherits@Upgrade.Federation01: ^affect.ImprovedLoader.Federation
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.federation.T3
 		BuildPaletteOrder: 90
@@ -423,38 +377,26 @@ t3_rhino:
 		Offset: -40,0,110
         PauseOnCondition: stunweapons
 	WithMuzzleOverlay:
-	RenderSprites:
-		Scale: 1.0
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,525,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 540,-525,-10
 	Cloak:
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock, Move
 		IsPlayerPalette: true
 
 t3_porcupine:
 	Inherits: ^ShapeVehicleMedium
-    # / Inherit Stat Unite /
-	Inherits@StatUnite: ^t3_porcupine.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetAllAssaultMove
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t3_porcupine.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
+    # / Upgrade Faction /
+	Inherits@Upgrade.Federation01: ^affect.ImprovedLoader.Federation
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAir
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2248, 2248, 0, 0
 	Buildable:
 		Queue: Vehicle.federation.T3
 		BuildPaletteOrder: 100
@@ -484,18 +426,19 @@ t3_porcupine:
 
 t3_mantis:
 	Inherits: ^ShapeVehicleLight
-    # / Inherit Stat Unite /
-	Inherits@StatUnite: ^t3_mantis.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetGroundAssaultMove
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t3_mantis.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@SoundMove: ^tracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
     # / Upgrade Faction /
-    Inherits@Upgrade01: ^affect.Ramjet.Federation
+	Inherits@Upgrade.Federation01: ^affect.Ramjet.Federation
+    # / Select - Target type /
+	Inherits@Select: ^SelectableMassiveCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2848, 2848, 0, 0
 	Buildable:
 		Queue: Vehicle.federation.T3
 		BuildPaletteOrder: 110
@@ -521,27 +464,23 @@ t3_mantis:
 		Turret: primary
 		Weapon: Mantis.missileShock
 		LocalOffset: 0,0,0
-	WithMuzzleOverlay:
-	RenderSprites:
-		Scale: 0.95
 	AttackFrontal:
 		FacingTolerance: 4
 		PauseOnCondition: empdisable || stunweapons
 
 t4_colossus:
 	Inherits: ^ShapeVehicleHeavy
-    # / Inherit Stat Unite /
-	Inherits@StatUnite: ^t4_colossus.stat.unite
-    Inherits@StatUnite: ^System.Abillity.Goliath
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetGroundAssaultMove
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t4_colossus.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@SoundMove: ^tracked.vehicle.move
-    # / Upgrade Faction /
+	Inherits@TrailEffect: ^Trails.effect.smoke
+    # / Select - Target type /
+	Inherits@Select: ^SelectableMassiveCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2948, 2948, 0, 0
 	Buildable:
 		Queue: Vehicle.federation.T3
 		BuildPaletteOrder: 120
@@ -593,19 +532,38 @@ t4_colossus:
         RequiresCondition: move_unit
     GrantConditionOnMovement:
         Condition: move_unit
-    # //////// Custom Effet Unite //////////
-    LeavesTrails@01:
-        Image: smoke_movelarge
-        Sequences: smoke_movelarge01, smoke_movelarge02, smoke_movelarge03, smoke_movelarge04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 870,755,-10
-    LeavesTrails@02:
-        Image: smoke_movelarge
-        Sequences: smoke_movelarge01, smoke_movelarge02, smoke_movelarge03, smoke_movelarge04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 870,-755,-10
 
+aicraft_cariersupport:
+	Inherits: ^ShapeVehicleLight
+    # / Inherit Stat Unite /
+	Inherits@StatUnite: ^cargo_superweapons.stat.unite
+    # / Inherit option Unite /
+	Inherits@GainsExperience: ^GainsExperience
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@Target: ^AutoTargetAllAssaultMove
+	Inherits@SoundMove: ^tracked.vehicle.move
+    # / < Stat Unite Base > /
+	Selectable:
+		Bounds: 1544, 2509, 0, -289
+	DetectCloaked:
+		Range: 5c0
+		CloakTypes: Cloak, Mine
+	Armament@Gun:
+		Name: primary
+		Weapon: Surricate.M60
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 410,0,180
+		MuzzleSequence: muzzle
+		MuzzlePalette: flameeffect
+	WithMuzzleOverlay:
+	RenderSprites:
+		Scale: 1.0
+	AttackTurreted:
+		RequiresCondition: !(empdisable || stunweapons)
+	WithSpriteTurret:
+	Turreted:
+		TurnSpeed: 16
+		RealignDelay: 20
+		Offset: -40,0,620
+        PauseOnCondition: stunweapons

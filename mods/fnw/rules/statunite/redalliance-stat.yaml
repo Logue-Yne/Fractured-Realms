@@ -122,6 +122,11 @@
 		Speed: 90
 	RevealsShroud:
 		Range: 10c0
+    WithRangeCircle@DetectCloack:
+        Range: 5c0
+	DetectCloaked:
+		Range: 5c0
+        CloakTypes: Cloak, Mine
     ActorStatValues:
 		SplitRanges: true
         Icon: icon
@@ -289,6 +294,7 @@
 		Name: Satyr
 	Buildable:
 		Description: Light and fast recon vehicle armed with two missile-launchers.\n\n* Its pilot can leave (permanently) the vehicle.\n* Can detect stealthed units.\n\n> Strong vs Light Vehicles, Aircraft.\n> Weak vs Infantry, Heavy Vehicles, Structures.
+		Prerequisites: arproc
 		BuildDurationModifier: 8
 	Valued:
 		Cost: 500
@@ -336,6 +342,7 @@
 		Name: Arachne
 	Buildable:
 		Description: Flamethrower support vehicle.\n\n* Can be deployed and become a stealthed fixed spotter.\n* Can be redeployed.\n\n> Strong vs Infantry, Structures.\n> Weak vs Vehicles, Aircraft.
+		Prerequisites: arproc
 		BuildDurationModifier: 8
 	Valued:
 		Cost: 600
@@ -387,13 +394,14 @@
 		Name: Basilisk
 	Buildable:
 		Description: Powerful and resilient main battle tank armed with a fearsome railgun.\n\n> Strong vs Vehicles, Structures.\n> Weak vs Infantry, Aircraft.
+		Prerequisites: artech
 		BuildDurationModifier: 17
 	Valued:
 		Cost: 1100
 	Armor:
 		Type: ArmorTank
 	Health:
-		HP: 5800
+		HP: 6000
 	Mobile:
 		Speed: 80
 		TurnSpeed: 35
@@ -413,26 +421,27 @@
 #--Weapons01--
 ^Railgun.Basilisk.Stat.weapons:
 	Range: 10c0
-    ReloadDelay: 75
+    ReloadDelay: 80
 	Warhead@1Dam: SpreadDamage
 		Damage: 1200
 		Versus:
 			Infantry: 10
-			LightVehicle: 85
+			LightVehicle: 80
 			ArmorTank: 100
-			Concrete: 50
+			Concrete: 40
 			
 #--Weapons01.Surcharge--
 ^Surcharge.Railgun.Basilisk.Stat.weapons:
 	Range: 10c0
     ReloadDelay: 5
 	Warhead@1Dam: SpreadDamage
-		Damage: 720
+		Damage: 700
 		Versus:
-			Infantry: 15
-			LightVehicle: 80
+			Infantry: 10
+			LightVehicle: 90
 			ArmorTank: 110
 			Concrete: 50
+
 #--Animation stat Weapons01--      
 ^basilic.Shock.weapons:
 	Range: 10c0
@@ -463,6 +472,7 @@
 		Name: Hydra
 	Buildable:
 		Description: Heavy self-propelled anti-aircraft gun with a main battle tank hull.\n\n> Strong vs Infantry, Aircraft.\n> Weak vs Vehicles, Structures.
+		Prerequisites: artech
 		BuildDurationModifier: 12
 	Valued:
 		Cost: 1000
@@ -543,6 +553,7 @@
 		Name: Manticore
 	Buildable:
 		Description: Heavy self-propelled artillery on a main battle tank hull.\n\n> Strong vs Infantry, Structures.\n> Weak vs Vehicles, Aircraft.
+		Prerequisites: artech, arlab
 		BuildDurationModifier: 18
 	Valued:
 		Cost: 1300
@@ -552,7 +563,7 @@
 		HP: 2500
 	Mobile:
 		Speed: 80
-		TurnSpeed: 35
+		TurnSpeed: 20
 	Turreted:
 		TurnSpeed: 5
         RealignDelay: 20
@@ -561,7 +572,7 @@
     WithRangeCircle@MinAreaFire:
         Range: 6c0
     WithRangeCircle@MaxAreaFire:
-        Range: 15c0
+        Range: 18c0
     ActorStatValues:
 		SplitRanges: true
         Icon: icon
@@ -569,12 +580,12 @@
 
 #--Weapons01--
 ^manticoreGun.Stat.weapons:
-	Range: 15c0
+	Range: 18c0
 	MinRange: 6c0
 	ReloadDelay: 120
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c128
-		Damage: 1500 # 2000 -modified: Divadawm
+		Damage: 1600 # 2000 -modified: Divadawm
 		Versus:
 			Infantry: 25
 			LightVehicle: 70
@@ -582,7 +593,7 @@
 			Concrete: 115
 #--Animation stat Weapons01--      
 ^manticoreGun.Shock.weapons:
-	Range: 15c0
+	Range: 18c0
 	MinRange: 6c0
 	ReloadDelay: 1    
         
@@ -608,6 +619,7 @@
 		Name: Minotaur
 	Buildable:
 		Description: Heavy troop transport vehicle armed with a flamethrower.\n\n* Can carry up to 7 infantry units.\n* Amphibious.\n\n> Strong vs Infantry, Structures.\n> Weak vs Vehicles, Aircraft.
+		Prerequisites: artech
 		BuildDurationModifier: 11
 	Valued:
 		Cost: 700
@@ -629,6 +641,16 @@
         Upgrades: upgrade.armor.purge.redalliance, upgrade.fusion.speed.vehicle.redalliance
 
 #--Weapons Minotaur Gun--
+^FlamerSpay.RedAlliance.Stat.weapons:
+	ReloadDelay: 4
+	Range: 8c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 20
+		Versus:
+			Infantry: 250
+			LightVehicle: 35
+			ArmorTank: 20
+			Concrete: 120
 
 # |------------------------------| - APOCALYPSE SUPER HEAVY TANK - |------------------------------|
 #--Stat Unite--
@@ -637,13 +659,14 @@
 		Name: Titan
 	Buildable:
 		Description: Super heavy tank armed with 2 railguns and 2 missile-launchers.\n\n> Strong vs Vehicles, Aircraft, Structures.\n> Weak vs Infantry.
+		Prerequisites: t3_commandbuilding
 		BuildDurationModifier: 25
 	Valued:
 		Cost: 2200
 	Armor:
 		Type: ArmorTank
 	Health:
-		HP: 10000
+		HP: 12000
 	Mobile:
 		Speed: 70
 		TurnSpeed: 30
@@ -664,11 +687,11 @@
 	BurstDelays: 8
 	ReloadDelay: 75
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
-		Damage: 1100
+		Spread: 1c0
+		Damage: 1600
 		Versus:
-			Infantry: 15
-			LightVehicle: 80
+			Infantry: 25
+			LightVehicle: 70
 			ArmorTank: 100
 			Concrete: 50
 
@@ -733,6 +756,7 @@
 		Name: Salamander
 	Buildable:
 		Description: Super heavy armored vehicle equipped with an insanely powerful flamethrower.\n\n> Strong vs Infantry, Light Vehicles, Structures.\n> Weak vs Heavy Vehicles, Aircraft.
+		Prerequisites: t3_commandbuilding
 		BuildDurationModifier: 27
 	Valued:
 		Cost: 2300
@@ -774,6 +798,7 @@
 		Name:  Colossus
 	Buildable:
 		Description: Advanced nuclear artillery/support vehicle.\n\n* Can switch between close combat/artillery mode.\n\n> Strong vs Infantry, Vehicles, Structures.\n> Weak vs Aircraft.
+		Prerequisites: t3_commandbuilding
 		BuildDurationModifier: 30
 	Valued:
 		Cost: 2300
@@ -816,7 +841,7 @@
 ^Anhilihator.Railgun.Stat.weapons:
 	ReloadDelay: 20
 	MinRange: 7c0
-    Range: 19c0   
+    Range: 20c0   
 	Warhead@1Dam: SpreadDamage
 		Damage: 7000
 		Versus:
@@ -826,7 +851,7 @@
 			Concrete: 80
 #--Animation stat Weapons01--      
 ^RailgunAnn.Shock.weapons:
-    Range: 19c0   
+    Range: 20c0   
 	MinRange: 7c0
 	ReloadDelay: 20 
 
@@ -837,6 +862,7 @@
 		Name: Gorgon
 	Buildable:
 		Description: Advanced unarmed support vehicle capable of healing and cloaking nearby allied units when deployed\nCan detect stealthed units\n\n> Strong vs None\n> Weak vs Everything
+		Prerequisites: t3_commandbuilding
 		BuildDurationModifier: 20
 	Valued:
 		Cost: 2000
@@ -1131,7 +1157,7 @@
 		Cost: 1000
 
 #--Upgrade Stat--
-^RangeInfantry.redalliance.apply:
+^RangeInfantryStat.redalliance.apply:
 	RangeMultiplier@Up.Inf.Range:
 		Modifier: 130
 		
@@ -1221,9 +1247,9 @@
 		Prerequisites: research.Railgun.Redalliance
 		Condition: Upgrade.Railgun.Redalliance
 
-# =================================================================================================================================================================
-# =========================================================== |     Structure Red Alliance       |  ===============================================================
-# =================================================================================================================================================================
+# ===============================================================================================================================================
+# ====================================================== |     Structure Red Alliance       |  ==================================================
+# ===============================================================================================================================================
 
 # |------------------------------| - Construction Yard - |------------------------------|
 ^gigante.mcv.stat.building:
@@ -1239,6 +1265,9 @@
 	Health:
 		HP: 14000
 
+^gigante.mcv.stat.building.fixe:
+	Inherits@Building.Deployed: ^gigante.mcv.stat.building
+
 # |------------------------------| - Reffinery Building - |------------------------------|
 ^proc.redalliance.stat.building:
 	Tooltip:
@@ -1252,6 +1281,9 @@
 		Type: Concrete
 	Health:
 		HP: 8000
+
+^proc.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^proc.redalliance.stat.building
 
 # |------------------------------| - Barrack Building - |------------------------------|
 ^barrack.redalliance.stat.building:
@@ -1267,6 +1299,9 @@
 	Health:
 		HP: 5000
 
+^barrack.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^barrack.redalliance.stat.building
+
 # |------------------------------| - Factory Building - |------------------------------|
 ^factory.redalliance.stat.building:
 	Tooltip:
@@ -1280,6 +1315,9 @@
 		Type: Concrete
 	Health:
 		HP: 8000
+
+^factory.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^factory.redalliance.stat.building
         
 # |------------------------------| - Tech 1 Building - |------------------------------|
 ^tech2.redalliance.stat.building:
@@ -1295,6 +1333,9 @@
 	Health:
 		HP: 7000
 
+^tech2.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^tech2.redalliance.stat.building
+
 # |------------------------------| - Radar/Power Building - |------------------------------|
 ^spec.redalliance.stat.building:
 	Tooltip:
@@ -1308,6 +1349,9 @@
 		Type: Concrete
 	Health:
 		HP: 7000
+
+^spec.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^spec.redalliance.stat.building
 
 # |------------------------------| - Command t3 Building - |------------------------------|
 ^tech3.redalliance.stat.building:
@@ -1323,6 +1367,9 @@
 	Health:
 		HP: 8000
 
+^tech3.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^tech3.redalliance.stat.building
+
 # |------------------------------| - Helipad Building - |------------------------------|
 ^heliport.redalliance.stat.building:
 	Tooltip:
@@ -1336,3 +1383,6 @@
 		Type: Concrete
 	Health:
 		HP: 5000
+
+^heliport.redalliance.stat.building.fixe:
+	Inherits@Building.Deployed: ^heliport.redalliance.stat.building

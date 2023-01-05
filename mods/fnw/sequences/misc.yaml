@@ -2,6 +2,35 @@
 # ///////////////////////////////////// Animate Stat Unite Sequences /////////////////////////////////
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+ency.tick.unite:
+	idle: bits/ency_art.png
+        AddExtension: false
+
+encyclopedia.order.faction:
+	idle: bits/ency_art.png
+        AddExtension: false
+
+encyclopedia.garm.unite:
+	idle: bits/ency_art.png
+        AddExtension: false
+
+encyclopedia.lyndworm.unite:
+	idle: bits/ency_art.png
+        AddExtension: false
+
+encyclopedia.alliance.faction:
+	idle: bits/ency_art.png
+        AddExtension: false
+
+encyclopedia.federation.faction:
+	idle: bits/ency_art.png
+        AddExtension: false
+
+encyclopedia.conclave.faction:
+	idle: bits/ency_art.png
+        AddExtension: false
+
+
 ^HeavySmokeEffect:
 	SmokeMove: smoke_vehiclemove
 		Length: *
@@ -259,10 +288,13 @@ explosion:
         Offset: 0, 0
     apo_expl01: apo_expl01
         Offset: 0, -50
+		BlendMode: Additive
     apo_expl02: apo_expl02
         Offset: 0, -50
+		BlendMode: Additive
     apo_expl03: apo_expl03
         Offset: 0, -50
+		BlendMode: Additive
     flak_expl01: flak_expl01
 		BlendMode: Additive
     flak_expl02: flak_expl02
@@ -291,6 +323,15 @@ explosion:
 	obus_smoke03: obus_smoke03
 		BlendMode: Additive
         Offset: 0, -35
+    heavysmoke_damage01: damage_smokelarge01
+        Offset: 0, -40
+		BlendMode: Subtractive
+    heavysmoke_damage02: damage_smokelarge02
+        Offset: 0, -40
+		BlendMode: Subtractive
+    heavysmoke_damage03: damage_smokelarge03
+        Offset: 0, -40
+		BlendMode: Subtractive
     clusterimpact01: clusterimpact01
 		BlendMode: Additive
         Tick: 15
@@ -813,6 +854,28 @@ explosion:
 		BlendMode: Additive
     zenithimpact: zenithimpact
 		BlendMode: Additive
+        
+smoke:
+    single_smoke_medium01: single_smoke_medium01
+		BlendMode: Translucent
+		ZOffset: 25
+    single_smoke_medium02: single_smoke_medium02
+		BlendMode: Translucent
+		ZOffset: 25
+    single_smoke_medium03: single_smoke_medium03
+		BlendMode: Translucent
+		ZOffset: 25
+    single_smoke_darkmedium01: single_smoke_medium01
+		BlendMode: Subtractive
+		ZOffset: 10
+    single_smoke_darkmedium02: single_smoke_medium02
+		BlendMode: Subtractive
+		ZOffset: 10
+    single_smoke_darkmedium03: single_smoke_medium03
+		BlendMode: Subtractive
+		ZOffset: 10
+        
+
 
 particles:
 	largesmoke.cruiser: trail_smoke01
@@ -1415,12 +1478,15 @@ minburning:
 	flameball1: flame_ball01
 		Length: *
         Tick: 23
+        BlendMode: LowAdditive
 	flameball2: flame_ball02
 		Length: *
         Tick: 23
+        BlendMode: LowAdditive
 	flameball3: flame_ball03
 		Length: *
         Tick: 23
+        BlendMode: LowAdditive
         
 minburningspeed:
 	idle: minburning
@@ -2001,6 +2067,17 @@ water_wave_particle:
 # ///////////////////////////////////////// Ressource Sequences //////////////////////////////////////
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+parachute_vehicle:
+	open: para_end
+		Length: *
+        Scale: 0.60
+	close: para_end
+		Length: *
+        Scale: 0.60
+	idle: para_roll
+		Length: *
+        Scale: 0.60
+
 diastore:
 	idle: diast
 		Length: *
@@ -2137,6 +2214,26 @@ droppod:
 	idle: droppod
 		Length: *
         Scale: 0.65
+        
+aicraft_carier.superweapons:
+	Defaults: t3_trasportfed
+		Start: 40
+	idle: t3_trasportfed
+		Start: 40
+        
+aicraft_cariersupport:
+	Inherits@Stat: ^StatVehicleEffect
+	Defaults:
+	idle: t3_trasportfed
+		Start: 40
+	muzzle: muzzle_riflegun_20mm
+		Facings: 16
+		Length: 11
+		Tick: 25
+		BlendMode: Additive
+	turret: t1_suricatetur
+		Facings: 64
+	icon: t1_surricateicon
 
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 # ////////////////////////////////////// Stat & Effet Decoration ////////////////////////////////////

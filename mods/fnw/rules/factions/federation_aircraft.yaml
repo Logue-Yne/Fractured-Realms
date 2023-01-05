@@ -253,17 +253,17 @@ t3_trasportfed.power:
 	Aircraft:
 		InitialFacing: 192
 		TurnSpeed: 35
-		Speed: 180
+		Speed: 220
 		RepulsionSpeed: 40
 		MaximumPitch: 110
 		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
 		IdleBehavior: Land
 	ParaDrop:
-		DropRange: 5c0
-        DropInterval: 1
+		DropRange: 8c0
+        DropInterval: 15
 		ChuteSound:
 	Cargo:
-		MaxWeight: 20
+		MaxWeight: 40
 	-AttackMove:
 	RejectsOrders:
 	-RevealsShroud:
@@ -274,7 +274,7 @@ t3_trasportfed.power:
     -GrantCondition@Stase.bubble.Bait:
     -GrantCondition@Stase.bubble.notmobile.turret: 
     RenderSprites:
-        Image: t3_trasportfed
+        Image: t3_bombardfed
 	SpawnActorOnDeath:
 		Actor: t3_trasportfed.husk
 

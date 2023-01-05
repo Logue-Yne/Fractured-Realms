@@ -1,12 +1,12 @@
 Midgard.gun:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
-	Inherits@default.weapons: ^InstantHit.Comon.Animation
+	Inherits@default.weapons: ^Autogun.Comon.Animation
     Inherits@StatBase.weapons: ^Midgard.defense.baneslayer.stat.weapons
 	Report: flak_canonfire01.aud, flak_canonfire02.aud, flak_canonfire03.aud
     
 Midgard.gunAP:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
-	Inherits@default.weapons: ^InstantHit.Comon.Animation
+	Inherits@default.weapons: ^Autogun.Comon.Animation
     Inherits@StatBase.weapons: ^Midgard.defenseAP.baneslayer.stat.weapons
 	Report: flak_canonfire01.aud, flak_canonfire02.aud, flak_canonfire03.aud
 
@@ -238,7 +238,7 @@ Aesir.Mattergun:
 
 Minigun.matrice:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
-    Inherits@default.weapons: ^Minigunorder.Baneslayer.Animation
+    Inherits@default.weapons: ^Minigun.Comon.Animation
     Inherits@StatBase.weapons: ^Minigun.heidrun.stat.weapons
 	Report: rigleheavygun_01.aud, rigleheavygun_02.aud, rigleheavygun_03.aud
     Warhead@Shoot.shield.Federation: GrantExternalCondition
@@ -458,8 +458,6 @@ Heimdall.Missile:
 	Inherits@default.weapons: ^BallistiqueMissile.Baneslayer.Animation
 	Inherits@StatBase.weapons: ^Heimdall.Rocket.stat.weapons
     Inherits@SmokeImpactEffect: ^weapons.shake.impact_large
-	FirstBurstTargetOffset: 0,-2800,0
-	FollowingBurstTargetOffset: 0,2800,0
 	Report: hemdail_rocket.aud
 	Warhead@13Shake: ShakeScreen
 		Duration: 8

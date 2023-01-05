@@ -157,11 +157,61 @@
 # =======================================================================================================================   
 # |------------------------------| - PROWLER MAIN BATTLE TANK - |------------------------------|
 #--Stat Unite--
+^tcmcv.conclave.stat.unite:
+	Tooltip:
+		Name: Wayfarer(MCV)
+	Buildable:
+		Description: Mobile construction vehicle
+		Prerequisites: Ion Trap X3, tcweap.first
+		BuildDurationModifier: 14
+	Valued:
+		Cost: 2500
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 5000
+	Mobile:
+		Speed: 105
+		TurnSpeed: 55
+	RevealsShroud:
+		Range: 8c0
+    ActorStatValues:
+		SplitRanges: true
+        Icon: icon
+
+# |------------------------------| - HAVESTER PROSPECTOR - |------------------------------|
+#--Stat Unite--
+^prospecteur.conclave.stat.unite:
+	Tooltip:
+		Name: Prospector(Harvester)
+		GenericName: Harvester
+	Buildable:
+		Description: Hover Diastim harvester
+		Prerequisites: tcproc, tcweap.first
+		BuildDurationModifier: 14
+	Valued:
+		Cost: 1000
+	Armor:
+		Type: ArmorTank
+	Health:
+		HP: 4000
+	Mobile:
+		Speed: 105
+		TurnSpeed: 55
+	RevealsShroud:
+		Range: 8c0
+    ActorStatValues:
+		SplitRanges: true
+        Icon: icon      
+
+# |------------------------------| - PROWLER MAIN BATTLE TANK - |------------------------------|
+#--Stat Unite--
 ^t2_rodeur.conclave.stat.unite:
 	Tooltip:
 		Name: Prowler
 	Buildable:
-		Description: Lightly armored tank equipped with a double rapid-fire laser cannon\n> Strong against Vehicles\n> Weak against Infantry, Aircraft
+		Description: Lightly armored tank equipped with a double rapid-fire laser cannon\n> Strong against Vehicles\n> Weak against Infantry, Aircraft.
+		Prerequisites: tcholotech.rodeur
 		BuildDurationModifier: 14
 	Valued:
 		Cost: 950
@@ -236,7 +286,8 @@
 		Name: Pilgrim (deployed)
 		RequiresCondition: deployed
 	Buildable:
-		Description: Hover anti-aircraft missile launcher\nCan be deployed into an fixed artillery\n> Strong vs Vehicles, Aircraft\n> Weak vs Infantry
+		Description: Hover anti-aircraft missile launcher\nCan be deployed into an fixed artillery\n> Strong vs Vehicles, Aircraft\n> Weak vs Infantry.
+		Prerequisites: tcholotech.pelerin
 		BuildDurationModifier: 20
 	Valued:
 		Cost: 1300
@@ -360,7 +411,8 @@
 	Tooltip:
 		Name: Surveyor
 	Buildable:
-		Description: Three legged heavy walker\nDeals damage based on HP percentages\n> Strong vs Vehicles, Structures\n> Weak vs Infantry, Aircraft
+		Description: Three legged heavy walker\nDeals damage based on HP percentages\n> Strong vs Vehicles, Structures\n> Weak vs Infantry, Aircraft.
+		Prerequisites: tcholotech.arpenteur
 		BuildDurationModifier: 29
 	Valued:
 		Cost: 2300
@@ -702,9 +754,9 @@
 	Valued:
 		Cost: 800
 
-# =================================================================================================================================================================
-# =========================================================== |     Structure Conclave      |  ====================================================================
-# =================================================================================================================================================================
+# ====================================================================================================================================================
+# ============================================== |     Structure Conclave      |  ====================================================================
+# ====================================================================================================================================================
 
 # |------------------------------| - Construction Yard - |------------------------------|
 ^conclave.mcv.stat.building:
@@ -905,9 +957,9 @@
 		HP: 10000
 
 
-# =================================================================================================================================================================
-# =========================================================== |     Super Weapons Avatar      |  ====================================================================
-# =================================================================================================================================================================
+# ==================================================================================================================================================
+# ================================================== |     Super Weapons Avatar      |  ============================================================
+# ==================================================================================================================================================
 
 ^Avatar.TelsaGun.conclave.stat.weapons:
     ValidTargets: Ground, Air, Water

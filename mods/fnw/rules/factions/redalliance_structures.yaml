@@ -31,11 +31,12 @@ aracnst:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^7x3Shape
     # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^gigante.mcv.stat.building
+    Inherits@StatBuilding: ^gigante.mcv.stat.building.fixe
     # / Inherit option Unite /
     Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+    Inherits@AiBot.cheat: ^aibotcheat.module
 	Selectable:
 		Bounds: 7168, 3072, 0, 0
 	Building:
@@ -203,7 +204,7 @@ arproc:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^3x3Shape
     # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^proc.redalliance.stat.building
+    Inherits@StatBuilding: ^proc.redalliance.stat.building.fixe
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
@@ -297,7 +298,7 @@ arproc.seconddeploy:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^3x3Shape
     # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^proc.redalliance.stat.building
+    Inherits@StatBuilding: ^proc.redalliance.stat.building.fixe
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Building:
@@ -384,7 +385,7 @@ arbarr:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^5x3Shape
     # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^barrack.redalliance.stat.building
+    Inherits@StatBuilding: ^barrack.redalliance.stat.building.fixe
     # / Inherit option Unite /
     Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
     # / Inherit specifity /
@@ -456,7 +457,7 @@ arweap:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^6x4Shape
     # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^factory.redalliance.stat.building
+    Inherits@StatBuilding: ^factory.redalliance.stat.building.fixe
     # / Inherit option Unite /
     Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
     # / Inherit specifity /
@@ -538,7 +539,7 @@ artech:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^4x3Shape
     # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^tech2.redalliance.stat.building
+    Inherits@StatBuilding: ^tech2.redalliance.stat.building.fixe
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Selectable:
@@ -590,7 +591,7 @@ arlab:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^5x4Shape
     # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^spec.redalliance.stat.building
+    Inherits@StatBuilding: ^spec.redalliance.stat.building.fixe
     Inherits@3: ^DisablePowerDown
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
@@ -649,7 +650,7 @@ t3_commandbuilding:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^7x4Shape
     # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^tech3.redalliance.stat.building
+    Inherits@StatBuilding: ^tech3.redalliance.stat.building.fixe
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
@@ -711,27 +712,33 @@ t3_annihilator_deployed:
 	GrantConditionOnAttack@TargetRailgun:
 		ArmamentNames: primary
 		RevokeOnNewTarget: true
-		RequiredShotsPerInstance: 19
+		RequiredShotsPerInstance: 160
 		Condition: Target
 	Armament@muzzle:
 		Weapon: Ann.muzzle
 		Recoil: 150
 		RecoilRecovery: 15
-		LocalOffset: 2150,0,1280
+		LocalOffset: 2950,90,1850
 		RequiresCondition: !Target
 		MuzzleSequence: muzzle.target
 		MuzzlePalette: flammeeffectblue
-	Armament@gun:
-		Weapon: Ann.TargetBeam
+	Armament@target01:
+		Weapon: Ann.target01
 		Recoil: 150
 		RecoilRecovery: 15
-		LocalOffset: 2150,0,1280
+		LocalOffset: 2950,90,1850
+		RequiresCondition: !Target
+	Armament@target02:
+		Weapon: Ann.target02
+		Recoil: 150
+		RecoilRecovery: 15
+		LocalOffset: 2950,90,1850
 		RequiresCondition: !Target
 	Armament@railgun:
 		Weapon: RailgunAnn
 		Recoil: 150
 		RecoilRecovery: 15
-		LocalOffset: 2150,0,1280
+		LocalOffset: 2950,90,1850
 		RequiresCondition: Target
 		MuzzleSequence: muzzle.fire
 		MuzzlePalette: powereffect
@@ -757,8 +764,6 @@ t3_annihilator_deployed:
 		InitialFacing: 370
 		RealignDelay: -1
         PauseOnCondition: stunweapons
-	RenderSprites:
-		Scale: 1
 	WithSpriteTurret:
 		RequiresCondition: !build-incomplete
 	-MustBeDestroyed:
@@ -904,7 +909,7 @@ arheli:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^3x2Shape
     # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^heliport.redalliance.stat.building
+    Inherits@StatBuilding: ^heliport.redalliance.stat.building.fixe
     Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base

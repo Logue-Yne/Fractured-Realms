@@ -1,13 +1,12 @@
 gardian:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^gardian.conclave.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^gardian.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@2: ^Global.Upgrade.Conclave
-	Inherits@3: ^Infantry.Upgrade.Conclave
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 20
@@ -37,15 +36,14 @@ gardian:
 
 statis:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^statis.conclave.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-	Inherits@Target: ^AutoTargetAll
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@2: ^Global.Upgrade.Conclave
-	Inherits@3: ^Infantry.Upgrade.Conclave
-	Inherits@CaptureRules: ^Unite.CaptureRules
+    # / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^statis.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Target type /
+	Inherits@Capture: ^Capture.allBuilding
+	Inherits@Target: ^AutoTargetAllAssaultMove
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 30
@@ -73,19 +71,16 @@ statis:
 	WithInfantryBody:
 		StandSequences: stand
 		DefaultAttackSequence: shoot
-	RenderSprites:
-		Scale: 0.85
 	
 t3_navigator:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t3_navigator.conclave.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_navigator.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@2: ^Global.Upgrade.Conclave
-	Inherits@3: ^Infantry.Upgrade.Conclave
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 100
@@ -124,9 +119,10 @@ t3_navigator:
 
 ^t4_consniper.Base:
     Inherits@1: ^Infantry
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@2: ^Global.Upgrade.Conclave
-	Inherits@3: ^Infantry.Upgrade.Conclave
+    # / Inherit Stat & generic Unite /
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / < Stat Unite Actor > /
 	WithInfantryBody:
 		IdleSequences: idle1
 		StandSequences: stand
@@ -135,12 +131,13 @@ t3_navigator:
 
 t4_consniper:
 	Inherits@1: ^t4_consniper.Base
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t4_consniper.conclave.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t4_consniper.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 20
@@ -235,9 +232,9 @@ activate.Mirror:
 
 avatar:
 	Inherits@1: ^Infantry
-	Inherits@2: ^Global.Upgrade.Conclave
-	Inherits@3: ^Infantry.Upgrade.Conclave
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Nope.conclave
 		BuildPaletteOrder: 20

@@ -269,6 +269,36 @@ upgrade.fusion.reactor.federation:
 		UseDirectionalTarget: True
 		DirectionArrowAnimation: powerdirection
 		DirectionArrowPalette: effect
+	ParatroopersPower@Federation.Superweapon:
+		OrderName: Federation.Superweapon
+		Prerequisites:
+			1: fedlabtech
+		Icons:
+			1: ardroppowericon
+		IconPalette: RedAlliance.Icon
+		ChargeInterval: 8250
+		StartFullyCharged: true
+		Names:
+			1: Calls an debarquement
+		Descriptions:
+			1: Reinforcements have arrived, commander!\nReinforcements include:\n- 10 Guardsmen\n- 20 Rocket Guardsmen\n- 2 Officers\n- 5 Exosoldiers\n- 20 “Tick” light tanks\n- 10 “Cobra” SPAAG\n- 2 “Mongoose” SPM\n- 2 “Lynx” field command vehicles
+		SelectTargetSpeechNotification: 
+		EndChargeSpeechNotification: 
+		DropItems:
+			1: t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmenat, t1_guardmenat, t1_guardmenat, t1_guardmenat, t1_guardmenat, t2_officer, t2_officer, t2_locust, t2_locust, t2_locust, t2_locust, t2_locust, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t1_tick, t2_cobra, t2_cobra, t2_cobra, t2_cobra, t2_cobra, t2_cobra, t2_cobra, t2_cobra, t2_cobra, t2_cobra, t2_mongoose, t2_mongoose, t2_lynx, t2_lynx
+		SquadSizes:
+			1: 5
+		SquadOffset: -3048, 3048, 0
+		QuantizedFacings: 8
+		UnitTypes:
+			1: t3_trasportfed.power
+		CameraActor: camera
+		DisplayBeacon: false
+		ArrowSequence: arrow
+		ClockSequence: clock
+		UseDirectionalTarget: True
+		DirectionArrowAnimation: powerdirection
+		DirectionArrowPalette: effect
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
 # //////////////////////////////////////////////////////// Stat Upgrade Federation ////////////////////////////////////////////////////////

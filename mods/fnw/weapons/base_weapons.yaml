@@ -316,6 +316,27 @@ Comon.Delay weapon:
 	Warhead@3EffWater: CreateEffect
 		Explosions: water_piffs
 		ValidTargets: Water
+        
+^Autogun.Comon.Animation:   
+	Projectile: BulletAS
+		Inaccuracy: 256
+		Blockable: false
+		Speed: 1c512
+        ContrailDelay: 0
+		ContrailLength: 2
+        ContrailWidth: 65
+        ContrailStartColor: f6eb14
+        ContrailEndColor: e2a41f
+	Warhead@1Dam: SpreadDamage
+		Spread: 4
+		DamageTypes: DefaultDeath
+	Warhead@3EffGround: CreateEffect
+		Explosions: flak_expl01, flak_expl02, flak_expl03, flak_expl04
+		ExplosionPalette: flameeffect
+		ValidTargets: Ground, Water, Air
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piffs
+		ValidTargets: Water
 
 ^Melee.Comon.Animation:
 	ValidTargets: Ground, Water
@@ -393,7 +414,6 @@ Comon.Delay weapon:
 
 ^Autocanon.Comon.Animation:
 	ValidTargets: Ground, Water
-	Projectile: Bullet
 	Projectile: BulletAS
 		Inaccuracy: 256
 		Blockable: false
@@ -403,11 +423,6 @@ Comon.Delay weapon:
         ContrailWidth: 45
         ContrailStartColor: f6eb14
         ContrailEndColor: e2a41f
-        
-        
-        
-        
-        
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		DeathType: 4
@@ -584,27 +599,43 @@ Comon.Delay weapon:
 		ValidTargets: Ground, Water
         
 ^Flamme.RedAlliance.Animation:
-	Projectile: Bullet
-		Speed: 240
-		Arm: 2
-		DamageInterval: 2
+	Inherits: ^Scorched_flame
+	Inherits@1: ^Burned_damage_effect
+	Inherits@Gar: ^Garrisonnable_weapons_counter
+	Projectile: BulletAS
+		Speed: 210
 		Image: minburning
-        Sequences: flameball1, flameball2, flameball3
-		Palette: flameeffect50
+		Sequences: flameball1, flameball2, flameball3
 		Inaccuracy: 1c256
+		Palette: flameeffect50
+		Blockable: true
+        RepeatAnimation: false         
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c512
 		RangeLimit: 7c256
 		DamageTypes: Burned
-	Warhead@3Eff: CreateEffect
-		Explosions: flame_impact01, flame_impact02, flame_impact03
-		ExplosionPalette: flameeffect60
-		ValidTargets: Ground
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: Scorch
-		InvalidTargets: Vehicle
+        
+^FlamerSpray.RedAlliance.Animation:
+	Inherits: ^Scorched_flame
+	Inherits@1: ^Burned_damage_effect
+	Inherits@Gar: ^Garrisonnable_weapons_counter
+	Projectile: BulletAS
+		Speed: 500
+		ContrailLength: 22
+		ContrailStartColor: ffd80088
+		ContrailStartColorAlpha: 187
+		ContrailWidth: 35
+		ContrailEndColor: 7b291b55
+		ContrailEndColorAlpha: 85
+		ContrailWidthFadeRate: 1
+		Inaccuracy: 1c512
+		LaunchAngle: 96
+		Blockable: false        
         
 ^FlammeMelee.RedAlliance.Animation:
+	Inherits: ^Scorched_flame
+	Inherits@1: ^Burned_damage_effect
+	Inherits@Gar: ^Garrisonnable_weapons_counter
 	Projectile: InstantHit
 		Speed: 450
 		Inaccuracy: 128
@@ -613,9 +644,6 @@ Comon.Delay weapon:
 		Spread: 512
 		RangeLimit: 7c256
 		DamageTypes: Burned
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: Scorch
-		InvalidTargets: Vehicle
         
 ^Inferno.rocket.RedAlliance.Animation:
 	ValidTargets: Ground, Water
@@ -697,7 +725,7 @@ Comon.Delay weapon:
         BeamAlphaDeltaPerTick: 25
         HelixAngleDeltaPerTick: 8
         QuantizationCount: 10
-        HelixPitch: 1c828
+        HelixPitch: 1c528
         HelixRadius: 0c95
         HelixColor: 717171
         BeamColor: fee40d
@@ -708,6 +736,46 @@ Comon.Delay weapon:
 	Warhead@801: CreateEffect
 		Explosions: obus_smoke01, obus_smoke02, obus_smoke03
 		ExplosionPalette: effect
+		ValidTargets: Ground
+	Warhead@3Shad: CreateEffect
+        Delay: 2
+		Explosions: shad_medium_smoke01, shad_medium_smoke02
+		ExplosionPalette: flameeffect50
+		ValidTargets: Ground
+	Warhead@PulseImpact: CreateEffect
+		Explosions: bomb_pulse01
+		ExplosionPalette: flameeffect50
+		ValidTargets: Ground, Water
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater_clear, Crater_concrete
+		InvalidTargets: Vehicle
+	Warhead@3EffWater: CreateEffect
+		Explosions: impact_water_large
+		ExplosionPalette: effectalpha75
+		ValidTargets: Water
+	Warhead@8Light: CreateEffect
+		Explosions: baselight
+		ExplosionPalette: light
+        
+^HeavyRailgun.RedAlliance.Animation: 
+	Projectile: Railgun
+        Duration: 16
+        BeamWidth: 0c92
+        BeamShape: Cylindrical
+        BeamAlphaDeltaPerTick: 25
+        HelixAngleDeltaPerTick: 8
+        QuantizationCount: 14
+        HelixPitch: 1c528
+        HelixRadius: 0c95
+        HelixColor: 717171
+        BeamColor: fee40d
+	Warhead@3EffGround: CreateEffect
+		Explosions: railgun_trailshot01, railgun_trailshot02, railgun_trailshot03
+		ImpactSounds: impact_explh01.aud, impact_explh02.aud, impact_explh03.aud
+		ExplosionPalette: railgunpal
+	Warhead@801: CreateEffect
+		Explosions: heavysmoke_damage01, heavysmoke_damage02, heavysmoke_damage03
+		ExplosionPalette: flameeffect60
 		ValidTargets: Ground
 	Warhead@3Shad: CreateEffect
         Delay: 8
@@ -721,7 +789,7 @@ Comon.Delay weapon:
 	Warhead@Shad: CreateEffect
         Delay: 4
 		Explosions: shad_medium_smoke01, shad_medium_smoke02
-		ExplosionPalette: flameeffect60
+		ExplosionPalette: flameeffect70
 		ValidTargets: Ground, Water, Air
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater_clear, Crater_concrete
@@ -791,14 +859,12 @@ Comon.Delay weapon:
 		ValidTargets: Water
         
 ^Anhilihator.Railgun.default:
-	Projectile: Bullet
-		Speed: 700
-		Image: 120mm
-		Inaccuracy: 0
-		ContrailLength: 40
-		ContrailWidth: 80
-		TrailInterval: 0
-		Color: 40E5E3
+	Projectile: RadBeam
+        Thickness: 24
+        Amplitude: 128
+        WaveLength: 812
+        QuantizationCount: 4
+        Color: 717171
 	Warhead@1Dam: SpreadDamage
 		Spread: 2048
 		DamageTypes: NukeDeath, TriggerProne, Crater
@@ -1256,7 +1322,6 @@ Comon.Delay weapon:
 ^BallistiqueMissile.Baneslayer.Animation:
 	ValidTargets: Ground, Water
 	Projectile: BulletAS
-		Inaccuracy: 125
 		Blockable: false
 		High: true
 		Speed: 170
@@ -2127,19 +2192,14 @@ orbital_power:
 		ValidTargets: Ground, Water
 		
 ^Anaconda.Weapons.default:
-	Projectile: Missile
-		Speed: 1050
-		Arm: 2
-		Inaccuracy: 64
-        RangeLimit: 20c256
-		Image: 80mm128proj
-        Palette: flameeffect
-		HorizontalRateOfTurn: 5
-        VerticalRateOfTurn: 6
-		CruiseAltitude: 1c64
-		LockOnProbability: 0
-        Jammable: false
-        Gravity: 4
+	Projectile: BulletAS
+		Blockable: false
+		Speed: 1c512
+        ContrailDelay: 0
+		ContrailLength: 2
+        ContrailWidth: 35
+        ContrailStartColor: f6eb14
+        ContrailEndColor: e2a41f
 	Warhead@1Dam: SpreadDamage
 		DeathType: 4
 		DamageTypes: Gibs, TriggerProne, Crater

@@ -4,65 +4,48 @@
 
 t1_dainn:
 	Inherits: ^VoxelVehicleMedium
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t1_bike.stat.unite
-    # / Inherit option Unite /
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t1_dainn.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
 	Inherits@harvester: ^Harvester.rules
-    Inherits@SoundMove: ^Truck.vehicle.move
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
 	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
     Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableEconomicUnit
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.baneslayer
 		BuildPaletteOrder: 10
 		InitialActivity: FindResources
-		Description: Harvester with average protection\n> Strong vs None\n Weak vs Everything
-	Tooltip:
-		Name: Dainn(Harvester)
-		GenericName: Harvester
-	Health:
-		HP: 4000
     # //////// Turret Trait System //////////
 	-AutoTarget:
     WithSpriteBody:
-    RenderVoxels:
-		Scale: 1.00
     # //////// Custom Effet Unite //////////
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 870,525,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 870,-525,-10
 
 t1_heidrun:
 	Inherits: ^ShapeVehicleLight
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t1_heidrun.stat.unite
-    # / Inherit option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Whell.vehicle.move
-	Inherits@Target: ^AutoTargetAllAssaultMove
-    Inherits@GAINSEXPERIENCE: ^GainsExperience
-    Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
 	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
     Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
     # / < Stat Unite Base > /
 	Selectable:
 		Bounds: 1048, 1048, 0, 0
@@ -188,44 +171,28 @@ t1_heidrun:
         TargetRelationships: Ally
 		ForceTargetRelationships: None
 		RequiresCondition: if-rep
-    # //////// Custom Effet Unite //////////
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 6
-        Offsets: 570,425,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 6
-        Offsets: 570,-425,-10
 
 t2_garm:
 	Inherits: ^ShapeHoverMedium
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t2_garm.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Hover.vehicle.move
-	Inherits@Target: ^AutoTargetGroundAssaultMove
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-    Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
-	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
+    Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
-    Inherits@Protocol01: ^Shield.Trait.Protocol
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.baneslayer
 		BuildPaletteOrder: 40
-		Prerequisites: optech
 		IconPalette: Baneslayer.Icon
     # //////// Turret Trait System //////////
 	WithSpriteTurret:
@@ -252,43 +219,29 @@ t2_garm:
         Range: 3c128
         Color: FF990065
         RequiresCondition: PShield.Activated
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 670,625,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 670,-625,-10
 
 t2_warg:
 	Inherits: ^ShapeVehicleMedium
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t2_warg.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@CargoPipsVisual: ^CargoPips
-    Inherits@SoundMove: ^Whell.vehicle.move
-	Inherits@TargetAir: ^AutoTargetAir
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-    Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Whell.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
+	Inherits@CargoPips: ^CargoPips
     # / Upgrade Faction /
-	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
-	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
+    Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAir
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.baneslayer
 		BuildPaletteOrder: 50
-		Prerequisites: optech
 	Mobile:
 		Locomotor: amphibious
     # //////// Trait Mechanics Unite //////////
@@ -322,45 +275,28 @@ t2_warg:
 	WithFacingSpriteBody@AmphMode:
 		Sequence: idleamp
 		RequiresCondition: amphibie
-    # //////// Custom Effet Unite //////////
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 870,625,-10
-        RequiresCondition: !amphibie
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 870,-625,-10
-        RequiresCondition: !amphibie
         
 t2_lindwyrm:
 	Inherits: ^ShapeVehicleMedium
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t2_lindwyrm.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Truck.vehicle.move
-	Inherits@Target: ^AutoTargetGroundAssaultMove
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-    Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Truck.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
-	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
+    Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.baneslayer
 		BuildPaletteOrder: 60
-		Prerequisites: oplabtech
 		IconPalette: Baneslayer.Icon
     # //////// Turret Trait System //////////
 	WithSpriteTurret:
@@ -403,32 +339,23 @@ t2_lindwyrm:
 		MuzzleSequence: muzzle
         MuzzlePalette: flameeffect
     ReloadArmamentsBar:
-    # //////// Custom Effet Unite //////////
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 870,625,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 870,-625,-10
 
 t2_yggdrasil:
 	Inherits: ^ShapeVehicleMedium
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@selection: ^SelectableSupportUnit
-    Inherits@SoundMove: ^Truck.vehicle.move
-    Inherits@UniteCarryable: ^UniteCarryable
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t2_lindwyrm.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Truck.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
-	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
+    Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableSupportUnit
     # / < Stat Unite Base > /
 	Selectable:
 		Bounds: 2048, 2048, 0, 0
@@ -475,22 +402,26 @@ t2_yggdrasil:
         
 t2_troll:
 	Inherits: ^ShapeVehicleMedium
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t2_troll.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-    Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Truck.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
+    Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
     # / < Stat Unite Base > /
 	Selectable:
 		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.baneslayer
 		BuildPaletteOrder: 80
-		Prerequisites: oplabtech
 		IconPalette: Baneslayer.Icon
 	-AutoTarget:
     # //////// Abillity Deploy Mechanics //////////
@@ -536,7 +467,6 @@ t3_fafnir:
 	Buildable:
 		Queue: Vehicle.baneslayer
 		BuildPaletteOrder: 90
-		Prerequisites: optechtempt3
     # //////// Turret Garrisoned Trait System //////////
 	AttackGarrisoned:
 		Name: garrisonedturret
@@ -580,22 +510,26 @@ t3_fafnir:
         
 t3_heimdall:
 	Inherits: ^ShapeVehicleHeavy
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t3_heimdall.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-    Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Truck.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.smoke
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
+    Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
     # / < Stat Unite Base > /
 	Selectable:
 		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.baneslayer
 		BuildPaletteOrder: 100
-		Prerequisites: optechtempt3
 	-AutoTarget:
     # //////// Abillity Deploy Mechanics //////////
     AutoDeployer:
@@ -625,25 +559,25 @@ t3_heimdall:
 
 t3_loki:
 	Inherits: ^ShapeHoverMedium
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t3_loki.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Hover.vehicle.move
-	Inherits@Target: ^AutoTargetGroundAssaultMove
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-    Inherits@UniteCarryable: ^UniteCarryable
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Hover.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover
+	Inherits@Carryable: ^UniteCarryable
     # / Upgrade Faction /
-	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
-	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
+    Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
 	Buildable:
 		Queue: Vehicle.baneslayer
 		BuildPaletteOrder: 110
-		Prerequisites: oplabtech, optechtempt3
 		HP: 2800
     # //////// Turret Trait System //////////
 	AttackFrontal:
@@ -676,41 +610,28 @@ t3_loki:
 		RecoilRecovery: 15
 		LocalOffset: 650,0,280
 		RequiresCondition: Target
-    # //////// Custom Effet Unite //////////
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 870,635,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 870,-635,-10
 
 t4_odin:
 	Inherits: ^ShapeVehicleHeavy
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t4_odin.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^HeavyTracked.vehicle.move
-	Inherits@Target: ^AutoTargetGroundAssaultMove
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer
-	Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^HeavyTracked.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover
+	Inherits@Carryable: ^UniteCarryable
+    # / Upgrade Faction /
+	Inherits@Upgrade01: ^Upgrade.Speed.Plasma.Engine.Baneslayer 
+    Inherits@Upgrade02: ^Upgrade.Repair.Training.Baneslayer
     Inherits@Upgrade03: ^Upgrade.armorpack.Baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableMassiveCombatUnit
+	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
-	Selectable:
-		Bounds: 2848, 2848, 0, 0
 	Buildable:
 		Queue: Vehicle.baneslayer
 		BuildPaletteOrder: 120
-		Prerequisites: oplabtech, optechtempt3
 		BuildLimit: 1
 	GrantConditionOnAttack@Target:
 		ArmamentNames: primary
@@ -834,19 +755,5 @@ t2_dwarf:
 		RecoilRecovery: 15
 		LocalOffset: 650,0,280
 		RequiresCondition: !Target
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 870,635,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 870,-635,-10
 	WithMuzzleOverlay:
 	RenderSprites:

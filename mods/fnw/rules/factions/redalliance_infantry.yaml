@@ -1,14 +1,14 @@
 t1_comrade:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t1_comrade.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_comrade.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-	Inherits@CaptureRules: ^Unite.CaptureRulesmin
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    # / Upgrade Faction /
-	Inherits@3: ^Infantry.Upgrade.Redalliance
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildAtProductionType: Soldier
@@ -41,14 +41,15 @@ t1_comrade:
 
 t1_disciple:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t1_disciple.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_disciple.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
+    # / Target type /
 	Inherits@Target: ^AutoTargetAllAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    # / Upgrade Faction /
-	Inherits@3: ^Infantry.Upgrade.Redalliance
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildPaletteOrder: 20
@@ -88,7 +89,6 @@ t2_tesla:
 	Inherits@Target: ^AutoTargetGroundAssaultMove
     Inherits@UnitePlayStat:^UnitPlayerStat
     # / Upgrade Faction /
-	Inherits@3: ^Infantry.Upgrade.Redalliance
 	Buildable:
 		Queue: Null.redalliance
 		BuildPaletteOrder: 30
@@ -126,15 +126,16 @@ t2_tesla:
 
 t1_stealhar:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t1_stealhar.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t1_stealhar.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Capture: ^Capture.allBuilding
+	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@CaptureRules: ^Unite.CaptureRules
-    # / Upgrade Faction /
-	Inherits@3: ^Infantry.Upgrade.Redalliance
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildAtProductionType: Soldier
@@ -170,14 +171,15 @@ t1_stealhar:
 
 t2_devastator:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t2_devastator.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_devastator.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    # / Upgrade Faction /
-	Inherits@3: ^Infantry.Upgrade.Redalliance
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildPaletteOrder: 50
@@ -211,14 +213,15 @@ t2_devastator:
 
 t3_eradicator:
 	Inherits@1: ^InfantryHeavy
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t3_eradicator.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_eradicator.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    # / Upgrade Faction /
-	Inherits@3: ^Infantry.Upgrade.Redalliance
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildPaletteOrder: 60

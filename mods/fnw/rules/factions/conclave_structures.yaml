@@ -5,6 +5,7 @@ tccacnst:
     Inherits@StatBuilding: ^conclave.mcv.stat.building
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+    Inherits@AiBot.cheat: ^aibotcheat.module
 	Selectable:
 		Bounds: 7168, 4096, 0, 0
 	Building:

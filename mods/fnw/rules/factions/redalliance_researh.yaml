@@ -1,32 +1,34 @@
-^Infantry.Upgrade.Redalliance:
-    Inherits@SpeedInfantry: ^RangeInfantry.redalliance.apply
+^Infantry.WeaponRange.Upgrade.Redalliance:
+    Inherits@SpeedInfantry: ^RangeInfantryStat.redalliance.apply
 	GrantConditionOnPrerequisite@Up.Inf.Range:
 		Prerequisites: research.RangeInfantry.Redalliance
 		Condition: upgrade.RangeInfantry.Redalliance
 	RangeMultiplier@Up.Inf.Range:
 		RequiresCondition: upgrade.RangeInfantry.Redalliance
-	GrantConditionOnPrerequisite@research.SerumRage.Infantry:
-		Prerequisites: research.SerumRage.Infantry
-		Condition: Upgrade.SerumRage.Infantry
 
-^Vehicle.Upgrade.Redalliance:
+^Affect.Upgrade.FusionSpeed.Redalliance:
     Inherits@FusionSpeed: ^FusionSpeed.redalliance.apply
-    Inherits@ArmorPurge: ^Stat.ArmorPurge.RedAlliance
 	SpeedMultiplier@Fusion.Engine:
 		RequiresCondition: Upgrade.FusionSpeed.Vehicle
 	GrantConditionOnPrerequisite@research.FusionSpeed.Vehicle:
 		Prerequisites: research.FusionSpeed.Vehicle
 		Condition: Upgrade.FusionSpeed.Vehicle
+        
+^Affect.Upgrade.ChargedRailgun.Redalliance:
 	GrantConditionOnPrerequisite@research.Railgun.Redalliance:
 		Prerequisites: research.Railgun.Redalliance
 		Condition: Upgrade.Railgun.Redalliance
+        
+^Affect.Upgrade.Retrofit.Redalliance:
 	GrantConditionOnPrerequisite@research.Retrofit.Redalliance:
 		Prerequisites: research.Retrofit.Redalliance
 		Condition: Upgrade.Retrofit.Redalliance
+        
+^Affect.Upgrade.ArmorPurge.Redalliance:
+    Inherits@ArmorPurge: ^Stat.ArmorPurge.RedAlliance
 	GrantConditionOnPrerequisite@research.ArmorPurge.Redalliance:
 		Prerequisites: research.ArmorPurge.Redalliance
 		Condition: Upgrade.ArmorPurge.Redalliance
-#Aspect Trait Option
 
 ^Aircraft.Upgrade.Redalliance:
     Inherits@FusionSpeed: ^AircraftSpeed.redalliance.apply

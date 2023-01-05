@@ -280,3 +280,70 @@ fixedTech.tabsUpgrade:
 	Warhead@Actor: SpawnBuilding
 		Buildings: fixed.federation.tech
 		SkipMakeAnims: true
+
+# SuperWeapons de base
+federation.superweapon.debarquement:
+	ReloadDelay: 25
+	Range: 12c0
+	Projectile: InstantExplode
+	Warhead@drop2: FireShrapnel
+        Delay: 20
+		Weapon: aircraft.fed.desending01
+		Amount: 1
+		Delay: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+	Warhead@drop3: FireShrapnel
+        Delay: 45
+		Weapon: aircraft.fed.desending01
+		Amount: 2
+		Delay: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+
+# SuperWeapons | atterissange de base
+^aircraft.fed.desending:
+	ReloadDelay: 8
+	Range: 4c0
+	MinRange: 1c0
+	Projectile: AthenaProjectile
+		Altitude: 10000
+	Warhead@op: FireShrapnel
+		Weapon: ^droppod.charging.base
+		ImpactActors: false
+		AimChance: 25
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Air
+
+# SuperWeapons | Debarquement d'unité
+^aircraft.fed.charging.base:
+	ReloadDelay: 3
+	Range: 3c0
+	Report: mine_expl03.aud
+	ValidTargets: Ground, Water, Air, Vehicle, Building, Infantry
+	Projectile: BulletAS
+		Speed: 200
+		Image: aicraft_carier.superweapons
+		Palette: player
+		Shadow: true
+		Inaccuracy: 600
+		ContrailLength: 12
+		ContrailColor: EECCAA77
+		ContrailWidth: 40
+		ContrailDelay: 0
+        
+# Composition du debarquement
+
+# ----- Drop pod 01 ----- 
+aircraft.fed.desending01:
+	Inherits: ^aircraft.fed.desending
+	Warhead@op: FireShrapnel
+		Weapon: debarquement.federation.infanterie
+		ImpactActors: false
+   
+debarquement.federation.infanterie:
+	Inherits: ^aircraft.fed.charging.base
+	Warhead@5Actor: SpawnActor
+		Actors: aicraft_cariersupport, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen, t1_guardmen
+		Range: 1

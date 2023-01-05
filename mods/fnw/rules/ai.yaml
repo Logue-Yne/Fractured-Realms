@@ -28,6 +28,8 @@ Player:
 		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
 		McvFactoryTypes: opweap, arweap, tcweap.first, fedweap
 		MinimumConstructionYardCount: 2
+        MinBaseRadius: 20
+        MaxBaseRadius: 35
     HarvesterBotModule@generic:
         RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
         HarvesterTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv
@@ -40,6 +42,10 @@ Player:
 	GrantConditionOnBotOwner@rush:
 		Condition: enable-rush-ai
 		Bots: rush
+	ProvidesPrerequisite@AISpecialCash:
+		Prerequisite: AICash
+        RequiresCondition: enable-rush-ai || enable-normal-ai || enable-turtle-ai
+        
     #-------------------------------#
     # Harvester/Deploy AI
     #-------------------------------#
@@ -387,9 +393,16 @@ Player:
     #-------------------------------#
 	SquadManagerBotModule@rush:
 		RequiresCondition: enable-rush-ai
-		SquadSize: 14
+		SquadSize: 10
+        SquadSizeRandomBonus: 25
+        AssignRolesInterval: 15
 		ExcludeFromSquadsTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, armcv, tcmcv, t2_yggdrasil, arnaweap, arnahand, refinery, mobilerelay, t2_airfield, t2_command_relais, t1_opengineer, t1_stealhar
 		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
+		IdleScanRadius: 18
+		AttackScanRadius: 9
+		MaxBaseRadius: 16
+        MinimumAttackForceDelay: 25
+		RushAttackScanRadius: 25
         ProtectionScanRadius: 10
 		ProtectUnitScanRadius: 20
 		DangerScanRadius: 15
@@ -398,23 +411,36 @@ Player:
         ProtectionTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, oppowr, tciontrap, fedpowr, arproc, opproc, tcproc, fedproc, arbarr, opbarr, fedbarr, arweap, opweap, fedweap, tcweap, arheli, opheli, fedheli, artech, ardeftech, t3_commandbuilding, optech, optech2, opcacnst, fedcnst
 	SquadManagerBotModule@normal:
 		RequiresCondition: enable-normal-ai
-		SquadSize: 20
+		SquadSize: 8
+        SquadSizeRandomBonus: 30
+        AssignRolesInterval: 20
 		ExcludeFromSquadsTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, armcv, tcmcv, t2_yggdrasil, arnaweap, arnahand, refinery, mobilerelay, t2_airfield, t2_command_relais, t1_opengineer, t1_stealhar
 		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
-        ProtectionScanRadius: 12
-		ProtectUnitScanRadius: 25
+		IdleScanRadius: 18
+		AttackScanRadius: 9
+		MaxBaseRadius: 16
+        MinimumAttackForceDelay: 25
+		RushAttackScanRadius: 25
+        ProtectionScanRadius: 10
+		ProtectUnitScanRadius: 20
 		DangerScanRadius: 18
         AirUnitsTypes: t2_nidhogg, t3_thor, t3_valkyrie, t2_comete, t2_zenith, t3_quasar, t2_wyvern, t2_chimera, t3_archdemon, t4_cruiser
         GuerrillaTypes: t1_bike, t1_scarab, t2_rodeur, t2_comete, t1_heidrun
         ProtectionTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, oppowr, tciontrap, fedpowr, arproc, opproc, tcproc, fedproc, arbarr, opbarr, fedbarr, arweap, opweap, fedweap, tcweap, arheli, opheli, fedheli, artech, ardeftech, t3_commandbuilding, optech, optech2, opcacnst, fedcnst
 	SquadManagerBotModule@turtle:
 		RequiresCondition: enable-turtle-ai
-		SquadSize: 35
+		SquadSize: 10
+        SquadSizeRandomBonus: 40
 		ExcludeFromSquadsTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, armcv, tcmcv, t2_yggdrasil, arnaweap, arnahand, refinery, mobilerelay, t2_airfield, t2_command_relais, t1_opengineer, t1_stealhar
 		ConstructionYardTypes: aracnst, tccacnst, opcacnst, fedcnst
+		IdleScanRadius: 18
+		AttackScanRadius: 9
+		MaxBaseRadius: 16
+        MinimumAttackForceDelay: 25
+		RushAttackScanRadius: 25
+		DangerScanRadius: 18
         ProtectionScanRadius: 12
 		ProtectUnitScanRadius: 25
-		DangerScanRadius: 18
         AirUnitsTypes: t2_nidhogg, t3_thor, t3_valkyrie, t2_comete, t2_zenith, t3_quasar, t2_wyvern, t2_chimera, t3_archdemon, t4_cruiser, t1_mosquito, t1_vulture
         GuerrillaTypes: t1_bike, t1_scarab, t2_rodeur, t2_comete, t1_heidrun
         ProtectionTypes: t1_harvester, t1_dainn, prospecteur, t1_fedharv, oppowr, tciontrap, fedpowr, arproc, opproc, tcproc, fedproc, arbarr, opbarr, fedbarr, arweap, opweap, fedweap, tcweap, arheli, opheli, fedheli, artech, ardeftech, t3_commandbuilding, optech, optech2, opcacnst, fedcnst

@@ -1,18 +1,17 @@
 ^Debris:
 	Range: 5c0
 	Projectile: Bullet
-		Speed: 64, 128
-		LaunchAngle: 80, 192
+		Speed: 84, 148
+		LaunchAngle: 85, 182
 		Image: medium_debris
 		High: true
-		Inaccuracy: 125
+		Inaccuracy: 1c0
 		TrailImage: smokeymin
-		TrailInterval: 1
-		ContrailLength: 10
-		ContrailWidth: 7
-        AirburstAltitude: 1c0
+        TrailInterval: 2
+        TrailPalette: effectalpha55
+        BounceCount: 3
 		Shadow: true
-		Blockable: false
+		Blockable: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
 		Damage: 10
@@ -52,6 +51,25 @@ SmallDebris3:
 		Explosion: debrisexplode
 		ImpactSound: debrisexplode.aud
 		ValidTargets: Ground, Water, Air
+
+#Building Damaged Spawn debris
+building.damaged.debris:
+	ReloadDelay: 25
+	Range: 6c768
+	Warhead@Spawn.debris01: FireShrapnel
+        Delay: 5
+		Weapon: Debris3
+		Amount: 3
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
+	Warhead@Spawn.debris02: FireShrapnel
+        Delay: 5
+		Weapon: Debris4
+		Amount: 3
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
+		ImpactActors: false
 
 #Vehicle debris spec
 
@@ -182,7 +200,7 @@ Debris4:
 		Blockable: false
 		Angle: 30, 90
 		Inaccuracy: 1c256
-		Image: shrapnel4
+		Image: small_debris2
 		Trail: large_trail
 		TrailPalette: effect75alpha
 		TrailInterval: 1

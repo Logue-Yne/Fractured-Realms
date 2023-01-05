@@ -190,10 +190,11 @@ t2_hydra:
 t3_apocalypse:
 	Inherits@Stat: ^StatVehicleEffect
 	Inherits@1: ^HeavySmokeEffect
-	muzzlebase: muzzle_railgunbase01
-		Length: *
+	muzzlebase: muzzle_railgun
+		Facings: 16
+		Length: 25
+		Tick: 20
 		BlendMode: Additive
-		Tick: 15
 	muzzle: muzzle_railgun
 		Facings: 16
 		Length: 25

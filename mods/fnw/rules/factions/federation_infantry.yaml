@@ -1,13 +1,13 @@
 t1_guardmen:
 	Inherits@1: ^Infantry
-    # / Inherit Stat / effect - upgrade Unite /
-    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
-    Inherits@Effect01: ^affect.Officer.influence.Federation
-    # / Inherit Stats Unit /
+    # / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t1_guardmen.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.federation01: ^affect.InfantryTogether.Federation
+	Inherits@Upgrade.federation02: ^affect.Officer.influence.Federation
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
     # / < Stat Unite Base > /
 	Buildable:
@@ -48,14 +48,15 @@ t1_guardmen:
 
 t1_guardmenat:
 	Inherits@1: ^Infantry
-    # / Inherit Stat / effect - upgrade Unite /
-    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
-    Inherits@Effect01: ^affect.Officer.influence.Federation
+    # / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t1_guardmen_at.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
-	Inherits@Target: ^AutoTargetGroundAssaultMove
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.federation01: ^affect.InfantryTogether.Federation
+	Inherits@Upgrade.federation02: ^affect.Officer.influence.Federation
+    # / Target type /
+	Inherits@Target: ^AutoTargetAll
     # / < Stat Unite Base > /
 	Buildable:
 		Queue: Infantry.federation, Infantry.federationT2, Infantry.federationT3
@@ -96,14 +97,14 @@ t1_guardmenat:
     
 t2_officer:
 	Inherits@1: ^Infantry
-    # / Inherit Stat / effect - upgrade Unite /
-    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
+    # / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t2_officier.stat.unite
-    # / Inherit Option Unite /
-	Inherits@CaptureRules: ^Unite.CaptureRules
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@3: ^Infantry.Upgrade.baneslayer
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Capture: ^Capture.allBuilding
+	Inherits@Upgrade.federation01: ^affect.InfantryTogether.Federation
+	Inherits@Upgrade.federation02: ^affect.Officer.influence.Federation
     # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.federation, Infantry.federationT2, Infantry.federationT3
@@ -129,15 +130,16 @@ t2_officer:
 
 t2_locust:
 	Inherits@1: ^Infantry
-    # / Inherit Stat / effect - upgrade Unite /
-    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
-    Inherits@Effect01: ^affect.Officer.influence.Federation
+    # / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t2_locust.stat.unite
-    # / Inherit option Unite /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.federation01: ^affect.InfantryTogether.Federation
+	Inherits@Upgrade.federation02: ^affect.Officer.influence.Federation
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Base > /
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.federation, Infantry.federationT2, Infantry.federationT3
 		BuildAtProductionType: Soldier
@@ -178,16 +180,16 @@ t2_locust:
     
 t3_silverwolf:
 	Inherits@1: ^Infantry
-    # / Inherit Stat / effect - upgrade Unite /
-    Inherits@Upgrade01: ^affect.InfantryTogether.Federation
-    Inherits@Effect01: ^affect.Officer.influence.Federation
-    # / Inherit Stats Unit /
+    # / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t3_wolf.stat.unite
-    # / Inherit option Unit /
-	Inherits@GainsExperience: ^GainsExperience
-	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.federation01: ^affect.InfantryTogether.Federation
+	Inherits@Upgrade.federation02: ^affect.Officer.influence.Federation
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Actor Unit > /
+    # / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.federation, Infantry.federationT2, Infantry.federationT3
 		BuildAtProductionType: Soldier

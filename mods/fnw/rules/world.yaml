@@ -205,7 +205,7 @@ World:
 		Type: Scorch
 		Sequence: scorchs
 		Palette: schorchalpha85
-		SmokeChance: 15
+		SmokeChance: 1
         SmokeType: Scorch_flamming
         SmokeSequences: idle01, idle02, idle03
         SmokePalette: flameeffect60

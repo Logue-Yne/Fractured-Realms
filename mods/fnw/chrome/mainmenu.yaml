@@ -51,21 +51,21 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: Un Joueur
+							Text: Singleplayer
 							Font: Bold
 						Button@MULTIPLAYER_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: Multijoueur
+							Text: Multiplayer
 							Font: Bold
 						Button@SETTINGS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
-							Text: Options
+							Text: Settings
 							Font: Bold
 						Button@EXTRAS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -79,14 +79,14 @@ Container@MAINMENU:
 							Y: 220
 							Width: 140
 							Height: 30
-							Text: Gestion de contenu
+							Text: Manage Content
 							Font: Bold
 						Button@QUIT_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: Quitter
+							Text: Quit
 							Font: Bold
 				Background@SINGLEPLAYER_MENU:
 					Width: PARENT_RIGHT
@@ -97,7 +97,7 @@ Container@MAINMENU:
 							Y: 20
 							Width: 200
 							Height: 30
-							Text: Solo
+							Text: Singleplayer
 							Align: Center
 							Font: Bold
 						Button@SKIRMISH_BUTTON:
@@ -105,7 +105,7 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: Escarmouche
+							Text: Skirmish
 							Font: Bold
 						Button@MISSIONS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -119,7 +119,14 @@ Container@MAINMENU:
 							Y: 140
 							Width: 140
 							Height: 30
-							Text: Charger
+							Text: Load
+							Font: Bold
+						Button@ENCYCLOPEDIA_BUTTON:
+							X: PARENT_RIGHT / 2 - WIDTH / 2
+							Y: 180
+							Width: 140
+							Height: 30
+							Text: Codex
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -127,7 +134,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: Retour
+							Text: Back
 							Font: Bold
 				Background@EXTRAS_MENU:
 					Width: PARENT_RIGHT
@@ -146,28 +153,28 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: Rediffusions
+							Text: Replays
 							Font: Bold
 						Button@MUSIC_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: Musique
+							Text: Music
 							Font: Bold
 						Button@MAP_EDITOR_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 140
 							Width: 140
 							Height: 30
-							Text: Éditeur de carte
+							Text: Map Editor
 							Font: Bold
 						Button@ASSETBROWSER_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 180
 							Width: 140
 							Height: 30
-							Text: Navigateur d'assets
+							Text: Asset Browser
 							Font: Bold
 						Button@CREDITS_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -182,7 +189,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: Retour
+							Text: Back
 							Font: Bold
 				Background@MAP_EDITOR_MENU:
 					Width: PARENT_RIGHT
@@ -193,7 +200,7 @@ Container@MAINMENU:
 							Y: 20
 							Width: 200
 							Height: 30
-							Text: Éditeur de carte
+							Text: Map Editor
 							Align: Center
 							Font: Bold
 						Button@NEW_MAP_BUTTON:
@@ -201,14 +208,14 @@ Container@MAINMENU:
 							Y: 60
 							Width: 140
 							Height: 30
-							Text: Nouvelle carte
+							Text: New Map
 							Font: Bold
 						Button@LOAD_MAP_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
 							Y: 100
 							Width: 140
 							Height: 30
-							Text: Charger carte
+							Text: Load Map
 							Font: Bold
 						Button@BACK_BUTTON:
 							X: PARENT_RIGHT / 2 - WIDTH / 2
@@ -216,7 +223,7 @@ Container@MAINMENU:
 							Y: 260
 							Width: 140
 							Height: 30
-							Text: Retour
+							Text: Back
 							Font: Bold
 		Container@PERFORMANCE_INFO:
 			Logic: PerfDebugLogic
@@ -252,7 +259,7 @@ Container@MAINMENU:
 					Y: 15
 					Width: 400
 					Height: 25
-					Text: Nouvelles du Front
+					Text: Battlefield News
 					Font: Bold
 		Container@UPDATE_NOTICE:
 			X: (WINDOW_RIGHT - WIDTH) / 2
@@ -264,12 +271,14 @@ Container@MAINMENU:
 					Height: 25
 					Align: Center
 					Shadow: true
-					Text: Vous utilisez une version obsolète d'OpenRA / Fractured Realms.
+					Text: You are running an outdated version of OpenRA.
 				Label@B:
 					Y: 20
 					Width: PARENT_RIGHT
 					Height: 25
 					Align: Center
 					Shadow: true
-					Text: Téléchargez la dernière version sur www.openra.net
+					Text: Download the latest version from www.openra.net
 		Container@PLAYER_PROFILE_CONTAINER:
+			X: 25
+			Y: 25

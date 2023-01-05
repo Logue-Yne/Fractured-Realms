@@ -1,25 +1,18 @@
 tcmcv:
 	Inherits: ^ShapeWalkerMedium
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^tcmcv.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Select - Target type /
+	Inherits@Select: ^SelectableMassiveSupportUnit
+    # / < Stat Unite Base > /
     Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle.conclave
-		Prerequisites: Ion Trap X3, tcweap.first
 		BuildPaletteOrder: 70
 		BuildDurationModifier: 25
-		Description: Mobile construction vehicle
 		IconPalette: Conclave.Icon
-	Selectable:
-		Bounds: 3048, 3048, 0, 0
-	Valued:
-		Cost: 2500
-	Tooltip:
-		Name: Wayfarer(MCV)
-	Selectable:
-		Priority: 4
-	Health:
-		HP: 5000
-	Armor:
-		Type: ArmorTank
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	Transforms:
@@ -34,8 +27,6 @@ tcmcv:
 		VisualBounds: 1544, 2509, 0, -289
 	BaseBuilding:
 	-AutoTarget:
-	RenderSprites:
-		Scale: 0.85
 	ChangesHealth:
 		Step: 5
 		Ticks: 3
@@ -43,55 +34,45 @@ tcmcv:
 
 prospecteur:
 	Inherits: ^ShapeHoverMedium
-    Inherits@UnitePlayStat:^UnitPlayerStat
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^prospecteur.conclave.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^HoverTech.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover.conclave
 	Inherits@harvester: ^Harvester.rules
-    Inherits@SoundMove: ^HoverTech.vehicle.move
-    Inherits@CargoPassenger: ^VehiclePassenger
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
+	Inherits@Carryable: ^UniteCarryable
+	Inherits@CargoPassenger: ^VehiclePassenger
+    # / Select - Target type /
+	Inherits@Select: ^SelectableEconomicUnit
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 10
-		Prerequisites: tcproc, tcweap.first
 		InitialActivity: FindResources
-		Description: Hover Diastim harvester
 		IconPalette: Conclave.Icon
-	Tooltip:
-		Name: Prospector(Harvester)
-		GenericName: Harvester
-	Selectable:
-		Priority: 7
-		DecorationBounds: 1544, 2509, 0, -289
 	WithHarvestOverlay:
-	Health:
-		HP: 4000
 	-AutoTarget:
-	RenderSprites:
-		Scale: 1.5
-    LeavesTrails@01:
-        Image: smoke_hovermove
-        Sequences: smoke_hovermove02, smoke_hovermove03, smoke_hovermove04
-        Palette: powereffect
-        Type: CenterPosition
-        MovingInterval: 6
-        Offsets: -20,0,-15
 	WithDockingAnimation:
 
 t2_rodeur:
 	Inherits: ^ShapeWalkerMedium
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t2_rodeur.conclave.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^HoverTech.vehicle.move
+	Inherits@Carryable: ^UniteCarryable
+	Inherits@CargoPassenger: ^VehiclePassenger
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@CargoPassenger: ^VehiclePassenger
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 40
-		Prerequisites: tcholotech.rodeur
 		IconPalette: Conclave.Icon
 	Armament@gun:
 		Weapon: Rodeur.Dual.LightLaser
@@ -129,8 +110,6 @@ t2_rodeur:
         StartIfBelow: 100
         RequiresCondition: Omega.drain
 	WithMuzzleOverlay:
-	RenderSprites:
-		Scale: 0.85
 	WithSpriteTurret:
         RequiresCondition: !upgrade.Base.Rodeur.Conclave
     WithSpriteTurret@phie:
@@ -166,18 +145,19 @@ t2_rodeur:
 
 t3_surveyor:
 	Inherits: ^ShapeWalkerMedium
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t3_surveyor.conclave.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@TrailEffect: ^Trails.Walker.effect.smoke
+    # / Select - Target type /
+	Inherits@Select: ^SelectableHeightCombatUnit
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Selectable:
-		Bounds: 2048, 3048, 0, -1024
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 110
-		Prerequisites: tcholotech.arpenteur
 		IconPalette: Conclave.Icon
 	Mobile:
 		PauseOnCondition: empdisable && !upgrade.Omega.Arpenteur.Conclave
@@ -276,20 +256,21 @@ activate.Shield:
 
 t2_pilgrim:
     Inherits: ^ShapeHoverMedium
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t2_pilgrim.conclave.stat.unite
-    # / Inherit option Unite /
-    Inherits@GAINSEXPERIENCE: ^GainsExperience
-    Inherits@Target: ^AutoTargetAllAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^HoverTech.vehicle.move
-    Inherits@CargoPassenger: ^VehiclePassenger
-	Selectable:
-		Bounds: 2048, 2048, 0, 0
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^HoverTech.vehicle.move
+	Inherits@TrailEffect: ^Trails.effect.hover.conclave
+	Inherits@Carryable: ^UniteCarryable
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetAllAssaultMove
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 60
-		Prerequisites: tcholotech.pelerin
 		IconPalette: Conclave.Icon
 	Passenger:
 		RequireForceMoveCondition: !undeployed

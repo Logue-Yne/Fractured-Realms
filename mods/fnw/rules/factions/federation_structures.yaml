@@ -23,6 +23,7 @@ fedcnst:
     Inherits@StatBuilding: ^Mcv.federation.stat.building
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+    Inherits@AiBot.cheat: ^aibotcheat.module
 	Selectable:
 		Bounds: 7168, 4096, 0, -512
 	Building:
@@ -212,7 +213,7 @@ fedproc:
 	Tooltip:
 		Name: Diastim Refinery
 	Building:
-		Footprint:  =xxx= xxxx= xxxx=
+		Footprint:  _xxx_ xxxx_ xxxx_
 		Dimensions: 5,3
 		BuildSounds: buildingmakeop.aud
 		LocalCenterOffset: 0,-512,0

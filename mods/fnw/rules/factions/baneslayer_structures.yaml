@@ -5,6 +5,7 @@ opcacnst:
     Inherits@StatBuilding: ^baneslayer.mcv.stat.building
     # / Inherit specifity /
     Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+    Inherits@AiBot.cheat: ^aibotcheat.module
 	Selectable:
 		Bounds: 7168, 4096, 0, -512
 	Building:
@@ -95,8 +96,6 @@ opcacnst:
         CloakTypes: Cloak, Mine
 		RequiresCondition: Power.reveal.Baneslayer
 	RenderDetectionCircle:
-	RenderSprites:
-		Scale: 1.0
 	Exit:
     # Reveal Power Conclave
     RevealsShroud@PowerReveal.Conclave:
@@ -1119,6 +1118,15 @@ t3_heimdall_deploy:
     AutoDeployer:
         DeployTicks: 1000
         UndeployTicks: 1000
+	GrantConditionOnAttack@MissileAccuratePrime:
+		ArmamentNames: primary
+		RevokeOnNewTarget: false
+		RequiredShotsPerInstance: 1
+        RevokeDelay: 60
+		Condition: Inaccurate.prime
+    InaccuracyMultiplier@MissileAccuratePrime:
+        Modifier: 4500
+        RequiresCondition: Inaccurate.prime
 	Armament@gun:
 		Weapon: Heimdall.Missile
 		Recoil: 150

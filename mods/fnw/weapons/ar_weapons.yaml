@@ -127,7 +127,7 @@ AP_basilic:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^Railgun.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^Railgun.Basilisk.Stat.weapons
-	Report: railgun_fire01.aud, railgun_fire02.aud, railgun_fire03.aud
+	Report: basilisk_firecanon01.aud, basilisk_firecanon02.aud, basilisk_firecanon03.aud
 	Warhead@13Shake: ShakeScreen
 		Duration: 3
 		Intensity: 2
@@ -265,7 +265,7 @@ AP_ApocalypseCounterMeasure:
 
 AP_Apocalypse:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
-	Inherits@Animation.weapons: ^Railgun.RedAlliance.Animation
+	Inherits@Animation.weapons: ^HeavyRailgun.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^RailgunApocalypse.RedAlliance.Stat.weapons
     Inherits@SmokeImpactEffect: ^weapons.shake.impact_min
 	Report: titanrailgunfire01.aud, titanrailgunfire02.aud, titanrailgunfire03.aud
@@ -279,10 +279,10 @@ AP_Apocalypse:
 		Multiplier: 0.5,0.3
 	Warhead@3ShockWave: CreateEffect
 		Explosions: shockwave_medium
-		ExplosionPalette: flameeffect10
+		ExplosionPalette: flameeffect20
 		ValidTargets: Ground, Water
     Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 512
+        Range: 1c0
         
 AP_ApocalypseShock:
 	Inherits@StatBase.weapons: ^RailgunApocalypse.RedAlliance.Shock.weapons
@@ -329,6 +329,12 @@ fragMissile:
 	Inherits@default.weapons: ^Missile.Comon.Animation
     Inherits@StatBase.weapons: ^MissileApocalpyse.Redalliance.Stat.weapons
 	Report: rocketweaponfire01.aud, rocketweaponfire02.aud, rocketweaponfire03.aud
+    
+minotaur_flamer:
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@Animation.weapons: ^FlamerSpray.RedAlliance.Animation
+	Inherits@StatBase.weapons: ^FlamerSpay.RedAlliance.Stat.weapons
+	StartBurstReport: flameaera01.aud, flameaera02.aud, flameaera03.aud
 
 FlamerPurifier_01:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
@@ -359,18 +365,33 @@ Ann.muzzle:
 	Projectile: InstantHit
 	ReloadDelay: 100
 	MinRange: 4c0
-	
-Ann.TargetBeam:
-	Inherits@default.weapons: ^Laser.Target.Animation
-	Inherits@Range: ^Anhilihator.Raigun.Stat.weapons
+    
+Ann.target01:
+	Inherits@default.weapons: ^LokyIem.Target.Baneslayer.Animation
+	FirstBurstTargetOffset: 0,-960,0
+	FollowingBurstTargetOffset: 0,12,0
 	ReloadDelay: 4
 	MinRange: 4c0
+    Range: 20c0	
+	Burst: 80
+	BurstDelays: 1
+    StartBurstReport: ann_charging.aud
+    
+Ann.target02:
+	Inherits@default.weapons: ^LokyIem.Target.Baneslayer.Animation
+	FirstBurstTargetOffset: 0,960,0
+	FollowingBurstTargetOffset: 0,-12,0
+	ReloadDelay: 4
+	MinRange: 4c0
+    Range: 20c0
+	Burst: 80
+	BurstDelays: 1
 
 RailgunAnn:
     Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@default.weapons: ^Anhilihator.Railgun.default
 	Inherits@StatBase.weapons: ^Anhilihator.Railgun.Stat.weapons
-	Report: ann_gun.aud
+	Report: ann_artymodefire01.aud, ann_artymodefire02.aud, ann_artymodefire03.aud
 	Warhead@13Shake: ShakeScreen
 		Duration: 7
 		Intensity: 3
@@ -978,6 +999,8 @@ alliance.mine:
 		ExplosionPalette: effectalpha10
 		ValidTargets: Ground, Water
         
+        
+# SuperWeapons de base
 alliance.droppod:
 	ReloadDelay: 25
 	Range: 12c0
@@ -998,7 +1021,8 @@ alliance.droppod:
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
 		ImpactActors: false
-        
+
+# SuperWeapons | atterissange de base
 ^droppod.desending:
 	ReloadDelay: 8
 	Range: 4c0
@@ -1010,7 +1034,8 @@ alliance.droppod:
 		ImpactActors: false
 		AimChance: 25
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Air
-        
+
+# SuperWeapons | Debarquement d'unité
 ^droppod.charging.base:
 	ReloadDelay: 3
 	Range: 3c0

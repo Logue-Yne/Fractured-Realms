@@ -1,6 +1,6 @@
 Metadata:
 	Title: Fractured Realms
-	Version: v1.0/03 (playtest 2022.09.25)
+	Version: v1.0/05 (playtest 2022.12.14)
 	Website: https://www.moddb.com/mods/fractured-realms
 	WebIcon32: https://i60.servimg.com/u/f60/16/69/66/28/logo_310.png
 	WindowTitle: OpenRA - Fractured Realms
@@ -97,6 +97,7 @@ Rules:
     fnw|rules/world/rock.yaml
     fnw|rules/mechanics.yaml
     fnw|rules/doctrines.yaml
+	fnw|rules/codex.yaml
 	
 	# Comuns
 	fnw|rules/factions/comun_structures.yaml
@@ -175,7 +176,7 @@ ChromeLayout:
 	common|chrome/ingame-infoobjectives.yaml            #trad Fr
 	common|chrome/ingame-infostats.yaml                 #trad Fr
 	common|chrome/lobby-players.yaml                    #trad Fr
-	common|chrome/mainmenu.yaml                         #trad Fr
+	fnw|chrome/mainmenu.yaml                         #trad Fr
 	common|chrome/settings-hotkeys.yaml                 #trad Fr
 	fnw|chrome/tooltips.yaml
 	common|chrome/assetbrowser.yaml
@@ -220,9 +221,11 @@ ChromeLayout:
 	common|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
 	common|chrome/text-notifications.yaml
+	fnw|chrome/encyclopedia.yaml
 
 Weapons:
     fnw|weapons/stat_weapons.yaml
+    fnw|weapons/effect_weapons.yaml
 	fnw|weapons/weapons.yaml
 	fnw|weapons/debris.yaml
     fnw|weapons/gibs.yaml
@@ -257,7 +260,7 @@ Music:
 	fnw|audio/music.yaml
 
 Translations:
-	fnw|languages/english.yaml
+	common|languages/en.ftl
     
 Translations:
     en:
@@ -284,6 +287,8 @@ WorldViewportSizes:
 
 LoadScreen: ImageLoadScreen
 	Image: fnw|uibits/loading.png
+    
+    
 	Width: 2048
 	Height: 1024
 	Text: (°Д°) ...Loading,(°X°) ...Loading,(°3°) ...Loading,(°U°) ...Loading,(°w°) ...Loading,(°_°) ...Loading,(°o°) ...Loading,(°O°) ...Loading,(°*°) ...Loading,(Ô_õ) ...Loading,(x_x) ...Loading,(=_=) ...Loading,( ͡° ͜ʖ ͡°) ...Loading

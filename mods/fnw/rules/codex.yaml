@@ -1,0 +1,57 @@
+#Order du Pourfendeur
+encyclopedia.order.faction:
+	Inherits: ^encyclopedia.info
+    Tooltip:
+        Name: Baneslayer Order
+	Encyclopedia:
+		Description: Originally founded as the Xeno Containment Task Force under the old regime, the Order broke the chains that kept it bound to the Great Federation during the dark age and reforged itself into a powerful military order,\nFirm in it's dedication to protect Earth's old colonies from threats both Alien and Human.
+		Order: 0
+		Category: Baneslayer Order
+
+encyclopedia.garm.unite:
+	Inherits: ^encyclopedia.info
+    Tooltip:
+        Name: Garm Battle Tank
+	Encyclopedia:
+		Description: Main Battle Tank of the Order.\nFloating on Hover Tracks and armed with a portable ion cannon the Garm is a versatile weapon capable of handling most threats by itself.\nIt is the result of years of struggle against a higly adaptable foe.
+		Order: 1
+		Category: Baneslayer Order
+
+encyclopedia.lyndworm.unite:
+	Inherits: ^encyclopedia.info
+    Tooltip:
+        Name: Lyndwurm Artilery
+	Encyclopedia:
+		Description: Hypermobile Anti-vehicle artilery.\nWith its highly precise canon and fast all-terrain speed, the Lindwyrm is a counter-artilery.\nThanks to it's ability to acuratly fire while on the move it excels at picking up valuable targets.
+		Order: 2
+		Category: Baneslayer Order
+
+#Alliance Rouge
+encyclopedia.alliance.faction:
+	Inherits: ^encyclopedia.info
+    Tooltip:
+        Name: Red Alliance
+	Encyclopedia:
+		Description: \n\n
+		Order: 10
+		Category: Red Alliance
+
+#Federation Terrienne
+encyclopedia.federation.faction:
+	Inherits: ^encyclopedia.info
+    Tooltip:
+        Name: Earth Federation
+	Encyclopedia:
+		Description: \n\n
+		Order: 20
+		Category: Earth Federation
+
+# Conclave de l'Horizon
+encyclopedia.conclave.faction:
+	Inherits: ^encyclopedia.info
+    Tooltip:
+        Name: Conclave of the Horizon
+	Encyclopedia:
+		Description: \n\n
+		Order: 30
+		Category: Conclave of the Horizon

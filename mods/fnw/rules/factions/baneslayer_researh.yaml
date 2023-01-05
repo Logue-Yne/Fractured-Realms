@@ -1,6 +1,4 @@
-^Global.Upgrade.baneslayer:
-
-^Infantry.Upgrade.baneslayer:
+^upgrade.survivalkit.baneslayer:
     Inherits@Upgrade.Stat: ^Upgrade.survivalkit.baneslayer.modifier
 	GrantConditionOnPrerequisite@Upgrade.urvivalkit.infantry.baneslayer:
 		Prerequisites: research.survivalkit.infantry.baneslayer

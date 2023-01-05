@@ -1,5 +1,7 @@
 diastextractor:
 	Inherits: ^TechBuilding
+    Inherits@Option.derrick: ^DerrickBuilding.Option
+    Inherits@Capturable.Building: ^TechBuildingCapturable
 	Inherits@2: ^4x3Shape
 	Selectable:
 		Bounds: 4048, 4049, 0, 0
@@ -10,17 +12,9 @@ diastextractor:
 	Building:
 		Footprint: xxxx xxxx xxxx
 		Dimensions: 4,3
-	CapturableProgressBar:
 	EngineerRepairable:
-	CashTrickler:
-		Interval: 250
-		Amount: 100
 	Tooltip:
 		Name: Derrick
-	GivesCashOnCapture:
-		Amount: 300
-	CapturableProgressBlink:
-	CaptureManager:
 	Health:
 		HP: 5000
 	Armor:
@@ -36,6 +30,7 @@ diastextractor:
 factoryoil:
 	Inherits: ^TechBuilding
 	Inherits@2: ^3x3Shape
+    Inherits@Capturable.Building: ^TechBuildingCapturable
 	Selectable:
 		Bounds: 3048, 2509, 0, 0
 	Building:
@@ -43,14 +38,9 @@ factoryoil:
 		Dimensions: 3,3
 	Valued:
 		Cost: 1200
-	Capturable:
-		Types: TechBuilding
-	CapturableProgressBar:
 	EngineerRepairable:
 	Tooltip:
 		Name: Factory
-	CapturableProgressBlink:
-	CaptureManager:
 	Health:
 		HP: 5000
 	Armor:
@@ -1092,10 +1082,7 @@ avpost:
 		Offset: 0, 0, 0
 		Sequence: effect
 		Palette: powereffect
-	CapturableProgressBar:
 	HitShape:
-	CapturableProgressBlink:
-	CaptureManager:
 
 # ///// Building Type Administrative
 commbuilding01:
@@ -1774,12 +1761,9 @@ reactor:
 		Range: 3c0
 	Tooltip:
 		Name: Reactor
-	CapturableProgressBar:
 	ProvidesPrerequisite@ShieldActivate:
 		Prerequisite: ShieldFortress
 	HitShape:
-	CapturableProgressBlink:
-	CaptureManager:
 
 fortress:
 	Inherits: ^TechBuilding
@@ -1817,6 +1801,7 @@ fortress:
 postpoint:
 	Inherits: ^TechBuilding
 	Inherits@2: ^2x2Shape
+    Inherits@Capturable.Building: ^TechBuildingCapturable
 	Selectable:
 		Bounds: 2048, 2049, 0, 0
 	Building:
@@ -1830,10 +1815,7 @@ postpoint:
 		Name: Observation tower
 	Capturable:
 		Types: TechBuilding
-	CapturableProgressBar:
 	HitShape:
-	CapturableProgressBlink:
-	CaptureManager:
 	RevealsShroud:
 		Range: 18c0
     WithRangeCircle@DetectCloack:
@@ -1945,9 +1927,6 @@ plandefense:
 		HP: 10000
 	RevealsShroud:
 		Range: 7c0
-	Capturable:
-		Types: TechBuilding
-	CapturableProgressBar:
 	EngineerRepairable:
 	WithSpriteTurret:
 	AttackTurreted:
@@ -2029,9 +2008,6 @@ plandefense:
 	BodyOrientation:
 		QuantizedFacings: 0
 	HitShape:
-		
-	CapturableProgressBlink:
-	CaptureManager:
 
 
 towerdefenceap:
@@ -2047,9 +2023,6 @@ towerdefenceap:
 		HP: 6000
 	RevealsShroud:
 		Range: 7c0
-	Capturable:
-		Types: TechBuilding
-	CapturableProgressBar:
 	EngineerRepairable:
 	WithSpriteTurret:
 	AttackTurreted:
@@ -2077,8 +2050,6 @@ towerdefenceap:
 	BodyOrientation:
 		QuantizedFacings: 0
 	HitShape:
-	CapturableProgressBlink:
-	CaptureManager:
 
 towerdefenceac:
 	Inherits: ^TechBuilding
@@ -2092,18 +2063,12 @@ towerdefenceac:
 		HP: 5000
 	RevealsShroud:
 		Range: 5c0
-	Capturable:
-		Type: TechBuilding
-		Types: building
-	CapturableProgressBar:
 	EngineerRepairable:
 	Tooltip:
 		Name: Guard Tower
 	BodyOrientation:
 		QuantizedFacings: 0
 	HitShape:
-	CapturableProgressBlink:
-	CaptureManager:
 
 bunker:
 	Inherits@buildingType: ^GarrisonableBuilding

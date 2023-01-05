@@ -1,12 +1,14 @@
 soldierop:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^soldierop.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@3: ^Infantry.Upgrade.baneslayer
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Infantry.baneslayer
 		BuildAtProductionType: Soldier
@@ -41,13 +43,15 @@ soldierop:
 
 roquetteorderinf:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^roquetteorderinf.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@3: ^Infantry.Upgrade.baneslayer
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+    # / Target type /
 	Inherits@Target: ^AutoTargetAll
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Infantry.baneslayer
 		BuildAtProductionType: Soldier
@@ -76,19 +80,19 @@ roquetteorderinf:
 
 t1_opengineer:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t1_opengineer.stat.unite
-    # / Inherit Option Unite /
-	Inherits@CaptureRules: ^Unite.CaptureRules
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@3: ^Infantry.Upgrade.baneslayer
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Capture: ^Capture.allBuilding
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Infantry.baneslayer
 		BuildAtProductionType: Soldier
-		BuildPaletteOrder: 30
-		Prerequisites: ~opbarr, ~techlevel.infonly
 		IconPalette: Baneslayer.Icon
+		BuildPaletteOrder: 30
     -AttackMove:
     Garrisoner:
 		Voice: Move
@@ -99,13 +103,15 @@ t1_opengineer:
 
 vanir:
 	Inherits@1: ^Helicoptershape
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^vanir.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@3: ^Infantry.Upgrade.baneslayer
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Infantry.baneslayer
 		BuildAtProductionType: Soldier
@@ -138,13 +144,15 @@ vanir:
 
 jotun:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^jotun.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@3: ^Infantry.Upgrade.baneslayer
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Infantry.baneslayer
 		BuildAtProductionType: Soldier
@@ -178,13 +186,15 @@ jotun:
 
 t1_aesir:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t1_aesir.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat:^UnitPlayerStat
-	Inherits@3: ^Infantry.Upgrade.baneslayer
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / affect & upgrade /
+	Inherits@Upgrade.baneslayer01: ^upgrade.survivalkit.baneslayer
+    # / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Infantry.baneslayer
 		BuildAtProductionType: Soldier

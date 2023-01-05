@@ -34,14 +34,17 @@ baneslayerattackaircraft:
 
 t2_nidhogg:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t2_nidhogg.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-	Inherits@Target: ^NidhoggAutoTargetAllAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
+	Inherits@SoundMove: ^Rotor.aircraft.move
 	Inherits@Upgrade: ^Aircraft.Upgrade.baneslayer
-    Inherits@SoundMove: ^Rotor.aircraft.move
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^NidhoggAutoTargetAllAssaultMove
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Aircraft.baneslayer
 		BuildPaletteOrder: 40
@@ -84,13 +87,16 @@ t2_nidhogg.Husk:
 
 t3_thor:
 	Inherits: ^Aircraftshape
-    # / Inherit Stat Unite /
+    # / Inherit Stat & generic Unite /
     Inherits@StatUnite: ^t3_thor.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-	Inherits@Target: ^AutoTargetGround
-    Inherits@UnitePlayStat:^UnitPlayerStat
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@Upgrade: ^Aircraft.Upgrade.baneslayer
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGround
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Aircraft.baneslayer
 		BuildPaletteOrder: 50
@@ -144,14 +150,17 @@ t3_thor.Husk:
 
 t3_valkyrie:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t3_valkyrie.stat.unite
-    # / Inherit option Unite /
-	Inherits@GAINSEXPERIENCE: ^GainsExperience
-	Inherits@Target: ^AutoTargetGround
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@DropAircraft: ^UniteAircraft.drop
+    # / Inherit Stat & generic Unite /
+    Inherits@StatUnite: ^t3_thor.stat.unite
+	Inherits@unite.experience: ^GainsExperience
+	Inherits@Unite.stat: ^UnitPlayerStat
+    # / Option - Effect /
 	Inherits@Upgrade: ^Aircraft.Upgrade.baneslayer
+	Inherits@DropAircraft: ^UniteAircraft.drop
+    # / Select - Target type /
+	Inherits@Select: ^SelectableCombatUnit
+	Inherits@Target: ^AutoTargetGround
+    # / < Stat Unite Base > /
 	Buildable:
 		Queue: Aircraft.baneslayer
 		BuildPaletteOrder: 40
