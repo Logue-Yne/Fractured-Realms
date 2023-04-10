@@ -23,7 +23,7 @@ waypoint:
 		QuantizedFacings: 1
 	MapEditorData:
 		Categories: Actor
-  
+
 ^Particle.effect.Base:
 	AlwaysVisible:
 	Immobile:
@@ -34,59 +34,59 @@ waypoint:
 	MapEditorData:
 		Categories: Actor
 	RenderSprites:
-		Image: ico_light  
+		Image: ico_light
 
 Spotlight.Red:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-		Image: ico_light  
+		Image: ico_light
 	WithIdleOverlay@Light:
 		Offset: 0, 0, 0
 		Sequence: Light
 		Palette: redlight
-        
+		
 Spotlight.Purple:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-		Image: ico_light  
+		Image: ico_light
 	WithIdleOverlay@Light:
 		Offset: 0, 0, 0
 		Sequence: Light
 		Palette: purplelight
-        
+		
 Spotlight.Cyan:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-		Image: ico_light  
+		Image: ico_light
 	WithIdleOverlay@Light:
 		Offset: 0, 0, 0
 		Sequence: Light
 		Palette: cyanlight
-        
+		
 Spotlight.Blue:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-		Image: ico_light  
+		Image: ico_light
 	WithIdleOverlay@Light:
 		Offset: 0, 0, 0
 		Sequence: Light
 		Palette: bluelight
-        
+		
 Spotlight.Green:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-		Image: ico_light  
+		Image: ico_light
 	WithIdleOverlay@Light:
 		Offset: 0, 0, 0
 		Sequence: Light
 		Palette: greenlight
-        
+		
 # /// Water Wave Particle ///
 
 Water.Wave.n:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
@@ -94,59 +94,59 @@ Water.Wave.n:
 		Palette: effect
 
 Water.Wave.nwiso:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
 		Sequence: wave_nw_iso
 		Palette: effect
-        
+		
 Water.Wave.nw:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.25
+		Scale: 0.25
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
 		Sequence: wave_nw
 		Palette: effect
-        
+		
 Water.Wave.w:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.25
+		Scale: 0.25
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
 		Sequence: wave_w
 		Palette: effect
-        
+		
 Water.Wave.swiso:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
 		Sequence: wave_sw_iso
 		Palette: effect
-        
+		
 Water.Wave.sw:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
 		Sequence: wave_sw
 		Palette: effect
-        
+		
 Water.Wave.s:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
@@ -154,9 +154,9 @@ Water.Wave.s:
 		Palette: effect
 
 Water.Wave.se_iso:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
@@ -164,40 +164,40 @@ Water.Wave.se_iso:
 		Palette: effect
 
 Water.Wave.se:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
 		Sequence: wave_se
 		Palette: effect
-        
+		
 Water.Wave.e:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
 		Sequence: wave_e
 		Palette: effect
-        
+		
 Water.Wave.ne:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
 		Sequence: wave_ne
 		Palette: effect
-        
-        
+		
+		
 Water.Wave.ne_iso:
-    Inherits: ^Particle.effect.Base
+	Inherits: ^Particle.effect.Base
 	RenderSprites:
-   		Scale: 0.45
+		Scale: 0.45
 		Image: water_wave_particle
 	WithIdleOverlay@Wave:
 		Offset: 0, 0, 0
@@ -262,7 +262,7 @@ camera.spy:
 		Sequence: idle
 		Palette: effectalpha75
 		ReferencePoint: bottom, left
-        ValidStances: Ally, Enemy, Neutral
+		ValidStances: Ally, Enemy, Neutral
 		ZOffset: 0
 
 camera.cloak:
@@ -275,12 +275,12 @@ camera.cloak:
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
 		AffectsParent: true
-        
+		
 repair.zone:
 	Inherits: Spot_effect
 	EditorOnlyTooltip:
 		Name: (Repair zone)
-        
+		
 # ////////////////////////////////////////// ColorPicker Acor Rules //////////////////////////////////////
 
 t2_basilisk.colorpicker:
@@ -292,7 +292,7 @@ t2_basilisk.colorpicker:
 	RenderSprites:
 		Image: t2_basilisk
 		Palette: colorpicker
-        
+		
 t2_garm.colorpicker:
 	Inherits: t2_garm
 	Mobile:
@@ -302,7 +302,7 @@ t2_garm.colorpicker:
 	RenderSprites:
 		Image: t2_garm
 		Palette: colorpicker
-        
+		
 t2_rodeur.colorpicker:
 	Inherits: t2_rodeur
 	Mobile:
@@ -312,7 +312,7 @@ t2_rodeur.colorpicker:
 	RenderSprites:
 		Image: t2_rodeur
 		Palette: colorpicker
-        
+		
 t1_tick.colorpicker:
 	Inherits: t1_tick
 	Mobile:
@@ -405,7 +405,7 @@ DiastMine:
 	HiddenUnderShroud:
 	Interactable:
 	Tooltip:
-		Name: Diastim deposit 
+		Name: Diastim deposit
 	WithSpriteBody:
 	Building:
 		Footprint: x
@@ -427,7 +427,7 @@ DiastMine.Gold:
 	HiddenUnderShroud:
 	Interactable:
 	Tooltip:
-		Name: Gold Diastim deposit 
+		Name: Gold Diastim deposit
 	WithSpriteBody:
 	Building:
 		Footprint: x

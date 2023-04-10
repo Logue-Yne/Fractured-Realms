@@ -1,5 +1,5 @@
 ^Infantry.WeaponRange.Upgrade.Redalliance:
-    Inherits@SpeedInfantry: ^RangeInfantryStat.redalliance.apply
+	Inherits@SpeedInfantry: ^RangeInfantryStat.redalliance.apply
 	GrantConditionOnPrerequisite@Up.Inf.Range:
 		Prerequisites: research.RangeInfantry.Redalliance
 		Condition: upgrade.RangeInfantry.Redalliance
@@ -7,31 +7,31 @@
 		RequiresCondition: upgrade.RangeInfantry.Redalliance
 
 ^Affect.Upgrade.FusionSpeed.Redalliance:
-    Inherits@FusionSpeed: ^FusionSpeed.redalliance.apply
+	Inherits@FusionSpeed: ^FusionSpeed.redalliance.apply
 	SpeedMultiplier@Fusion.Engine:
 		RequiresCondition: Upgrade.FusionSpeed.Vehicle
 	GrantConditionOnPrerequisite@research.FusionSpeed.Vehicle:
 		Prerequisites: research.FusionSpeed.Vehicle
 		Condition: Upgrade.FusionSpeed.Vehicle
-        
+		
 ^Affect.Upgrade.ChargedRailgun.Redalliance:
 	GrantConditionOnPrerequisite@research.Railgun.Redalliance:
 		Prerequisites: research.Railgun.Redalliance
 		Condition: Upgrade.Railgun.Redalliance
-        
+		
 ^Affect.Upgrade.Retrofit.Redalliance:
 	GrantConditionOnPrerequisite@research.Retrofit.Redalliance:
 		Prerequisites: research.Retrofit.Redalliance
 		Condition: Upgrade.Retrofit.Redalliance
-        
+		
 ^Affect.Upgrade.ArmorPurge.Redalliance:
-    Inherits@ArmorPurge: ^Stat.ArmorPurge.RedAlliance
+	Inherits@ArmorPurge: ^Stat.ArmorPurge.RedAlliance
 	GrantConditionOnPrerequisite@research.ArmorPurge.Redalliance:
 		Prerequisites: research.ArmorPurge.Redalliance
 		Condition: Upgrade.ArmorPurge.Redalliance
 
 ^Aircraft.Upgrade.Redalliance:
-    Inherits@FusionSpeed: ^AircraftSpeed.redalliance.apply
+	Inherits@FusionSpeed: ^AircraftSpeed.redalliance.apply
 	SpeedMultiplier@SupersonicAircraft:
 		RequiresCondition: upgrade.Supersonic.Redalliance.Aircraft
 	GrantConditionOnPrerequisite@SupersonicAircraft:
@@ -39,11 +39,11 @@
 		Condition: upgrade.Supersonic.Redalliance.Aircraft
 
 ^FlamerWeapons.UpgradeStat.Redalliance:
-    Inherits@FlameStat: ^FlamerWeapons.redalliance.apply
+	Inherits@FlameStat: ^FlamerWeapons.redalliance.apply
 	GrantConditionOnPrerequisite@research.WeaponsFlamer.Redalliance:
 		Prerequisites: research.WeaponsFlamer.Redalliance
 		Condition: upgrade.WeaponsFlamer.Redalliance
-    FirepowerMultiplier@WeaponsFlamer:
+	FirepowerMultiplier@WeaponsFlamer:
 		RequiresCondition: upgrade.WeaponsFlamer.Redalliance
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
@@ -59,7 +59,7 @@
 	GrantConditionOnDamageState@Damage.heavy.speed:
 		Condition: damheavyspeed
 		ValidDamageStates: Heavy
-    #/// Critical damage ///
+	#/// Critical damage ///
 	SpeedMultiplier@Damage.critical.speed:
 		RequiresCondition: damcritspeed && !Upgrade.ArmorPurge.Redalliance
 		Modifier: 60
@@ -68,7 +68,7 @@
 	GrantConditionOnDamageState@Damage.critical.speed:
 		Condition: damcritspeed
 		ValidDamageStates: Critical
-    #/// UPGRADE ARMOR PURGE ///
+	#/// UPGRADE ARMOR PURGE ///
 	SpeedMultiplier@Damage.heavy.speed.Armorpurge:
 		RequiresCondition: damheavyspeed && Upgrade.ArmorPurge.Redalliance
 		Modifier: 110
@@ -77,7 +77,7 @@
 	GrantConditionOnDamageState@Damage.heavy.speed.Armorpurge:
 		Condition: damheavyspeed
 		ValidDamageStates: Heavy
-    #/// Critical damage ///
+	#/// Critical damage ///
 	SpeedMultiplier@Damage.critical.speed.Armorpurge:
 		RequiresCondition: damcritspeed && Upgrade.ArmorPurge.Redalliance
 		Modifier: 120
@@ -117,7 +117,7 @@
 		Condition: RevokedStat
 	KillsSelf:
 		RemoveInstead: true
-        
+		
 upgrade.range.infantry.redalliance:
 	Inherits@Research: ^ResearchActor
 	Inherits@Stat: ^Upgrade.RangeInfantry.redalliance.stat
@@ -145,7 +145,7 @@ upgrade.flak.basilisk.redalliance:
 		Image: arflakicon
 	ProvidesPrerequisite:
 		Prerequisite: research.Retrofit.Redalliance
-        
+		
 upgrade.armor.purge.redalliance:
 	Inherits@Research: ^ResearchActor
 	Inherits@Stat: ^Upgrade.ArmorPurge.Redalliance.stat
@@ -202,7 +202,7 @@ upgrade.weapons.flamer.redalliance:
 		Image: blueflameicon
 	ProvidesPrerequisite:
 		Prerequisite: research.WeaponsFlamer.Redalliance
-        
+		
 upgrade.super.railgun.redalliance:
 	Inherits@Research: ^ResearchActor
 	Inherits@Stat: ^Upgrade.SuperchargedRailgun.redalliance.stat
@@ -227,8 +227,8 @@ upgrade.super.railgun.redalliance:
 		ChargeInterval: 3750
 		Icons:
 			1: arminstrikepowericon
-        Prerequisites:
-            1: artech
+		Prerequisites:
+			1: artech
 		IconPalette: RedAlliance.Icon
 		Names:
 			1: Judgment
@@ -267,7 +267,7 @@ upgrade.super.railgun.redalliance:
 		Weapons:
 			1: strike_aa_nuke
 		ActivationSequence:
-        LaunchSound: strikenukeaa_alert.aud
+		LaunchSound: strikenukeaa_alert.aud
 	DetonateWeaponPower@Droppod:
 		OrderName: Droppod
 		PauseOnCondition: disabled
@@ -317,17 +317,17 @@ Unlocked.droneSpawn.Redalliance:
 # ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ^Condition.Abillity.Titan:
-    GrantConditionOnProduction@Abillity.Titan.Validate:
-        Condition: Abillity.Validate
-    GrantConditionOnProduction@Abillity.Titan.ConterMeasure:
-        Actors: Upgrade.CounterMeasure.Redalliance
-        Condition: Titan.Activate.CounterMeasure
-    GrantConditionOnProduction@Abillity.Titan.Fumigene:
-        Actors: Upgrade.Fumigene.Redalliance
-        Condition: Titan.Activate.Fumigene
+	GrantConditionOnProduction@Abillity.Titan.Validate:
+		Condition: Abillity.Validate
+	GrantConditionOnProduction@Abillity.Titan.ConterMeasure:
+		Actors: Upgrade.CounterMeasure.Redalliance
+		Condition: Titan.Activate.CounterMeasure
+	GrantConditionOnProduction@Abillity.Titan.Fumigene:
+		Actors: Upgrade.Fumigene.Redalliance
+		Condition: Titan.Activate.Fumigene
 
 ^System.Abillity.Titan:
-    Inherits@ConditionAbillity: ^Condition.Abillity.Titan
+	Inherits@ConditionAbillity: ^Condition.Abillity.Titan
 	ProductionBar@Abillity.Titan:
 		ProductionType: Abillity.Titan
 	Production:
@@ -341,7 +341,7 @@ Unlocked.droneSpawn.Redalliance:
 		LowPowerModifier: 200
 		QueuedAudio: Research
 		ReadyAudio: ResearchReady
-        OnHoldAudio: OnHold
+		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	Exit:
 
@@ -357,11 +357,11 @@ Upgrade.CounterMeasure.Redalliance:
 		IconPalette: RedAlliance.Icon
 	RenderSprites:
 		Image: blueflameicon
-    GrantExternalConditionToProduced@ValidateUpgrade:
-        Condition: Abillity.Validate
-    GrantExternalConditionToProduced@Type.Upgrade:
-        Condition: Titan.Activate.CounterMeasure
-        
+	GrantExternalConditionToProduced@ValidateUpgrade:
+		Condition: Abillity.Validate
+	GrantExternalConditionToProduced@Type.Upgrade:
+		Condition: Titan.Activate.CounterMeasure
+		
 Upgrade.Fumigene.Redalliance:
 	Inherits@Research: ^ResearchActor
 	Inherits@Stat: ^Upgrade.WeaponsFlamer.redalliance.stat
@@ -372,7 +372,7 @@ Upgrade.Fumigene.Redalliance:
 		IconPalette: RedAlliance.Icon
 	RenderSprites:
 		Image: blueflameicon
-    GrantExternalConditionToProduced@ValidateUpgrade:
-        Condition: Abillity.Validate
-    GrantExternalConditionToProduced@Type.Upgrade:
-        Condition: Titan.Activate.Fumigene
+	GrantExternalConditionToProduced@ValidateUpgrade:
+		Condition: Abillity.Validate
+	GrantExternalConditionToProduced@Type.Upgrade:
+		Condition: Titan.Activate.Fumigene

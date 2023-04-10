@@ -19,7 +19,7 @@
 		Speed: 80
 	RevealsShroud:
 		Range: 9c0
-        
+		
 #--Weapons01--
 ^Gardian.Impulsor.stat.weapons:
 	Range: 7c0
@@ -53,15 +53,15 @@
 		Speed: 80
 	RevealsShroud:
 		Range: 9c0
-        
+		
 #--Weapons01--
 ^Statis.Missile.stat.weapons:
-    ValidTargets: Ground, Air, Water
+	ValidTargets: Ground, Air, Water
 	Range: 9c0
 	ReloadDelay: 85
 	Warhead@1Dam: SpreadDamage
 		Damage: 600
-        Spread: 125
+		Spread: 125
 		ValidTargets: Ground, Water, Air
 		Versus:
 			Infantry: 25
@@ -92,14 +92,14 @@
 	PortableChrono:
 		ChargeDelay: 900
 		MaxDistance: 8
-        
+		
 #--Weapons01--
 ^Graviton.Missile.conclave.stat.weapons:
-    ReloadDelay: 85
+	ReloadDelay: 85
 	Range: 9c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 2800
-        Spread: 1c256
+		Spread: 1c256
 		Versus:
 			Infantry: 80
 			LightVehicle: 100
@@ -139,7 +139,7 @@
 		Speed: 90
 	RevealsShroud:
 		Range: 6c0
-        
+		
 #--Weapons01--
 ^Vagabond.snipergun.conclave.stat.weapons:
 	ValidTargets: Infantry
@@ -148,9 +148,9 @@
 	ReloadDelay: 60
 	Warhead@1Dam: SpreadDamage
 		Damage: 5500
-        Spread: 750
+		Spread: 750
 		ValidTargets: Infantry
-        InvalidTargets: Vehicle, Building
+		InvalidTargets: Vehicle, Building
 
 # =======================================================================================================================
 # ============================================== | Vehicle Conclave |  =================================================
@@ -175,9 +175,9 @@
 		TurnSpeed: 55
 	RevealsShroud:
 		Range: 8c0
-    ActorStatValues:
+	ActorStatValues:
 		SplitRanges: true
-        Icon: icon
+		Icon: icon
 
 # |------------------------------| - HAVESTER PROSPECTOR - |------------------------------|
 #--Stat Unite--
@@ -200,9 +200,9 @@
 		TurnSpeed: 55
 	RevealsShroud:
 		Range: 8c0
-    ActorStatValues:
+	ActorStatValues:
 		SplitRanges: true
-        Icon: icon      
+		Icon: icon
 
 # |------------------------------| - PROWLER MAIN BATTLE TANK - |------------------------------|
 #--Stat Unite--
@@ -227,28 +227,28 @@
 		RealignDelay: 10
 	RevealsShroud:
 		Range: 10c0
-    ActorStatValues:
+	ActorStatValues:
 		SplitRanges: true
-        Icon: x_icon
-        Upgrades: upgrade.alpha.rodeur.conclave, upgrade.omega.rodeur.conclave
-        
+		Icon: x_icon
+		Upgrades: upgrade.alpha.rodeur.conclave, upgrade.omega.rodeur.conclave
+		
 #--Weapons01--
 ^impuls.laser.conclave.stat.weapons:
 	Range: 9c0
 	ReloadDelay: 10
 	Warhead@1Dam: SpreadDamage
 		Damage: 95
-        Spread: 2
+		Spread: 2
 		Versus:
 			Infantry: 50
 			LightVehicle: 100
 			ArmorTank: 80
 			Concrete: 50
-        
+		
 #--Weapons01--
 ^impuls.laserPhie.conclave.stat.weapons:
 	Range: 9c0
-    Burst: 20
+	Burst: 20
 	BurstDelays: 1
 	ReloadDelay: 35
 	Warhead@1Dam: SpreadDamage
@@ -259,22 +259,22 @@
 			LightVehicle: 35
 			ArmorTank: 20
 			Concrete: 45
-        
+		
 #--Weapons01--
 ^impuls.laserOmega.conclave.stat.weapons:
-    ValidTargets: Vehicle, Infantry, Structure, Defense
+	ValidTargets: Vehicle, Infantry, Structure, Defense
 	Range: 9c0
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
 		Damage: 190
-        Spread: 25
+		Spread: 25
 		Versus:
 			Infantry: 20
 			LightVehicle: 90
 			ArmorTank: 100
 			Concrete: 40
 		DamageTypes: Burned
-        ValidTargets: Vehicle, Infantry, Structure, Defense
+		ValidTargets: Vehicle, Infantry, Structure, Defense
 
 # |------------------------------| - PILGRIM SELF-PROPELLED ANTI-AIR GUN/ARTILLERY - |------------------------------|
 #--Stat Unite--
@@ -298,52 +298,52 @@
 	Mobile:
 		Speed: 85
 		TurnSpeed: 40
-        CanMoveBackward: true
+		CanMoveBackward: true
 	Turreted:
 		TurnSpeed: 30
 		RealignDelay: 15
-    #Mode Artilerie déployer
-    WithRangeCircle@MinAreaFireModeArty:
-        Range: 6c0
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArty:
+		Range: 6c0
 		RequiresCondition: deployed
-    WithRangeCircle@MaxAreaFireModeArty:
-        Range: 15c0
+	WithRangeCircle@MaxAreaFireModeArty:
+		Range: 15c0
 		RequiresCondition: deployed
-    #Mode AA/Move
-    WithRangeCircle@MaxAreaFireModeAAMove:
-        Range: 10c0
+	#Mode AA/Move
+	WithRangeCircle@MaxAreaFireModeAAMove:
+		Range: 10c0
 		RequiresCondition: !deployed && !upgrade.Alpha.Pelerin.Conclave
-    #Mode Artilerie déployer
-    WithRangeCircle@MinAreaFireModeArtyMove:
-        Range: 3c0
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArtyMove:
+		Range: 3c0
 		RequiresCondition: upgrade.Alpha.Pelerin.Conclave
-    WithRangeCircle@MaxAreaFireModeArtyMove:
-        Range: 9c0
+	WithRangeCircle@MaxAreaFireModeArtyMove:
+		Range: 9c0
 		RequiresCondition: upgrade.Alpha.Pelerin.Conclave
-    #Mode Artilerie déployer
-    WithRangeCircle@MinAreaFireModeArtyAA:
-        Range: 6c0
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArtyAA:
+		Range: 6c0
 		RequiresCondition: deployed && upgrade.Omega.Pelerin.Conclave
-    WithRangeCircle@MaxAreaFireModeArtyAA:
-        Range: 18c0
+	WithRangeCircle@MaxAreaFireModeArtyAA:
+		Range: 18c0
 		RequiresCondition: deployed && upgrade.Omega.Pelerin.Conclave
 	RevealsShroud:
 		Range: 12c0
-    ActorStatValues:
+	ActorStatValues:
 		SplitRanges: true
-        Icon: icon
-        Upgrades: upgrade.alpha.pelerin.conclave, upgrade.omega.pelerin.conclave
-        
+		Icon: icon
+		Upgrades: upgrade.alpha.pelerin.conclave, upgrade.omega.pelerin.conclave
+		
 #--Weapons01 |missile AA Move|--
 ^Photon.MissileAA.conclave.stat.weapons:
 	ValidTargets: Air
 	Range: 10c0
 	Burst: 4
-    BurstDelay: 6
+	BurstDelay: 6
 	ReloadDelay: 95
 	Warhead@1Dam: SpreadDamage
 		Damage: 450
-        Spread: 1c0
+		Spread: 1c0
 		Versus:
 			Infantry: 60
 			LightVehicle: 65
@@ -351,51 +351,51 @@
 			LightAerial: 65
 			HeavyAerial: 65
 			Concrete: 80
-        ValidTargets: Air
+		ValidTargets: Air
 
 #--Weapons02 |Arty Missile Deploy|--
 ^Photon.MissileArty.conclave.stat.weapons:
 	Range: 15c0
 	MinRange: 6c0
 	Burst: 8
-    BurstDelay: 4
+	BurstDelay: 4
 	ReloadDelay: 95
 	Warhead@1Dam: SpreadDamage
 		Damage: 450
-        Spread: 450
+		Spread: 450
 		Versus:
 			Infantry: 60
 			LightVehicle: 70
 			ArmorTank: 60
 			Concrete: 80
-            
+			
 #--Weapons01 ||--
 ^Photon.Missile.conclave.stat.weapons:
 	Range: 9c0
 	MinRange: 3c0
 	Burst: 8
-    BurstDelays: 6
+	BurstDelays: 6
 	ReloadDelay: 95
 	Warhead@1Dam: SpreadDamage
 		Damage: 300
-        Spread: 450
+		Spread: 450
 		Versus:
 			Infantry: 60
 			LightVehicle: 70
 			ArmorTank: 60
 			Concrete: 80
-            
+			
 #--Weapons01--
 ^Photon.MissileArtyAA.conclave.stat.weapons:
 	ValidTargets: Air
 	Range: 18c0
 	MinRange: 6c0
 	Burst: 8
-    BurstDelays: 6
+	BurstDelays: 6
 	ReloadDelay: 95
 	Warhead@1Dam: SpreadDamage
 		Damage: 400
-        Spread: 300
+		Spread: 300
 		Versus:
 			Infantry: 60
 			LightVehicle: 65
@@ -403,7 +403,7 @@
 			LightAerial: 65
 			HeavyAerial: 65
 			Concrete: 80
-        ValidTargets: Air
+		ValidTargets: Air
 
 # |------------------------------| - SURVEYOR HEAVY WALKER - |------------------------------|
 #--Stat Unite--
@@ -428,11 +428,11 @@
 		RealignDelay: 20
 	RevealsShroud:
 		Range: 10c0
-    ActorStatValues:
+	ActorStatValues:
 		SplitRanges: true
-        Icon: icon
-        Upgrades: upgrade.alpha.arpenteur.conclave, upgrade.omega.arpenteur.conclave
-        
+		Icon: icon
+		Upgrades: upgrade.alpha.arpenteur.conclave, upgrade.omega.arpenteur.conclave
+		
 #--Weapons01--
 ^Surveyor.BeamSpect.stat.weapons:
 	Range: 10c0
@@ -444,22 +444,22 @@
 			LightVehicle: 20
 			ArmorTank: 20
 			Concrete: 20
-            
+			
 # =======================================================================================================================
 # ============================================== | Defense Conclave |  =================================================
 # =======================================================================================================================   
 # |------------------------------| - Guard Needle - |------------------------------|
-   
+
 #--Weapons01--
 ^IonTrap.TelsaGun.conclave.stat.weapons:
-    ValidTargets: Ground, Air, Water
+	ValidTargets: Ground, Air, Water
 	Range: 8c0
 	ReloadDelay: 75
 	Warhead@1Dam: SpreadDamage
 		Damage: 400
 		Spread: 64
 		DeathType: 5
-        ValidTargets: Ground, Air, Water
+		ValidTargets: Ground, Air, Water
 		Versus:
 			Infantry: 180
 			LightVehicle: 100
@@ -479,48 +479,48 @@
 		Description: Light aircraft equipped with laser spray guns\n> Strong vs Infantry, Aircraft\n> Weak vs Vehicles
 		BuildDurationModifier: 14
 	Valued:
-		Cost: 1200
+		Cost: 1000
 	Armor:
 		Type: LightAerial
 	Health:
-		HP: 950 # 800 Modif Divadawm
+		HP: 1450 # 800 Modif Divadawm
 	Aircraft:
 		Speed: 190
 		TurnSpeed: 40
 	RevealsShroud:
 		Range: 12c0
-    ActorStatValues:
+	ActorStatValues:
 		SplitRanges: true
-        Icon: icon
-        Upgrades: upgrade.alpha.comete.conclave, upgrade.omega.comete.conclave
-        
+		Icon: icon
+		Upgrades: upgrade.alpha.comete.conclave, upgrade.omega.comete.conclave
+		
 #--Weapons01--
 ^Comete.standardGun.conclave.stat.weapons:
 	ValidTargets: Ground, Air, Water
 	Range: 8c0
-    Burst: 10
-    BurstDelays: 3
-	ReloadDelay: 30
+	Burst: 10
+	BurstDelays: 3
+	ReloadDelay: 40
 	Warhead@1Dam: SpreadDamage
-		Damage: 45
+		Damage: 50
 		Versus:
 			Infantry: 70
 			LightVehicle: 80
 			ArmorTank: 40
 			LightAerial: 75
-			HeavyAerial: 40
+			HeavyAerial: 45
 			Concrete: 35
-        ValidTargets: Ground, Air, Water
+		ValidTargets: Ground, Air, Water
 
 #--Weapons02 |Phie Upgrade|--
 ^Comete.standardGun.conclave.stat.weapons:
 	ValidTargets: Ground, Air, Water
 	Range: 8c0
-    Burst: 10
-    BurstDelays: 3
+	Burst: 10
+	BurstDelays: 3
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
-		Damage: 60
+		Damage: 65
 		Versus:
 			Infantry: 70
 			LightVehicle: 80
@@ -528,17 +528,17 @@
 			LightAerial: 75
 			HeavyAerial: 40
 			Concrete: 35
-        ValidTargets: Ground, Air, Water
+		ValidTargets: Ground, Air, Water
 
 #--Weapons03 |Omega Upgrade|--
 ^Comete.standardGun.conclave.stat.weapons:
 	ValidTargets: Ground, Air, Water
 	Range: 8c0
-    Burst: 10
-    BurstDelays: 3
+	Burst: 10
+	BurstDelays: 3
 	ReloadDelay: 30
 	Warhead@1Dam: SpreadDamage
-		Damage: 60
+		Damage: 65
 		Versus:
 			Infantry: 70
 			LightVehicle: 80
@@ -546,7 +546,7 @@
 			LightAerial: 75
 			HeavyAerial: 40
 			Concrete: 35
-        ValidTargets: Ground, Air, Water
+		ValidTargets: Ground, Air, Water
 
 # |------------------------------| - ZENITH - |------------------------------|
 #--Stat Unite--
@@ -567,11 +567,11 @@
 		TurnSpeed: 20
 	RevealsShroud:
 		Range: 12c0
-    ActorStatValues:
+	ActorStatValues:
 		SplitRanges: true
-        Icon: icon
-        Upgrades: upgrade.alpha.zenith.conclave, upgrade.omega.zenith.conclave
-        
+		Icon: icon
+		Upgrades: upgrade.alpha.zenith.conclave, upgrade.omega.zenith.conclave
+		
 #--no weapons--
 
 # |------------------------------| - QUASAR ANTI-AIR ARTILLERY - |------------------------------|
@@ -580,7 +580,7 @@
 	Tooltip:
 		Name: Quasar
 	Buildable:
-		Description: Anti-spaceship artillery\nCan make tactical jump\n> Strong vs Slow Moving Aircraft\n> Weak vs Infantry, Vehicles, Fast Moving Aircraft
+		Description: Anti-spaceship artillery\nCan deploy as stationary artillery cannon\n> Strong vs Slow Moving Aircraft\n> Weak vs Infantry, Vehicles, Fast Moving Aircraft
 		BuildDurationModifier: 28
 	Valued:
 		Cost: 2000
@@ -593,14 +593,18 @@
 		TurnSpeed: 15
 	RevealsShroud:
 		Range: 16c0
-    ActorStatValues:
+	#Mode Artilerie déployer
+	WithRangeCircle@MaxAreaFireModeArty:
+		Range: 25c0
+		RequiresCondition: deployed
+	ActorStatValues:
 		SplitRanges: true
-        Icon: icon
-        Upgrades: upgrade.alpha.quasar.conclave, upgrade.omega.quasar.conclave
-        
+		Icon: icon
+		Upgrades: upgrade.alpha.quasar.conclave, upgrade.omega.quasar.conclave
+		
 #--Weapons01--
 ^Quasar.RailgunAA.conclave.stat.weapons:
-    ValidTargets: Air
+	ValidTargets: Air
 	Range: 9c0
 	ReloadDelay: 20
 	Warhead@1Dam: SpreadDamage
@@ -616,13 +620,13 @@
 
 #--Weapons Arty |target|-- (doit etre identique à la portée de l'arme "Quasar.FireArty.Stat.weapons")
 ^Quasar.ChargeArty.Stat.weapons:
-    Range: 25c0
+	Range: 25c0
 
 #--Weapons Arty Fire--
 ^Quasar.FireArty.Stat.weapons:
 	ReloadDelay: 16
 	MinRange: 7c0
-    Range: 25c0   
+	Range: 25c0
 	Warhead@1Dam: SpreadDamage
 		Damage: 7000
 		Versus:
@@ -823,7 +827,7 @@
 		BuildDurationModifier: 10
 	Valued:
 		Cost: 700
-        
+		
 # |------------------------------| - Vision Orb Module - |------------------------------|
 ^vision.module.stat.building:
 	Tooltip:
@@ -832,8 +836,8 @@
 		Description: Must be placed on an ion trap\nGrants a large line-of-sight and a stealth detection radius
 		BuildDurationModifier: 20
 	Valued:
-		Cost: 800    
-        
+		Cost: 800
+		
 # |------------------------------| - Repair Module - |------------------------------|
 ^repair.module.stat.building:
 	Tooltip:
@@ -866,11 +870,11 @@
 		Description: Unlocks the Pilgrim missile launcher and its upgrades
 		BuildDurationModifier: 15
 	Valued:
-		Cost: 1000  
+		Cost: 1000
 	Armor:
 		Type: Concrete
 	Health:
-		HP: 8000  
+		HP: 8000
 
 # |------------------------------| - Holotech Surveyor Building - |------------------------------|
 ^holo.surveyor.conclave.stat.building:
@@ -889,7 +893,7 @@
 # |------------------------------| - Holotech Comet Building - |------------------------------|
 ^holo.comet.conclave.stat.building:
 	Tooltip:
-		Name: Holo-Tech: Surveyor
+		Name: Holo-Tech: Comet
 	Buildable:
 		Description: Unlocks the Comet aircraft and its upgrades
 		BuildDurationModifier: 15
@@ -962,14 +966,14 @@
 # ==================================================================================================================================================
 
 ^Avatar.TelsaGun.conclave.stat.weapons:
-    ValidTargets: Ground, Air, Water
+	ValidTargets: Ground, Air, Water
 	Range: 9c0
 	ReloadDelay: 15
 	Warhead@1Dam: SpreadDamage
 		Damage: 300
 		Spread: 64
 		DeathType: 5
-        ValidTargets: Ground, Air, Water
+		ValidTargets: Ground, Air, Water
 		Versus:
 			Infantry: 180
 			LightVehicle: 100

@@ -6,7 +6,7 @@
 		LowPowerModifier: 300
 		QueuedAudio: Research
 		ReadyAudio: ResearchReady
-        OnHoldAudio: OnHold
+		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 	Production:
 		Produces: Doctrine
@@ -20,18 +20,18 @@
 		ResourceValues:
 			Diast: 25
 			Diastgems: 50
-    
+	
 EditorPlayer:
 	Inherits: ^BasePlayer
 
 Player:
 	Inherits@Base: ^BasePlayer
-    Inherits@Power: ^GeneralsPower
+	Inherits@Power: ^GeneralsPower
 	PlaceBuilding:
 		NewOptionsNotification: NewOptions
 		CannotPlaceNotification: BuildingCannotPlaceAudio
 	SupportPowerManager:
-    AutoDeployManager:
+	AutoDeployManager:
 	TechTree:
 	ScriptTriggers:
 	MissionObjectives:
@@ -43,7 +43,7 @@ Player:
 		SpeechNotification: LowPower
 	AllyRepair:
 	PlayerResources:
-        InsufficientFundsNotification: InsufficientFunds
+		InsufficientFundsNotification: InsufficientFunds
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
 	DeveloperMode:
@@ -83,7 +83,7 @@ Player:
 	PlayerExperience:
 	GameSaveViewportManager:
 	PlayerRadarTerrain:
-    Inherits@RedAlliance.PowerAbilities: ^BuildingGivePower.Alliance
-    Inherits@Baneslayer.PowerAbilities: ^BuildingGivePower.Baneslayer
-    Inherits@Conclave.PowerAbilities: ^BuildingGivePower.Conclave
-    Inherits@Federation.PowerAbilities: ^BuildingGivePower.Federation
+	Inherits@RedAlliance.PowerAbilities: ^BuildingGivePower.Alliance
+	Inherits@Baneslayer.PowerAbilities: ^BuildingGivePower.Baneslayer
+	Inherits@Conclave.PowerAbilities: ^BuildingGivePower.Conclave
+	Inherits@Federation.PowerAbilities: ^BuildingGivePower.Federation

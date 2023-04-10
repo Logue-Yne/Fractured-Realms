@@ -43,12 +43,12 @@ t0_transportship:
 
 t2_wyvern:
 	Inherits: ^Aircraftshape
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t2_wyvern.stat.unite
-    # / Inherit option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_wyvern.stat.unite
+	# / Inherit option Unite /
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@Target: ^AutoTargetAir
-    Inherits@UnitePlayStat:^UnitPlayerStat
+	Inherits@UnitePlayStat: ^UnitPlayerStat
 	Buildable:
 		Queue: Aircraft.redalliance
 		BuildPaletteOrder: 10
@@ -60,7 +60,7 @@ t2_wyvern:
 	AttackAircraft:
 		FacingTolerance: 24
 		AttackTurnDelay: 15
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	GrantConditionOnPrerequisite@Upgrade.Supersonic.Redalliance.Aircraft:
 		Prerequisites: research.Supersonic.Redalliance.Aircraft
 		Condition: upgrade.Supersonic.Redalliance.Aircraft
@@ -79,7 +79,7 @@ t2_wyvern:
 		Bounds: 1024, 1024, 0, 0
 	SpawnActorOnDeath:
 		Actor: t2_wyvern.husk
-    -AppearsOnRadar:
+	-AppearsOnRadar:
 
 t2_wyvern.husk:
 	Inherits: ^PlaneHusk
@@ -95,14 +95,14 @@ t2_wyvern.husk:
 
 t2_chimera:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t2_chimera.stat.unite
-    # / Inherit option Unite /
-    Inherits@DropAircraft: ^UniteAircraft.drop
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_chimera.stat.unite
+	# / Inherit option Unite /
+	Inherits@DropAircraft: ^UniteAircraft.drop
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Rotor.aircraft.move
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Rotor.aircraft.move
 	Buildable:
 		Queue: Aircraft.redalliance
 		BuildPaletteOrder: 20
@@ -118,7 +118,7 @@ t2_chimera:
 		FacingTolerance: 20
 		PersistentTargeting: false
 		AttackType: Hover
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	AutoTarget:
 		InitialStance: Defend
 		InitialStanceAI: Defend
@@ -140,12 +140,12 @@ t2_chimera.husk:
 
 t3_archdemon:
 	Inherits: ^Aircraftshape
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t3_archdemon.stat.unite
-    # / Inherit option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_archdemon.stat.unite
+	# / Inherit option Unite /
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
+	Inherits@UnitePlayStat: ^UnitPlayerStat
 	Buildable:
 		Queue: Aircraft.redalliance
 		BuildAtProductionType: Aircraft
@@ -161,7 +161,7 @@ t3_archdemon:
 		LocalYaw: -40, 24
 	AttackAircraft:
 		FacingTolerance: 20
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Aircraft:
 		InitialFacing: 192
 		Repulsable: true
@@ -181,7 +181,7 @@ t3_archdemon:
 		InitialStance: HoldFire
 	Selectable:
 		Bounds: 1224, 1224, 0, 0
-    RenderSprites:
+	RenderSprites:
 		Scale: 0.65
 	SpawnActorOnDeath:
 		Actor: t3_archdemon.Husk
@@ -201,10 +201,10 @@ t3_archdemon.husk:
 
 t2_command_relais:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^tech3.redalliance.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^tech3.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
 		Queue: Building.redalliance
 		BuildPaletteOrder: 90
@@ -243,8 +243,8 @@ t2_command_relais:
 	WithIdleOverlay@EngineSPOT:
 		Offset: 0,0,0
 		Sequence: spot
-		Palette: light	
-    RenderSprites:
+		Palette: light
+	RenderSprites:
 		Scale: 0.50
 	SpawnActorOnDeath:
 		Actor: t2_command_relais.Husk
@@ -264,13 +264,13 @@ t2_command_relais.husk:
 
 t4_cruiser:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t4_cruiser.stat.unite
-    # / Inherit option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t4_cruiser.stat.unite
+	# / Inherit option Unite /
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Rotor.aircraft.move
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Rotor.aircraft.move
 	Buildable:
 		Queue: Building.redalliance
 		BuildPaletteOrder: 120
@@ -284,7 +284,7 @@ t4_cruiser:
 		MuzzleSplitFacings: 8
 		LocalOffset: 840,900,200, 490,900,200, 140,900,200, -210,900,200, -560,900,200
 	Armament@secondary:
-        Delay: 8
+		Delay: 8
 		Turret: borde02
 		Weapon: cannon_cruiser
 		MuzzleSequence: muzzle
@@ -298,19 +298,19 @@ t4_cruiser:
 		LocalOffset: 950,200,700, 950,-200,700
 	AttackTurreted:
 		Turrets: borde01, borde02, laser_des
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Turreted:
 		Turret: borde01
 		Offset: 750,1800,-50
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Turreted@borde02:
 		Turret: borde02
 		Offset: 750,1500,-50
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Turreted@borde02:
 		Turret: laser_des
 		Offset: 950,0,0
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	RenderSprites:
 		Scale: 1.15
 	Aircraft:
@@ -340,58 +340,58 @@ t4_cruiser:
 		Palette: light
 		RequiresCondition: !SmokeCamoActivate
 	HitShape:
-    GrantConditionOnDamageState@Damage01:
-        Condition: heavy.damage
-        ValidDamageStates: Heavy
-    GrantConditionOnDamageState@Damage02:
-        Condition: Critical.damage
-        ValidDamageStates: Critical
-    LeavesTrails@01:
-        Image: damage_smoke.min
-        TrailWhileStationary: true
-        Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
-        Palette: flameeffect60
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 650,445,580
-        RequiresCondition: heavy.damage || Critical.damage
-    LeavesTrails@02:
-        Image: damage_smoke.min
-        TrailWhileStationary: true
-        Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
-        Palette: flameeffect60
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: -380,-405,670
-        RequiresCondition: Critical.damage
-    LeavesTrails@03:
-        Image: damage_smoke.min
-        TrailWhileStationary: true
-        Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
-        Palette: flameeffect
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: -80,505,670
-        RequiresCondition: Critical.damage
-    NukePower@NukeMissile:
+	GrantConditionOnDamageState@Damage01:
+		Condition: heavy.damage
+		ValidDamageStates: Heavy
+	GrantConditionOnDamageState@Damage02:
+		Condition: Critical.damage
+		ValidDamageStates: Critical
+	LeavesTrails@01:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 650,445,580
+		RequiresCondition: heavy.damage || Critical.damage
+	LeavesTrails@02:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: -380,-405,670
+		RequiresCondition: Critical.damage
+	LeavesTrails@03:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: -80,505,670
+		RequiresCondition: Critical.damage
+	NukePower@NukeMissile:
 		OrderName: Nuke.Redalliance
 		Cursor: nuke
 		PauseOnCondition: disabled || chronodisable
 		Prerequisites:
-            1: t4_cruiser
+			1: t4_cruiser
 		Icons:
 			1: nukeallianceicons
-        IconPalette: flameeffect
+		IconPalette: flameeffect
 		ChargeInterval: 8000
 		Names:
 			1: Wrath of God
 		Descriptions:
 			1: Please select the section of the map you want to obliterate
-		LaunchSound: 
+		LaunchSound:
 		SelectTargetSpeechNotification:
 		MissileWeapons:
 			1: nuke.alliance.missile
-        DisplayTimerRelationships: Ally, Neutral, Enemy
+		DisplayTimerRelationships: Ally, Neutral, Enemy
 		MissileImage: nuke.alliance.missile
 		MissilePalette: player
 		IsPlayerPalette: true
@@ -400,7 +400,7 @@ t4_cruiser:
 		FlightVelocity: 1c0
 		FlightDelay: 100
 		DisplayBeacon: False
-		BeaconPosters: 
+		BeaconPosters:
 		ArrowSequence: arrow
 		ClockSequence: clock
 		CircleRanges:
@@ -425,7 +425,7 @@ t4_cruiser.husk:
 	FallsToEarth:
 		Explosion: therombomb
 	SmokeParticleEmitter:
-        Image: building_smokeparticle
+		Image: building_smokeparticle
 		Sequences: idle01, idle02
 		RequiresCondition: !build-incomplete
 		SpawnFrequency: 2, 8

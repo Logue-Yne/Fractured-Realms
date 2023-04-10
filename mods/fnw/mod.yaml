@@ -1,6 +1,6 @@
 Metadata:
 	Title: Fractured Realms
-	Version: v1.0/05 (playtest 2022.12.14)
+	Version: v1.0 (playtest 2023.04.01)
 	Website: https://www.moddb.com/mods/fractured-realms
 	WebIcon32: https://i60.servimg.com/u/f60/16/69/66/28/logo_310.png
 	WindowTitle: OpenRA - Fractured Realms
@@ -140,11 +140,11 @@ Rules:
     fnw|rules/statunite/federation-stat.yaml
 
 Sequences:
+	fnw|sequences/misc.yaml
 	fnw|sequences/aircraft.yaml
 	fnw|sequences/vehicles.yaml
 	fnw|sequences/infantry.yaml
 	fnw|sequences/structures.yaml
-	fnw|sequences/misc.yaml
     fnw|sequences/decorations.yaml
     fnw|sequences/debris-gibs_seq.yaml
     fnw|sequences/abilitie-power.yaml
@@ -172,7 +172,7 @@ ChromeLayout:
 	fnw|chrome/credits.yaml
 	common|chrome/ingame.yaml                           #trad Fr
 	fnw|chrome/ingame-player.yaml
-	common|chrome/ingame-observer.yaml                  #trad Fr
+	fnw|chrome/ingame-observer.yaml                  #trad Fr
 	common|chrome/ingame-infoobjectives.yaml            #trad Fr
 	common|chrome/ingame-infostats.yaml                 #trad Fr
 	common|chrome/lobby-players.yaml                    #trad Fr
@@ -192,6 +192,7 @@ ChromeLayout:
 	common|chrome/ingame-infobriefing.yaml
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-debuginfo.yaml
+	common|chrome/ingame-debug-hpf.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-infochat.yaml
 	common|chrome/ingame-info-lobby-options.yaml
@@ -335,6 +336,14 @@ Fonts:
 		Font: fnw|steel_blade_7.ttf
 		Size: 32
 		Ascender: 26
+	Title_Codex:
+		Font: common|FreeSansBold.ttf
+		Size: 12
+		Ascender: 8
+	Small_Codex:
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 7
 	InfoConso:
 		Font: common|FreeSansBold.ttf
 		Size:18

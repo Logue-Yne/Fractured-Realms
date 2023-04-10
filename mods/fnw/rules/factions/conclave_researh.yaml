@@ -86,7 +86,7 @@
 upgrade.alpha.rodeur.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Rodeur.Aspect
-    Inherits@Research.stat: ^Upgrade.PhieProwler.conclave.stat
+	Inherits@Research.stat: ^Upgrade.PhieProwler.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 10
@@ -107,7 +107,7 @@ upgrade.alpha.rodeur.conclave:
 upgrade.omega.rodeur.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Rodeur.Aspect
-    Inherits@Research.stat: ^Upgrade.OmegaProwler.conclave.stat
+	Inherits@Research.stat: ^Upgrade.OmegaProwler.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 70
@@ -128,7 +128,7 @@ upgrade.omega.rodeur.conclave:
 upgrade.alpha.pelerin.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Pelerin.Aspect
-    Inherits@Research.stat: ^Upgrade.PhiePelerin.conclave.stat
+	Inherits@Research.stat: ^Upgrade.PhiePelerin.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 20
@@ -147,7 +147,7 @@ upgrade.alpha.pelerin.conclave:
 upgrade.omega.pelerin.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Pelerin.Aspect
-    Inherits@Research.stat: ^Upgrade.OmegaPelerin.conclave.stat
+	Inherits@Research.stat: ^Upgrade.OmegaPelerin.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 80
@@ -166,7 +166,7 @@ upgrade.omega.pelerin.conclave:
 upgrade.alpha.comete.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Comete.Aspect
-    Inherits@Research.stat: ^Upgrade.PhieComete.conclave.stat
+	Inherits@Research.stat: ^Upgrade.PhieComete.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 30
@@ -188,7 +188,7 @@ upgrade.alpha.comete.conclave:
 upgrade.omega.comete.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Comete.Aspect
-    Inherits@Research.stat: ^Upgrade.OmegaComete.conclave.stat
+	Inherits@Research.stat: ^Upgrade.OmegaComete.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 90
@@ -210,7 +210,7 @@ upgrade.omega.comete.conclave:
 upgrade.alpha.arpenteur.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Arpenteur.Aspect
-    Inherits@Research.stat: ^Upgrade.PhieArpenteur.conclave.stat
+	Inherits@Research.stat: ^Upgrade.PhieArpenteur.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 50
@@ -230,7 +230,7 @@ upgrade.alpha.arpenteur.conclave:
 upgrade.omega.arpenteur.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Arpenteur.Aspect
-    Inherits@Research.stat: ^Upgrade.OmegaArpenteur.conclave.stat
+	Inherits@Research.stat: ^Upgrade.OmegaArpenteur.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 110
@@ -250,7 +250,7 @@ upgrade.omega.arpenteur.conclave:
 upgrade.alpha.zenith.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Zenith.Aspect
-    Inherits@Research.stat: ^Upgrade.PhieZenith.conclave.stat
+	Inherits@Research.stat: ^Upgrade.PhieZenith.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 40
@@ -270,7 +270,7 @@ upgrade.alpha.zenith.conclave:
 upgrade.omega.zenith.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Zenith.Aspect
-    Inherits@Research.stat: ^Upgrade.OmegaZenith.conclave.stat
+	Inherits@Research.stat: ^Upgrade.OmegaZenith.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 100
@@ -290,7 +290,7 @@ upgrade.omega.zenith.conclave:
 upgrade.alpha.quasar.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Quasar.Aspect
-    Inherits@Research.stat: ^Upgrade.PhieQuasar.conclave.stat
+	Inherits@Research.stat: ^Upgrade.PhieQuasar.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 60
@@ -310,7 +310,7 @@ upgrade.alpha.quasar.conclave:
 upgrade.omega.quasar.conclave:
 	Inherits@Research: ^Aspect.Base.Conclave
 	Inherits@Research1: ^Quasar.Aspect
-    Inherits@Research.stat: ^Upgrade.OmegaQuasar.conclave.stat
+	Inherits@Research.stat: ^Upgrade.OmegaQuasar.conclave.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 120
@@ -385,9 +385,9 @@ upgrade.omega.navigator.conclave:
 		ChargeInterval: 6000
 		Icons:
 			1: orbitalstairstrikepowericon
-        IconPalette: Conclave.Icon
-        Prerequisites:
-            1: Ion Trap X6
+		IconPalette: Conclave.Icon
+		Prerequisites:
+			1: Ion Trap X6
 		Names:
 			1: stair power
 		Descriptions:
@@ -401,14 +401,14 @@ upgrade.omega.navigator.conclave:
 			1: Ion Trap X6
 		Icons:
 			1: powereclipseconclaveicon
-        IconPalette: Conclave.Icon
+		IconPalette: Conclave.Icon
 		ChargeInterval: 3750
 		Names:
 			1: Gravity Eclipse
 		Descriptions:
 			1: Calls a slow moving “shadow”.\nAny enemy units under this “shadow” have drastically reduced movement speed and view range.\nIts approach angle can be manually adjusted.
-		SelectTargetSpeechNotification: 
-		IncomingSpeechNotification: 
+		SelectTargetSpeechNotification:
+		IncomingSpeechNotification:
 		UnitTypes:
 			1: eclipse
 		SquadSizes:
@@ -428,7 +428,7 @@ upgrade.omega.navigator.conclave:
 		Icons:
 			1: powergravitconclaveicon
 		Cursor: ability
-        IconPalette: Conclave.Icon
+		IconPalette: Conclave.Icon
 		Prerequisites:
 			1: Ion Trap X3
 		ChargeInterval: 2250
@@ -446,12 +446,12 @@ upgrade.omega.navigator.conclave:
 		Footprints:
 			1: x
 		ValidRelationships: Enemy
-		SelectTargetSpeechNotification: 
-		EndChargeSpeechNotification: 
-		LaunchSpeechNotification: 
-		IncomingSpeechNotification: 
-		EndChargeSound: 
-		OnFireSound: 
+		SelectTargetSpeechNotification:
+		EndChargeSpeechNotification:
+		LaunchSpeechNotification:
+		IncomingSpeechNotification:
+		EndChargeSound:
+		OnFireSound:
 		DisplayTimerStances: Ally
 		DisplayRadarPing: True
 		PauseOnCondition: disabled
@@ -466,13 +466,13 @@ upgrade.omega.navigator.conclave:
 		ChargeInterval: 3250
 		Icons:
 			1: bubblestaseicon
-        IconPalette: Conclave.Icon
+		IconPalette: Conclave.Icon
 		StartFullyCharged: false
 		Names:
 			1: Field Stase
 		Descriptions:
 			1: Creates a stasis field that makes units inside it completely invulnerable and untargetable but also renders them unable to move or attack for a short period of time.
 		EffectImage: stase_effect
-        EffectSequence: idle
+		EffectSequence: idle
 		DeploySound: spyreveal.aud
-		SelectTargetSpeechNotification: 
+		SelectTargetSpeechNotification:

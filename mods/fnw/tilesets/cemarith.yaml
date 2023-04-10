@@ -1,9 +1,9 @@
 General:
-    Name: cemarith
-    Id: CEMARITH
-    SheetSize: 1024
-    EditorTemplateOrder: Terrain, Water, Concrete, Rouch, Road, Concrete Wall, Divers, Cliff, Jonction Cliff, Rouch Cliff, Water Cliff
-    HeightDebugColors: AA0000
+	Name: cemarith
+	Id: CEMARITH
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain, Water, Concrete, Rouch, Road, Concrete Wall, Divers, Cliff, Jonction Cliff, Rouch Cliff, Water Cliff
+	HeightDebugColors: AA0000
 
 Terrain:
 	TerrainType@Clear:
@@ -84,7 +84,7 @@ Terrain:
 		Color: c55ac4
 
 Templates:
- 	Template@0:
+	Template@0:
 		Id: 0
 		Images: t00.cem, t01.cem, t02.cem, t03.cem, t04.cem, t05.cem, t06.cem, t07.cem, t08.cem, t09.cem, t10.cem, t11.cem, t12.cem, t13.cem, t14.cem, t15.cem, t16.cem, t17.cem, t18.cem, t19.cem, t20.cem, t21.cem, t22.cem, t23.cem, t24.cem, t25.cem, t26.cem, t27.cem, t28.cem, t29.cem, t30.cem, t31.cem, t32.cem, t33.cem, t34.cem
 		Size: 1,1
@@ -137,7 +137,7 @@ Templates:
 		Images: t806.cem, t807.cem
 		Size: 1,1
 		PickAny: False
-        Categories: Road
+		Categories: Road
 		Tiles:
 			0: Road
 				Height: 1
@@ -148,7 +148,7 @@ Templates:
 		Images: t808.cem, t809.cem
 		Size: 1,1
 		PickAny: False
-        Categories: Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@810:
@@ -156,7 +156,7 @@ Templates:
 		Images: t810.cem, t811.cem
 		Size: 1,1
 		PickAny: False
-        Categories: Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@812:
@@ -164,7 +164,7 @@ Templates:
 		Images: t812.cem, t813.cem
 		Size: 1,1
 		PickAny: False
-        Categories: Road
+		Categories: Road
 		Tiles:
 			0: Road
 	Template@814:
@@ -172,7 +172,7 @@ Templates:
 		Images: t814.cem, t815.cem
 		Size: 2,1
 		PickAny: False
-        Categories: Road
+		Categories: Road
 		Tiles:
 			0: Road
 			1: Road
@@ -181,7 +181,7 @@ Templates:
 		Images: t816.cem, t817.cem
 		Size: 2,1
 		PickAny: False
-        Categories: Road
+		Categories: Road
 		Tiles:
 			0: Road
 			1: Road
@@ -190,7 +190,7 @@ Templates:
 		Images: t818.cem, t819.cem
 		Size: 2,1
 		PickAny: False
-        Categories: Road
+		Categories: Road
 		Tiles:
 			0: Road
 			1: Road
@@ -199,7 +199,7 @@ Templates:
 		Images: t820.cem, t821.cem
 		Size: 2,1
 		PickAny: False
-        Categories: Road
+		Categories: Road
 		Tiles:
 			0: Road
 			1: Road
@@ -589,7 +589,7 @@ Templates:
 		PickAny: False
 		Categories: Rouch
 		Tiles:
-			0: Clear	
+			0: Clear
 	Template@917:
 		Id: 917
 		Images: t917.cem
@@ -739,7 +739,7 @@ Templates:
 		Images: t792.cem, t793.cem
 		Size: 1,1
 		PickAny: False
-        Categories: Water, Rouch
+		Categories: Water, Rouch
 		Tiles:
 			0: Beach
 	Template@794:
@@ -747,7 +747,7 @@ Templates:
 		Images: t794.cem, t795.cem
 		Size: 1,1
 		PickAny: False
-        Categories: Water, Rouch
+		Categories: Water, Rouch
 		Tiles:
 			0: Beach
 	Template@796:
@@ -755,7 +755,7 @@ Templates:
 		Images: t796.cem, t797.cem
 		Size: 1,1
 		PickAny: False
-        Categories: Water, Rouch
+		Categories: Water, Rouch
 		Tiles:
 			0: Beach
 	Template@798:
@@ -763,7 +763,7 @@ Templates:
 		Images: t798.cem, t799.cem
 		Size: 2,1
 		PickAny: False
-        Categories: Water, Rouch
+		Categories: Water, Rouch
 		Tiles:
 			0: Beach
 			1: Beach
@@ -772,7 +772,7 @@ Templates:
 		Images: t800.cem, t801.cem
 		Size: 2,1
 		PickAny: False
-        Categories: Water, Rouch
+		Categories: Water, Rouch
 		Tiles:
 			0: Beach
 			1: Beach
@@ -781,7 +781,7 @@ Templates:
 		Images: t802.cem, t803.cem
 		Size: 2,1
 		PickAny: False
-        Categories: Water, Rouch
+		Categories: Water, Rouch
 		Tiles:
 			0: Beach
 			1: Beach
@@ -790,7 +790,7 @@ Templates:
 		Images: t804.cem, t805.cem
 		Size: 2,1
 		PickAny: False
-        Categories: Water, Rouch
+		Categories: Water, Rouch
 		Tiles:
 			0: Beach
 			1: Beach
@@ -7502,4 +7502,4 @@ Templates:
 		Categories: Cliff
 		Tiles:
 			0: Rock
-			1: Rock      
+			1: Rock

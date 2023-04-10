@@ -1,8 +1,8 @@
 ^ConditionGeneralInfantryBase:
 	Inherits@PowerEffect: ^ConditionGeneralComonBase
 	# Mechanics /
-    Inherits@BaitTarget: ^Bait.TargetEffet
-    Inherits@EclipsesShroud:^Eclipse.ShroudEffet
+	Inherits@BaitTarget: ^Bait.TargetEffet
+	Inherits@EclipsesShroud: ^Eclipse.ShroudEffet
 	Inherits@Healing: ^CoditionHeal
 	Inherits@Cover: ^CoditionCover
 	Inherits@1: ^HammerEradicatorStunInfantry
@@ -12,14 +12,14 @@
 	Inherits@Avatar.conclave: ^Aura.Avatar.Conclave
 	Inherits@Radiant: ^RadiantDelay
 	Inherits@Shield.Protect: ^Shield.Protect
-    Inherits@Federation.PowerCharge:^affect.ChargePower.Federation
+	Inherits@Federation.PowerCharge: ^affect.ChargePower.Federation
 
 ^ConditionGeneralVehicleBase:
 	Inherits@PowerEffect: ^ConditionGeneralComonBase
 	# Mechanics /
-    Inherits@BaitTarget: ^Bait.TargetEffet
-    Inherits@EclipsesShroud: ^Eclipse.ShroudEffet
-    Inherits@Target.blue: ^Target.blue.effet.weapon
+	Inherits@BaitTarget: ^Bait.TargetEffet
+	Inherits@EclipsesShroud: ^Eclipse.ShroudEffet
+	Inherits@Target.blue: ^Target.blue.effet.weapon
 	Inherits@Repair: ^CoditionRepairVehicle
 	Inherits@EMPDisable: ^EmpDisableMobile
 	Inherits@StunSpeed: ^StunSpeedDisturb
@@ -31,18 +31,18 @@
 	Inherits@DisturbPower: ^PowerStase.Conclave
 	Inherits@Avatar.conclave: ^Aura.Avatar.Conclave
 	Inherits@Shield.Protect: ^Shield.Protect
-    Inherits@Federation.PowerCharge:^affect.ChargePower.Federation
+	Inherits@Federation.PowerCharge: ^affect.ChargePower.Federation
 	
 ^ConditionGeneralBuilding:
-    Inherits@EclipsesShroud:^Eclipse.ShroudEffet
+	Inherits@EclipsesShroud: ^Eclipse.ShroudEffet
 	Inherits@DisturbPower: ^PowerStase.Conclave
-    Inherits@EMPDisable: ^EmpDisable
+	Inherits@EMPDisable: ^EmpDisable
 	
 ^ConditionGeneralBuildDefense:
 	Inherits@PowerEffect: ^ConditionGeneralComonBase
-    Inherits@EclipsesShroud:^Eclipse.ShroudEffet
+	Inherits@EclipsesShroud: ^Eclipse.ShroudEffet
 	# Mechanics /
-    Inherits@BaitTarget: ^Bait.TargetEffet
+	Inherits@BaitTarget: ^Bait.TargetEffet
 	Inherits@EMPDisable: ^EmpDisable
 	Inherits@2: ^StunEmp
 	Inherits@3: ^DisturbsReloadAmmo
@@ -53,8 +53,8 @@
 ^ConditionGeneralAircraftBase:
 	Inherits@PowerEffect: ^ConditionGeneralComonBase
 	# Mechanics /
-    Inherits@BaitTarget: ^Bait.TargetEffet
-    Inherits@EclipsesShroud:^Eclipse.ShroudEffet
+	Inherits@BaitTarget: ^Bait.TargetEffet
+	Inherits@EclipsesShroud: ^Eclipse.ShroudEffet
 	Inherits@1: ^CoditionFlakAreaCruiser
 	Inherits@2: ^CoditionRepairAircraft
 	Inherits@3: ^Anaconda.Modifier
@@ -64,8 +64,6 @@
 	# Mechanics /
 	Inherits@1: ^PowerSmokeCamo.Baneslayer
 	Inherits@Zenith.Speed.conclave: ^Zenith.Alpha.Speed.Conclave
-	
-	
 	
 ## Spec Mechanics //
 ^ConditioneffetGeneralsUnit:
@@ -106,7 +104,7 @@
 		UncloakOn: Attack, Infiltrate, Demolish
 		IsPlayerPalette: true
 		PauseOnCondition: !(SmokeCamoActivate)
-        
+		
 ^Bait.TargetEffet:
 	ExternalCondition@BaitTarget:
 		Condition: BaitTargetApply
@@ -135,10 +133,10 @@
 	DamageMultiplier@Stase.bubble:
 		Modifier: 0
 		RequiresCondition: Stase.bubble
-    GrantCondition@Stase.bubble.Bait:
+	GrantCondition@Stase.bubble.Bait:
 		Condition: BaitTargetApply
 		RequiresCondition: Stase.bubble
-    GrantCondition@Stase.bubble.notmobile.turret:
+	GrantCondition@Stase.bubble.notmobile.turret:
 		Condition: stunweapons
 		RequiresCondition: Stase.bubble
 
@@ -166,7 +164,7 @@
 	GrantConditionOnDamageState@Damage.heavy.speed:
 		Condition: damheavyspeed
 		ValidDamageStates: Heavy
-    #/// Critical damage ///
+	#/// Critical damage ///
 	SpeedMultiplier@Damage.critical.speed:
 		RequiresCondition: damcritspeed
 		Modifier: 60
@@ -202,7 +200,6 @@
 		Palette: effect
 		ValidStances: Ally
 		RequiresCondition: damaged && (FactoryRepairVehicle || UniteRepairVehicle)
-		
 
 ^CoditionRepairAircraft:
 	#Weapons Fact repair Aircraft
@@ -323,17 +320,17 @@
 		RequiresCondition: HEDamageDelay
 		DamageTypes: Burned
 		Terrain: Clear, Rough, Tree, Diast
-        
+		
 ^Eclipse.ShroudEffet:
 	ExternalCondition@ECLIPSESHROUD:
 		Condition: Eclipse.shroud
-    RevealsShroudMultiplier@ECLIPSESHROUD:
-        Modifier: 40
-        RequiresCondition: Eclipse.shroud
+	RevealsShroudMultiplier@ECLIPSESHROUD:
+		Modifier: 40
+		RequiresCondition: Eclipse.shroud
 	SpeedMultiplier@ECLIPSESHROUD:
 		RequiresCondition: Eclipse.shroud
 		Modifier: 40
-        
+		
 ^Target.blue.effet.weapon:
 	ExternalCondition@TARGET.BLUE:
 		Condition: target.blue.weapon

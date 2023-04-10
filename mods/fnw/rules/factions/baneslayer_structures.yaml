@@ -1,11 +1,11 @@
 opcacnst:
 	Inherits: ^BaseBuilding
 	Inherits@2: ^7x4Shape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^baneslayer.mcv.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
-    Inherits@AiBot.cheat: ^aibotcheat.module
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^baneslayer.mcv.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@AiBot.cheat: ^aibotcheat.module
 	Selectable:
 		Bounds: 7168, 4096, 0, -512
 	Building:
@@ -30,17 +30,17 @@ opcacnst:
 	ProductionQueue@Building:
 		Type: Building.baneslayer
 		Group: Building
-		LowPowerModifier: 200		
+		LowPowerModifier: 200
 		QueuedAudio: Building
-        OnHoldAudio: OnHold
+		OnHoldAudio: OnHold
 		ReadyAudio: BuildingReady
 		CancelledAudio: Cancelled
 	ProductionQueue@DEFENCE:
 		Type: Defence.baneslayer
 		Group: defence
-		LowPowerModifier: 200		
+		LowPowerModifier: 200
 		QueuedAudio: Building
-        OnHoldAudio: OnHold
+		OnHoldAudio: OnHold
 		ReadyAudio: BuildingReady
 		CancelledAudio: Cancelled
 	BaseBuilding:
@@ -48,7 +48,7 @@ opcacnst:
 		ProductionType: Building.baneslayer
 	ProductionBar@DEFENCE:
 		ProductionType: Defence.baneslayer
-    GivesBuildableArea:
+	GivesBuildableArea:
 		AreaTypes: building, defense
 	BaseProvider:
 		Cooldown: 75
@@ -74,7 +74,7 @@ opcacnst:
 	Pluggable@Radr:
 		Conditions:
 			plug.techradr: Power.reveal.Baneslayer
-    ProvidesRadar:
+	ProvidesRadar:
 	Pluggable@Doctrines:
 		Conditions:
 			plug.doctrineshield: Power.shield.Baneslayer
@@ -93,46 +93,27 @@ opcacnst:
 		RequiresCondition: Power.shield.Baneslayer
 	DetectCloaked@Plug:
 		Range: 8c0
-        CloakTypes: Cloak, Mine
+		CloakTypes: Cloak, Mine
 		RequiresCondition: Power.reveal.Baneslayer
 	RenderDetectionCircle:
 	Exit:
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: opcacnst.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealopcacnst
-        Condition: opcacnst.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealopcacnst
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: opcacnst.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealopcacnst
+		Condition: opcacnst.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealopcacnst
 	HitShape:
-
-opcacnst.plugradr:
-	Inherits: ^BuildingPlugable
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: Advanced Radar Module
-	Buildable:
-		Queue: nope.baneslayer
-		BuildPaletteOrder: 100
-		Prerequisites: opproc
-		Description: Provides a large line-of-sight around the construction yard\nCan detect stealthed units\nCan only be placed on a MCV\nMCV with modules cannot be redeployed anymore
-		BuildDurationModifier: 20
-	RevealsShroud:
-		Range: 18c0
-	Plug:
-		Type: plug.techradr
-	Power:
-		Amount: -35
 
 oppowr:
 	Inherits: ^BaseBuilding
 	Inherits@2: ^5x3Shape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^powerplant.baneslayer.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^powerplant.baneslayer.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Selectable:
 		Bounds: 5120, 3072, 0, 0
 	Buildable:
@@ -169,9 +150,9 @@ oppowr:
 		Sequence: plug.powr
 		Palette: powereffect60
 		RequiresCondition: plug.powr
-    # Smoke Power Baneslayer
+	# Smoke Power Baneslayer
 	SmokeParticleEmitter@01:
-        Image: smoke_plasmaparticle
+		Image: smoke_plasmaparticle
 		Sequences: idlemin01, idlemin02, idlemin03
 		RequiresCondition: !build-incomplete
 		SpawnFrequency: 5, 6
@@ -182,7 +163,7 @@ oppowr:
 		Duration: 70
 		RandomFacing: True
 	SmokeParticleEmitter@02:
-        Image: smoke_plasmaparticle
+		Image: smoke_plasmaparticle
 		Sequences: idlemin01, idlemin02, idlemin03
 		RequiresCondition: !build-incomplete
 		SpawnFrequency: 5, 6
@@ -192,41 +173,34 @@ oppowr:
 		Palette: powereffect60
 		Duration: 70
 		RandomFacing: True
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: opowr.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealOpowr
-        Condition: opowr.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealOpowr
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: opowr.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealOpowr
+		Condition: opowr.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealOpowr
 	HitShape:
 
 oppowr.plugpowr:
 	Inherits: ^BuildingPlugable
-	Valued:
-		Cost: 600
-	Tooltip:
-		Name: (+) Plasma Core
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^oppowr.plugpowr.stat.plugin
 	Buildable:
 		Queue: Defence.baneslayer
 		BuildPaletteOrder: 60
-		Prerequisites: oplabtech
-		Description: Increases the Power Plant’s output by +100%.\n\n* Can only be placed on a pre-existing non-upgraded Power Plant.
-		BuildDurationModifier: 15
 		IconPalette: Baneslayer.Icon
 	Plug:
 		Type: plug.powr
-	Power:
-		Amount: 80
 
 opproc:
 	Inherits: ^BaseBuilding
 	Inherits@2: ^4x3Shape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^proc.baneslayer.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^proc.baneslayer.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Selectable:
 		Bounds: 5120, 3072, 0, -712
 	Buildable:
@@ -235,7 +209,7 @@ opproc:
 		Prerequisites: oppowr
 		IconPalette: Baneslayer.Icon
 	Building:
-		Footprint:  xxxxx xxxxx =====
+		Footprint: xxxxx xxxxx =====
 		Dimensions: 5,3
 		BuildSounds: buildingmakeop.aud
 	RequiresBuildableArea:
@@ -255,7 +229,7 @@ opproc:
 		Actor: t1_dainn
 		SpawnOffset: 4,2
 		Facing: 64
-        RequiresCondition: !build-incomplete
+		RequiresCondition: !build-incomplete
 	InfiltrateForCash:
 		Percentage: 50
 		Minimum: 500
@@ -268,9 +242,9 @@ opproc:
 	Explodes:
 		Delay: 5
 	ProvidesPrerequisite@buildingname:
-    # Smoke refinery
+	# Smoke refinery
 	SmokeParticleEmitter@01dock:
-        Image: heat_smokeparticle
+		Image: heat_smokeparticle
 		Sequences: idle01, idle02
 		RequiresCondition: !build-incomplete
 		SpawnFrequency: 10, 16
@@ -281,7 +255,7 @@ opproc:
 		Duration: 70
 		RandomFacing: True
 	SmokeParticleEmitter@02Dock:
-        Image: heat_smokeparticle
+		Image: heat_smokeparticle
 		Sequences: idle01, idle02
 		RequiresCondition: !build-incomplete
 		SpawnFrequency: 10, 16
@@ -291,25 +265,25 @@ opproc:
 		Palette: flameeffect60
 		Duration: 70
 		RandomFacing: True
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: opproc.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealopproc
-        Condition: opproc.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealopproc
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: opproc.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealopproc
+		Condition: opproc.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealopproc
 	HitShape:
 
 opbarr:
 	Inherits: ^BaseBuilding
 	Inherits@2: ^4x3Shape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^barrack.baneslayer.stat.building
-    Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
-    # / Inherit specifity /
-    Inherits@Power.ConclaveReveal: ^PowerReveal.Conclave.Base
-    Inherits@PowerDown: ^DisablePowerDown
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^barrack.baneslayer.stat.building
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	# / Inherit specifity /
+	Inherits@Power.ConclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
 	Selectable:
 		Bounds: 5120, 3072, 0, 0
 	Buildable:
@@ -329,9 +303,9 @@ opbarr:
 	ProductionQueue@Infantry:
 		Type: Infantry.baneslayer
 		Group: Infantry
-		LowPowerModifier: 200		
+		LowPowerModifier: 200
 		QueuedAudio: Training
-        OnHoldAudio: OnHold
+		OnHoldAudio: OnHold
 		ReadyAudio: UnitReady
 		CancelledAudio: Cancelled
 	ProductionBar@Infantry:
@@ -348,29 +322,29 @@ opbarr:
 		Condition: HealInfantry
 		Range: 5c0
 		AffectsParent: true
-    WithRangeCircle@BuildingHeal:
-        Type: HealInfantry
-        Color: ff6600
+	WithRangeCircle@BuildingHeal:
+		Type: HealInfantry
+		Color: ff6600
 		Range: 5c0
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: opbarr.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealopbarr
-        Condition: opbarr.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealopbarr
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: opbarr.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealopbarr
+		Condition: opbarr.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealopbarr
 	HitShape:
 
 opweap:
 	Inherits: ^BaseBuilding
 	Inherits@2: ^6x4Shape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^factory.baneslayer.stat.building
-    Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
-    Inherits@PowerDown: ^DisablePowerDown
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^factory.baneslayer.stat.building
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
 	Selectable:
 		Bounds: 6144, 4096, 0, 0
 	Buildable:
@@ -390,9 +364,9 @@ opweap:
 		Range: 7c0
 		AffectsParent: true
 		PauseOnCondition: empdisable
-    WithRangeCircle@BuildingRepair:
-        Type: FactoryRepairVehicle
-        Color: fcb415
+	WithRangeCircle@BuildingRepair:
+		Type: FactoryRepairVehicle
+		Color: fcb415
 		Range: 7c0
 	WithProductionDoorOverlay:
 		RequiresCondition: !build-incomplete
@@ -407,9 +381,9 @@ opweap:
 	ProductionQueue@Vehicle:
 		Type: Vehicle.baneslayer
 		Group: Vehicle
-		LowPowerModifier: 200		
+		LowPowerModifier: 200
 		QueuedAudio: Training
-        OnHoldAudio: OnHold
+		OnHoldAudio: OnHold
 		ReadyAudio: UnitReady
 		CancelledAudio: Cancelled
 	ProductionBar:
@@ -421,24 +395,24 @@ opweap:
 		VoiceSet: opweap_voice
 	Power:
 		Amount: -30
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: opweap.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealopweap
-        Condition: opweap.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealopweap
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: opweap.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealopweap
+		Condition: opweap.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealopweap
 	HitShape:
 
 optech:
 	Inherits: ^BaseBuilding
 	Inherits@2: ^5x3Shape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^tech2.baneslayer.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
-    Inherits@PowerDown: ^DisablePowerDown
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^tech2.baneslayer.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
 	Selectable:
 		Bounds: 5120, 3072, 0, 0
 	Buildable:
@@ -455,12 +429,10 @@ optech:
 		Adjacent: 14
 	Voiced:
 		VoiceSet: optech_voice
-	Power:
-		Amount: -100
 	InfiltrateForPowerOutage:
 	ProvidesPrerequisite@tech:
 		Prerequisite: optech
-        RequiresCondition: !disabled
+		RequiresCondition: !disabled
 	AffectedByPowerOutage:
 	GrantExternalConditionToProduced@WeaponsOP:
 		Condition: RemoveBaseOption
@@ -471,23 +443,23 @@ optech:
 	GrantExternalConditionToProduced@StatOP:
 		Condition: RemoveBaseStat
 		Duration: 10
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: optech.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealoptech
-        Condition: optech.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealoptech
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: optech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealoptech
+		Condition: optech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealoptech
 	ScalePowerWithHealth:
-    
+	
 oplabtech:
 	Inherits: ^BaseBuilding
 	Inherits@2: ^5x3Shape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^oplabtech.baneslayer.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^oplabtech.baneslayer.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Selectable:
 		Bounds: 5120, 3072, 0, 0
 	Buildable:
@@ -504,16 +476,14 @@ oplabtech:
 		Adjacent: 14
 	Voiced:
 		VoiceSet: opavtech_voice
-	Power:
-		Amount: -200
 	InfiltrateForPowerOutage:
 	ProvidesPrerequisite:
-        RequiresCondition: !disabled
+		RequiresCondition: !disabled
 	WithIdleOverlay@spot:
 		Offset: 0, 0, 0
 		Sequence: spot
 		Palette: powereffect
-		RequiresCondition: !build-incomplete && buildOverlay-active 
+		RequiresCondition: !build-incomplete && buildOverlay-active
 	Production:
 		Produces: Research.baneslayer
 		MoveIntoWorld: false
@@ -522,38 +492,38 @@ oplabtech:
 	ProductionQueue@Research:
 		Type: Research.baneslayer
 		Group: Research
-		LowPowerModifier: 200		
+		LowPowerModifier: 200
 		QueuedAudio: Building
-        OnHoldAudio: OnHold
+		OnHoldAudio: OnHold
 		ReadyAudio: BuildingReady
 		CancelledAudio: Cancelled
 	ProductionBar@Research.Baneslayer:
 		ProductionType: Research.baneslayer
-    RenderSprites:
-        Image: optech2
+	RenderSprites:
+		Image: optech2
 	RallyPoint:
 	Exit@1:
 		SpawnOffset: -850,900,0
 		ExitCell: 0,2
 	AffectedByPowerOutage:
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: optech2.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealoptech2
-        Condition: optech2.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealoptech2
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: optech2.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealoptech2
+		Condition: optech2.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealoptech2
 	ScalePowerWithHealth:
-    
-    
+	
+	
 optechtempt3:
 	Inherits: ^BaseBuilding
 	Inherits@2: ^7x4Shape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^tech3.baneslayer.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^tech3.baneslayer.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Selectable:
 		Bounds: 7520, 4120, 0, 0
 	Buildable:
@@ -570,16 +540,14 @@ optechtempt3:
 		Adjacent: 14
 	Voiced:
 		VoiceSet: opavtech_voice
-	Power:
-		Amount: -100
 	InfiltrateForPowerOutage:
 	ProvidesPrerequisite:
-        RequiresCondition: !disabled
+		RequiresCondition: !disabled
 	WithIdleOverlay@spot:
 		Offset: 0, 0, 0
 		Sequence: spot
 		Palette: powereffect
-		RequiresCondition: !build-incomplete && buildOverlay-active 
+		RequiresCondition: !build-incomplete && buildOverlay-active
 	Production:
 		Produces: Veteran.baneslayer
 		MoveIntoWorld: false
@@ -595,21 +563,21 @@ optechtempt3:
 		ProductionType: Veteran.baneslayer
 	Exit:
 	AffectedByPowerOutage:
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: optechtempt3.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealoptech2
-        Condition: optechtempt3.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealoptech2
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: optechtempt3.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealoptech2
+		Condition: optechtempt3.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealoptech2
 	ScalePowerWithHealth:
 
 opavtech:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^3x2Shape
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
-    Inherits@PowerDown: ^DisablePowerDown
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
 	Selectable:
 		Bounds: 5120, 3072, 0, 0
 	Buildable:
@@ -634,7 +602,7 @@ opavtech:
 	Armor:
 		Type: Concrete
 	ProvidesPrerequisite:
-        RequiresCondition: !disabled
+		RequiresCondition: !disabled
 	Production:
 		Produces: Veteran.baneslayer
 		MoveIntoWorld: false
@@ -651,21 +619,21 @@ opavtech:
 		ProductionType: Veteran.baneslayer
 	Power:
 		Amount: -200
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: opavtech.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealopavtech
-        Condition: opavtech.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealopavtech
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: opavtech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealopavtech
+		Condition: opavtech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealopavtech
 	ScalePowerWithHealth:
-    
+	
 opprotocolcenter:
 	Inherits@1: ^BaseBuilding
 	Inherits@2: ^4x3Shape
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
-    Inherits@PowerDown: ^DisablePowerDown
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
 	Selectable:
 		Bounds: 5120, 3072, 0, 0
 	Buildable:
@@ -691,7 +659,7 @@ opprotocolcenter:
 	Armor:
 		Type: Concrete
 	ProvidesPrerequisite:
-        RequiresCondition: !disabled
+		RequiresCondition: !disabled
 	Production:
 		Produces: Veteran.baneslayer
 		MoveIntoWorld: false
@@ -708,25 +676,25 @@ opprotocolcenter:
 		ProductionType: Veteran.baneslayer
 	Power:
 		Amount: -200
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: opprotocolcenter.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealopprotocolcenter
-        Condition: opprotocolcenter.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealopprotocolcenter
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: opprotocolcenter.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealopprotocolcenter
+		Condition: opprotocolcenter.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealopprotocolcenter
 	ScalePowerWithHealth:
 
 opheli:
 	Inherits: ^BaseBuilding
 	Inherits@2: ^3x2Shape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^heliport.baneslayer.stat.building
-    Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
-    # / Inherit specifity /
-    Inherits@Power.ConclaveReveal: ^PowerReveal.Conclave.Base
-    Inherits@PowerDown: ^DisablePowerDown
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^heliport.baneslayer.stat.building
+	Inherits@Rallypoint.Production: ^Rallypoint.ProductionBuilding
+	# / Inherit specifity /
+	Inherits@Power.ConclaveReveal: ^PowerReveal.Conclave.Base
+	Inherits@PowerDown: ^DisablePowerDown
 	Selectable:
 		Bounds: 3072, 2048, 0, 0
 	Buildable:
@@ -763,9 +731,9 @@ opheli:
 	ProductionQueue@Aircraft:
 		Type: Aircraft.baneslayer
 		Group: Aircraft
-		LowPowerModifier: 200		
+		LowPowerModifier: 200
 		QueuedAudio: Training
-        OnHoldAudio: OnHold
+		OnHoldAudio: OnHold
 		ReadyAudio: UnitReady
 		CancelledAudio: Cancelled
 	ProductionBar@Aircraft:
@@ -781,21 +749,21 @@ opheli:
 		Condition: Ammocraft
 		Range: 5c0
 		AffectsParent: true
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: opheli.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealopheli
-        Condition: opheli.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealopheli
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: opheli.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealopheli
+		Condition: opheli.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealopheli
 	HitShape:
 
 t1_midgard:
 	Inherits@1: ^Defence
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t1_midgard.stat.unite
-    # / Inherit Option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t1_midgard.stat.unite
+	# / Inherit Option Unite /
 	Inherits@2: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetAll
 	Buildable:
@@ -811,19 +779,19 @@ t1_midgard:
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
-    GrantConditionOnAttack:
-        Condition: AP_fire
-        ArmamentNames: AP_weapon
-        RevokeDelay: 25
+	GrantConditionOnAttack:
+		Condition: AP_fire
+		ArmamentNames: AP_weapon
+		RevokeDelay: 25
 	Armament@gun:
 		Weapon: Midgard.gun
 		Recoil: 15
 		RecoilRecovery: 5
 		MuzzleSequence: muzzle
-        MuzzlePalette: flameeffect
+		MuzzlePalette: flameeffect
 		LocalOffset: 1500,900,1550, 1500,-900,1550, 1650,900,950, 1650,-900,950
 	Armament@gunAP:
-        Name: AP_weapon
+		Name: AP_weapon
 		Weapon: Midgard.gunAP
 		Recoil: 15
 		RecoilRecovery: 5
@@ -838,44 +806,44 @@ t1_midgard:
 		RequiresCondition: !(empdisable || stunweapons)
 	AutoTarget:
 	WithSpriteTurret@AA:
-        Sequence: turret
-        RequiresCondition: !AP_fire
-    WithSpriteTurret:
-        Sequence: turretap
-        RequiresCondition: AP_fire
+		Sequence: turret
+		RequiresCondition: !AP_fire
+	WithSpriteTurret:
+		Sequence: turretap
+		RequiresCondition: AP_fire
 		Turret: AP_turret
-    # turreted type
+	# turreted type
 	Turreted:
 		Turret: AP_turret
 		TurnSpeed: 14
 		RealignDelay: -1
 		Offset: 0,0,0
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Turreted@AA:
 		Turret: primary
 		TurnSpeed: 14
 		RealignDelay: -1
 		Offset: 0,0,0
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Power:
 		Amount: -30
-    # //// Sound Rotation Turret ////
-    GrantConditionWhileAiming@RotateAimTurret:
-        Condition: SoundRotateApply
-    GrantConditionOnAttack@FireAimWeapons:
-        Condition: NoSoundFireApply
-        RevokeOnNewTarget: true
-        RevokeDelay: 75
-    AmbientSound@RotateTurret:
-        SoundFiles: rotateturrer-order.aud
-        RequiresCondition: SoundRotateApply && !NoSoundFireApply
+	# //// Sound Rotation Turret ////
+	GrantConditionWhileAiming@RotateAimTurret:
+		Condition: SoundRotateApply
+	GrantConditionOnAttack@FireAimWeapons:
+		Condition: NoSoundFireApply
+		RevokeOnNewTarget: true
+		RevokeDelay: 75
+	AmbientSound@RotateTurret:
+		SoundFiles: rotateturrer-order.aud
+		RequiresCondition: SoundRotateApply && !NoSoundFireApply
 	HitShape:
 
 t2_niflheim:
 	Inherits@1: ^Defence
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t2_niflheim.stat.unite
-    # / Inherit Option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_niflheim.stat.unite
+	# / Inherit Option Unite /
 	Inherits@2: ^2x2Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
@@ -904,26 +872,26 @@ t2_niflheim:
 		TurnSpeed: 20
 		RealignDelay: -1
 		Offset: 0,0,540
-	WithSpriteTurret: 
+	WithSpriteTurret:
 	Power:
 		Amount: -30
-    # //// Sound Rotation Turret ////
-    GrantConditionWhileAiming@RotateAimTurret:
-        Condition: SoundRotateApply
-    GrantConditionOnAttack@FireAimWeapons:
-        Condition: NoSoundFireApply
-        RevokeOnNewTarget: true
-        RevokeDelay: 75
-    AmbientSound@RotateTurret:
-        SoundFiles: rotateturrer-order.aud
-        RequiresCondition: SoundRotateApply && !NoSoundFireApply
+	# //// Sound Rotation Turret ////
+	GrantConditionWhileAiming@RotateAimTurret:
+		Condition: SoundRotateApply
+	GrantConditionOnAttack@FireAimWeapons:
+		Condition: NoSoundFireApply
+		RevokeOnNewTarget: true
+		RevokeDelay: 75
+	AmbientSound@RotateTurret:
+		SoundFiles: rotateturrer-order.aud
+		RequiresCondition: SoundRotateApply && !NoSoundFireApply
 	HitShape:
 
 t3_hel:
 	Inherits@1: ^Defence
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t3_hel.stat.unite
-    # / Inherit Option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_hel.stat.unite
+	# / Inherit Option Unite /
 	Inherits@2: ^1x1Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Buildable:
@@ -951,25 +919,25 @@ t3_hel:
 		TurnSpeed: 15
 		RealignDelay: -1
 		Offset: 0,0,1650
-	WithSpriteTurret: 
+	WithSpriteTurret:
 	Power:
 		Amount: -60
-    # //// Sound Rotation Turret ////
-    GrantConditionWhileAiming@RotateAimTurret:
-        Condition: SoundRotateApply
-    GrantConditionOnAttack@FireAimWeapons:
-        Condition: NoSoundFireApply
-        RevokeOnNewTarget: true
-        RevokeDelay: 75
-    AmbientSound@RotateTurret:
-        SoundFiles: rotateturrer-order.aud
-        RequiresCondition: SoundRotateApply && !NoSoundFireApply
+	# //// Sound Rotation Turret ////
+	GrantConditionWhileAiming@RotateAimTurret:
+		Condition: SoundRotateApply
+	GrantConditionOnAttack@FireAimWeapons:
+		Condition: NoSoundFireApply
+		RevokeOnNewTarget: true
+		RevokeDelay: 75
+	AmbientSound@RotateTurret:
+		SoundFiles: rotateturrer-order.aud
+		RequiresCondition: SoundRotateApply && !NoSoundFireApply
 	HitShape:
 	
 t4_executioner:
 	Inherits@1: ^Defence
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t4_executioner.stat.unite
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t4_executioner.stat.unite
 	Inherits@2: ^3x2Shape
 	Buildable:
 		Queue: Defence.baneslayer
@@ -987,13 +955,13 @@ t4_executioner:
 		Adjacent: 16
 	Armament@gun01:
 		Weapon: RagnarokCanonPlasma.target
-        Name: superweapon
+		Name: superweapon
 		LocalOffset: 3450,0,2650
 		MuzzleSequence: muzzle
 		MuzzlePalette: greeneffect
 	Armament@gun02:
 		FireDelay: 145
-        Name: superweapon
+		Name: superweapon
 		Weapon: RagnarokCanonPlasma
 		Recoil: 150
 		RecoilRecovery: 15
@@ -1006,15 +974,15 @@ t4_executioner:
 		InitialFacing: 224
 		RealignDelay: -1
 		Offset: -70,0,850
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	ProvidesPrerequisite:
 	FireArmamentPower:
 		Cursor: ability
-        Prerequisites:
-            1: t4_executioner
+		Prerequisites:
+			1: t4_executioner
 		Icons:
 			1: ragnarokcanonicon
-        IconPalette: powereffect
+		IconPalette: powereffect
 		TargetCircleRanges:
 			1: 5c0
 		ChargeInterval: 7500
@@ -1023,12 +991,12 @@ t4_executioner:
 		Descriptions:
 			1: Fires a pulse blast which disables\nall mechanical units in the area.
 		OrderName: RagnarokFire
-        # Sound bank
+		# Sound bank
 		EndChargeSound:
 		EndChargeSpeechNotification:
 		SelectTargetSound:
-		LaunchSpeechNotification: 
-		IncomingSpeechNotification: 
+		LaunchSpeechNotification:
+		IncomingSpeechNotification:
 		IncomingSound:
 		LaunchSound:
 		DisplayTimerRelationships: Ally, Neutral, Enemy
@@ -1036,16 +1004,16 @@ t4_executioner:
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
-    # //// Sound Rotation Turret ////
-    GrantConditionWhileAiming@RotateAimTurret:
-        Condition: SoundRotateApply
-    GrantConditionOnAttack@FireAimWeapons:
-        Condition: NoSoundFireApply
-        RevokeOnNewTarget: true
-        RevokeDelay: 75
-    AmbientSound@RotateTurret:
-        SoundFiles: rotateturrer-order.aud
-        RequiresCondition: SoundRotateApply && !NoSoundFireApply
+	# //// Sound Rotation Turret ////
+	GrantConditionWhileAiming@RotateAimTurret:
+		Condition: SoundRotateApply
+	GrantConditionOnAttack@FireAimWeapons:
+		Condition: NoSoundFireApply
+		RevokeOnNewTarget: true
+		RevokeDelay: 75
+	AmbientSound@RotateTurret:
+		SoundFiles: rotateturrer-order.aud
+		RequiresCondition: SoundRotateApply && !NoSoundFireApply
 	Power:
 		Amount: -260
 	WithSpriteTurret:
@@ -1087,10 +1055,10 @@ t2_troll_deployed:
 		PauseOnCondition: build-incomplete || empdisable || stunweapons || disabled
 	Turreted:
 		TurnSpeed: 25
-        InitialFacing: 370
+		InitialFacing: 370
 		RealignDelay: -1
 		Offset: 400,350,2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	RenderSprites:
 		Scale: 1
 	HitShape:
@@ -1115,18 +1083,18 @@ t3_heimdall_deploy:
 		IntoActor: t3_heimdall
 		Offset: 0,0
 		Facing: 370
-    AutoDeployer:
-        DeployTicks: 1000
-        UndeployTicks: 1000
+	AutoDeployer:
+		DeployTicks: 1000
+		UndeployTicks: 1000
 	GrantConditionOnAttack@MissileAccuratePrime:
 		ArmamentNames: primary
 		RevokeOnNewTarget: false
 		RequiredShotsPerInstance: 1
-        RevokeDelay: 60
+		RevokeDelay: 60
 		Condition: Inaccurate.prime
-    InaccuracyMultiplier@MissileAccuratePrime:
-        Modifier: 4500
-        RequiresCondition: Inaccurate.prime
+	InaccuracyMultiplier@MissileAccuratePrime:
+		Modifier: 4500
+		RequiresCondition: Inaccurate.prime
 	Armament@gun:
 		Weapon: Heimdall.Missile
 		Recoil: 150
@@ -1140,10 +1108,10 @@ t3_heimdall_deploy:
 		PauseOnCondition: build-incomplete || empdisable || stunweapons || disabled
 	Turreted:
 		TurnSpeed: 15
-        InitialFacing: 370
+		InitialFacing: 370
 		RealignDelay: -1
 		Offset: 680,25,10
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons || disabled
 	RenderSprites:
 		Scale: 1
 	HitShape:

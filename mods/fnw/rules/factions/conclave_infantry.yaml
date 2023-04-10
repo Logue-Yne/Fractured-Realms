@@ -1,23 +1,23 @@
 gardian:
 	Inherits@1: ^Infantry
-    # / Inherit Stat & generic Unite /
+	# / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^gardian.conclave.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Target type /
+	# / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 20
 		IconPalette: Conclave.Icon
-    Garrisoner:
+	Garrisoner:
 		Voice: Move
 		GarrisonType: Garrisoner
-        GarrisonCondition: GarrisonWeaponRange
+		GarrisonCondition: GarrisonWeaponRange
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Armament@PRIMARY:
 		Weapon: Gardian.zap.Laser
 		LocalOffset: 180,0,260
@@ -36,25 +36,25 @@ gardian:
 
 statis:
 	Inherits@1: ^Infantry
-    # / Inherit Stat & generic Unite /
+	# / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^statis.conclave.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Target type /
+	# / Target type /
 	Inherits@Capture: ^Capture.allBuilding
 	Inherits@Target: ^AutoTargetAllAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 30
 		IconPalette: Conclave.Icon
-    Garrisoner:
+	Garrisoner:
 		Voice: Move
 		GarrisonType: Garrisoner
-        GarrisonCondition: GarrisonWeaponRange
+		GarrisonCondition: GarrisonWeaponRange
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Armament@Primary:
 		Weapon: Statis.Missile
 		LocalOffset: 450,0,260
@@ -74,13 +74,13 @@ statis:
 	
 t3_navigator:
 	Inherits@1: ^Infantry
-    # / Inherit Stat & generic Unite /
+	# / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t3_navigator.conclave.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Target type /
+	# / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 100
@@ -101,7 +101,7 @@ t3_navigator:
 		Type: GroundPosition
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	-Crushable:
 	WithIdleOverlay@robe:
 		Offset: 0,0,-5
@@ -118,11 +118,11 @@ t3_navigator:
 	HitShape:
 
 ^t4_consniper.Base:
-    Inherits@1: ^Infantry
-    # / Inherit Stat & generic Unite /
+	Inherits@1: ^Infantry
+	# / Inherit Stat & generic Unite /
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	WithInfantryBody:
 		IdleSequences: idle1
 		StandSequences: stand
@@ -131,26 +131,26 @@ t3_navigator:
 
 t4_consniper:
 	Inherits@1: ^t4_consniper.Base
-    # / Inherit Stat & generic Unite /
+	# / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t4_consniper.conclave.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Target type /
+	# / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 20
 		Prerequisites: tcsuperweap
 		IconPalette: Conclave.Icon
 		BuildLimit: 1
-    Garrisoner:
+	Garrisoner:
 		Voice: Move
 		GarrisonType: Garrisoner
-        GarrisonCondition: GarrisonWeaponRange
+		GarrisonCondition: GarrisonWeaponRange
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	GrantConditionOnAttack@TargetWeapon:
 		ArmamentNames: primary
 		RevokeOnNewTarget: true
@@ -184,7 +184,7 @@ t4_consniper:
 		CloakDelay: 1
 		IsPlayerPalette: true
 		CloakedCondition: cloaked
-        RequiresCondition: ActiveHologram
+		RequiresCondition: ActiveHologram
 	ExternalCondition@ActiveHologram:
 		Condition: ActiveHologram
 	ExplodeWeapon@Deployed:
@@ -199,18 +199,18 @@ t4_consniper:
 		Weapon: ExconvectorGun.primaris
 		MuzzleSequence: garrison-muzzle
 	HitShape:
-    
+	
 t4_consniper.Mirror:
 	Inherits@1: ^t4_consniper.Base
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t4_consniper.conclave.stat.mirror.unite
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t4_consniper.conclave.stat.mirror.unite
 	AttackFrontal:
 		FacingTolerance: 2
-    RenderSprites:
-        Image: t4_consniper
-    KillsSelf:
-        Delay: 300
-        RemoveInstead: true
+	RenderSprites:
+		Image: t4_consniper
+	KillsSelf:
+		Delay: 300
+		RemoveInstead: true
 	WithDecoration@MIRROR:
 		Image: mirror
 		Sequence: mirror-1
@@ -218,8 +218,8 @@ t4_consniper.Mirror:
 		ReferencePoint: Bottom, Left
 		ValidStances: Ally
 		ZOffset: 256
-    -ActorLostNotification:
-        
+	-ActorLostNotification:
+		
 activate.Mirror:
 	Inherits: ^Capacity.system.active
 	Interactable:
@@ -232,9 +232,9 @@ activate.Mirror:
 
 avatar:
 	Inherits@1: ^Infantry
-    # / Target type /
+	# / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Nope.conclave
 		BuildPaletteOrder: 20
@@ -264,11 +264,11 @@ avatar:
 	HiddenUnderFog:
 		Type: GroundPosition
 		Amount of charge required to attack.:
-        FacingTolerance: 64
+		FacingTolerance: 64
 	-Crushable:
 	AttackFrontal:
 		FacingTolerance: 4
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Armament@CHARGING:
 		Weapon: avatar.charging
 		LocalOffset: 1000,-2500,1500
@@ -279,10 +279,10 @@ avatar:
 		Weapon: Avatar.deluge
 		LocalOffset: 1000,-2500,1500
 	WithMuzzleOverlay:
-    PeriodicExplosion@Lighting:
+	PeriodicExplosion@Lighting:
 		Weapon: Avatar_effet
 		LocalOffset: 0,0,0c0
-        ResetReloadWhenEnabled: false
+		ResetReloadWhenEnabled: false
 	WithInfantryBody:
 		StandSequences: idle1
 		DefaultAttackSequence: shoot

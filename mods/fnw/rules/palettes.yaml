@@ -1,5 +1,5 @@
 ^Palettes:
-    # Palette Terrain
+	# Palette Terrain
 	PaletteFromFile@Vigile:
 		Name: terrain
 		Tileset: VIGILE
@@ -7,12 +7,12 @@
 	PaletteFromFile@Cemarith:
 		Name: terrain
 		Tileset: CEMARITH
-		Filename: cemarith.pal 
+		Filename: cemarith.pal
 	PaletteFromFile@Orion:
 		Name: terrain
 		Tileset: ORION
 		Filename: orion.pal
-    # Palette Player
+	# Palette Player
 	PaletteFromFile@player:
 		Name: player
 		Filename: unittem.pal
@@ -28,7 +28,7 @@
 		BaseName: black
 		BasePalette: black
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-    # Palette Player unite tileset
+	# Palette Player unite tileset
 	PaletteFromFile@inftem:
 		Name: infantry
 		Filename: unittem.pal
@@ -46,7 +46,7 @@
 		Filename: unittemdisabled.pal
 		AllowModifiers: false
 		ShadowIndex: 1
-    # Palette ingame Hud
+	# Palette ingame Hud
 	PaletteFromFile@chrome:
 		Name: chrome
 		Filename: temperat.pal
@@ -66,7 +66,7 @@
 		Name: civilianpal
 		Filename: civilpalette.pal
 		ShadowIndex: 1
-    # Palette Ressource
+	# Palette Ressource
 	FixedColorPalette@diastgreen:
 		Base: player
 		Name: diastgreen
@@ -77,7 +77,7 @@
 		Name: diastgold
 		Color: ffcc00
 		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-    # Palette Effect
+	# Palette Effect
 	PaletteFromFile@effect:
 		Name: effect
 		Filename: temperat.pal
@@ -101,7 +101,7 @@
 		Name: toxintree
 		Filename: toxintree.pal
 		ShadowIndex: 1
-		AllowModifiers: true   
+		AllowModifiers: true
 	PaletteFromFile@treebionte:
 		Name: treebionte
 		Filename: bionte_faune.pal
@@ -150,7 +150,7 @@
 		Name: railgunpal
 		Filename: railgunpal.pal
 		AllowModifiers: false
-    # Icons Faction Palette
+	# Icons Faction Palette
 	PaletteFromFile@RedAlliance.Icon:
 		Name: RedAlliance.Icon
 		Filename: palette_color_ar.pal
@@ -171,7 +171,7 @@
 		Name: Federation.Icon
 		Filename: pallete_color_federation.pal
 		AllowModifiers: false
-    # Icons Light Palette
+	# Icons Light Palette
 	PaletteFromFile@light:
 		Name: light
 		Filename: light.pal
@@ -207,12 +207,12 @@
 		Filename: voidlight.pal
 		AllowModifiers: false
 		ShadowIndex: 0
-    # Voxel Palette
+	# Voxel Palette
 	VoxelNormalsPalette@normals:
 		Name: normals
 		Filename: light.pal
 		ShadowIndex: 1
-    # Variation Palette
+	# Variation Palette
 	PaletteFromRGBA@Upgrade_blue_effect:
 		BasePalette: effect
 		Name: Upgrade_blue_effect
@@ -287,7 +287,7 @@
 		G: 0
 		B: 0
 		A: 80
-    #Alpha/spec Palette
+	#Alpha/spec Palette
 	PaletteFromPaletteWithAlpha@craterpalalpha50:
 		Name: craterpalalpha50
 		Alpha: 0.80
@@ -400,7 +400,7 @@
 		Alpha: 0.70
 		BasePalette: flameeffect
 		Premultiply: false
-    #Other Palette
+	#Other Palette
 	PaletteFromPaletteWithAlpha@placelinesegment:
 		Name: placelinesegment
 		BasePalette: terrain

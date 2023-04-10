@@ -1,13 +1,13 @@
 tcmcv:
 	Inherits: ^ShapeWalkerMedium
-    # / Inherit Stat & generic Unite /
-    Inherits@StatUnite: ^tcmcv.conclave.stat.unite
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^tcmcv.conclave.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Select - Target type /
+	# / Select - Target type /
 	Inherits@Select: ^SelectableMassiveSupportUnit
-    # / < Stat Unite Base > /
-    Inherits@selection: ^SelectableSupportUnit
+	# / < Stat Unite Base > /
+	Inherits@selection: ^SelectableSupportUnit
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 70
@@ -34,19 +34,19 @@ tcmcv:
 
 prospecteur:
 	Inherits: ^ShapeHoverMedium
-    # / Inherit Stat & generic Unite /
-    Inherits@StatUnite: ^prospecteur.conclave.stat.unite
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^prospecteur.conclave.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Option - Effect /
+	# / Option - Effect /
 	Inherits@SoundMove: ^HoverTech.vehicle.move
 	Inherits@TrailEffect: ^Trails.effect.hover.conclave
 	Inherits@harvester: ^Harvester.rules
 	Inherits@Carryable: ^UniteCarryable
 	Inherits@CargoPassenger: ^VehiclePassenger
-    # / Select - Target type /
+	# / Select - Target type /
 	Inherits@Select: ^SelectableEconomicUnit
-    # / < Stat Unite Base > /
+	# / < Stat Unite Base > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 10
@@ -58,18 +58,18 @@ prospecteur:
 
 t2_rodeur:
 	Inherits: ^ShapeWalkerMedium
-    # / Inherit Stat & generic Unite /
-    Inherits@StatUnite: ^t2_rodeur.conclave.stat.unite
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_rodeur.conclave.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Option - Effect /
+	# / Option - Effect /
 	Inherits@SoundMove: ^HoverTech.vehicle.move
 	Inherits@Carryable: ^UniteCarryable
 	Inherits@CargoPassenger: ^VehiclePassenger
-    # / Select - Target type /
+	# / Select - Target type /
 	Inherits@Select: ^SelectableCombatUnit
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Base > /
+	# / < Stat Unite Base > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 40
@@ -92,37 +92,37 @@ t2_rodeur:
 	Armament@gunOmega:
 		Weapon: Rodeur.Dual.LightLaser.Omega
 		MuzzleSequence: muzzle_omega
-        MuzzlePalette: powereffect
+		MuzzlePalette: powereffect
 		LocalOffset: 450,260,650
 		RequiresCondition: upgrade.Omega.Rodeur.Conclave
 	Armament@gunOmega2:
 		Weapon: Rodeur.Dual.LightLaser.Omega
 		MuzzleSequence: muzzle_omega
-        MuzzlePalette: powereffect
+		MuzzlePalette: powereffect
 		LocalOffset: 450,-260,650
 		RequiresCondition: upgrade.Omega.Rodeur.Conclave
-    GrantConditionOnAttack@Omega:
-        Condition: Omega.drain
-        RequiresCondition: upgrade.Omega.Rodeur.Conclave
+	GrantConditionOnAttack@Omega:
+		Condition: Omega.drain
+		RequiresCondition: upgrade.Omega.Rodeur.Conclave
 	ChangesHealth@Omega.drain:
-        Step: 140
-        Delay: 25
-        StartIfBelow: 100
-        RequiresCondition: Omega.drain
+		Step: 140
+		Delay: 25
+		StartIfBelow: 100
+		RequiresCondition: Omega.drain
 	WithMuzzleOverlay:
 	WithSpriteTurret:
-        RequiresCondition: !upgrade.Base.Rodeur.Conclave
-    WithSpriteTurret@phie:
-        Sequence: turretPhie
-        RequiresCondition: upgrade.Alpha.Rodeur.Conclave
-    WithSpriteTurret@Omega:
-        Sequence: turretOmega
-        RequiresCondition: upgrade.Omega.Rodeur.Conclave
+		RequiresCondition: !upgrade.Base.Rodeur.Conclave
+	WithSpriteTurret@phie:
+		Sequence: turretPhie
+		RequiresCondition: upgrade.Alpha.Rodeur.Conclave
+	WithSpriteTurret@Omega:
+		Sequence: turretOmega
+		RequiresCondition: upgrade.Omega.Rodeur.Conclave
 	AttackTurreted:
 		RequiresCondition: !(empdisable || stunweapons)
 	Turreted:
 		Offset: -30,0,0
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	GrantConditionOnPrerequisite@Base:
 		Prerequisites: research.Base.Rodeur.Conclave
 		Condition: upgrade.Base.Rodeur.Conclave
@@ -145,16 +145,16 @@ t2_rodeur:
 
 t3_surveyor:
 	Inherits: ^ShapeWalkerMedium
-    # / Inherit Stat & generic Unite /
-    Inherits@StatUnite: ^t3_surveyor.conclave.stat.unite
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_surveyor.conclave.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Option - Effect /
+	# / Option - Effect /
 	Inherits@TrailEffect: ^Trails.Walker.effect.smoke
-    # / Select - Target type /
+	# / Select - Target type /
 	Inherits@Select: ^SelectableHeightCombatUnit
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Base > /
+	# / < Stat Unite Base > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 110
@@ -180,9 +180,9 @@ t3_surveyor:
 	RenderSprites:
 		Scale: 1.0
 	WithSpriteTurret:
-    AutoDeployer:
-        DeployTicks: 100
-        UndeployTicks: 100
+	AutoDeployer:
+		DeployTicks: 100
+		UndeployTicks: 100
 	AttackTurreted:
 		RequiresCondition: !(empdisable || stunweapons) || upgrade.Omega.Arpenteur.Conclave
 	GrantConditionOnPrerequisite@Alpha:
@@ -222,8 +222,8 @@ t3_surveyor:
 		RequiresCondition: upgrade.Omega.Arpenteur.Conclave
 	Turreted:
 		Offset: 0,0,2700
-        PauseOnCondition: stunweapons
-    # // Shield System //
+		PauseOnCondition: stunweapons
+	# // Shield System //
 	GrantTimedConditionOnDeploy@SHIELD:
 		DeployedCondition: deployed
 		CooldownTicks: 2000
@@ -255,19 +255,19 @@ activate.Shield:
 		Weapon: ShieldWarhead.Active
 
 t2_pilgrim:
-    Inherits: ^ShapeHoverMedium
-    # / Inherit Stat & generic Unite /
-    Inherits@StatUnite: ^t2_pilgrim.conclave.stat.unite
+	Inherits: ^ShapeHoverMedium
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_pilgrim.conclave.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Option - Effect /
+	# / Option - Effect /
 	Inherits@SoundMove: ^HoverTech.vehicle.move
 	Inherits@TrailEffect: ^Trails.effect.hover.conclave
 	Inherits@Carryable: ^UniteCarryable
-    # / Select - Target type /
+	# / Select - Target type /
 	Inherits@Select: ^SelectableCombatUnit
 	Inherits@Target: ^AutoTargetAllAssaultMove
-    # / < Stat Unite Base > /
+	# / < Stat Unite Base > /
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 60
@@ -284,52 +284,52 @@ t2_pilgrim:
 		AllowedTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
 		Voice: Move
 	WithFacingSpriteBody:
-        StartSequence: make
+		StartSequence: make
 		RequiresCondition: !deployed
 	WithSpriteBody@deployed:
-        StartSequence: make
-        Sequence: idle-deployed
+		StartSequence: make
+		Sequence: idle-deployed
 		RequiresCondition: deployed
 	Mobile:
-        PauseOnCondition: deployed
+		PauseOnCondition: deployed
 	Hovers:
-        RequiresCondition: !deployed
-    WithShadow:
-        RequiresCondition: !deployed
+		RequiresCondition: !deployed
+	WithShadow:
+		RequiresCondition: !deployed
 	WithShadow@deploy:
 		Offset: 320,-150, -100
 		ZOffset: -300
-        RequiresCondition: deployed
+		RequiresCondition: deployed
 	WithSpriteTurret:
-    AutoDeployer:
-        DeployTicks: 1000
-        UndeployTicks: 1000
-    WithRangeCircle@MinAreaFireModeArty:
-        Color: FF000065
-    WithRangeCircle@MaxAreaFireModeArty:
-        Color: FF990065
-    #Mode AA/Move
-    WithRangeCircle@MaxAreaFireModeAAMove:
-        Color: FF990065
-        RequiresCondition: !deployed
-    #Mode Artilerie déployer
-    WithRangeCircle@MinAreaFireModeArtyMove:
-        Color: FF000065
-        RequiresCondition: !deployed
-    WithRangeCircle@MaxAreaFireModeArtyMove:
-        Color: FF990065
-        RequiresCondition: !deployed
-    #Mode Artilerie déployer
-    WithRangeCircle@MinAreaFireModeArtyAA:
-        Color: FF000065
-    WithRangeCircle@MaxAreaFireModeArtyAA:
-        Color: FF990065
+	AutoDeployer:
+		DeployTicks: 1000
+		UndeployTicks: 1000
+	WithRangeCircle@MinAreaFireModeArty:
+		Color: FF000065
+	WithRangeCircle@MaxAreaFireModeArty:
+		Color: FF990065
+	#Mode AA/Move
+	WithRangeCircle@MaxAreaFireModeAAMove:
+		Color: FF990065
+		RequiresCondition: !deployed
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArtyMove:
+		Color: FF000065
+		RequiresCondition: !deployed
+	WithRangeCircle@MaxAreaFireModeArtyMove:
+		Color: FF990065
+		RequiresCondition: !deployed
+	#Mode Artilerie déployer
+	WithRangeCircle@MinAreaFireModeArtyAA:
+		Color: FF000065
+	WithRangeCircle@MaxAreaFireModeArtyAA:
+		Color: FF990065
 	AttackTurreted:
-        RequiresCondition: !(empdisable || stunweapons)
+		RequiresCondition: !(empdisable || stunweapons)
 	Turreted:
 		Offset: -650,0,125
-        PauseOnCondition: stunweapons
-    # ///// Upgrade ,Conclave /////
+		PauseOnCondition: stunweapons
+	# ///// Upgrade ,Conclave /////
 	GrantConditionOnPrerequisite@Phie:
 		Prerequisites: research.Alpha.Pelerin.Conclave
 		Condition: upgrade.Alpha.Pelerin.Conclave
@@ -359,19 +359,19 @@ t2_pilgrim:
 		LocalOffset: 820,0,1386
 		RequiresCondition: deployed && upgrade.Omega.Pelerin.Conclave
 		MuzzleSequence: muzzle
-    ReloadArmamentsBar:
+	ReloadArmamentsBar:
 	WithMuzzleOverlay:
 	RenderSprites:
 		Scale: 0.85
 	RevealOnFire:
 		ArmamentNames: deployed
-    LeavesTrails@01:
-        Image: smoke_hovermove
-        Sequences: smoke_hovermove02, smoke_hovermove03, smoke_hovermove04
-        Palette: powereffect
-        Type: CenterPosition
-        MovingInterval: 6
-        Offsets: -20,0,-15
+	LeavesTrails@01:
+		Image: smoke_hovermove
+		Sequences: smoke_hovermove02, smoke_hovermove03, smoke_hovermove04
+		Palette: powereffect
+		Type: CenterPosition
+		MovingInterval: 6
+		Offsets: -20,0,-15
 	Explodes:
 		Weapon: tank.blue.explode
 		EmptyWeapon: tank.blue.explode
@@ -391,9 +391,9 @@ stase.actor:
 		Condition: Stase.bubble
 		Range: 4c0
 		AffectsParent: false
-        ValidRelationships: Ally, Enemy
-    Immobile:
-        OccupiesSpace: False
+		ValidRelationships: Ally, Enemy
+	Immobile:
+		OccupiesSpace: False
 	DetectCloaked:
 		Range: 4c0
 		CloakTypes: Cloak, Mine
@@ -407,7 +407,7 @@ stase.actor:
 	BodyOrientation:
 		QuantizedFacings: 1
 	RenderSprites:
-        Image: stase_effect
+		Image: stase_effect
 	KillsSelf:
 		RemoveInstead: true
 		Delay: 875

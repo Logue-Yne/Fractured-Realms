@@ -1,31 +1,31 @@
 t1_comrade:
 	Inherits@1: ^Infantry
-    # / Inherit Stat & generic Unite /
+	# / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t1_comrade.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / affect & upgrade /
+	# / affect & upgrade /
 	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
-    # / Target type /
+	# / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 10
 		IconPalette: RedAlliance.Icon
-    Garrisoner:
+	Garrisoner:
 		Voice: Move
 		GarrisonType: Garrisoner
-        GarrisonCondition: GarrisonWeaponRange
+		GarrisonCondition: GarrisonWeaponRange
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Armament@PRIMARY:
 		Weapon: Laser_cf
 		LocalOffset: 100,0,350
 		MuzzleSequence: muzzle
-        MuzzlePalette: powereffect
+		MuzzlePalette: powereffect
 	WithMuzzleOverlay:
 	WithInfantryBody:
 		IdleSequences: idle1
@@ -41,32 +41,32 @@ t1_comrade:
 
 t1_disciple:
 	Inherits@1: ^Infantry
-    # / Inherit Stat & generic Unite /
+	# / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t1_disciple.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / affect & upgrade /
+	# / affect & upgrade /
 	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
-    # / Target type /
+	# / Target type /
 	Inherits@Target: ^AutoTargetAllAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildPaletteOrder: 20
 		IconPalette: RedAlliance.Icon
-    Garrisoner:
+	Garrisoner:
 		Voice: Move
 		GarrisonType: Garrisoner
-        GarrisonCondition: GarrisonWeaponRange
+		GarrisonCondition: GarrisonWeaponRange
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	WithMuzzleOverlay:
 	Armament@PRIMARY:
 		Weapon: AP_Sentient
 		LocalOffset: 300,0,550
 		MuzzleSequence: muzzle
-        MuzzlePalette: flammeeffectblue
+		MuzzlePalette: flammeeffectblue
 		RequiresCondition: !Balistique.Doctrines.Redalliance
 	WithInfantryBody:
 		IdleSequences: idle1
@@ -82,20 +82,20 @@ t1_disciple:
 	
 t2_tesla:
 	Inherits@1: ^Infantry
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t2_tesla.stat.unite
-    # / Inherit option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_tesla.stat.unite
+	# / Inherit option Unite /
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    # / Upgrade Faction /
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	# / Upgrade Faction /
 	Buildable:
 		Queue: Null.redalliance
 		BuildPaletteOrder: 30
 		IconPalette: RedAlliance.Icon
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	GrantConditionOnPrerequisite@research.DisturbZap.TeslaTrooper.Redalliance:
 		Prerequisites: research.DisturbZap.TeslaTrooper.Redalliance
 		Condition: upgrade.DisturbZap.TeslaTrooper.Redalliance
@@ -126,16 +126,16 @@ t2_tesla:
 
 t1_stealhar:
 	Inherits@1: ^Infantry
-    # / Inherit Stat & generic Unite /
+	# / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t1_stealhar.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / affect & upgrade /
+	# / affect & upgrade /
 	Inherits@Capture: ^Capture.allBuilding
 	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
-    # / Target type /
+	# / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildAtProductionType: Soldier
@@ -143,7 +143,7 @@ t1_stealhar:
 		IconPalette: RedAlliance.Icon
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Armament@PRIMARY:
 		Weapon: Saberweapon
 		LocalOffset: 100,0,350
@@ -158,7 +158,7 @@ t1_stealhar:
 		CloakDelay: 1
 		IsPlayerPalette: true
 		CloakedCondition: cloaked
-        RequiresCondition: ActiveCloak
+		RequiresCondition: ActiveCloak
 	WithIdleOverlay@Shadow:
 		RequiresCondition: !cloaked
 	WithInfantryBody:
@@ -171,27 +171,27 @@ t1_stealhar:
 
 t2_devastator:
 	Inherits@1: ^Infantry
-    # / Inherit Stat & generic Unite /
+	# / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t2_devastator.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / affect & upgrade /
+	# / affect & upgrade /
 	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
-    # / Target type /
+	# / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildPaletteOrder: 50
 		Prerequisites: artech
 		IconPalette: RedAlliance.Icon
-    Garrisoner:
+	Garrisoner:
 		Voice: Move
 		GarrisonType: Garrisoner
-        GarrisonCondition: GarrisonWeaponRange
+		GarrisonCondition: GarrisonWeaponRange
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Armament@PRIMARY:
 		Weapon: Nukegun
 		LocalOffset: 0,0,220
@@ -213,27 +213,27 @@ t2_devastator:
 
 t3_eradicator:
 	Inherits@1: ^InfantryHeavy
-    # / Inherit Stat & generic Unite /
+	# / Inherit Stat & generic Unite /
 	Inherits@StatUnite: ^t3_eradicator.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / affect & upgrade /
+	# / affect & upgrade /
 	Inherits@Upgrade.redalliance01: ^Infantry.WeaponRange.Upgrade.Redalliance
-    # / Target type /
+	# / Target type /
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    # / < Stat Unite Actor > /
+	# / < Stat Unite Actor > /
 	Buildable:
 		Queue: Infantry.redalliance
 		BuildPaletteOrder: 60
 		Prerequisites: t3_commandbuilding
 		IconPalette: RedAlliance.Icon
-    Garrisoner:
+	Garrisoner:
 		Voice: Move
 		GarrisonType: Garrisoner
-        GarrisonCondition: GarrisonWeaponRange
+		GarrisonCondition: GarrisonWeaponRange
 	AttackFrontal:
 		FacingTolerance: 2
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	WithInfantryBody:
 		IdleSequences: idle1
 		StandSequences: stand

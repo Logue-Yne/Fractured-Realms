@@ -1,16 +1,11 @@
 Container@OBSERVER_WIDGETS:
-	Logic: MenuButtonsChromeLogic, LoadIngameChatLogic
+	Logic: LoadIngameChatLogic
 	Children:
 		Container@CHAT_ROOT:
-		SupportPowerTimer@SUPPORT_POWER_TIMER:
-			X: WINDOW_RIGHT - WIDTH - 260
-			Align: Right
-			Format: {1} : {0}
-			Order: Descending
 		Container@MUTE_INDICATOR:
 			Logic: MuteIndicatorLogic
-			X: (WINDOW_RIGHT / 2) - 156
-			Y: 60
+			X: WINDOW_RIGHT - WIDTH - 260
+			Y: 10
 			Width: 200
 			Height: 25
 			Children:
@@ -25,84 +20,96 @@ Container@OBSERVER_WIDGETS:
 					Width: PARENT_RIGHT - 30
 					Height: 25
 					Align: Right
-					Text: Audio Mute
+					Text: Audio Muted
 					Contrast: true
-		LogicKeyListener@OBSERVER_KEY_LISTENER:
-		Background@SIDEBAR_BACKGROUND_TOP:
-			X: WINDOW_RIGHT - 255
-			Y: 5
-			Width: 250
-			Height: 56
+		Image@SIDEBAR_BACKGROUND_TOP:
+			X: WINDOW_RIGHT - 250
+			Y: 10
+			Width: 238
+			Height: 287
+			ImageCollection: sidebar-observer
+			ImageName: background
+			ClickThrough: false
 			Children:
-				MenuButton@OPTIONS_BUTTON:
-					X: PARENT_RIGHT - 41
-					Y: 15
-					Width: 26
-					Height: 26
-					Key: escape
-					TooltipText: Options
-					TooltipContainer: TOOLTIP_CONTAINER
-					DisableWorldSounds: true
-					Children:
-						Image@ICON:
-							X: 5
-							Y: 5
-							ImageCollection: order-icons
-							ImageName: options
-				Container@GAME_TIMER_BLOCK:
+				Background@GAME_TIMER_BLOCK:
 					Logic: GameTimerLogic
-					X: 15
-					Width: 100
-					Height: 56
+					X: 26
+					Y: 10
+					Width: 120
+					Height: 22
+					Background: sidebar-button-observer
 					Children:
 						LabelWithTooltip@GAME_TIMER:
+							Y: 0 - 1
 							Width: PARENT_RIGHT
 							Height: PARENT_BOTTOM
-							Font: BigBold
+							Align: Center
+							Font: TinyBold
 							TooltipContainer: TOOLTIP_CONTAINER
 							TooltipTemplate: SIMPLE_TOOLTIP
-		Background@RADAR_BG:
-			X: WINDOW_RIGHT - 255
-			Y: 66
-			Width: 250
-			Height: 250
-			Children:
-				Radar@INGAME_RADAR:
-					X: 10
-					Y: 10
-					Width: PARENT_RIGHT - 19
-					Height: PARENT_BOTTOM - 19
-					WorldInteractionController: INTERACTION_CONTROLLER
-				VideoPlayer@PLAYER:
-					X: 10
-					Y: 10
-					Width: PARENT_RIGHT - 20
-					Height: PARENT_BOTTOM - 20
-					Skippable: false
-		Background@OBSERVER_CONTROL_BG:
-			X: WINDOW_RIGHT - 255
-			Y: 321
-			Width: 250
-			Height: 55
-			Children:
+				Container@TOP_BUTTONS:
+					Logic: MenuButtonsChromeLogic
+					X: 9
+					Y: 7
+					Children:
+						LogicKeyListener@OBSERVER_KEY_LISTENER:
+						MenuButton@OPTIONS_BUTTON:
+							Key: escape
+							X: 192
+							Width: 28
+							Height: 28
+							Background: sidebar-button-observer
+							TooltipText: Options
+							TooltipContainer: TOOLTIP_CONTAINER
+							DisableWorldSounds: true
+							VisualHeight: 0
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: order-icons
+									ImageName: options
+				Container@RADAR:
+					Children:
+						ColorBlock:
+							X: 8
+							Y: 40
+							Width: 222
+							Height: 222
+							Color: 000000
+						Radar@INGAME_RADAR:
+							WorldInteractionController: INTERACTION_CONTROLLER
+							X: 9
+							Y: 41
+							Width: 220
+							Height: 220
+						VideoPlayer@PLAYER:
+							X: 9
+							Y: 41
+							Width: 220
+							Height: 220
+							Skippable: false
 				DropDownButton@SHROUD_SELECTOR:
 					Logic: ObserverShroudSelectorLogic
 						CombinedViewKey: ObserverCombinedView
 						WorldViewKey: ObserverWorldView
-					X: 15
-					Y: 15
-					Width: 220
+					X: 6
+					Y: 262
+					Width: 226
 					Height: 25
 					Font: Bold
+					VisualHeight: 0
+					Background: sidebar-button-observershroud
+					SeparatorImage: observer-separator
 					Children:
 						LogicKeyListener@SHROUD_KEYHANDLER:
 						Image@FLAG:
-							Width: 23
-							Height: 23
 							X: 4
-							Y: 3
+							Y: 6
+							Width: 32
+							Height: 16
 						Label@LABEL:
-							X: 34
+							X: 40
 							Width: PARENT_RIGHT
 							Height: 25
 							Shadow: True
@@ -111,89 +118,107 @@ Container@OBSERVER_WIDGETS:
 							Width: PARENT_RIGHT
 							Height: 25
 							Shadow: True
-				Container@REPLAY_PLAYER:
-					Logic: ReplayControlBarLogic
-					Y: 39
-					Width: 160
-					Height: 35
-					Visible: false
+		Image@SIDEBAR_BACKGROUND_BOTTOM:
+			X: WINDOW_RIGHT - 250
+			Y: 297
+			Width: 238
+			Height: 8
+			ImageCollection: sidebar-observer
+			ImageName: observer-bottom
+		Image@REPLAY_PLAYER:
+			Logic: ReplayControlBarLogic
+			X: WINDOW_RIGHT - 250
+			Y: 297
+			Width: 238
+			Height: 40
+			Visible: false
+			ImageCollection: sidebar-observer
+			ImageName: replay-bottom
+			ClickThrough: false
+			Visible: false
+			Children:
+				Button@BUTTON_PAUSE:
+					X: 9
+					Y: 5
+					Width: 28
+					Height: 28
+					Background: sidebar-button-observer
+					Key: Pause
+					TooltipText: Pause
+					TooltipContainer: TOOLTIP_CONTAINER
+					VisualHeight: 0
 					Children:
-						Button@BUTTON_PAUSE:
-							X: 15
-							Y: 10
-							Width: 26
-							Height: 26
-							Key: Pause
-							TooltipText: Pause
-							TooltipContainer: TOOLTIP_CONTAINER
-							IgnoreChildMouseOver: true
-							Children:
-								Image@IMAGE_PAUSE:
-									X: 5
-									Y: 5
-									Width: 25
-									Height: 25
-									ImageCollection: music
-									ImageName: pause
-						Button@BUTTON_PLAY:
-							X: 15
-							Y: 10
-							Width: 26
-							Height: 26
-							Key: Pause
-							IgnoreChildMouseOver: true
-							TooltipText: Play
-							TooltipContainer: TOOLTIP_CONTAINER
-							Children:
-								Image@IMAGE_PLAY:
-									X: 5
-									Y: 5
-									Width: 25
-									Height: 25
-									ImageCollection: music
-									ImageName: play
-						Button@BUTTON_SLOW:
-							X: 55
-							Y: 13
-							Width: 36
-							Height: 20
-							Key: ReplaySpeedSlow
-							TooltipText: Vitesse lente
-							TooltipContainer: TOOLTIP_CONTAINER
-							Text: 50%
-							Font: TinyBold
-						Button@BUTTON_REGULAR:
-							X: 55 + 45
-							Y: 13
-							Width: 38
-							Height: 20
-							Key: ReplaySpeedRegular
-							TooltipText: Vitesse régulière
-							TooltipContainer: TOOLTIP_CONTAINER
-							Text: 100%
-							Font: TinyBold
-						Button@BUTTON_FAST:
-							X: 55 + 45 * 2
-							Y: 13
-							Width: 38
-							Height: 20
-							Key: ReplaySpeedFast
-							TooltipText: Vitesse rapide
-							TooltipContainer: TOOLTIP_CONTAINER
-							Text: 200%
-							Font: TinyBold
-						Button@BUTTON_MAXIMUM:
-							X: 55 + 45 * 3
-							Y: 13
-							Width: 38
-							Height: 20
-							Key: ReplaySpeedMax
-							TooltipText: Vitesse maximum
-							TooltipContainer: TOOLTIP_CONTAINER
-							Text: MAX
-							Font: TinyBold
+						Image@IMAGE_PAUSE:
+							X: 6
+							Y: 6
+							ImageCollection: music
+							ImageName: pause
+				Button@BUTTON_PLAY:
+					X: 9
+					Y: 5
+					Width: 28
+					Height: 28
+					Background: sidebar-button-observer
+					Key: Pause
+					TooltipText: Play
+					TooltipContainer: TOOLTIP_CONTAINER
+					VisualHeight: 0
+					Children:
+						Image@IMAGE_PLAY:
+							X: 6
+							Y: 6
+							ImageCollection: music
+							ImageName: play
+				Button@BUTTON_SLOW:
+					X: 49
+					Y: 8
+					Width: 42
+					Height: 22
+					Background: sidebar-button-observer
+					Key: ReplaySpeedSlow
+					TooltipText: Slow speed
+					TooltipContainer: TOOLTIP_CONTAINER
+					VisualHeight: 0
+					Text: 50%
+					Font: TinyBold
+				Button@BUTTON_REGULAR:
+					X: 95
+					Y: 8
+					Width: 42
+					Height: 22
+					Background: sidebar-button-observer
+					Key: ReplaySpeedRegular
+					TooltipText: Regular speed
+					TooltipContainer: TOOLTIP_CONTAINER
+					VisualHeight: 0
+					Text: 100%
+					Font: TinyBold
+				Button@BUTTON_FAST:
+					X: 141
+					Y: 8
+					Width: 42
+					Height: 22
+					Background: sidebar-button-observer
+					Key: ReplaySpeedFast
+					TooltipText: Fast speed
+					TooltipContainer: TOOLTIP_CONTAINER
+					VisualHeight: 0
+					Text: 200%
+					Font: TinyBold
+				Button@BUTTON_MAXIMUM:
+					X: 187
+					Y: 8
+					Width: 42
+					Height: 22
+					Background: sidebar-button-observer
+					Key: ReplaySpeedMax
+					TooltipText: Maximum speed
+					TooltipContainer: TOOLTIP_CONTAINER
+					VisualHeight: 0
+					Text: MAX
+					Font: TinyBold
 		Container@INGAME_OBSERVERSTATS_BG:
-			Logic: ObserverStatsRVLogic
+			Logic: ObserverStatsLogic
 				StatisticsNoneKey: StatisticsNone
 				StatisticsBasicKey: StatisticsBasic
 				StatisticsEconomyKey: StatisticsEconomy
@@ -201,11 +226,11 @@ Container@OBSERVER_WIDGETS:
 				StatisticsSupportPowersKey: StatisticsSupportPowers
 				StatisticsCombatKey: StatisticsCombat
 				StatisticsArmyKey: StatisticsArmy
-				StatisticsUpgradesKey: StatisticsUpgrades
 				StatisticsGraphKey: StatisticsGraph
 				StatisticsArmyGraphKey: StatisticsArmyGraph
 				StatsDropDownPanelTemplate: SPECTATOR_LABEL_DROPDOWN_TEMPLATE
-			X: 0
+			X: 5
+			Y: 5
 			Width: 760
 			Height: 240
 			Children:
@@ -215,6 +240,8 @@ Container@OBSERVER_WIDGETS:
 					Width: 185
 					Height: 25
 					Font: Bold
+					Background: observer-scrollpanel-button
+					SeparatorImage: observer-separator
 					Children:
 						LogicKeyListener@STATS_DROPDOWN_KEYHANDLER:
 				Container@GRAPH_BG:
@@ -248,7 +275,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Joueur
+									Text: Player
 									Align: Left
 									Shadow: True
 								Label@CASH_HEADER:
@@ -257,7 +284,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Crédits
+									Text: Cash
 									Align: Right
 									Shadow: True
 								Label@POWER_HEADER:
@@ -266,7 +293,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Energie
+									Text: Power
 									Align: Center
 									Shadow: True
 								Label@KILLS_HEADER:
@@ -275,7 +302,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 40
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Tué
+									Text: Kills
 									Align: Right
 									Shadow: True
 								Label@DEATHS_HEADER:
@@ -284,7 +311,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 60
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Mort
+									Text: Deaths
 									Align: Right
 									Shadow: True
 								Label@ASSETS_DESTROYED_HEADER:
@@ -293,7 +320,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Détruit
+									Text: Destroyed
 									Align: Right
 									Shadow: True
 								Label@ASSETS_LOST_HEADER:
@@ -302,7 +329,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Perdu
+									Text: Lost
 									Align: Right
 									Shadow: True
 								Label@EXPERIENCE_HEADER:
@@ -347,14 +374,14 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Joueur
+									Text: Player
 									Shadow: True
 								Label@CASH_HEADER:
 									X: 160
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Credits
+									Text: Cash
 									Align: Right
 									Shadow: True
 								Label@INCOME_HEADER:
@@ -362,7 +389,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Revenu
+									Text: Income
 									Align: Right
 									Shadow: True
 								Label@ASSETS_HEADER:
@@ -378,7 +405,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Gagné
+									Text: Earned
 									Align: Right
 									Shadow: True
 								Label@SPENT_HEADER:
@@ -386,7 +413,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Dépensé
+									Text: Spent
 									Align: Right
 									Shadow: True
 								Label@HARVESTERS_HEADER:
@@ -394,7 +421,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Récolteuses
+									Text: Harvesters
 									Align: Right
 									Shadow: True
 								Label@DERRICKS_HEADER:
@@ -402,7 +429,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 80
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Derricks
+									Text: Oil Derricks
 									Align: Right
 									Shadow: True
 						Container@PRODUCTION_STATS_HEADERS:
@@ -430,7 +457,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Joueur
+									Text: Player
 									Align: Left
 									Shadow: True
 								Label@PRODUCTION_HEADER:
@@ -466,7 +493,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Joueur
+									Text: Player
 									Align: Left
 									Shadow: True
 								Label@SUPPORT_POWERS_HEADER:
@@ -475,7 +502,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 100
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Pouvoirs de soutien
+									Text: Support Powers
 									Shadow: True
 						Container@ARMY_HEADERS:
 							X: 0
@@ -502,7 +529,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Joueur
+									Text: Player
 									Align: Left
 									Shadow: True
 								Label@ARMY_HEADER:
@@ -511,48 +538,12 @@ Container@OBSERVER_WIDGETS:
 									Width: 100
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Armée
-									Shadow: True
-						Container@UPGRADES_HEADERS:
-							X: 0
-							Y: 0
-							Width: 400
-							Height: PARENT_BOTTOM
-							Children:
-								ColorBlock@HEADER_COLOR:
-									X: 0
-									Y: 0
-									Color: 00000090
-									Width: PARENT_RIGHT - 200
-									Height: PARENT_BOTTOM
-								GradientColorBlock@HEADER_GRADIENT:
-									X: PARENT_RIGHT - 200
-									Y: 0
-									TopLeftColor: 00000090
-									BottomLeftColor: 00000090
-									Width: 200
-									Height: PARENT_BOTTOM
-								Label@PLAYER_HEADER:
-									X: 40
-									Y: 0
-									Width: 120
-									Height: PARENT_BOTTOM
-									Font: Bold
-									Text: Joueur
-									Align: Left
-									Shadow: True
-								Label@UPGRADES_HEADER:
-									X: 160
-									Y: 0
-									Width: 100
-									Height: PARENT_BOTTOM
-									Font: Bold
-									Text: CPs et Upgrades
+									Text: Army
 									Shadow: True
 						Container@COMBAT_STATS_HEADERS:
 							X: 0
 							Y: 0
-							Width: 740
+							Width: 760
 							Height: PARENT_BOTTOM
 							Children:
 								ColorBlock@HEADER_COLOR:
@@ -574,7 +565,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 120
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Joueur
+									Text: Player
 									Align: Left
 									Shadow: True
 								Label@ASSETS_DESTROYED_HEADER:
@@ -583,7 +574,7 @@ Container@OBSERVER_WIDGETS:
 									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Détruit
+									Text: Destroyed
 									Align: Right
 									Shadow: True
 								Label@ASSETS_LOST_HEADER:
@@ -592,52 +583,61 @@ Container@OBSERVER_WIDGETS:
 									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Perdu
+									Text: Lost
 									Align: Right
 									Shadow: True
 								Label@UNITS_KILLED_HEADER:
 									X: 310
 									Y: 0
-									Width: 90
+									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Unité Detruite
+									Text: U. Killed
 									Align: Right
 									Shadow: True
 								Label@UNITS_DEAD_HEADER:
-									X: 400
+									X: 385
 									Y: 0
-									Width: 80
+									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Unité perdu
+									Text: U. Lost
 									Align: Right
 									Shadow: True
 								Label@BUILDINGS_KILLED_HEADER:
-									X: 480
+									X: 460
 									Y: 0
-									Width: 85
+									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Batiment detruit
+									Text: B. Killed
 									Align: Right
 									Shadow: True
 								Label@BUILDINGS_DEAD_HEADER:
-									X: 565
+									X: 535
 									Y: 0
-									Width: 80
+									Width: 75
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Batiment perdu
+									Text: B. Lost
 									Align: Right
 									Shadow: True
 								Label@ARMY_VALUE_HEADER:
-									X: 645
+									X: 610
 									Y: 0
 									Width: 90
 									Height: PARENT_BOTTOM
 									Font: Bold
-									Text: Valeur Armée
+									Text: Army Value
+									Align: Right
+									Shadow: True
+								Label@VISION_HEADER:
+									X: 700
+									Y: 0
+									Width: 60
+									Height: PARENT_BOTTOM
+									Font: Bold
+									Text: Vision
 									Align: Right
 									Shadow: True
 				ScrollPanel@PLAYER_STATS_PANEL:
@@ -684,7 +684,7 @@ Container@OBSERVER_WIDGETS:
 							Y: 0
 							Width: 705
 							Height: 24
-							BaseName: scrollitem-nohover
+							Background: scrollitem-nohover
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -698,7 +698,7 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_BOTTOM
 								Image@FLAG:
 									X: 5
-									Y: 2
+									Y: 4
 									Width: 35
 									Height: PARENT_BOTTOM - 4
 									ImageName: random
@@ -771,7 +771,7 @@ Container@OBSERVER_WIDGETS:
 							Y: 0
 							Width: 735
 							Height: 24
-							BaseName: scrollitem-nohover
+							Background: scrollitem-nohover
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -785,7 +785,7 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_BOTTOM
 								Image@FLAG:
 									X: 5
-									Y: 2
+									Y: 4
 									Width: 35
 									Height: PARENT_BOTTOM - 4
 									ImageName: random
@@ -851,7 +851,7 @@ Container@OBSERVER_WIDGETS:
 							Y: 0
 							Width: 400
 							Height: 24
-							BaseName: scrollitem-nohover
+							Background: scrollitem-nohover
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -865,7 +865,7 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_BOTTOM
 								Image@FLAG:
 									X: 5
-									Y: 2
+									Y: 4
 									Width: 35
 									Height: PARENT_BOTTOM - 4
 									ImageName: random
@@ -888,7 +888,7 @@ Container@OBSERVER_WIDGETS:
 							Y: 0
 							Width: 400
 							Height: 24
-							BaseName: scrollitem-nohover
+							Background: scrollitem-nohover
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -902,7 +902,7 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_BOTTOM
 								Image@FLAG:
 									X: 5
-									Y: 2
+									Y: 4
 									Width: 35
 									Height: PARENT_BOTTOM - 4
 									ImageName: random
@@ -925,7 +925,7 @@ Container@OBSERVER_WIDGETS:
 							Y: 0
 							Width: 400
 							Height: 24
-							BaseName: scrollitem-nohover
+							Background: scrollitem-nohover
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -939,7 +939,7 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_BOTTOM
 								Image@FLAG:
 									X: 5
-									Y: 2
+									Y: 4
 									Width: 35
 									Height: PARENT_BOTTOM - 4
 									ImageName: random
@@ -957,49 +957,12 @@ Container@OBSERVER_WIDGETS:
 									Width: 0
 									Height: PARENT_BOTTOM
 									TooltipContainer: TOOLTIP_CONTAINER
-						ScrollItem@UPGRADES_PLAYER_TEMPLATE:
-							X: 0
-							Y: 0
-							Width: 400
-							Height: 24
-							BaseName: scrollitem-nohover
-							Children:
-								ColorBlock@PLAYER_COLOR:
-									X: 0
-									Y: 0
-									Width: PARENT_RIGHT - 200
-									Height: PARENT_BOTTOM
-								GradientColorBlock@PLAYER_GRADIENT:
-									X: PARENT_RIGHT - 200
-									Y: 0
-									Width: 200
-									Height: PARENT_BOTTOM
-								Image@FLAG:
-									X: 5
-									Y: 2
-									Width: 35
-									Height: PARENT_BOTTOM - 4
-									ImageName: random
-									ImageCollection: flags
-								Label@PLAYER:
-									X: 40
-									Y: 0
-									Width: 120
-									Height: PARENT_BOTTOM
-									Font: Bold
-									Shadow: True
-								ObserverUpgradesIcons@UPGRADES_ICONS:
-									X: 160
-									Y: 0
-									Width: 0
-									Height: PARENT_BOTTOM
-									TooltipContainer: TOOLTIP_CONTAINER
 						ScrollItem@COMBAT_PLAYER_TEMPLATE:
 							X: 0
 							Y: 0
-							Width: 740
+							Width: 760
 							Height: 24
-							BaseName: scrollitem-nohover
+							Background: scrollitem-nohover
 							Children:
 								ColorBlock@PLAYER_COLOR:
 									X: 0
@@ -1013,7 +976,7 @@ Container@OBSERVER_WIDGETS:
 									Height: PARENT_BOTTOM
 								Image@FLAG:
 									X: 5
-									Y: 2
+									Y: 4
 									Width: 35
 									Height: PARENT_BOTTOM - 4
 									ImageName: random
@@ -1042,42 +1005,49 @@ Container@OBSERVER_WIDGETS:
 								Label@UNITS_KILLED:
 									X: 310
 									Y: 0
-									Width: 90
+									Width: 75
 									Height: PARENT_BOTTOM
 									Align: Right
 									Shadow: True
 								Label@UNITS_DEAD:
-									X: 400
+									X: 385
 									Y: 0
-									Width: 80
+									Width: 75
 									Height: PARENT_BOTTOM
 									Align: Right
 									Shadow: True
 								Label@BUILDINGS_KILLED:
-									X: 480
+									X: 460
 									Y: 0
-									Width: 85
+									Width: 75
 									Height: PARENT_BOTTOM
 									Align: Right
 									Shadow: True
 								Label@BUILDINGS_DEAD:
-									X: 565
+									X: 535
 									Y: 0
-									Width: 80
+									Width: 75
 									Height: PARENT_BOTTOM
 									Align: Right
 									Shadow: True
 								Label@ARMY_VALUE:
-									X: 645
+									X: 610
 									Y: 0
 									Width: 90
+									Height: PARENT_BOTTOM
+									Align: Right
+									Shadow: True
+								Label@VISION:
+									X: 700
+									Y: 0
+									Width: 60
 									Height: PARENT_BOTTOM
 									Align: Right
 									Shadow: True
 				Container@INCOME_GRAPH_CONTAINER:
 					X: 0
 					Y: 30
-					Width: PARENT_RIGHT - 5
+					Width: PARENT_RIGHT
 					Height: PARENT_BOTTOM
 					Visible: False
 					Children:
@@ -1090,21 +1060,20 @@ Container@OBSERVER_WIDGETS:
 						LineGraph@INCOME_GRAPH:
 							X: 0
 							Y: 0
-							Width: PARENT_RIGHT
+							Width: PARENT_RIGHT - 5
 							Height: PARENT_BOTTOM
 							ValueFormat: ${0}
-							XAxisValueFormat: {0}
 							YAxisValueFormat: ${0:F0}
 							XAxisSize: 40
 							XAxisTicksPerLabel: 2
 							XAxisLabel: Game Minute
 							YAxisLabel: Earnings
 							LabelFont: TinyBold
-							AxisFont: Bold
+							AxisFont: TinyBold
 				Container@ARMY_VALUE_GRAPH_CONTAINER:
 					X: 0
 					Y: 30
-					Width: PARENT_RIGHT - 5
+					Width: PARENT_RIGHT
 					Height: PARENT_BOTTOM
 					Visible: False
 					Children:
@@ -1117,14 +1086,18 @@ Container@OBSERVER_WIDGETS:
 						LineGraph@ARMY_VALUE_GRAPH:
 							X: 0
 							Y: 0
-							Width: PARENT_RIGHT
+							Width: PARENT_RIGHT - 5
 							Height: PARENT_BOTTOM
 							ValueFormat: ${0}
-							XAxisValueFormat: {0}
 							YAxisValueFormat: ${0:F0}
 							XAxisSize: 40
 							XAxisTicksPerLabel: 2
 							XAxisLabel: Game Minute
 							YAxisLabel: Army Value
 							LabelFont: TinyBold
-							AxisFont: Bold
+							AxisFont: TinyBold
+		Container@HPF_ROOT:
+			Logic: LoadIngameHierarchicalPathFinderOverlayLogic
+			X: WINDOW_RIGHT - WIDTH - 255
+			Y: 40
+			Width: 175

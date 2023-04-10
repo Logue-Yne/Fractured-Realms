@@ -1,5 +1,5 @@
 ^DefaultCivBuildSequence:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -7,24 +7,32 @@
 	critical-idle:
 		Start: 0
 	dead:
-    
+	
 null_building:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: null
-    make: null
-    build: null
-    dead: null
-	icon: null
-    
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: null.shp
+	make:
+		Filename: null.shp
+	build:
+		Filename: null.shp
+	dead:
+		Filename: null.shp
+	icon:
+		Filename: null.shp
+	
 buildingcrane:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: buildingcrane.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	dead:
 		Start: 1
-	make: buildingcrane
+	make:
+		Filename: buildingcrane.shp
 		Length: *
 	build:
 		Start: 1
@@ -34,43 +42,57 @@ buildingcrane:
 		Start: 1
 	damaged-active:
 		Start: 1
-	smoke: smoke
+	smoke:
+		Filename: smoke.shp
 		Start: 0
 		Length: 19
 		Offset: -4, -2
 		BlendMode: Additive
-	icon: arpowricon
+	icon:
+		Filename: arpowricon.shp
 
 opwall:
 	idle:
+		Filename: opwall.shp
 		Length: 16
-    die-crushed: wallcrush
+	die-crushed:
+		Filename: wallcrush.shp
 		Length: *
-        Tick: 45
-        Offset: 0, -20
-	icon: arwallicon
+		Tick: 45
+		Offset: 0, -20
+	icon:
+		Filename: arwallicon.shp
 
 arwall:
 	idle:
+		Filename: arwall.shp
 		Length: 16
-    die-crushed: wallcrush
+	die-crushed:
+		Filename: wallcrush.shp
 		Length: *
-        Tick: 45
-        Offset: 0, -20
-	icon: arwallicon
+		Tick: 45
+		Offset: 0, -20
+	icon:
+		Filename: arwallicon.shp
 
 brik:
-	idle: brik
+	idle:
+		Filename: brik.shp
 		Length: 16
-	scratched-idle: brik
+	scratched-idle:
+		Filename: brik.shp
 		Start: 16
 		Length: 16
-	damaged-idle: brik
+	damaged-idle:
+		Filename: brik.shp
 		Start: 32
 		Length: 16
-	icon: arwallicon
-    
+	icon:
+		Filename: arwallicon.shp
+	
 wallbrik:
+	Defaults:
+		Filename: wallbrik.shp
 	idle:
 		Length: 16
 	scratched-idle:
@@ -79,469 +101,524 @@ wallbrik:
 	damaged-idle:
 		Start: 32
 		Length: 16
-    die-crushed: wallcrush
+	die-crushed:
+		Filename: wallcrush.shp
 		Length: *
-        Tick: 45
-        Offset: 0, -20
-	icon: wallicon
-    
+		Tick: 45
+		Offset: 0, -20
+	icon:
+		Filename: wallicon.shp
+	
 concrete_base:
 	idle:
-	icon: arwallicon
+		Filename: concrete_base.shp
+	icon:
+		Filename: arwallicon.shp
 
 civpunkbuilding01:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding01.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 5
 	dead:
-    
+	
 civpunkbuilding02:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding02.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 5
 	dead:
-    
+	
 civpunkbuilding03:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding03.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 5
 	dead:
-    
+	
 civpunkbuilding04:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding04.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 5
 	dead:
-    
+	
 civpunkbuilding05:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding05.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 5
 	dead:
 
 civpunkbuilding06:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding06.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 5
 	dead:
 
 civpunkbuilding07:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding07.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 3
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 2
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 3
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
-    
+	
 civpunkbuilding08:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding08.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
 
 civpunkbuilding09:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding09.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
-    
+	
 civpunkbuilding10:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding10.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 3
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
-    
+	
 civpunkbuilding11:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding11.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
-    
+	
 civpunkbuilding12:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding12.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	garrisoned:
 		Start: 4
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
-    
+	
 civpunkbuilding13:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 0.75
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding13.shp
+		Scale: 0.75
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        Length: 2
-        BlendMode: Additive
+		Length: 2
+		Tick: 90
+		BlendMode: Additive
 	garrisoned:
 		Start: 5
 	damaged-garrisoned:
 		Start: 6
 	critical-garrisoned:
 		Start: 6
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 7
 	shadow:
 		Start: 8
 		ZOffset: -10
 	dead:
-    
+	
 civpunkbuilding14:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 0.75
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding14.shp
+		Scale: 0.75
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        Length: 2
-        BlendMode: Additive
+		Length: 2
+		Tick: 90
+		BlendMode: Additive
 	garrisoned:
 		Start: 5
 	damaged-garrisoned:
 		Start: 6
 	critical-garrisoned:
 		Start: 6
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 7
 	shadow:
 		Start: 8
 		ZOffset: -10
 	dead:
-    
+	
 civpunkbuilding15:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 0.75
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding15.shp
+		Scale: 0.75
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        Length: 2
-        BlendMode: Additive
+		Length: 2
+		Tick: 90
+		BlendMode: Additive
 	garrisoned:
 		Start: 5
 	damaged-garrisoned:
 		Start: 6
 	critical-garrisoned:
 		Start: 6
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 7
 	shadow:
 		Start: 8
 		ZOffset: -10
 	dead:
-    
+	
 civpunkbuilding16:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 0.75
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding16.shp
+		Scale: 0.75
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        Length: 2
-        BlendMode: Additive
+		Length: 2
+		Tick: 90
+		BlendMode: Additive
 	garrisoned:
 		Start: 5
 	damaged-garrisoned:
 		Start: 6
 	critical-garrisoned:
 		Start: 6
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 7
 	shadow:
 		Start: 8
 		ZOffset: -10
 	dead:
-    
+	
 civpunkbuilding17:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 0.75
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding17.shp
+		Scale: 0.75
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        Length: 2
-        BlendMode: Additive
+		Length: 2
+		Tick: 90
+		BlendMode: Additive
 	garrisoned:
 		Start: 5
 	damaged-garrisoned:
 		Start: 6
 	critical-garrisoned:
 		Start: 6
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 7
 	shadow:
@@ -550,68 +627,74 @@ civpunkbuilding17:
 	dead:
 
 civpunkbuilding18:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 0.75
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding18.shp
+		Scale: 0.75
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        Length: 2
-        BlendMode: Additive
+		Length: 2
+		Tick: 90
+		BlendMode: Additive
 	garrisoned:
 		Start: 5
 	damaged-garrisoned:
 		Start: 6
 	critical-garrisoned:
 		Start: 6
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 7
 	shadow:
 		Start: 8
 		ZOffset: -10
 	dead:
-    
+	
 civpunkbuilding19:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 0.75
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding19.shp
+		Scale: 0.75
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        Length: 2
-        BlendMode: Additive
+		Length: 2
+		Tick: 90
+		BlendMode: Additive
 	garrisoned:
 		Start: 5
 	damaged-garrisoned:
 		Start: 6
 	critical-garrisoned:
 		Start: 6
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 7
 	shadow:
@@ -620,33 +703,36 @@ civpunkbuilding19:
 	dead:
 
 civpunkbuilding20:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 0.75
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: civpunkbuilding20.shp
+		Scale: 0.75
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-    neonlight:
+		BlendMode: Additive
+	neonlight:
 		Start: 3
-        Length: 2
-        BlendMode: Additive
+		Length: 2
+		Tick: 90
+		BlendMode: Additive
 	garrisoned:
 		Start: 5
 	damaged-garrisoned:
 		Start: 6
 	critical-garrisoned:
 		Start: 6
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 7
 	shadow:
@@ -655,7 +741,9 @@ civpunkbuilding20:
 	dead:
 
 commbuilding01:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding01.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -664,15 +752,18 @@ commbuilding01:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
 
 commbuilding02:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding02.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -681,15 +772,18 @@ commbuilding02:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
 
 commbuilding03:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding03.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -698,15 +792,18 @@ commbuilding03:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
 
 commbuilding04:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding04.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -715,15 +812,18 @@ commbuilding04:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
 
 commbuilding05:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding05.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -732,87 +832,99 @@ commbuilding05:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
 
 commbuilding06:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding06.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
-        Offset: 146, -150
+		Offset: 146, -150
 	damaged-idle:
 		Start: 1
-        Offset: 146, -150
+		Offset: 146, -150
 	critical-idle:
 		Start: 1
-        Offset: 146, -150
+		Offset: 146, -150
 	garrisoned:
 		Start: 2
-        Offset: 146, -150
-    garrisoned-visual: player_garrisoned
+		Offset: 146, -150
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 3
-        Offset: 146, -150
+		Offset: 146, -150
 	dead:
 
 commbuilding07:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding07.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
-        Offset: 146, -150
+		Offset: 146, -150
 	damaged-idle:
 		Start: 1
-        Offset: 146, -150
+		Offset: 146, -150
 	critical-idle:
 		Start: 1
-        Offset: 146, -150
+		Offset: 146, -150
 	garrisoned:
 		Start: 1
-        Offset: 146, -150
-    garrisoned-visual: player_garrisoned
+		Offset: 146, -150
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 2
-        Offset: 146, -150
+		Offset: 146, -150
 	dead:
 
 commbuilding08:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding08.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
-        Offset: 146, -150
+		Offset: 146, -150
 	damaged-idle:
 		Start: 1
-        Offset: 146, -150
+		Offset: 146, -150
 	critical-idle:
 		Start: 1
-        Offset: 146, -150
+		Offset: 146, -150
 	garrisoned:
 		Start: 2
-        Offset: 146, -150
-    garrisoned-visual: player_garrisoned
+		Offset: 146, -150
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 3
-        Offset: 146, -150
+		Offset: 146, -150
 	dead:
 
 commbuilding09:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding09.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -821,17 +933,20 @@ commbuilding09:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 3
 	dead:
 
 commbuilding10:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding10.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -840,17 +955,20 @@ commbuilding10:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 3
 	dead:
 
 commbuilding11:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding11.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -859,17 +977,20 @@ commbuilding11:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 3
 	dead:
 
 commbuilding012:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding012.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -878,17 +999,20 @@ commbuilding012:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 3
 	dead:
 
 commbuilding014:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: commbuilding014.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -897,28 +1021,33 @@ commbuilding014:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	rubble:
 		Start: 3
 	dead:
 
 trapvent:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: trapvent.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	damaged-idle:
 		Start: 1
 	rubble:
 		Start: 1
-    amins:
-        Start: 2
-        Length: 18
+	amins:
+		Start: 2
+		Length: 18
 
 purifierstation:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: purifierstation.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	damaged-idle:
 		Start: 1
@@ -926,21 +1055,25 @@ purifierstation:
 		Start: 2
 
 fortress:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fortress.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    shield:
+	shield:
 		Start: 2
-        Length: 2
-        BlendMode: Additive
+		Length: 2
+		BlendMode: Additive
 	dead:
-    
+	
 nuclear_fireplace:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: nuclear_fireplace.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -948,178 +1081,242 @@ nuclear_fireplace:
 	critical-idle:
 		Start: 1
 	dead:
-    
+	
 nuclear_reactor01:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: nuclear_reactor01.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
+		BlendMode: Additive
 	dead:
 
 nuclear_reactor02:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: nuclear_reactor02.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
+		BlendMode: Additive
 	dead:
-    
+	
 turbineheat:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: turbineheat.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
-        Length: 32
+		Length: 32
 	damaged-idle:
 		Start: 32
-        Length: 32
+		Length: 32
 	critical-idle:
 		Start: 32
-        Length: 32
+		Length: 32
 	dead:
 		Start: 32
-    
+	
 tuba:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: tuba
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: tuba.shp
 		Start: 0
-	damaged-idle: tuba
+	damaged-idle:
+		Filename: tuba.shp
 		Start: 0
-	critical-idle: tuba
+	critical-idle:
+		Filename: tuba.shp
 		Start: 0
-	dead: tuba
+	dead:
+		Filename: tuba.shp
 		Start: 0
-   
+
 tuba2:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: tuba
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: tuba.shp
 		Start: 1
-	damaged-idle: tuba
+	damaged-idle:
+		Filename: tuba.shp
 		Start: 1
-	critical-idle: tuba
+	critical-idle:
+		Filename: tuba.shp
 		Start: 1
-	dead: tuba
+	dead:
+		Filename: tuba.shp
 		Start: 1
 
 tuba4:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: tuba
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: tuba.shp
 		Start: 3
-	damaged-idle: tuba
+	damaged-idle:
+		Filename: tuba.shp
 		Start: 3
-	critical-idle: tuba
+	critical-idle:
+		Filename: tuba.shp
 		Start: 3
-	dead: tuba
+	dead:
+		Filename: tuba.shp
 		Start: 3
 
 crane:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: crane
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: crane.shp
 		Start: 0
-	damaged-idle: crane
+	damaged-idle:
+		Filename: crane.shp
 		Start: 1
-	critical-idle: crane
+	critical-idle:
+		Filename: crane.shp
 		Start: 1
-	dead: crane
+	dead:
+		Filename: crane.shp
 		Start: 1
 
 crane2:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: crane
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: crane.shp
 		Start: 2
-	damaged-idle: crane
+	damaged-idle:
+		Filename: crane.shp
 		Start: 3
-	critical-idle: crane
+	critical-idle:
+		Filename: crane.shp
 		Start: 3
-	dead: crane
+	dead:
+		Filename: crane.shp
 		Start: 3
 
 crane3:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: crane
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: crane.shp
 		Start: 4
-	damaged-idle: crane
+	damaged-idle:
+		Filename: crane.shp
 		Start: 5
-	critical-idle: crane
+	critical-idle:
+		Filename: crane.shp
 		Start: 5
-	dead: crane
+	dead:
+		Filename: crane.shp
 		Start: 5
 
 crane4:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: crane
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: crane.shp
 		Start: 6
-	damaged-idle: crane
+	damaged-idle:
+		Filename: crane.shp
 		Start: 7
-	critical-idle: crane
+	critical-idle:
+		Filename: crane.shp
 		Start: 7
-	dead: crane
+	dead:
+		Filename: crane.shp
 		Start: 7
 
 crane5:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: crane
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: crane.shp
 		Start: 8
-	damaged-idle: crane
+	damaged-idle:
+		Filename: crane.shp
 		Start: 9
-	critical-idle: crane
+	critical-idle:
+		Filename: crane.shp
 		Start: 9
-	dead: crane
+	dead:
+		Filename: crane.shp
 		Start: 9
-        
+		
 crane5:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: crane
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: crane.shp
 		Start: 10
-	damaged-idle: crane
+	damaged-idle:
+		Filename: crane.shp
 		Start: 11
-	critical-idle: crane
+	critical-idle:
+		Filename: crane.shp
 		Start: 11
-	dead: crane
+	dead:
+		Filename: crane.shp
 		Start: 11
 
 resbuilding01:
-    Inherits@01: ^DefaultCivBuildSequence
+	Defaults:
+		Filename: resbuilding01.shp
+	Inherits@01: ^DefaultCivBuildSequence
 
 resbuilding02:
-    Inherits@01: ^DefaultCivBuildSequence
+	Defaults:
+		Filename: resbuilding02.shp
+	Inherits@01: ^DefaultCivBuildSequence
 
 resbuilding03:
-    Inherits@01: ^DefaultCivBuildSequence
+	Defaults:
+		Filename: resbuilding03.shp
+	Inherits@01: ^DefaultCivBuildSequence
 
 resbuilding04:
-    Inherits@01: ^DefaultCivBuildSequence
+	Defaults:
+		Filename: resbuilding04.shp
+	Inherits@01: ^DefaultCivBuildSequence
 
 resbuilding05:
-    Inherits@01: ^DefaultCivBuildSequence
+	Defaults:
+		Filename: resbuilding05.shp
+	Inherits@01: ^DefaultCivBuildSequence
 
 resbuilding06:
-    Inherits@01: ^DefaultCivBuildSequence
-    
+	Defaults:
+		Filename: resbuilding06.shp
+	Inherits@01: ^DefaultCivBuildSequence
+	
 citern1:
-    Inherits@01: ^DefaultCivBuildSequence
+	Defaults:
+		Filename: citern1.shp
+	Inherits@01: ^DefaultCivBuildSequence
 
 citern2:
-    Inherits@01: ^DefaultCivBuildSequence
+	Defaults:
+		Filename: citern2.shp
+	Inherits@01: ^DefaultCivBuildSequence
 
 citern3:
-    Inherits@01: ^DefaultCivBuildSequence
+	Defaults:
+		Filename: citern3.shp
+	Inherits@01: ^DefaultCivBuildSequence
 
 citern4:
-    Inherits@01: ^DefaultCivBuildSequence
+	Defaults:
+		Filename: citern4.shp
+	Inherits@01: ^DefaultCivBuildSequence
 
 cont01:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: cont01.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -1129,7 +1326,9 @@ cont01:
 	dead:
 
 cont02:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: cont02.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -1137,9 +1336,11 @@ cont02:
 	critical-idle:
 		Start: 0
 	dead:
-    
+	
 cont03:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: cont03.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -1147,9 +1348,11 @@ cont03:
 	critical-idle:
 		Start: 0
 	dead:
-    
+	
 cont04:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: cont04.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -1157,46 +1360,56 @@ cont04:
 	critical-idle:
 		Start: 0
 	dead:
-    
+	
 proj01:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: proj01.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 0
 	critical-idle:
 		Start: 0
-    light: proj01light
-        BlendMode: Additive
+	light:
+		Filename: proj01light.shp
+		BlendMode: Additive
 	dead:
 
 proj02:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: proj02.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 0
 	critical-idle:
 		Start: 0
-    light: proj02light
-        BlendMode: Additive
+	light:
+		Filename: proj02light.shp
+		BlendMode: Additive
 	dead:
 
 proj03:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: proj03.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 0
 	critical-idle:
 		Start: 0
-    light: proj03light
-        BlendMode: Additive
+	light:
+		Filename: proj03light.shp
+		BlendMode: Additive
 	dead:
 
 gate_h:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Inherits@Buildstat: ^StatBuildingEffect
 	Defaults:
+		Filename: gate_h.shp
 		Tick: 80
 	idle:
 		Start: 0
@@ -1210,11 +1423,13 @@ gate_h:
 	damaged-open:
 		Start: 25
 	dead:
-	icon: gatehicon
-    
+	icon:
+		Filename: gatehicon.shp
+	
 gate_v:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Inherits@Buildstat: ^StatBuildingEffect
 	Defaults:
+		Filename: gate_v.shp
 		Tick: 80
 	idle:
 		Start: 0
@@ -1228,11 +1443,13 @@ gate_v:
 	damaged-open:
 		Start: 24
 	dead:
-	icon: gatevicon
-    
+	icon:
+		Filename: gatevicon.shp
+	
 biggate_h:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Inherits@Buildstat: ^StatBuildingEffect
 	Defaults:
+		Filename: biggate_h.shp
 		Tick: 80
 	idle:
 		Start: 0
@@ -1246,11 +1463,13 @@ biggate_h:
 	damaged-open:
 		Start: 72
 	dead:
-	icon: gatehicon
+	icon:
+		Filename: gatehicon.shp
 
 fortwall:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Inherits@Buildstat: ^StatBuildingEffect
 	Defaults:
+		Filename: fortwall.shp
 		Tick: 90
 	idle:
 		Start: 0
@@ -1264,40 +1483,51 @@ fortwall:
 	damaged-open:
 		Start: 59
 	dead:
-	icon: gatehicon
+	icon:
+		Filename: gatehicon.shp
 
 lay_clear01:
-	idle: lay_clear
+	idle:
+		Filename: lay_clear.shp
 		Length: 16
-	icon: arwallicon
+	icon:
+		Filename: arwallicon.shp
 
 lay_clear02:
-	idle: lay_clear
+	idle:
+		Filename: lay_clear.shp
 		Start: 16
 		Length: 16
-	icon: arwallicon
-    
+	icon:
+		Filename: arwallicon.shp
+	
 balise_medic:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: balise_medic.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
-        Length: 5
+		Length: 5
 	damaged:
 		Length: 5
 
 aracnst:
-    Inherits@Buildstat: ^StatBuildingEffect
-	smoke: arcacnstsmoke
+	Defaults:
+		Filename: aracnst.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	smoke:
+		Filename: arcacnstsmoke.shp
 		Length: *
 		Offset: 44, -83
-        Tick: 45
-        ZOffset: 1
+		Tick: 45
+		ZOffset: 1
 	spot:
-    	Start: 3
-        BlendMode: Additive
-        ZOffset: 1
+		Start: 3
+		BlendMode: Additive
+		ZOffset: 1
 	idle:
-    	Start: 0
-	null: null
+		Start: 0
+	null:
+		Filename: null.shp
 	build:
 		Start: 0
 	damaged-idle:
@@ -1308,18 +1538,23 @@ aracnst:
 		Start: 0
 	damaged-active:
 		Start: 1
-    make-drop: dropar
+	make-drop:
+		Filename: dropar.shp
 		Length: 50
 		Offset: 0, -150
-        Tick: 45
-        ZOffset: 1240
+		Tick: 45
+		ZOffset: 1240
 	dead:
-	make: aracnstmk
+	make:
+		Filename: aracnstmk.shp
 		Length: 24
-	icon: arbarricon
+	icon:
+		Filename: arbarricon.shp
 
 arpowr:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: arpowr.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 14
@@ -1333,106 +1568,133 @@ arpowr:
 	dead:
 		Start: 9
 		Offset: 0, -5
-	make: arpowrmk
+	make:
+		Filename: arpowrmk.shp
 		Length: 17
 		Offset: -3, -17
-	smoke_cheminal: smoke
+	smoke_cheminal:
+		Filename: smoke.shp
 		Start: 0
 		Length: 19
 		Offset: -4, -32
 		BlendMode: Additive
-	icon: arpowricon
+	icon:
+		Filename: arpowricon.shp
 
 arhighpowr:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: arhighpowr
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: arhighpowr.shp
 		Start: 0
 		Length: 14
 		Tick: 40
 		Offset: 0, 0
 	damaged-idle:
+		Filename: arhighpowr.shp
 		Start: 14
 		Tick: 14
 		Length: 9
 		Offset: 0, 0
-	dead: arhighpowr
+	dead:
+		Filename: arhighpowr.shp
 		Start: 25
-	smoke_cheminal: smoke_min
+	smoke_cheminal:
+		Filename: smoke_min.shp
 		Start: 0
 		Length: 19
 		Offset: 0, -20
 		BlendMode: Additive
-	make: arhighpowrmk
+	make:
+		Filename: arhighpowrmk.shp
 		Length: 29
 		Offset: -1, 28
 		Tick: 180
-	icon: arhighpowricon
+	icon:
+		Filename: arhighpowricon.shp
 
 arbarr:
-    Inherits@Buildstat: ^StatBuildingEffect
-	smoke: artechsmoke
+	Defaults:
+		Filename: arbarr.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	smoke:
+		Filename: artechsmoke.shp
 		Length: *
-        Tick: 30
+		Tick: 30
 		Offset: 0, -18
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
-    spot:
-        Start: 3
-        BlendMode: Additive
+	spot:
+		Start: 3
+		BlendMode: Additive
 	dead:
 		Start: 2
-	make: arbarrmk
+	make:
+		Filename: arbarrmk.shp
 		Length: *
 		Tick: 80
 		Offset: -4, 10
-	bib: bib2
+	bib:
+		Filename: bib2.shp
 		Length: *
-	icon: arbarricon
+	icon:
+		Filename: arbarricon.shp
 
 t3_commandbuilding:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: t3_commandbuilding.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	dead:
 		Start: 2
-	make: t3_commandmk
+	make:
+		Filename: t3_commandmk.shp
 		Length: *
-	icon: arbarricon
+	icon:
+		Filename: arbarricon.shp
 
 arproc:
-    Inherits@Buildstat: ^StatBuildingEffect
-	smoke: arprocsmoke
+	Inherits@Buildstat: ^StatBuildingEffect
+	smoke:
+		Filename: arprocsmoke.shp
 		Length: *
 		Offset: 0, -50
-        Tick: 80
-	idle: arproc
+		Tick: 80
+	idle:
+		Filename: arproc.shp
 		Start: 0
 	damaged-idle:
+		Filename: arproc.shp
 		Start: 1
-	dead: arproc
+	dead:
+		Filename: arproc.shp
 		Start: 2
-	make: arprocmk
-        Length: 50
+	make:
+		Filename: arprocmk.shp
+		Length: 50
 		Tick: 80
-	icon: arprocicon
+	icon:
+		Filename: arprocicon.shp
 
 arweap:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: arweap.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	spot:
 		Start: 6
 		Offset: 0, -32
-        BlendMode: Additive
-        ZOffset: 2400
+		BlendMode: Additive
+		ZOffset: 2400
 	smoke:
 		Start: 7
 		Length: 20
 		Offset: 0, -100
 		Tick: 80
-        ZOffset: 2500
+		ZOffset: 2500
 	idle:
 		Start: 0
 	damaged-idle:
@@ -1447,23 +1709,30 @@ arweap:
 		Start: 2
 	damaged-idle-top:
 		Start: 3
-	bib: bib2
+	bib:
+		Filename: bib4.shp
 		Length: *
 	dead:
 		Start: 2
-	make: arweapmk
+	make:
+		Filename: arweapmk.shp
 		Length: *
 		Offset: 0, -5
 		Tick: 80
-	bib: bib4
+	bib:
+		Filename: bib4.shp
 		Length: *
-	icon: arweapicon
+	icon:
+		Filename: arweapicon.shp
 
 artech:
-    Inherits@Buildstat: ^StatBuildingEffect
-	smoke: artechsmoke
+	Defaults:
+		Filename: artech.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	smoke:
+		Filename: artechsmoke.shp
 		Length: *
-        Tick: 70
+		Tick: 70
 	idle:
 		Start: 0
 		Length: 64
@@ -1472,85 +1741,110 @@ artech:
 		Length: 64
 	dead:
 		Start: 64
-    spot:
+	spot:
 		Start: 2
-        BlendMode: Additive
-	make: artechmk
+		BlendMode: Additive
+	make:
+		Filename: artechmk.shp
 		Start: 0
 		Length: *
-	icon: artechicon
+	icon:
+		Filename: artechicon.shp
 
 ardeftech:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: ardeftech.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	dead:
 		Start: 2
-    spot:
+	spot:
 		Start: 3
-        BlendMode: Additive
-    radar: radar_post
+		BlendMode: Additive
+	radar:
+		Filename: radar_post.shp
 		Length: *
 		Offset: 28, -24
-	make: ardeftechmk
+	make:
+		Filename: ardeftechmk.shp
 		Start: 0
 		Length: 50
 		Tick: 80
-	icon: ardeficon
-    
+	icon:
+		Filename: ardeficon.shp
+	
 arlab:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: arlab.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
 		Start: 1
 	dead:
 		Start: 2
-	make: arlabmk
+	make:
+		Filename: arlabmk.shp
 		Start: 0
 		Length: *
 		Tick: 25
-	icon: arlabicon
+	icon:
+		Filename: arlabicon.shp
 
 arheli:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: t2_airfielddeployed
-	damaged-idle: t2_airfielddeployed
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: t2_airfielddeployed.shp
+	damaged-idle:
+		Filename: t2_airfielddeployed.shp
 		Start: 1
-	critical-idle: t2_airfielddeployed
+	critical-idle:
+		Filename: t2_airfielddeployed.shp
 		Start: 2
-	dead: t2_airfielddeployed
+	dead:
+		Filename: t2_airfielddeployed.shp
 		Start: 2
-	make: t2_airfielddeployedmk
+	make:
+		Filename: t2_airfielddeployedmk.shp
 		Length: 7
 		Tick: 180
-	icon: arheliicon
+	icon:
+		Filename: arheliicon.shp
 
 droned:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: droned
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: droned.shp
 		ShadowStart: 3
 		Offset: 0, 0
-	damaged-idle: droned
+	damaged-idle:
+		Filename: droned.shp
 		Start: 2
 		ShadowStart: 4
 		Offset: 0, 0
-	critical-idle: droned
+	critical-idle:
+		Filename: droned.shp
 		Start: 2
 		ShadowStart: 4
 		Offset: 0, 0
 	dead:
+		Filename: droned.shp
 		Start: 2
-	make: dronedmk
+	make:
+		Filename: dronedmk.shp
 		Length: 6
 		Tick: 6
 		Offset: 0, 0
-	icon: artechicon
+	icon:
+		Filename: artechicon.shp
 
 t1_ratatoskrbuild:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: t1_ratatoskrbuild.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Offset: 0, 0
 	damaged-idle:
@@ -1559,25 +1853,33 @@ t1_ratatoskrbuild:
 	critical-idle:
 		Start: 2
 		Offset: 0, 0
-	idle.plug: t1_ratatoskrbuildplug
+	idle.plug:
+		Filename: t1_ratatoskrbuildplug.shp
 		Offset: 0, 0
-	damaged-idle.plug: t1_ratatoskrbuildplug
+	damaged-idle.plug:
+		Filename: t1_ratatoskrbuildplug.shp
 		Start: 1
 		Offset: 0, 0
-	critical-idle.plug: t1_ratatoskrbuildplug
+	critical-idle.plug:
+		Filename: t1_ratatoskrbuildplug.shp
 		Start: 2
 		Offset: 0, 0
 	dead:
 		Start: 2
-	make: t1_ratatoskrmk
+	make:
+		Filename: t1_ratatoskrmk.shp
 		Length: *
 		Offset: 0, 0
 
 t1_ratatoskrbuild.plug:
-	idle: null
-	icon: ratatosk_plugicon
-    
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: ratatosk_plugicon.shp
+	
 t3_heimdall_deploy:
+	Defaults:
+		Filename: t3_heimdall_deploy.shp
 	Inherits@Stat: ^StatVehicleEffect
 	idle:
 		Offset: 0, 0
@@ -1587,17 +1889,22 @@ t3_heimdall_deploy:
 	critical-idle:
 		Start: 0
 		Offset: 0, 0
-    turret: t3_heimdall_deploytur
-        Facings: 64
+	turret:
+		Filename: t3_heimdall_deploytur.shp
+		Facings: 64
 		Offset: 0, 0
-	make:  t3_heimdall_deploymk
+	make:
+		Filename: t3_heimdall_deploymk.shp
 		Length: *
 		Tick: 30
 		Offset: 0, 0
-	icon: heimicon
-        
+	icon:
+		Filename: heimicon.shp
+		
 t2_hydra_deployed:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: t2_hydra_deployed.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	Inherits@Stat: ^StatVehicleEffect
 	idle:
 		Offset: 0, 0
@@ -1607,20 +1914,26 @@ t2_hydra_deployed:
 	critical-idle:
 		Start: 2
 		Offset: 0, 0
-    turret: t2_hydratur
-        Facings: 64
+	turret:
+		Filename: t2_hydratur.shp
+		Facings: 64
 		Offset: 0, 0
-    muzzle: muzzle_autogun_small
-        Length: *
+	muzzle:
+		Filename: muzzle_autogun_small.shp
+		Length: *
 		Tick: 15
-	make: t2_hydramk
+	make:
+		Filename: t2_hydramk.shp
 		Length: *
 		Tick: 75
 		Offset: 0, 0
-	icon: artechicon
+	icon:
+		Filename: artechicon.shp
 
 t3_annihilator_deployed:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: t3_annihilator_deployed.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	Inherits@Stat: ^StatVehicleEffect
 	idle:
 		ShadowStart: 3
@@ -1633,85 +1946,109 @@ t3_annihilator_deployed:
 		Start: 2
 		ShadowStart: 4
 		Offset: 0, 0
-	make: annhiliatormk
+	make:
+		Filename: annhiliatormk.shp
 		Length: 6
 		Tick: 30
 		Offset: 0, 0
-    turret: annhiliatorturdeploy
-        Facings: 64
+	turret:
+		Filename: annhiliatorturdeploy.shp
+		Facings: 64
 		Offset: 0, -40
-        Scale: 0.75
-    muzzle.target: muzzle_targetrailgunan
-        BlendMode: Additive
+		Scale: 0.75
+	muzzle.target:
+		Filename: muzzle_targetrailgunan.shp
+		BlendMode: Additive
 		Length: *
-    muzzle.fire: muzzle_fireann
-        BlendMode: Additive
+	muzzle.fire:
+		Filename: muzzle_fireann.shp
+		BlendMode: Additive
 		Length: *
-	icon: artechicon
+	icon:
+		Filename: artechicon.shp
 
 t2_predator_deployed:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: 
+	Defaults:
+		Filename: t2_predator_deployed.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
 	damaged-idle:
-        Start: 1
+		Start: 1
 	critical-idle:
-        Start: 1
+		Start: 1
 	dead:
-        Start: 1
-	make: t2_predator_deployedmk
+		Start: 1
+	make:
+		Filename: t2_predator_deployedmk.shp
 		Length: *
-    turret: t2_predator_deployedtur
-        Facings: 64
+	turret:
+		Filename: t2_predator_deployedtur.shp
+		Facings: 64
 		Offset: 0, -15
-	icon: predatoricon
+	icon:
+		Filename: predatoricon.shp
 
 t2_tarantula_deployed:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: 
-	damaged-idle: 
-        Start: 1
+	Defaults:
+		Filename: t2_tarantula_deployed.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+	damaged-idle:
+		Start: 1
 	critical-idle:
-        Start: 1
+		Start: 1
 	dead:
-        Start: 1
-	make: t2_tarantula_deployedmk
+		Start: 1
+	make:
+		Filename: t2_tarantula_deployedmk.shp
 		Length: *
-    turret: t2_tarantula_deployedtur
-        Facings: 64
+	turret:
+		Filename: t2_tarantula_deployedtur.shp
+		Facings: 64
 		Offset: 0, -15
-	icon: tarantulaicon
+	icon:
+		Filename: tarantulaicon.shp
 
 t3_doomtowerbuild:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Inherits@Buildstat: ^StatBuildingEffect
 	Inherits@Stat: ^StatVehicleEffect
-	idle: doomtower
+	idle:
+		Filename: doomtower.shp
 		Start: 0
-        Length: 56
-	damaged-idle: doomtower
+		Length: 56
+	damaged-idle:
+		Filename: doomtower.shp
 		Start: 0
-        Length: 56
-	critical-idle: doomtower
+		Length: 56
+	critical-idle:
+		Filename: doomtower.shp
 		Start: 0
-        Length: 56
-    Lighting-effect: doomtowereffect
+		Length: 56
+	Lighting-effect:
+		Filename: doomtowereffect.shp
 		Start: 0
-        Length: 56
-        BlendMode: Additive
-	doomtowerelectro: doomtowerlight
+		Length: 56
+		BlendMode: Additive
+	doomtowerelectro:
+		Filename: doomtowerlight.shp
 		Length: *
 		Tick: 80
 		Offset: -5, -48
 		BlendMode: Additive
 	dead:
+		Filename: t3_doomtowerbuild.shp
 		Start: 2
-	make: t3_doomtowerbuildmk
+	make:
+		Filename: t3_doomtowerbuildmk.shp
 		Length: *
-	icon: doomtowericon
+	icon:
+		Filename: doomtowericon.shp
 
 opcacnst:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Tick: 80
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: opcacnst.shp
+		Tick: 80
 	idle:
 		Start: 0
 	damaged-idle:
@@ -1722,48 +2059,62 @@ opcacnst:
 		Start: 1
 	dead:
 		Start: 1
-	make: opcacnstmk
+	make:
+		Filename: opcacnstmk.shp
 		Length: 50
 	spot:
 		Start: 2
 		BlendMode: Additive
-	plug.moduleshield: opcacnstshield
-	plug.modulesword: opcacnstsword
-	plug.moduleradr: opcacnstplugradr
+	plug.moduleshield:
+		Filename: opcacnstshield.shp
+	plug.modulesword:
+		Filename: opcacnstsword.shp
+	plug.moduleradr:
+		Filename: opcacnstplugradr.shp
 		Start: 0
 		Length: *
 		Tick: 15
-	turret: ragnarokcanon
+	turret:
+		Filename: ragnarokcanon.shp
 		Facings: 64
 		Offset: 34, -5
-	icon: opweapicon
+	icon:
+		Filename: opweapicon.shp
 
 doctrinesword.plug:
-	idle: null
-	icon: upgrade_doctrine_valkyricon
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: upgrade_doctrine_valkyricon.shp
 
 opcacnst.plugradr:
-	idle: null
-	icon: opcacnstplugradricon
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: opcacnstplugradricon.shp
 
 doctrineshield.plug:
-	idle: null
-	icon: upgrade_doctrine_artemienicon
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: upgrade_doctrine_artemienicon.shp
 
 oppowr:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Tick: 65
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: oppowr.shp
+		Tick: 65
 	idle:
 		Start: 0
-        Length: 64
+		Length: 64
 	damaged-idle:
 		Start: 64
-        Length: 64
+		Length: 64
 	critical-idle:
 		Start: 64
-        Length: 64
-	smoke: smoke_min
+		Length: 64
+	smoke:
+		Filename: smoke_min.shp
 		Start: 0
 		Length: 19
 		Offset: 5, -55
@@ -1774,20 +2125,27 @@ oppowr:
 	dead:
 		Start: 64
 		Tick: 800
-	make: oppowrmk
+	make:
+		Filename: oppowrmk.shp
 		Length: *
 		Offset: 0, -10
-        Tick: 20
-	bib: bib2
+		Tick: 20
+	bib:
+		Filename: bib2.shp
 		Length: *
-	icon: oppowricon
+	icon:
+		Filename: oppowricon.shp
 
 oppowr.plugpowr:
-	idle: null
-	icon: oppowr_plugicon
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: oppowr_plugicon.shp
 
 opheli:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: opheli.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Offset: 0, -40
@@ -1800,13 +2158,17 @@ opheli:
 	dead:
 		Start: 1
 		Offset: 0, -40
-	make: ophelimk
+	make:
+		Filename: ophelimk.shp
 		Length: *
 		Offset: 0, -40
-	icon: opheliicon
+	icon:
+		Filename: opheliicon.shp
 
 opproc:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: opproc.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Offset: 8, -45
@@ -1818,19 +2180,24 @@ opproc:
 	damaged-idle-top:
 		Start: 1
 		Offset: 8, -45
-	make: opprocmk
+	make:
+		Filename: opprocmk.shp
 		Length: *
 		Offset: 8, -45
 	dead:
 		Start: 2
 		Tick: 800
-	bib: bib4
+	bib:
+		Filename: bib4.shp
 		Length: *
-	icon: opprocicon
+	icon:
+		Filename: opprocicon.shp
 
 opbarr:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: 
+	Defaults:
+		Filename: opbarr.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
 		Offset: 4, -7
 	damaged-idle:
 		Start: 1
@@ -1841,15 +2208,20 @@ opbarr:
 	dead:
 		Start: 1
 		Offset: 4, -7
-	make: opbarrmk
+	make:
+		Filename: opbarrmk.shp
 		Length: *
 		Offset: 2, -4
-	bib: bib4
+	bib:
+		Filename: bib4.shp
 		Length: *
-	icon: opbarricon
+	icon:
+		Filename: opbarricon.shp
 
 opweap:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: opweap.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 2
 		Offset: 10, -10
@@ -1870,42 +2242,51 @@ opweap:
 		Offset: 10, -10
 	dead:
 		Start: 2
-        Length: *
+		Length: *
 		Tick: 800
-	make: opweapmk
+	make:
+		Filename: opweapmk.shp
 		Length: *
 		Offset: -2, -10
-	bib: bib5
+	bib:
+		Filename: bib5.shp
 		Length: *
-	icon: opweapicon
+	icon:
+		Filename: opweapicon.shp
 
 optech:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: optech.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 69
-        Tick: 55
+		Tick: 55
 		Offset: 0, -5
 	damaged-idle:
 		Start: 71
 		Length: 69
-        Tick: 55
+		Tick: 55
 		Offset: 0, -5
 	critical-idle:
 		Start: 71
 		Length: 69
-        Tick: 55
+		Tick: 55
 		Offset: 0, -5
 	dead:
 		Start: 71
 		Offset: 0, -5
-	make: optechmk
+	make:
+		Filename: optechmk.shp
 		Length: *
 		Offset: 0, -5
-	icon: optech2icon
+	icon:
+		Filename: optech2icon.shp
 
 optech2:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: optech2.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -1914,23 +2295,29 @@ optech2:
 		Start: 1
 	spot:
 		Start: 2
-        Length: 3
-        BlendMode: Additive
+		Length: 3
+		BlendMode: Additive
 	dead:
 		Start: 1
-	make: optech2mk
+	make:
+		Filename: optech2mk.shp
 		Length: *
 		Offset: 0, 10
-	icon: optech3icon
+	icon:
+		Filename: optech3icon.shp
 
 opavtech:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: opavtech.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Offset: 0, 0
-	buried: opavtechbunk
+	buried:
+		Filename: opavtechbunk.shp
 		Start: 0
 		Length: 24
-	bunk: opavtechmk
+	bunk:
+		Filename: opavtechmk.shp
 		Start: 0
 		Offset: 0, 0
 	damaged-idle:
@@ -1941,15 +2328,18 @@ opavtech:
 		Offset: 0, 0
 	dead:
 		Start: 1
-	make: opavtechmk
+	make:
+		Filename: opavtechmk.shp
 		Length: 24
 		Offset: 0, 0
-	icon: optech2icon
-    
+	icon:
+		Filename: optech2icon.shp
+	
 optechtempt3:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 1.00
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: optechtempt3.shp
+		Scale: 1.00
 	idle:
 		Offset: 0, 0
 	damaged-idle:
@@ -1963,15 +2353,18 @@ optechtempt3:
 		Offset: 0, 0
 	dead:
 		Start: 1
-	make: optechtempt3mk
+	make:
+		Filename: optechtempt3mk.shp
 		Length: *
 		Offset: 0, 0
-	icon: opcommandt3icon
+	icon:
+		Filename: opcommandt3icon.shp
 
 opprotocolcenter:
-    Inherits@Buildstat: ^StatBuildingEffect
-    Defaults:
-        Scale: 1.00
+	Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: opprotocolcenter.shp
+		Scale: 1.00
 	idle:
 		Offset: 0, 0
 	damaged-idle:
@@ -1985,93 +2378,129 @@ opprotocolcenter:
 		Offset: 0, 0
 	dead:
 		Start: 1
-	make: opprotocolcentermk
+	make:
+		Filename: opprotocolcentermk.shp
 		Length: *
 		Offset: 0, 0
-	icon: opprotocolcentericon
+	icon:
+		Filename: opprotocolcentericon.shp
 
 t1_midgard:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: supportdefenseop
-        Start: 0
-	damaged-idle: supportdefenseop
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: supportdefenseop.shp
+		Start: 0
+	damaged-idle:
+		Filename: supportdefenseop.shp
 		Start: 1
-	critical-idle: supportdefenseop
+	critical-idle:
+		Filename: supportdefenseop.shp
 		Start: 1
-	dead: supportdefenseop
+	dead:
+		Filename: supportdefenseop.shp
 		Start: 2
-	make: supportdefenseopmake
+	make:
+		Filename: supportdefenseopmake.shp
 		Length: *
 		Offset: 0, 10
-    turret: t1_midgardtur
-        Facings: 64
+	turret:
+		Filename: t1_midgardtur.shp
+		Facings: 64
 		Offset: 0, -10
-    turretap: t1_midgardturap
-        Facings: 64
+	turretap:
+		Filename: t1_midgardturap.shp
+		Facings: 64
 		Offset: 0, -10
-	muzzle: muzzle_190mm
+	muzzle:
+		Filename: muzzle_190mm.shp
 		Length: *
 		BlendMode: Additive
-	icon: midgardicon
+	icon:
+		Filename: midgardicon.shp
 
 t2_niflheim:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: supportdefenseop
-        Start: 0
-	damaged-idle: supportdefenseop
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: supportdefenseop.shp
+		Start: 0
+	damaged-idle:
+		Filename: supportdefenseop.shp
 		Start: 1
-	critical-idle: supportdefenseop
+	critical-idle:
+		Filename: supportdefenseop.shp
 		Start: 1
-	dead: supportdefenseop
+	dead:
+		Filename: supportdefenseop.shp
 		Start: 2
-	make: supportdefenseopmake
+	make:
+		Filename: supportdefenseopmake.shp
 		Length: *
-    turret: t2_niflheimtur
-        Facings: 64
+	turret:
+		Filename: t2_niflheimtur.shp
+		Facings: 64
 		Offset: 0, 0
-	icon: niflheimicon
+	icon:
+		Filename: niflheimicon.shp
 
 t3_hel:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: heltower
-        Start: 0
-	damaged-idle: heltower
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: heltower.shp
+		Start: 0
+	damaged-idle:
+		Filename: heltower.shp
 		Start: 1
-	critical-idle: heltower
+	critical-idle:
+		Filename: heltower.shp
 		Start: 2
-	dead: heltower
+	dead:
+		Filename: heltower.shp
 		Start: 2
-	make: heltower
+	make:
+		Filename: heltower.shp
 		Length: *
-    turret: t3_heltur
-        Facings: 64
+	turret:
+		Filename: t3_heltur.shp
+		Facings: 64
 		Offset: 0, 0
-	icon: helicon
-    
+	icon:
+		Filename: helicon.shp
+	
 t4_executioner:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: plandefense
-        Start: 0
-	damaged-idle: plandefense
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: plandefense.shp
+		Start: 0
+	damaged-idle:
+		Filename: plandefense.shp
 		Start: 1
-	critical-idle: plandefense
+	critical-idle:
+		Filename: plandefense.shp
 		Start: 1
-	dead: plandefense
+	dead:
+		Filename: plandefense.shp
 		Start: 2
-    turret: plasmabigguntur
-        Facings: 64
+	turret:
+		Filename: plasmabigguntur.shp
+		Facings: 64
 		Offset: 0, 0
-    muzzle: bigplasma_chargemuzzle
-        Length: *
-        BlendMode: Additive
-    muzzlesouffle: souffle
-        Length: *
-	make: supportdefenseop
+	muzzle:
+		Filename: bigplasma_chargemuzzle.shp
 		Length: *
-	icon: ragnarokicon
+		BlendMode: Additive
+	muzzlesouffle:
+		Filename: souffle.shp
+		Length: *
+	make:
+		Filename: supportdefenseop.shp
+		Length: *
+	icon:
+		Filename: ragnarokicon.shp
 
 tccacnst:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: tccacnst.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 63
@@ -2087,229 +2516,286 @@ tccacnst:
 	dead:
 		Start: 64
 		Length: 63
-    spot:
+	spot:
 		Start: 128
-	make: tccacnstmk
+	make:
+		Filename: tccacnstmk.shp
 		Length: *
-	icon: arweapicon
+	icon:
+		Filename: arweapicon.shp
 
 tcpowr:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: tcpowr
+	Defaults:
+		Filename: tcpowr.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: tcpowr.shp
 		Offset: 0, 0
 		Start: 0
 		Length: 27
-	damaged-idle: 
+	damaged-idle:
 		Offset: 0, 0
 		Start: 27
 		Length: 27
-	critical-idle: 
+	critical-idle:
 		Start: 27
 		Length: 27
 		Offset: 0, 0
 	pavement:
 		Start: 54
 		Offset: 0, 0
-	lightingrelais: tcpowr_anim
+	lightingrelais:
+		Filename: tcpowr_anim.shp
 		Start: 0
 		Length: 60
 		Tick: 25
 		Offset: 0, -59
 		BlendMode: Additive
-	plug.relaisdef: tcpodrelais
+	plug.relaisdef:
+		Filename: tcpodrelais.shp
 		Start: 0
 		Length: 32
 		Tick: 40
 		Offset: 0, -70
-	plug.eyeplug: tceyeplug
+	plug.eyeplug:
+		Filename: tceyeplug.shp
 		Start: 0
 		Length: 100
 		Tick: 60
 		Offset: 0, -70
-	plug.tcrepairplug: tcrepairplug
+	plug.tcrepairplug:
+		Filename: tcrepairplug.shp
 		Start: 0
 		Length: *
 		Tick: 25
-        Scale: 0.64
+		Scale: 0.64
 		Offset: 0, -125
-    makeeffect: conclavemakeeffect
+	makeeffect:
+		Filename: conclavemakeeffect.shp
 		Length: *
 		Tick: 15
-        BlendMode: Additive
+		BlendMode: Additive
 		Offset: -5, -60
 	dead:
 		Start: 2
-	make: tcpowrmk
+	make:
+		Filename: tcpowrmk.shp
 		Length: *
 		Offset: 0, 0
-	icon: tcpowricon
+	icon:
+		Filename: tcpowricon.shp
 
 relaisaiguille:
-	idle: null
-	icon: guardplugicon
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: guardplugicon.shp
 
 tceyeplug:
-	idle: null
-	icon: eyeplugicon
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: eyeplugicon.shp
 
 repairplug:
-	idle: null
-	icon: tcrepairplugicon
-    
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: tcrepairplugicon.shp
+	
 tcweap.plug:
-	idle: null
-	icon: tcrepairplugicon
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: tcrepairplugicon.shp
 
 conclave_turret:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: conclave_turret
-        Start: 0
-	damaged-idle: conclave_turret
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: conclave_turret.shp
+		Start: 0
+	damaged-idle:
+		Filename: conclave_turret.shp
 		Start: 1
-	critical-idle: conclave_turret
+	critical-idle:
+		Filename: conclave_turret.shp
 		Start: 1
-	dead: conclave_turret
+	dead:
+		Filename: conclave_turret.shp
 		Start: 1
-	make: conclave_turret
+	make:
+		Filename: conclave_turret.shp
 		Length: *
-    turret: impulsturret
-        Facings: 64
-	muzzle: muzzle_bluegun
+	turret:
+		Filename: impulsturret.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_bluegun.shp
 		Length: *
 		BlendMode: Additive
-    turret.impulse: relaisaiguille
+	turret.impulse:
+		Filename: relaisaiguille.shp
 		Length: *
-	icon: helicon
+	icon:
+		Filename: helicon.shp
 
 ^tcholotech:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: tcholotech
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: tcholotech.shp
 		Start: 0
 		Length: 64
 		Offset: 0, 0
-	damaged-idle: tcholotech
+	damaged-idle:
+		Filename: tcholotech.shp
 		Start: 64
 		Length: 64
 		Offset: 0, 0
-	critical-idle: tcholotech
+	critical-idle:
+		Filename: tcholotech.shp
 		Start: 64
 		Length: 64
 		Offset: 0, 0
-	pavement: tcholotech
+	pavement:
+		Filename: tcholotech.shp
 		Start: 128
 		Offset: 0, 0
-	dead: tcholotech
+	dead:
+		Filename: tcholotech.shp
 		Start: 64
 		Offset: 0, 0
-    makeeffect: conclavemakeeffect
+	makeeffect:
+		Filename: conclavemakeeffect.shp
 		Length: *
 		Tick: 14
-        BlendMode: Additive
+		BlendMode: Additive
 		Offset: 0, -75
-    holotech_anim: holotech_anim
+	holotech_anim:
+		Filename: holotech_anim.shp
 		Length: *
 		BlendMode: Additive
 		Offset: 0, -80
-	make: tcholotechmk
+	make:
+		Filename: tcholotechmk.shp
 		Length: *
 		Tick: 40
 		Offset: 0, 0
-	icon: tcholotechicon
+	icon:
+		Filename: tcholotechicon.shp
 
 tcholotech.rodeur:
 	Inherits: ^tcholotech
-	Holo.Anim: t2_rodeur
+	Holo.Anim:
+		Filename: t2_rodeur.shp
 		Start: 0
 		Length: 8
-        Tick: 190
+		Tick: 190
 		BlendMode: Additive
 		Offset: 0, -110
-        Scale: 0.8
-	Holo.Anim.tur: t2_rodeurtur
+		Scale: 0.8
+	Holo.Anim.tur:
+		Filename: t2_rodeurtur.shp
 		Start: 0
 		Length: *
 		BlendMode: Additive
 		Offset: 0, -130
-        Scale: 0.8
-	icon: holorodeuricon
+		Scale: 0.8
+	icon:
+		Filename: holorodeuricon.shp
 
 tcholotech.pelerin:
 	Inherits: ^tcholotech
-	Holo.Anim: t2_pilgrim
+	Holo.Anim:
+		Filename: t2_pilgrim.shp
 		Start: 0
 		Length: *
 		BlendMode: Additive
 		Offset: 0, -110
-        Scale: 0.8
-	Holo.Anim.tur: t2_pilgrimtur
+		Scale: 0.8
+	Holo.Anim.tur:
+		Filename: t2_pilgrimtur.shp
 		Start: 0
 		Length: *
 		BlendMode: Additive
 		Offset: 0, -115
-        Scale: 0.8
-	icon: holopelerinicon
+		Scale: 0.8
+	icon:
+		Filename: holopelerinicon.shp
 
 tcholotech.arpenteur:
 	Inherits: ^tcholotech
-	Holo.Anim: t3_surveyor
+	Holo.Anim:
+		Filename: t3_surveyor.shp
 		Start: 0
 		Length: 8
-        Tick: 190
+		Tick: 190
 		BlendMode: Additive
 		Offset: 0, -90
-        Scale: 0.8
-	Holo.Anim.tur: t3_surveyortur
+		Scale: 0.8
+	Holo.Anim.tur:
+		Filename: t3_surveyortur.shp
 		Start: 0
 		Length: *
 		BlendMode: Additive
 		Offset: 0, -160
-        Scale: 0.8
-	icon: holoarpenteuricon
+		Scale: 0.8
+	icon:
+		Filename: holoarpenteuricon.shp
 
 tcholotech.comete:
 	Inherits: ^tcholotech
-	Holo.Anim: t2_comete
+	Holo.Anim:
+		Filename: t2_comete.shp
 		Start: 0
 		Length: *
-        Tick: 20
+		Tick: 20
 		BlendMode: Additive
 		Offset: 0, -110
-        Scale: 0.9
-	icon: holocometeicon
+		Scale: 0.9
+	icon:
+		Filename: holocometeicon.shp
 
 tcholotech.quasar:
 	Inherits: ^tcholotech
-	Holo.Anim: t3_quasar
+	Holo.Anim:
+		Filename: t3_quasar.shp
 		Start: 0
 		Length: *
-        Tick: 30
+		Tick: 30
 		BlendMode: Additive
 		Offset: 0, -220
-        Scale: 0.4
-	icon: holoquasaricon
+		Scale: 0.4
+	icon:
+		Filename: holoquasaricon.shp
 
 tcholotech.zenith:
 	Inherits: ^tcholotech
-	Holo.Anim: t2_zenith
+	Holo.Anim:
+		Filename: t2_zenith.shp
 		Start: 0
 		Length: *
 		BlendMode: Additive
 		Offset: 0, -130
-        Scale: 0.8
-	icon: holozenithicon
+		Scale: 0.8
+	icon:
+		Filename: holozenithicon.shp
 
 tcholotech.navigator:
 	Inherits: ^tcholotech
-	Holo.Anim: holonavigator
+	Holo.Anim:
+		Filename: holonavigator.shp
 		Start: 0
 		Length: *
 		BlendMode: Additive
 		Tick: 60
 		Offset: 0, 0
-	icon: holonavigatoricon
+	icon:
+		Filename: holonavigatoricon.shp
 
 tcproc:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: tcproc.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 8
@@ -2321,18 +2807,23 @@ tcproc:
 	dead:
 		Start: 6
 		Offset: 0, -0
-    makeeffect: conclavemakeeffect
+	makeeffect:
+		Filename: conclavemakeeffect.shp
 		Length: *
 		Tick: 23
-        BlendMode: Additive
+		BlendMode: Additive
 		Offset: 0, -75
-	make: tcprocmk
+	make:
+		Filename: tcprocmk.shp
 		Length: 40
 		Offset: 0, -0
-	icon: tcprocicon
+	icon:
+		Filename: tcprocicon.shp
 
 tcweap:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: tcweap.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 15
@@ -2341,28 +2832,35 @@ tcweap:
 		Start: 14
 		Length: 15
 		Offset: 0, -15
-	build-top: tcweapbuild
+	build-top:
+		Filename: tcweapbuild.shp
 		Length: 45
 		Offset: 0, -15
 		BlendMode: Additive
-	damaged-build-top: tcweapbuild
+	damaged-build-top:
+		Filename: tcweapbuild.shp
 		Length: 45
 		Offset: 0, -15
 		BlendMode: Additive
 	dead:
 		Start: 0
 		Offset: 0, -15
-    makeeffect: conclavemakeeffect
+	makeeffect:
+		Filename: conclavemakeeffect.shp
 		Length: *
 		Tick: 25
-        BlendMode: Additive
+		BlendMode: Additive
 		Offset: 0, -95
-	make: tcweapmk
+	make:
+		Filename: tcweapmk.shp
 		Length: *
 		Offset: 0, -15
-	icon: tcweapicon
-    
+	icon:
+		Filename: tcweapicon.shp
+	
 t2_troll_deployed:
+	Defaults:
+		Filename: t2_troll_deployed.shp
 	Inherits@Stat: ^StatVehicleEffect
 	idle:
 		Offset: 0, 0
@@ -2372,27 +2870,34 @@ t2_troll_deployed:
 	critical-idle:
 		Start: 2
 		Offset: 0, 0
-    turret: t2_troll_deployedtur
-        Facings: 64
+	turret:
+		Filename: t2_troll_deployedtur.shp
+		Facings: 64
 		Offset: 0, 0
-    muzzle: plasma_pulseminx2
-        Length: *
+	muzzle:
+		Filename: plasma_pulseminx2.shp
+		Length: *
 		Tick: 15
-	make: t2_trollmk
+	make:
+		Filename: t2_trollmk.shp
 		Length: *
 		Tick: 75
 		Offset: 0, 0
-	icon: artechicon
+	icon:
+		Filename: artechicon.shp
 
 tcsuperweap:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: tcsuperweap.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 10
 	damaged-idle:
 		Start: 9
 		Length: 10
-	make: tcsuperweapmk
+	make:
+		Filename: tcsuperweapmk.shp
 		Length: *
 	build:
 		Start: 0
@@ -2400,23 +2905,30 @@ tcsuperweap:
 	damaged-build:
 		Start: 9
 		Length: 10
-	tcsuperweapplug: tcsuperweapplug
+	tcsuperweapplug:
+		Filename: tcsuperweapplug.shp
 		Length: *
-		BlendMode: Additive    
-    makeeffect: conclavemakeeffect
+		BlendMode: Additive
+	makeeffect:
+		Filename: conclavemakeeffect.shp
 		Length: *
 		Tick: 15
-        BlendMode: Additive
+		BlendMode: Additive
 		Offset: 0, -75
 	dead:
 		Start: 9
-	icon: tcsuperweapicon
+	icon:
+		Filename: tcsuperweapicon.shp
 
 tcsuperweap.plug:
-	idle: null
-	icon: tcsuperweapplugicon
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: tcsuperweapplugicon.shp
 
 tcpodrelais:
+	Defaults:
+		Filename: tcpodrelais.shp
 	idle:
 		Start: 0
 		Length: 32
@@ -2430,35 +2942,45 @@ tcpodrelais:
 	dead:
 		Start: 31
 		Offset: 5, -20
-	make: tcpodrelais
+	make:
+		Filename: tcpodrelais.shp
 		Length: 24
 		Offset: 5, -20
-	icon: tcweapicon
+	icon:
+		Filename: tcweapicon.shp
 
 tctech:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: tctech
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: tctech.shp
 		ShadowStart: 3
 		Offset: 0, 0
-	damaged-idle: tctech
+	damaged-idle:
+		Filename: tctech.shp
 		Start: 2
 		ShadowStart: 4
 		Offset: 0, 0
-	critical-idle: tctech
+	critical-idle:
+		Filename: tctech.shp
 		Start: 2
 		ShadowStart: 4
 		Offset: 0, 0
 	dead:
+		Filename: tctech.shp
 		Start: 2
-	make: tctechmk
+	make:
+		Filename: tctechmk.shp
 		Length: 24
 		Offset: 0, 0
-	icon: tctechicon
-    
+	icon:
+		Filename: tctechicon.shp
+	
 # Federation Buuilding Sequences:
 
 fedcnst:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedcnst.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Offset: 0, 0
@@ -2476,34 +2998,61 @@ fedcnst:
 	spot:
 		Start: 3
 		Length: 3
-        BlendMode: Additive
-        ZOffset: 3500
+		BlendMode: Additive
+		ZOffset: 3500
 	dead:
-	make: aracnstmk
+	make:
+		Filename: aracnstmk.shp
 		Length: 24
 		Offset: 0, 25
-	icon: arbarricon
+	icon:
+		Filename: arbarricon.shp
 
 fedfortress:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedfortress.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
+		ZOffset: 400
 	build:
 		Start: 1
+		ZOffset: 400
 	damaged-idle:
 		Start: 1
+		ZOffset: 400
 	damaged-build:
 		Start: 1
+		ZOffset: 400
 	spot:
 		Start: 2
-        BlendMode: Additive
-	dead:
-	make: fedfortressmk
+		ZOffset: 500
+		BlendMode: Additive
+	turret:
+		Filename: fafnir_secturret.shp
+		Facings: 64
+		ZOffset: 800
+	turret2:
+		Filename: fafnir_secturret2.shp
+		ZOffset: 3400
+		Facings: 64
+		ZOffset: 800
+	muzzle:
+		Filename: muzzle_autogun_small.shp
 		Length: *
-	icon: fedfortressicon
+		BlendMode: Additive
+		ZOffset: 800
+	dead:
+	make:
+		Filename: fedfortressmk.shp
+		Length: *
+	icon:
+		Filename: fedfortressicon.shp
 
 fedpowr:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedpowr.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Offset: 0, 0
 	damaged-idle:
@@ -2519,19 +3068,25 @@ fedpowr:
 		BlendMode: Additive
 	dead:
 		Start: 2
-    smokemake: fedsmokemake
+	smokemake:
+		Filename: fedsmokemake.shp
 		Length: *
 		Offset: 25 , -85
-    making_zone: fed_makingface
+	making_zone:
+		Filename: fed_makingface.shp
 		Length: *
-        Tick: 36
-	make: fedpowrmk
+		Tick: 36
+	make:
+		Filename: fedpowrmk.shp
 		Length: 120
 		Offset: -1 , -128
-	icon: fedpowricon
-    
+	icon:
+		Filename: fedpowricon.shp
+	
 fedbarr:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedbarr.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -2540,33 +3095,39 @@ fedbarr:
 		Start: 2
 	dead:
 		Start: 2
-    spot:
+	spot:
 		Start: 3
-        Length: 3
-        BlendMode: Additive
-        ZOffset: 3400
-    level1:
+		Length: 3
+		BlendMode: Additive
+		ZOffset: 3400
+	level1:
 		Start: 6
-        ZOffset: 3400
-    level2: 
+		ZOffset: 3400
+	level2:
 		Start: 7
-        ZOffset: 3400
-    level3:
+		ZOffset: 3400
+	level3:
 		Start: 8
-        ZOffset: 3400
-    smokemake: fedsmokemake
+		ZOffset: 3400
+	smokemake:
+		Filename: fedsmokemake.shp
 		Length: *
 		Offset: 25 , -85
-    making_zone: fed_makingface
+	making_zone:
+		Filename: fed_makingface.shp
 		Length: *
-        Tick: 36
-	make: fedbarrmk
+		Tick: 36
+	make:
+		Filename: fedbarrmk.shp
 		Length: 120
 		Offset: 0 , -126
-	icon: fedbarricon
-    
+	icon:
+		Filename: fedbarricon.shp
+	
 fedweap:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedweap.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	damaged-idle:
 		Start: 1
@@ -2585,42 +3146,54 @@ fedweap:
 	spot:
 		Start: 7
 		Length: 3
-        BlendMode: Additive
-        ZOffset: 3500
-    level1:
+		BlendMode: Additive
+		ZOffset: 3500
+	level1:
 		Start: 10
-        ZOffset: 3400
-    level2: 
+		ZOffset: 3400
+	level2:
 		Start: 11
-        ZOffset: 3400
-    level3:
+		ZOffset: 3400
+	level3:
 		Start: 12
-        ZOffset: 3400
-    smokemake: fedsmokemake
+		ZOffset: 3400
+	smokemake:
+		Filename: fedsmokemake.shp
 		Length: *
 		Offset: 25 , -85
-    making_zone: fed_makingface
+	making_zone:
+		Filename: fed_makingface.shp
 		Length: *
-        Tick: 36
-	make: fedweapmk
+		Tick: 36
+	make:
+		Filename: fedweapmk.shp
 		Length: 120
 		Offset: 0 , -126
-	icon: fedweapicon
-    
+	icon:
+		Filename: fedweapicon.shp
+	
 federation.dualprod.plug:
-	idle: null
-	icon: unlock_dual
-    
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: unlock_dual.shp
+	
 federation.pluglevel2:
-	idle: null
-	icon: unlock_t2
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: unlock_t2.shp
 
 federation.pluglevel3:
-	idle: null
-	icon: unlock_t3
+	idle:
+		Filename: null.shp
+	icon:
+		Filename: unlock_t3.shp
 
 fedproc:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedproc.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 4
@@ -2629,22 +3202,28 @@ fedproc:
 		Start: 5
 		Length: 4
 		Offset: 25 , 0
-    smokemake: fedsmokemake
+	smokemake:
+		Filename: fedsmokemake.shp
 		Length: *
 		Offset: 25 , -85
-    making_zone: fed_makingface
+	making_zone:
+		Filename: fed_makingface.shp
 		Length: *
-        Tick: 36
-	make: fedprocmk
+		Tick: 36
+	make:
+		Filename: fedprocmk.shp
 		Length: 120
 		Offset: 25 , -126
 	dead:
 		Start: 5
 		Offset: 25 , 0
-	icon: fedprocicon
+	icon:
+		Filename: fedprocicon.shp
 
 fedlabtech:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedlabtech.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 40
@@ -2654,31 +3233,37 @@ fedlabtech:
 	spot:
 		Start: 80
 		Length: 14
-        BlendMode: Additive
-    level1:
+		BlendMode: Additive
+	level1:
 		Start: 95
-        ZOffset: 3400
-    level2:
+		ZOffset: 3400
+	level2:
 		Start: 96
-        ZOffset: 3400
-    level3:
+		ZOffset: 3400
+	level3:
 		Start: 97
-        ZOffset: 3400
-	make: fedtechmk
+		ZOffset: 3400
+	make:
+		Filename: fedtechmk.shp
 		Length: *
-    smokemake: fedsmokemake
+	smokemake:
+		Filename: fedsmokemake.shp
 		Length: *
 		Offset: 25 , -85
-    making_zone: fed_makingface
+	making_zone:
+		Filename: fed_makingface.shp
 		Length: *
-        Tick: 36
+		Tick: 36
 	dead:
 		Start: 1
 		Offset: 25 , 0
-	icon: fedlabtechicon
-    
+	icon:
+		Filename: fedlabtechicon.shp
+	
 fedtech:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedtech.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Offset: 25 , 0
@@ -2688,37 +3273,85 @@ fedtech:
 	spot:
 		Start: 5
 		Length: 16
-        BlendMode: Additive
-        ZOffset: 3500
+		BlendMode: Additive
+		ZOffset: 3500
 		Offset: 25 , 0
-    level1:
+	level1:
 		Start: 2
-        ZOffset: 3400
+		ZOffset: 3400
 		Offset: 25 , 0
-    level2: 
+	level2:
 		Start: 3
-        ZOffset: 3400
+		ZOffset: 3400
 		Offset: 25 , 0
-    level3:
+	level3:
 		Start: 4
-        ZOffset: 3400
+		ZOffset: 3400
 		Offset: 25 , 0
-	make: fedtechmk
+	make:
+		Filename: fedtechmk.shp
 		Length: *
 		Offset: 25 , -126
-    smokemake: fedsmokemake
+	smokemake:
+		Filename: fedsmokemake.shp
 		Length: *
 		Offset: 25 , -85
-    making_zone: fed_makingface
+	making_zone:
+		Filename: fed_makingface.shp
 		Length: *
-        Tick: 36
+		Tick: 36
 	dead:
 		Start: 1
 		Offset: 25 , 0
-	icon: fedtechicon
-    
+	icon:
+		Filename: fedtechicon.shp
+
+fedsupweapon:
+	Defaults:
+		Filename: fedsupweapon.shp
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Start: 0
+		Length: 40
+		Offset: 25 , 0
+	damaged-idle:
+		Start: 40
+		Length: 40
+		Offset: 25 , 0
+	level1:
+		Start: 2
+		ZOffset: 3400
+		Offset: 25 , 0
+	level2:
+		Start: 3
+		ZOffset: 3400
+		Offset: 25 , 0
+	level3:
+		Start: 4
+		ZOffset: 3400
+		Offset: 25 , 0
+	make:
+		Filename: fedsupweaponmk.shp
+		Length: *
+		Offset: 25 , -126
+	smokemake:
+		Filename: fedsmokemake.shp
+		Length: *
+		Offset: 25 , -85
+	making_zone:
+		Filename: fed_makingface.shp
+		Length: *
+		Tick: 36
+	dead:
+		Start: 40
+		Offset: 25 , 0
+	icon:
+		Filename: fedsupweaponicon.shp
+	
 fedheli:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedheli.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Offset: 0, -20
@@ -2727,7 +3360,7 @@ fedheli:
 		Offset: 0, -20
 	critical-idle:
 		Start: 1
-        Length: 5
+		Length: 5
 		Offset: 0, -20
 	idle-bottom:
 		Start: 2
@@ -2743,77 +3376,113 @@ fedheli:
 		ZOffset: -1024
 	light:
 		Start: 4
-        Length: 7
+		Length: 7
 		Offset: 0, -20
-        BlendMode: Additive
+		BlendMode: Additive
 		ZOffset: -1000
+	level1:
+		Start: 12
+		ZOffset: 3400
+		Offset: 25 , 0
+	level2:
+		Start: 13
+		ZOffset: 3400
+		Offset: 25 , 0
+	level3:
+		Start: 14
+		ZOffset: 3400
+		Offset: 25 , 0
 	dead:
 		Start: 4
-    smokemake: fedsmokemake
+	smokemake:
+		Filename: fedsmokemake.shp
 		Length: *
 		Offset: 25 , -85
-    making_zone: fed_makingface
+	making_zone:
+		Filename: fed_makingface.shp
 		Length: *
-        Tick: 36
-	make: fedhelimk
+		Tick: 36
+	make:
+		Filename: fedhelimk.shp
 		Length: 120
 		Offset: -1 , -128
-	icon: fedheliicon
-    
+	icon:
+		Filename: fedheliicon.shp
+	
 fedbunk:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: fedbunk.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
-        Start: 0
+		Start: 0
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 1
-	dead: 
+	dead:
 		Start: 1
 	garrisoned:
 		Start: 2
 	damaged-garrisoned:
 		Start: 3
-	make: fedbunkmk
+	make:
+		Filename: fedbunkmk.shp
 		Length: *
-	icon: fedbunkericon
-    
+	icon:
+		Filename: fedbunkericon.shp
+	
 fedgatling:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: fedmodular
-        Start: 0
-	damaged-idle: fedmodular
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: fedmodular.shp
+		Start: 0
+	damaged-idle:
+		Filename: fedmodular.shp
 		Start: 1
-	critical-idle: fedmodular
+	critical-idle:
+		Filename: fedmodular.shp
 		Start: 1
-	dead: fedmodular
+	dead:
+		Filename: fedmodular.shp
 		Start: 1
-	make: fedmodular
+	make:
+		Filename: fedmodular.shp
 		Length: *
-    turret: fedgattur
-        Facings: 64
+	turret:
+		Filename: fedgattur.shp
+		Facings: 64
 		Offset: 0, 0
-	icon: helicon
+	icon:
+		Filename: helicon.shp
 
 fedautogun:
-    Inherits@Buildstat: ^StatBuildingEffect
-	idle: fedmodular
-        Start: 0
-	damaged-idle: fedmodular
+	Inherits@Buildstat: ^StatBuildingEffect
+	idle:
+		Filename: fedmodular.shp
+		Start: 0
+	damaged-idle:
+		Filename: fedmodular.shp
 		Start: 1
-	critical-idle: fedmodular
+	critical-idle:
+		Filename: fedmodular.shp
 		Start: 1
-	dead: fedmodular
+	dead:
+		Filename: fedmodular.shp
 		Start: 1
-	make: fedmodular
+	make:
+		Filename: fedmodular.shp
 		Length: *
-    turret: fedautotur
-        Facings: 64
+	turret:
+		Filename: fedautotur.shp
+		Facings: 64
 		Offset: 0, 0
-	icon: helicon
+	icon:
+		Filename: helicon.shp
 
 derrick:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: derrick.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 5
@@ -2823,9 +3492,11 @@ derrick:
 	critical-idle:
 		Start: 5
 	dead:
-    
+	
 derrick3:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: derrick3.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 5
@@ -2834,14 +3505,17 @@ derrick3:
 		Length: 5
 	critical-idle:
 		Start: 5
-    effect: derrick3effect
+	effect:
+		Filename: derrick3effect.shp
 		Start: 0
 		Length: *
-        BlendMode: Additive
+		BlendMode: Additive
 	dead:
 
 reactor:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: reactor.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 9
@@ -2853,7 +3527,9 @@ reactor:
 	dead:
 
 postpoint:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: postpoint.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 9
@@ -2865,7 +3541,9 @@ postpoint:
 	dead:
 
 avpost:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: avpost.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 10
@@ -2874,14 +3552,17 @@ avpost:
 		Length: 10
 	critical-idle:
 		Start: 10
-    effect: avposteffect
+	effect:
+		Filename: avposteffect.shp
 		Start: 0
 		Length: *
-        BlendMode: Additive
+		BlendMode: Additive
 	dead:
 
 generatciv_01:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: generatciv_01.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 9
@@ -2893,7 +3574,9 @@ generatciv_01:
 	dead:
 
 bunker:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: bunker.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -2902,23 +3585,27 @@ bunker:
 		Start: 1
 	garrisoned:
 		Start: 2
-    garrisoned-visual: player_garrisoned
+	garrisoned-visual:
+		Filename: player_garrisoned.shp
 		Start: 0
-        Tick: 65
-        Length: *
-        Scale: 0.55
+		Tick: 65
+		Length: *
+		Scale: 0.55
 	dead:
 
 towerdefenceap:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: towerdefenceap.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 5
 		Offset: 0, 15
-	muzzle: muzzle_autogun_small
+	muzzle:
+		Filename: muzzle_autogun_small.shp
 		Length: *
 		BlendMode: Additive
-        Tick: 4
+		Tick: 4
 	damaged-idle:
 		Start: 5
 		Length: 5
@@ -2926,28 +3613,35 @@ towerdefenceap:
 	critical-idle:
 		Start: 5
 		Offset: 0, 15
-    turret: gatlingtur_tower
-        Facings: 64
+	turret:
+		Filename: gatlingtur_tower.shp
+		Facings: 64
 	dead:
-    
+	
 plandefense:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: plandefense.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
-	muzzle: muzzle_autogun_small
+	muzzle:
+		Filename: muzzle_autogun_small.shp
 		Length: *
 		BlendMode: Additive
-        Tick: 4
+		Tick: 4
 	damaged-idle:
 		Start: 1
 	critical-idle:
 		Start: 2
-    turret: plandefensetur
-        Facings: 64
+	turret:
+		Filename: plandefensetur.shp
+		Facings: 64
 	dead:
 
 towerdefenceac:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: towerdefenceac.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 5
@@ -2962,7 +3656,9 @@ towerdefenceac:
 	dead:
 
 buildingdepot:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: buildingdepot.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		ShadowStart: 3
 	damaged-idle:
@@ -2974,7 +3670,9 @@ buildingdepot:
 	dead:
 
 taudi_01:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: taudi_01.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		ShadowStart: 3
 	damaged-idle:
@@ -2986,7 +3684,9 @@ taudi_01:
 	dead:
 
 taudi_02:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: taudi_02.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		ShadowStart: 3
 	damaged-idle:
@@ -2998,7 +3698,9 @@ taudi_02:
 	dead:
 
 taudi_03:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: taudi_03.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		ShadowStart: 3
 	damaged-idle:
@@ -3010,7 +3712,9 @@ taudi_03:
 	dead:
 
 taudi_04:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: taudi_04.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	damaged-idle:
 		Start: 2
@@ -3019,7 +3723,9 @@ taudi_04:
 	dead:
 
 taudi_05:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: taudi_05.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	damaged-idle:
 		Start: 1
@@ -3028,7 +3734,9 @@ taudi_05:
 	dead:
 
 taudi_06:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: taudi_06.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	damaged-idle:
 		Start: 1
@@ -3037,7 +3745,9 @@ taudi_06:
 	dead:
 
 taudi_07:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: taudi_07.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	damaged-idle:
 		Start: 1
@@ -3046,43 +3756,53 @@ taudi_07:
 	dead:
 
 techcivbuild_01:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: techcivbuild_01.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	dead:
 	damaged-idle:
 		Start: 1
 
 techcivbuild_02:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: techcivbuild_02.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	dead:
 	damaged-idle:
 		Start: 1
 
 techcivbuild_03:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: techcivbuild_03.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 	dead:
 	damaged-idle:
 		Start: 1
 
 mirador_ice:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: mirador_ice.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		ShadowStart: 3
-        tick: 15
+		tick: 15
 	damaged-idle:
 		Start: 1
 		ShadowStart: 4
-        tick: 20
+		tick: 20
 	critical-idle:
 		Start: 2
 		ShadowStart: 5
-        tick: 20
+		tick: 20
 	dead:
 
 diastextractor:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: diastextractor.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 		Length: 41
@@ -3094,12 +3814,16 @@ diastextractor:
 		Length: 41
 	dead:
 		Start: 41
-	make: diastextractor
+	make:
+		Filename: diastextractor.shp
 		Length: *
-	icon: fedextractoricon
-    
+	icon:
+		Filename: fedextractoricon.shp
+	
 factoryoil:
-    Inherits@Buildstat: ^StatBuildingEffect
+	Defaults:
+		Filename: factoryoil.shp
+	Inherits@Buildstat: ^StatBuildingEffect
 	idle:
 		Start: 0
 	damaged-idle:
@@ -3110,5 +3834,5 @@ factoryoil:
 		Start: 2
 	spot:
 		Start: 3
-        BlendMode: Additive
+		BlendMode: Additive
 	dead:

@@ -16,9 +16,9 @@ AP_Sentient:
 	Inherits@Animation.weapons: ^Railgun.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^SentinelGun.RedAlliance.Stat.weapons
 	Report: minirailgun_fire01.aud, minirailgun_fire02.aud, minirailgun_fire03.aud
-    ValidTargets: Ground, Air, Water
+	ValidTargets: Ground, Air, Water
 	Warhead@1Dam: SpreadDamage
-        ValidTargets: Ground, Air, Water
+		ValidTargets: Ground, Air, Water
 		Spread: 50
 		Damage: 280
 		
@@ -56,8 +56,8 @@ Nukegun:
 		Duration: 2
 		Intensity: 1
 		Multiplier: 0.3,0.3
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 125
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 125
 
 AP_Gatling_Era:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
@@ -71,38 +71,35 @@ Beam_Gatling_Era:
 	Inherits@StatBase.weapons: ^Eradicator.FusionGun.RedAlliance.Stat.weapons
 	Inherits@doctrines;supplement: ^Doctrines.LaserSup
 	Report: eradicator_hecanon01.aud, eradicator_hecanon02.aud
-
 		
+
 # /////// Vehicle Weapons ///////
 BikeMissile:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@default.weapons: ^Missile.Comon.Animation
 	Inherits@StatBase.weapons: ^MissileSweep.RedAlliance.Stat.weapons
 	Report: rocketweaponfire01.aud, rocketweaponfire02.aud, rocketweaponfire03.aud
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 128
-        
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 128
+		
 FlamerDrone:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
-	Inherits@Animation.weapons: ^FlammeMelee.RedAlliance.Animation
-	Inherits@StatBase.weapons: ^FlammerDrone.RedAlliance.Stat.weapons
-    Report: flamefiremuzzle01.aud, flamefiremuzzle02.aud, flamefiremuzzle03.aud
-    Warhead@Cluster: FireCluster
-        Delay: 10
-        Weapon: ^burning.residual
-		RandomClusterCount: 3
-		Dimensions: 3,3
-		Footprint: xxx xxx xxx
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 1c256
-    
+	Inherits@Animation.weapons: ^FlamerSpray.RedAlliance.Animation
+	Inherits@StatBase.weapons: ^FlamerSpay.RedAlliance.Stat.weapons
+	Inherits@impact_Animation_type: ^Scorched_flame
+	Inherits@Affect_Impact: ^Burned_damage_effect
+	Inherits@AntiGarrisonnable_weapon: ^Garrisonnable_weapons_counter
+	StartBurstReport: flamefiremuzzle01.aud, flamefiremuzzle02.aud, flamefiremuzzle03.aud
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 1c256
+	
 FlamerDroneUP:
 	Inherits@default.weapons: FlamerDrone
 	Inherits@D.Upgrade: ^FlamerUgrade
 	Projectile: Bullet
 		TrailPalette: flammeeffectblue
-        Palette: flammeeffectblue
-        
+		Palette: flammeeffectblue
+		
 FlamerDrone.deploy:
 	Inherits@StatBase.weapons: ^FlammerDroneDeploy.RedAlliance.Stat.weapons
 	Inherits@default.weapons: ^Flame_spark_effect_power
@@ -114,7 +111,7 @@ FlamerDrone.deployUP:
 	Inherits@default.weapons: ^Flame_spark_effect_power
 	Warhead@2Dam: SpreadDamage
 		Damage: 450
-    Warhead@Spark_Shake: CreateEffect
+	Warhead@Spark_Shake: CreateEffect
 		ExplosionPalette: flammeeffectblue
 
 AP_Harvesterturret:
@@ -132,7 +129,7 @@ AP_basilic:
 		Duration: 3
 		Intensity: 2
 		Multiplier: 0.3,0.3
-        
+		
 AP_basilicShock:
 	Inherits@StatBase.weapons: ^basilic.Shock.weapons
 	ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
@@ -145,14 +142,14 @@ AP_basilicShock:
 		Explosions: shock_smokemin01, shock_smokemin02, shock_smokemin03
 		ExplosionPalette: flameeffect50
 		ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
-        
+		
 AP_basilic.supercharged:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^Railgun.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^Surcharge.Railgun.Basilisk.Stat.weapons
 	Report: railgun_firecharged01.aud, railgun_firecharged02.aud, railgun_firecharged03.aud
-    Warhead@Cluster: FireCluster
-        Weapon: ^electric.residual
+	Warhead@Cluster: FireCluster
+		Weapon: ^electric.residual
 		RandomClusterCount: 2
 		Dimensions: 3,3
 		Footprint: xxx xxx xxx
@@ -163,9 +160,9 @@ AP_basilic.supercharged:
 		Duration: 5
 		Intensity: 2
 		Multiplier: 0.2,0.3
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 256
-        
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 256
+		
 basilic_AACanon:
 	Inherits@default.weapons: ^InstantHit.Comon.Animation
 	Inherits@StatBase.weapons: ^AAgun.upgrade.Basilisk.Stat.weapons
@@ -176,15 +173,15 @@ AP_hydra:
 	Inherits@Animation.weapons: ^Lasergun.Redalliance.Animation
 	Inherits@StatBase.weapons: ^APgun.Hydra.Stat.weapons
 	Report: comrade_gun01.aud, comrade_gun02.aud, comrade_gun03.aud
-    
+	
 AA_hydra:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^Lasergun.Redalliance.Animation
 	Inherits@StatBase.weapons: ^AAgun.Hydra.Stat.weapons
 	Report: comrade_gun01.aud, comrade_gun02.aud, comrade_gun03.aud
-        
+		
 hydra.Inferno.rocket:
-    Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@default.weapons: ^Inferno.rocket.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^Rocket.Hydra.Stat.weapons
 	Report: infernomissfire01.aud, infernomissfire02.aud, infernomissfire03.aud
@@ -192,27 +189,27 @@ hydra.Inferno.rocket:
 		Range: 2c512
 		Duration: 75
 		Condition: HEDamageDelay
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 656
-        
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 656
+		
 
 120mm_mantis:
-    Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^Manticore.Railgun.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^manticoreGun.Stat.weapons
-    Inherits@SmokeImpactEffect: ^weapons.shake.impact_large
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_large
 	Report: manticorefire01.aud, manticorefire02.aud, manticorefire03.aud
-    Warhead@Cluster01: CreateEffect
-        Delay: 35
+	Warhead@Cluster01: CreateEffect
+		Delay: 35
 	Warhead@13Shake: ShakeScreen
-        Delay: 35
+		Delay: 35
 		Duration: 5
 		Intensity: 2
 		Multiplier: 0.3,0.4
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Delay: 35
-        Range: 656
-        
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Delay: 35
+		Range: 656
+		
 120mm_mantisShock:
 	Inherits@StatBase.weapons: ^manticoreGun.Shock.weapons
 	ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
@@ -228,13 +225,15 @@ hydra.Inferno.rocket:
 
 rocket.mantis:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
-    Inherits@default.weapons: ^Missile.Comon.Animation
-    Inherits@StatBase.weapons: ^Rocket.Manticore.Stat.weapons
+	Inherits@default.weapons: ^Missile.Comon.Animation
+	Inherits@StatBase.weapons: ^Rocket.Manticore.Stat.weapons
+	Inherits@impact_Animation_type: ^Scorched_flame
+	Inherits@Affect_Impact: ^Burned_damage_effect
 	Report: rocketweaponfire01.aud, rocketweaponfire02.aud, rocketweaponfire03.aud
 	Projectile: Missile
 		Speed: 480
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 656
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 656
 
 inferno_flamer_salamander:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
@@ -267,8 +266,8 @@ AP_Apocalypse:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^HeavyRailgun.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^RailgunApocalypse.RedAlliance.Stat.weapons
-    Inherits@SmokeImpactEffect: ^weapons.shake.impact_min
-	Report: titanrailgunfire01.aud, titanrailgunfire02.aud, titanrailgunfire03.aud
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_min
+	Report: titan_firecanon01.aud, titan_firecanon02.aud, titan_firecanon03.aud
 	ValidTargets: Ground
 	Warhead@3EffGround: CreateEffect
 		Explosions: apo_expl01, apo_expl02, apo_expl03
@@ -281,9 +280,9 @@ AP_Apocalypse:
 		Explosions: shockwave_medium
 		ExplosionPalette: flameeffect20
 		ValidTargets: Ground, Water
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 1c0
-        
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 1c0
+		
 AP_ApocalypseShock:
 	Inherits@StatBase.weapons: ^RailgunApocalypse.RedAlliance.Shock.weapons
 	ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
@@ -293,16 +292,16 @@ AP_ApocalypseShock:
 		Intensity: 2
 		Multiplier: 0.2,0.3
 	Warhead@3EffWater: CreateEffect
-        Delay: 35
+		Delay: 35
 		Explosions: shock_smokemin01, shock_smokemin02, shock_smokemin03
 		ExplosionPalette: flameeffect50
 		ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
-        
+		
 AP_Apocalypse_supercharged:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^Railgun.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^RailgunApocalypsecharged.RedAlliance.Stat.weapons
-    Inherits@SmokeImpactEffect: ^weapons.shake.impact_min
+	Inherits@SmokeImpactEffect: ^weapons.shake.impact_min
 	Report: titanrailgunfirecharged01.aud, titanrailgunfirecharged02.aud,, titanrailgunfirecharged03.aud,
 	ValidTargets: Ground
 	Warhead@3EffGround: CreateEffect
@@ -316,38 +315,47 @@ AP_Apocalypse_supercharged:
 		Explosions: shockwave_medium
 		ExplosionPalette: flameeffect10
 		ValidTargets: Ground, Water
-    Warhead@Cluster: FireCluster
-        Weapon: ^electric.residual
+	Warhead@Cluster: FireCluster
+		Weapon: ^electric.residual
 		RandomClusterCount: 2
 		Dimensions: 3,3
 		Footprint: xxx xxx xxx
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 512
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 512
 
 fragMissile:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@default.weapons: ^Missile.Comon.Animation
-    Inherits@StatBase.weapons: ^MissileApocalpyse.Redalliance.Stat.weapons
+	Inherits@StatBase.weapons: ^MissileApocalpyse.Redalliance.Stat.weapons
 	Report: rocketweaponfire01.aud, rocketweaponfire02.aud, rocketweaponfire03.aud
-    
+	
 minotaur_flamer:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^FlamerSpray.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^FlamerSpay.RedAlliance.Stat.weapons
+	Inherits@impact_Animation_type: ^Scorched_flame
+	Inherits@Affect_Impact: ^Burned_damage_effect
+	Inherits@AntiGarrisonnable_weapon: ^Garrisonnable_weapons_counter
 	StartBurstReport: flameaera01.aud, flameaera02.aud, flameaera03.aud
 
 FlamerPurifier_01:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^Flamme.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^FlamerPurifier.RedAlliance.Stat.weapons
+	Inherits@impact_Animation_type: ^Scorched_flame
+	Inherits@Affect_Impact: ^Burned_damage_effect
+	Inherits@AntiGarrisonnable_weapon: ^Garrisonnable_weapons_counter
 	StartBurstReport: flameaera01.aud, flameaera02.aud, flameaera03.aud
 	FirstBurstTargetOffset: 130,0,0
 	FollowingBurstTargetOffset: -40,0,0
-    
+	
 FlamerPurifier_02:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^Flamme.RedAlliance.Animation
 	Inherits@StatBase.weapons: ^FlamerPurifier.RedAlliance.Stat.weapons
+	Inherits@impact_Animation_type: ^Scorched_flame
+	Inherits@Affect_Impact: ^Burned_damage_effect
+	Inherits@AntiGarrisonnable_weapon: ^Garrisonnable_weapons_counter
 	StartBurstReport: flameaera01.aud, flameaera02.aud, flameaera03.aud
 
 FlamerPurifierUP_01:
@@ -365,30 +373,30 @@ Ann.muzzle:
 	Projectile: InstantHit
 	ReloadDelay: 100
 	MinRange: 4c0
-    
+	
 Ann.target01:
 	Inherits@default.weapons: ^LokyIem.Target.Baneslayer.Animation
 	FirstBurstTargetOffset: 0,-960,0
 	FollowingBurstTargetOffset: 0,12,0
 	ReloadDelay: 4
 	MinRange: 4c0
-    Range: 20c0	
+	Range: 20c0
 	Burst: 80
 	BurstDelays: 1
-    StartBurstReport: ann_charging.aud
-    
+	StartBurstReport: ann_charging.aud
+	
 Ann.target02:
 	Inherits@default.weapons: ^LokyIem.Target.Baneslayer.Animation
 	FirstBurstTargetOffset: 0,960,0
 	FollowingBurstTargetOffset: 0,-12,0
 	ReloadDelay: 4
 	MinRange: 4c0
-    Range: 20c0
+	Range: 20c0
 	Burst: 80
 	BurstDelays: 1
 
 RailgunAnn:
-    Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@default.weapons: ^Anhilihator.Railgun.default
 	Inherits@StatBase.weapons: ^Anhilihator.Railgun.Stat.weapons
 	Report: ann_artymodefire01.aud, ann_artymodefire02.aud, ann_artymodefire03.aud
@@ -396,9 +404,9 @@ RailgunAnn:
 		Duration: 7
 		Intensity: 3
 		Multiplier: 0.7,0.6
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 2c256
-        
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 2c256
+		
 RailgunAnnShock:
 	Inherits@StatBase.weapons: ^RailgunAnn.Shock.weapons
 	ValidTargets: Infantry, Vehicle, Building, Ground, Water, Air
@@ -424,7 +432,7 @@ AP_chimera:
 	Report: minirailgun_fire01.aud, minirailgun_fire02.aud, minirailgun_fire03.aud
 
 AP_Wyvern:
-    Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@default.weapons: ^InstantHit.Comon.Animation
 	Inherits@StatBase.weapons: ^AP_Wyvern.RedAlliance.Stat.weapons
 	Report: autocannon.aud
@@ -445,18 +453,18 @@ CommandMissile:
 			Concrete: 45
 
 therombomb:
-    Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@default.weapons: ^GravityBomb.Comon.Animation
 	Inherits@StatBase.weapons: ^Archdemon.RedAlliance.Stat.weapons
 	Warhead@13Shake: ShakeScreen
 		Duration: 7
 		Intensity: 3
 		Multiplier: 0.7,0.6
-    Warhead@Shoot.shield.Federation: GrantExternalCondition
-        Range: 2c512
+	Warhead@Shoot.shield.Federation: GrantExternalCondition
+		Range: 2c512
 
 cannon_cruiser:
-    Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
+	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@default.weapons: ^InstantHit.Comon.Animation
 	Inherits@StatBase.weapons: ^CruiserGun.RedAlliance.Stat.weapons
 	Report: cruis_gun.aud
@@ -465,7 +473,7 @@ laserdefence:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Inherits@Animation.weapons: ^Lasergun.Redalliance.Animation
 	Inherits@StatBase.weapons: ^LaserCruiser.RedAlliance.Stat.weapons
-    Report: cruise_biglaser.aud
+	Report: cruise_biglaser.aud
 	Projectile: LaserZap
 		Duration: 25
 		Width: 100
@@ -565,7 +573,7 @@ DoomTower.Gun:
 	Warhead@Smu: LeaveSmudge
 		Delay: 25
 		SmudgeType: Scorch
-        Chance: 5
+		Chance: 5
 		ValidTargets: Ground, Infantry
 	Warhead@8DotrinesUpgradeeffect0: CreateEffect
 		Delay: 10
@@ -625,172 +633,172 @@ DoomTower.Gun:
 # \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ /////////////////////////////////////////////////////////////////////////////////////// # 
 shake_nuke:
 	Inherits@weapons: ^Shake_nuke_timer.RedAlliance.Animation
-    Warhead@2Dam.Doctrine: SpreadDamage
+	Warhead@2Dam.Doctrine: SpreadDamage
 		Damage: 15
 		Versus:
 			Infantry: 0
 			LightVehicle: 10
 			ArmorTank: 20
 			Concrete: 150
-     Warhead@Clusterspark01: FireCluster
-        Delay: 75
-        Weapon: ^Flame_spark_effect_power
+	Warhead@Clusterspark01: FireCluster
+		Delay: 75
+		Weapon: ^Flame_spark_effect_power
 		RandomClusterCount: 3
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt01: GrantExternalCondition
-        Delay: 75
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
+	Warhead@Shoot.Shake.stunt01: GrantExternalCondition
+		Delay: 75
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
 	Warhead@Shake01: ShakeScreen
-        Delay: 75
+		Delay: 75
 		Duration: 7
 		Intensity: 4
 		Multiplier: 0.7,0.5
-     Warhead@Clusterflame01: FireCluster
-        Delay: 80
-        Weapon: ^Flame_ball_effect_power
+	Warhead@Clusterflame01: FireCluster
+		Delay: 80
+		Weapon: ^Flame_ball_effect_power
 		RandomClusterCount: 3
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt02: GrantExternalCondition
-        Delay: 80
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
+	Warhead@Shoot.Shake.stunt02: GrantExternalCondition
+		Delay: 80
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
 	Warhead@Shake02: ShakeScreen
-        Delay: 82
+		Delay: 82
 		Duration: 7
 		Intensity: 4
 		Multiplier: 0.7,0.5
-     Warhead@Clusterspark02: FireCluster
-        Delay: 85
-        Weapon: ^Flame_spark_effect_power
+	Warhead@Clusterspark02: FireCluster
+		Delay: 85
+		Weapon: ^Flame_spark_effect_power
 		RandomClusterCount: 4
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt03: GrantExternalCondition
-        Delay: 82
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
+	Warhead@Shoot.Shake.stunt03: GrantExternalCondition
+		Delay: 82
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
 	Warhead@Shake03: ShakeScreen
-        Delay: 88
+		Delay: 88
 		Duration: 7
 		Intensity: 4
 		Multiplier: 0.7,0.5
-     Warhead@Clusterflame02: FireCluster
-        Delay: 95
-        Weapon: ^Flame_ball_effect_power
+	Warhead@Clusterflame02: FireCluster
+		Delay: 95
+		Weapon: ^Flame_ball_effect_power
 		RandomClusterCount: 3
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt04: GrantExternalCondition
-        Delay: 95
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
+	Warhead@Shoot.Shake.stunt04: GrantExternalCondition
+		Delay: 95
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
 	Warhead@Shake04: ShakeScreen
-        Delay: 100
+		Delay: 100
 		Duration: 7
 		Intensity: 4
 		Multiplier: 0.7,0.5
-     Warhead@Clusterspark03: FireCluster
-        Delay: 100
-        Weapon: ^Flame_spark_effect_power
+	Warhead@Clusterspark03: FireCluster
+		Delay: 100
+		Weapon: ^Flame_spark_effect_power
 		RandomClusterCount: 5
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt05: GrantExternalCondition
-        Delay: 100
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
+	Warhead@Shoot.Shake.stunt05: GrantExternalCondition
+		Delay: 100
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
 	Warhead@Shake05: ShakeScreen
-        Delay: 115
+		Delay: 115
 		Duration: 7
 		Intensity: 4
 		Multiplier: 0.7,0.5
-     Warhead@Clusterflame03: FireCluster
-        Delay: 114
-        Weapon: ^Flame_ball_effect_power
+	Warhead@Clusterflame03: FireCluster
+		Delay: 114
+		Weapon: ^Flame_ball_effect_power
 		RandomClusterCount: 3
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt06: GrantExternalCondition
-        Delay: 114
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
-     Warhead@Clusterspark04: FireCluster
-        Delay: 115
-        Weapon: ^Flame_spark_effect_power
+	Warhead@Shoot.Shake.stunt06: GrantExternalCondition
+		Delay: 114
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
+	Warhead@Clusterspark04: FireCluster
+		Delay: 115
+		Weapon: ^Flame_spark_effect_power
 		RandomClusterCount: 4
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt07: GrantExternalCondition
-        Delay: 124
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
+	Warhead@Shoot.Shake.stunt07: GrantExternalCondition
+		Delay: 124
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
 	Warhead@Shake06: ShakeScreen
-        Delay: 124
+		Delay: 124
 		Duration: 7
 		Intensity: 4
 		Multiplier: 0.7,0.5
-     Warhead@Clusterflame04: FireCluster
-        Delay: 135
-        Weapon: ^Flame_ball_effect_power
+	Warhead@Clusterflame04: FireCluster
+		Delay: 135
+		Weapon: ^Flame_ball_effect_power
 		RandomClusterCount: 3
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt08: GrantExternalCondition
-        Delay: 135
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
+	Warhead@Shoot.Shake.stunt08: GrantExternalCondition
+		Delay: 135
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
 	Warhead@Shake07: ShakeScreen
-        Delay: 150
+		Delay: 150
 		Duration: 7
 		Intensity: 4
 		Multiplier: 0.7,0.5
-     Warhead@Clusterspark05: FireCluster
-        Delay: 150
-        Weapon: ^Flame_spark_effect_power
+	Warhead@Clusterspark05: FireCluster
+		Delay: 150
+		Weapon: ^Flame_spark_effect_power
 		RandomClusterCount: 3
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt09: GrantExternalCondition
-        Delay: 150
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
+	Warhead@Shoot.Shake.stunt09: GrantExternalCondition
+		Delay: 150
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
 	Warhead@Shake08: ShakeScreen
-        Delay: 174
+		Delay: 174
 		Duration: 7
 		Intensity: 4
 		Multiplier: 0.7,0.5
-     Warhead@Clusterflame05: FireCluster
-        Delay: 175
-        Weapon: ^Flame_ball_effect_power
+	Warhead@Clusterflame05: FireCluster
+		Delay: 175
+		Weapon: ^Flame_ball_effect_power
 		RandomClusterCount: 3
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xxxxxxx= xxxxxxxxx x=xxXxx=x xx=xXx=xx x=x=x=x=x xx=xxx=xx =xxxxxxx= ==xxxxx==
-    Warhead@Shoot.Shake.stunt10: GrantExternalCondition
-        Delay: 175
-        Condition: empdisable
-        Duration: 100
-        Range: 9c0
-        
+	Warhead@Shoot.Shake.stunt10: GrantExternalCondition
+		Delay: 175
+		Condition: empdisable
+		Duration: 100
+		Range: 9c0
+		
 strike_aa_nuke:
-    ValidTargets: Air
+	ValidTargets: Air
 	Inherits@weapons: ^Strike_nuke_AA.RedAlliance.Animation
-    Warhead@2Dam.Doctrine: SpreadDamage
-        Delay: 32
+	Warhead@2Dam.Doctrine: SpreadDamage
+		Delay: 32
 		Damage: 2200
-        Spread: 6c0
-        ValidTargets: Air
+		Spread: 6c0
+		ValidTargets: Air
 		Versus:
 			Infantry: 150
 			LightVehicle: 150
@@ -813,33 +821,33 @@ fusion.missile:
 		Range: 4c512
 		Duration: 180
 		Condition: HEDamageDelay
-    Warhead@Cluster01: FireCluster
-        Delay: 6
-        Weapon: ^Doctrines.FlammerSup
+	Warhead@Cluster01: FireCluster
+		Delay: 6
+		Weapon: ^Doctrines.FlammerSup
 		RandomClusterCount: 6
 		Dimensions: 3,3
 		Footprint: xxx xXx xxx
-    Warhead@Cluster02: FireCluster
-        Delay: 12
-        Weapon: ^Doctrines.FlammerSup
+	Warhead@Cluster02: FireCluster
+		Delay: 12
+		Weapon: ^Doctrines.FlammerSup
 		RandomClusterCount: 7
 		Dimensions: 5,5
 		Footprint: =xxx= x===x x=X=x x===x =xxx=
-    Warhead@Cluster03: FireCluster
-        Delay: 18
-        Weapon: ^Doctrines.FlammerSup
+	Warhead@Cluster03: FireCluster
+		Delay: 18
+		Weapon: ^Doctrines.FlammerSup
 		RandomClusterCount: 7
 		Dimensions: 5,5
 		Footprint: =xxx= x===x x===x x===x =xxx=
-    Warhead@Cluster04: FireCluster
-        Delay: 20
-        Weapon: ^Doctrines.FlammerSup
+	Warhead@Cluster04: FireCluster
+		Delay: 20
+		Weapon: ^Doctrines.FlammerSup
 		RandomClusterCount: 9
 		Dimensions: 7,7
 		Footprint: ==xxx== =x===x= x=====x x=====x x=====x =x===x= ==xxx==
-     Warhead@Cluster05: FireCluster
-        Delay: 24
-        Weapon: ^Doctrines.FlammerSup
+	Warhead@Cluster05: FireCluster
+		Delay: 24
+		Weapon: ^Doctrines.FlammerSup
 		RandomClusterCount: 11
 		Dimensions: 9,9
 		Footprint: ==xxxxx== =xx===xx= xx=====xx x=x==x==x xx=====xx x=x===x=x xx=====xx =xx===xx= ==xxxxx==
@@ -975,16 +983,16 @@ alliance.mine:
 	Inherits@conditionweapons: ^Weapons.Effect.Condition.Generale
 	Report: mine_expl01.aud, mine_expl02.aud, mine_expl03.aud
 	Range: 1c0
-    ReloadDelay: 75
+	ReloadDelay: 75
 	Warhead@1Dam: SpreadDamage
-        Spread: 25
+		Spread: 25
 		Damage: 1800
 		Versus:
 			Infantry: 150
 			LightVehicle: 90
 			ArmorTank: 100
 			Concrete: 50
-            Mine: 0
+			Mine: 0
 	Warhead@13Shake: ShakeScreen
 		Duration: 3
 		Intensity: 2
@@ -998,15 +1006,15 @@ alliance.mine:
 		Explosions: ring_pulse
 		ExplosionPalette: effectalpha10
 		ValidTargets: Ground, Water
-        
-        
+		
+		
 # SuperWeapons de base
 alliance.droppod:
 	ReloadDelay: 25
 	Range: 12c0
 	Projectile: InstantExplode
 	Warhead@drop2: FireShrapnel
-        Delay: 20
+		Delay: 20
 		Weapon: droppod.desending02
 		Amount: 1
 		Delay: 1
@@ -1014,7 +1022,7 @@ alliance.droppod:
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
 		ImpactActors: false
 	Warhead@drop3: FireShrapnel
-        Delay: 45
+		Delay: 45
 		Weapon: droppod.desending03
 		Amount: 1
 		Delay: 1
@@ -1051,14 +1059,14 @@ alliance.droppod:
 		ContrailColor: EECCAA77
 		ContrailWidth: 120
 		ContrailDelay: 0
-        
+		
 # ----- Drop pod 01 ----- 
 droppod.desending01:
 	Inherits: ^droppod.desending
 	Warhead@op: FireShrapnel
 		Weapon: droppod.alliance01
 		ImpactActors: false
-   
+
 droppod.alliance01:
 	Inherits: ^droppod.charging.base
 	Warhead@5Actor: SpawnActor
@@ -1071,7 +1079,7 @@ droppod.desending02:
 	Warhead@op: FireShrapnel
 		Weapon: droppod.alliance02
 		ImpactActors: false
-   
+
 droppod.alliance02:
 	Inherits: ^droppod.charging.base
 	Warhead@5Actor: SpawnActor
@@ -1084,7 +1092,7 @@ droppod.desending03:
 	Warhead@op: FireShrapnel
 		Weapon: droppod.alliance03
 		ImpactActors: false
-   
+
 droppod.alliance03:
 	Inherits: ^droppod.charging.base
 	Warhead@5Actor: SpawnActor
@@ -1097,9 +1105,9 @@ droppod.desending04:
 	Warhead@op: FireShrapnel
 		Weapon: droppod.alliance04
 		ImpactActors: false
-   
+
 droppod.alliance04:
 	Inherits: ^droppod.charging.base
 	Warhead@5Actor: SpawnActor
 		Actors: t2_manticore
-		Range: 3 
+		Range: 3

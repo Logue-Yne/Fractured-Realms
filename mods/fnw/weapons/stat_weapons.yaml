@@ -1,7 +1,7 @@
 # Comon Weapons Stat:
 
 ^Missile.Comon.Stat:
-    Warhead@1Dam: SpreadDamage
+	Warhead@1Dam: SpreadDamage
 		Versus:
 			Infantry: 20
 			LightVehicle: 100
@@ -44,7 +44,7 @@
 			ArmorTank: 15
 			Concrete: 20
 		DamageTypes: Burned
-        
+		
 ^LaserTank.RedAlliance.Stat:
 	Warhead@1Dam: SpreadDamage
 		Spread: 5
@@ -55,7 +55,7 @@
 			ArmorTank: 10
 			Concrete: 50
 		DamageTypes: Burned
-        
+		
 ^80mm.RedAlliance.Stat:
 	Warhead@1Dam: SpreadDamage
 		Spread: 50
@@ -72,7 +72,7 @@
 			LightVehicle: 80
 			ArmorTank: 40
 			Concrete: 120
-            
+			
 ^Railgun,Anhiliator.Stat:
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -80,7 +80,7 @@
 			LightVehicle: 75
 			ArmorTank: 110
 			Concrete: 100
-            
+			
 # Baneslayer Order Weapons Stat:
 
 ^Minigun.Baneslayer.Stat:
@@ -98,7 +98,7 @@
 			LightVehicle: 70
 			ArmorTank: 60
 			Concrete: 30
-            
+			
 ^Matter.Baneslayer.Stat:
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -106,7 +106,7 @@
 			LightVehicle: 90
 			ArmorTank: 110
 			Concrete: 110
-            
+			
 ^IonCanon.Baneslayer.Stat:
 	Warhead@1Dam: SpreadDamage
 		Versus:
@@ -122,7 +122,7 @@
 			LightVehicle: 95
 			ArmorTank: 80
 			Concrete: 100
-            
+			
 # Conclave Order Weapons Stat:
 
 ^impulsgun.Conclave.Stat:
@@ -133,7 +133,7 @@
 			ArmorTank: 40
 			Concrete: 20
 
-^impulsgatling.Conclave.Stat:   
+^impulsgatling.Conclave.Stat:
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			Infantry: 70
@@ -156,13 +156,13 @@
 			LightVehicle: 75
 			ArmorTank: 80
 			Concrete: 75
-            
+			
 ^Graviton.Missile.Conclave.Stat:
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			Infantry: 80
 			LightVehicle: 80
 			ArmorTank: 80
-			Concrete: 100    
-            
-            
+			Concrete: 100
+			
+			

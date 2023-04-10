@@ -1,7 +1,4 @@
 #  //////////// BUILDING TOOLTIP BANESLAYER FR //////////////
-
-opcacnst:
-
 opcacnst:
 	Tooltip:
 		Name:  Chantier de Construction

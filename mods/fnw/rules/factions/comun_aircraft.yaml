@@ -1,12 +1,12 @@
 mastodonde:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^mastodonde.stat.unite
-    # / Inherit option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^mastodonde.stat.unite
+	# / Inherit option Unite /
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@Target: ^AutoTargetGroundAssaultMove
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Rotor.aircraft.move
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Rotor.aircraft.move
 	Armament@primary:
 		Turret: borde01
 		Weapon: cannon_cruiser
@@ -76,39 +76,39 @@ mastodonde:
 		Palette: light
 		RequiresCondition: !SmokeCamoActivate
 	HitShape:
-    GrantConditionOnDamageState@Damage01:
-        Condition: heavy.damage
-        ValidDamageStates: Heavy
-    GrantConditionOnDamageState@Damage02:
-        Condition: Critical.damage
-        ValidDamageStates: Critical
-    LeavesTrails@01:
-        Image: damage_smoke.min
-        TrailWhileStationary: true
-        Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
-        Palette: flameeffect60
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 650,445,580
-        RequiresCondition: heavy.damage || Critical.damage
-    LeavesTrails@02:
-        Image: damage_smoke.min
-        TrailWhileStationary: true
-        Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
-        Palette: flameeffect60
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: -380,-405,670
-        RequiresCondition: Critical.damage
-    LeavesTrails@03:
-        Image: damage_smoke.min
-        TrailWhileStationary: true
-        Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
-        Palette: flameeffect60
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: -80,505,670
-        RequiresCondition: Critical.damage
+	GrantConditionOnDamageState@Damage01:
+		Condition: heavy.damage
+		ValidDamageStates: Heavy
+	GrantConditionOnDamageState@Damage02:
+		Condition: Critical.damage
+		ValidDamageStates: Critical
+	LeavesTrails@01:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 650,445,580
+		RequiresCondition: heavy.damage || Critical.damage
+	LeavesTrails@02:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: -380,-405,670
+		RequiresCondition: Critical.damage
+	LeavesTrails@03:
+		Image: damage_smoke.min
+		TrailWhileStationary: true
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Palette: flameeffect60
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: -80,505,670
+		RequiresCondition: Critical.damage
 	SpawnActorOnDeath:
 		Actor: mastodonde.Husk
 

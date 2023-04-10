@@ -2,11 +2,11 @@ t2_basilisk.Husk:
 	Inherits: ^Husk
 	ThrowsParticle@turret:
 		Anim: turret
-        MinThrowRange: 0c512
-        MaxThrowRange: 1c768
-        MaxThrowAngle: 195
-        Velocity: 45
-        TurnSpeed: 14
+		MinThrowRange: 0c512
+		MaxThrowRange: 1c768
+		MaxThrowAngle: 195
+		Velocity: 45
+		TurnSpeed: 14
 	RenderSprites:
 		Image: t2_basilisk
 		Scale: 0.80
@@ -15,11 +15,11 @@ t2_hydra.Husk:
 	Inherits: ^Husk
 	ThrowsParticle@turret:
 		Anim: turret
-        MinThrowRange: 0c512
-        MaxThrowRange: 1c768
-        MaxThrowAngle: 195
-        Velocity: 45
-        TurnSpeed: 14
+		MinThrowRange: 0c512
+		MaxThrowRange: 1c768
+		MaxThrowAngle: 195
+		Velocity: 45
+		TurnSpeed: 14
 	RenderSprites:
 		Image: t2_hydra
 		Scale: 1.0
@@ -28,11 +28,11 @@ t2_manticore.Husk:
 	Inherits: ^Husk
 	ThrowsParticle@turret:
 		Anim: turret
-        MinThrowRange: 0c512
-        MaxThrowRange: 1c768
-        MaxThrowAngle: 195
-        Velocity: 45
-        TurnSpeed: 14
+		MinThrowRange: 0c512
+		MaxThrowRange: 1c768
+		MaxThrowAngle: 195
+		Velocity: 45
+		TurnSpeed: 14
 	RenderSprites:
 		Image: t2_manticore
 		Scale: 0.80
@@ -41,11 +41,11 @@ t3_apocalypse.Husk:
 	Inherits: ^Husk
 	ThrowsParticle@turret:
 		Anim: turret
-        MinThrowRange: 0c512
-        MaxThrowRange: 1c768
-        MaxThrowAngle: 195
-        Velocity: 45
-        TurnSpeed: 14
+		MinThrowRange: 0c512
+		MaxThrowRange: 1c768
+		MaxThrowAngle: 195
+		Velocity: 45
+		TurnSpeed: 14
 	RenderSprites:
 		Image: t3_apocalypse
 		Scale: 1.00
@@ -54,11 +54,11 @@ t2_garm.Husk:
 	Inherits: ^Husk
 	ThrowsParticle@turret:
 		Anim: turret
-        MinThrowRange: 0c512
-        MaxThrowRange: 1c768
-        MaxThrowAngle: 195
-        Velocity: 45
-        TurnSpeed: 14
+		MinThrowRange: 0c512
+		MaxThrowRange: 1c768
+		MaxThrowAngle: 195
+		Velocity: 45
+		TurnSpeed: 14
 	RenderSprites:
 		Image: t2_garm
 		Scale: 0.75
@@ -78,30 +78,30 @@ t3_fafnir.Husk:
 	RenderSprites:
 		Image: t3_fafnir
 		Scale: 0.80
-        
+		
 t4_odin.Husk:
 	Inherits: ^Husk
 	ThrowsParticle@turret:
 		Anim: turret
-        MinThrowRange: 0c512
-        MaxThrowRange: 1c768
-        MaxThrowAngle: 195
-        Velocity: 45
-        TurnSpeed: 14
+		MinThrowRange: 0c512
+		MaxThrowRange: 1c768
+		MaxThrowAngle: 195
+		Velocity: 45
+		TurnSpeed: 14
 	RenderSprites:
 		Image: t4_odin
 		Scale: 0.86
-    AmbientSound@1:
-        Delay: 45
-        Interval: 45
-        SoundFiles: elec_spark01.aud, elec_spark02.aud
-        RequiresCondition: !alert.expl
-    AmbientSound@2:
-        SoundFiles: odin_chargeexpl.aud
-        RequiresCondition: alert.expl
-    GrantConditionOnDamageState:
-        Condition: alert.expl
-        ValidDamageStates: Critical
+	AmbientSound@1:
+		Delay: 45
+		Interval: 45
+		SoundFiles: elec_spark01.aud, elec_spark02.aud
+		RequiresCondition: !alert.expl
+	AmbientSound@2:
+		SoundFiles: odin_chargeexpl.aud
+		RequiresCondition: alert.expl
+	GrantConditionOnDamageState:
+		Condition: alert.expl
+		ValidDamageStates: Critical
 	Explodes:
 		Weapon: odin.explode
 		EmptyWeapon: odin.explode
@@ -120,4 +120,4 @@ t2_pilgrim.Husk:
 		Anim: turret
 	RenderSprites:
 		Image: t2_pilgrim
-        Scale: 0.95
+		Scale: 0.95

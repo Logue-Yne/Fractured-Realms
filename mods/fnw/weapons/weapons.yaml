@@ -287,14 +287,14 @@ uniteanimexplode:
 		Explosions: unit_expl01, unit_expl02
 		ValidTargets: Ground, Water, Air
 	Warhead@Shad: CreateEffect
-        Delay: 4
+		Delay: 4
 		Explosions: shad_medium_smoke01, shad_medium_smoke02
 		ExplosionPalette: flameeffect60
 		ValidTargets: Ground, Water, Air
 	Warhead@Smu: LeaveSmudge
 		SmudgeType: Crater
 		InvalidTargets: Wall, Trees
-        
+		
 tank.explode:
 	Warhead@2bisEffGround: CreateEffect
 		Explosions: ring_pulse
@@ -305,7 +305,7 @@ tank.explode:
 		ExplosionPalette: flameeffect
 		ImpactSounds: vehdfie_expl01.aud, vehdfie_expl02.aud, vehdfie_expl03.aud, vehdfie_expl04.aud
 		ValidTargets: Ground, Water
-        
+		
 tank.blue.explode:
 	Warhead@2bisEffGround: CreateEffect
 		Explosions: ring_pulse
@@ -320,8 +320,8 @@ tank.blue.explode:
 odin.explode:
 	Warhead@1Dam: SpreadDamage
 		Damage: 750
-		Spread: 2048		
-        Versus:
+		Spread: 2048
+		Versus:
 			Infantry: 75
 			LightVehicle: 75
 			ArmorTank: 75
@@ -1891,7 +1891,7 @@ gunbladecomete:
 		Speed: 1000
 		Inaccuracy: 0
 		ContrailLength: 15
-		ContrailColor: 66ffff
+		ContrailStartColor: 66ffff
 		ContrailWidth: 4
 		ContrailDelay: 0
 	Warhead@1Dam: SpreadDamage

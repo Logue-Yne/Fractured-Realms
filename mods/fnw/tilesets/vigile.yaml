@@ -1,9 +1,9 @@
 General:
 	Name: vigile
 	Id: VIGILE
-    SheetSize: 1024
-    EditorTemplateOrder: Terrain, Water, Concrete, Rouch, Road, Concrete Wall, Divers, Cliff, Jonction Cliff, Rouch Cliff, Water Cliff
-    HeightDebugColors: AA0000
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain, Water, Concrete, Rouch, Road, Concrete Wall, Divers, Cliff, Jonction Cliff, Rouch Cliff, Water Cliff
+	HeightDebugColors: AA0000
 
 Terrain:
 	TerrainType@Clear:
@@ -84,7 +84,7 @@ Terrain:
 		Color: c55ac4
 
 Templates:
- 	Template@0:
+	Template@0:
 		Id: 0
 		Images: t00.vig, t01.vig, t02.vig, t03.vig, t04.vig, t05.vig, t06.vig, t07.vig, t08.vig, t09.vig, t10.vig, t11.vig, t12.vig, t13.vig, t14.vig, t15.vig, t16.vig, t17.vig, t18.vig, t19.vig, t20.vig, t21.vig, t22.vig, t23.vig, t24.vig, t25.vig, t26.vig, t27.vig, t28.vig, t29.vig, t30.vig, t31.vig, t32.vig, t33.vig, t34.vig
 		Size: 1,1

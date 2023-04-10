@@ -22,7 +22,7 @@
 	GrantCondition@IDISABLE:
 		RequiresCondition: lowpower
 		Condition: disabled
-        
+		
 ^DisablePowerDown:
 	Inherits: ^DisableOnLowPower
 	GrantCondition@IDISABLE:
@@ -107,14 +107,14 @@
 		Priority: 10
 		PriorityModifiers: Ctrl
 		Bounds: 2048, 2048, 0, 0
-        
+		
 ^SelectableMassiveCombatUnit:
 	Inherits@selectiondecorations: ^Selectable
 	Selectable:
 		Priority: 10
 		PriorityModifiers: Ctrl
 		Bounds: 2848, 2848, 0, 0
-        
+		
 ^SelectableHeightCombatUnit:
 	Inherits@selectiondecorations: ^Selectable
 	Selectable:
@@ -128,7 +128,7 @@
 		Priority: 8
 		PriorityModifiers: Ctrl, Alt
 		Bounds: 2048, 2048, 0, 0
-        
+		
 ^SelectableMassiveSupportUnit:
 	Inherits@selectiondecorations: ^Selectable
 	Selectable:
@@ -180,12 +180,12 @@
 		BuildDuration: 2500
 	WithTextControlGroupDecoration:
 		Margin: 1, 1
-        
+		
 ^WithDisabledOverlay:
 	WithColoredOverlay@IDISABLE:
 		RequiresCondition: disabled
 		Palette: disabled
-        
+		
 ^AffectedByLeaflet: #poubelle?
 	Inherits@DISABLED: ^WithDisabledOverlay
 	TimedConditionBar@LEAFLET:
@@ -196,7 +196,7 @@
 	GrantCondition@DISABLED-LEAFLET:
 		RequiresCondition: leaflet
 		Condition: disabled
-        
+		
 # ///////////////////////////////////// Actor spec Inherits Rules //////////////////////////////////////
 
 # / ???
@@ -312,7 +312,7 @@
 		Type: Rectangle
 			TopLeft: -1536, -2048
 			BottomRight: 1536, 2048
-            
+			
 ^5x3Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -327,14 +327,14 @@
 			TopLeft: -2048, -1536
 			BottomRight: 2048, 1536
 			
-            
+			
 ^4x4Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			TopLeft: -2048, -2048
 			BottomRight: 2048, 2048
-            
+			
 ^4x4Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -348,28 +348,28 @@
 		Type: Rectangle
 			TopLeft: -2560, -2048
 			BottomRight: 2560, 2048
-            
+			
 ^6x3Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			TopLeft: -3072, -1536
 			BottomRight: 3072, 1536
-            
+			
 ^6x4Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			TopLeft: -3072, -2048
 			BottomRight: 3072, 2048
-            
+			
 ^7x3Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
 			TopLeft: -3584, -1536
 			BottomRight: 3584, 1536
-            
+			
 ^7x4Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -383,7 +383,7 @@
 		Type: Rectangle
 			TopLeft: -3584, -2560
 			BottomRight: 3584, 2560
-            
+			
 ^9x4Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
@@ -401,11 +401,11 @@
 ^UniteAircraft.drop:
 	Carryall:
 		Voice: Move
-        PickUpCursor: drop
-        UnloadCursor: capture
-        UnloadBlockedCursor: capture-blocked
-        DropOffCursor: capture
-        DropOffBlockedCursor: capture-blocked
+		PickUpCursor: drop
+		UnloadCursor: capture
+		UnloadBlockedCursor: capture-blocked
+		DropOffCursor: capture
+		DropOffBlockedCursor: capture-blocked
 		LocalOffset: 0,0,-317
 		BeforeLoadDelay: 1
 		BeforeUnloadDelay: 1
@@ -419,25 +419,84 @@
 ^VehiclePassenger:
 	Passenger:
 		CargoType: Vehicle
-        Weight: 3
+		Weight: 2
 		CargoCondition: disable-experience
 		PipType: Blue
+        
+^HeavyVehiclePassenger:
+	Passenger:
+		CargoType: Vehicle
+		Weight: 3
+		CargoCondition: disable-experience
+		PipType: Blue
+        
+^Parachutable.infantry:
+	Parachutable:
+		FallRate: 52
+		KilledOnImpassableTerrain: true
+		GroundCorpseSequence:
+		GroundCorpsePalette:
+		WaterCorpseSequence:
+		WaterCorpsePalette:
+		ParachutingCondition: parachute
+	WithParachute:
+		ShadowImage: null
+		ShadowSequence: idle
+		Image: parachute_infantry
+		Sequence: idle
+		OpeningSequence: idle
+		ClosingSequence: close
+		Offset: 0,0,800
+		RequiresCondition: parachute
+	Targetable:
+		RequiresCondition: !parachute
+	Targetable@airborne:
+		TargetTypes: Air
+		RequiresCondition: parachute
+	WithDeathAnimation@normal:
+		RequiresCondition: !parachute
+	WithDeathAnimation@effect:
+		RequiresCondition: !parachute
+	ExternalCondition@PARACHUTE:
+		Condition: parachute
+        
+^Parachutable.vehicle:
+	Parachutable:
+		FallRate: 26
+		KilledOnImpassableTerrain: true
+		ParachutingCondition: parachute
+	WithParachute:
+		ShadowImage: null
+		ShadowSequence: idle
+		Image: parachute_vehicle
+		Sequence: idle
+		OpeningSequence: idle
+		ClosingSequence: close
+		Offset: 0,0,200
+		RequiresCondition: parachute
+	Targetable:
+		RequiresCondition: !parachute
+	Targetable@airborne:
+		TargetTypes: Air
+		RequiresCondition: parachute
+	ExternalCondition@PARACHUTE:
+		Condition: parachute
 
 # ///////////////////////////////////// Building Capture Inherits Rules //////////////////////////////////////
 
 # / [Building] Option Heritage accordant que le batiment est de type 'TechBuilding' peut être capturer
 ^TechBuildingCapturable:
-    CapturableProgressBar:
+	CapturableProgressBar:
 	CapturableProgressBlink:
 	Capturable:
-        Types: TechBuilding
+		Types: TechBuilding
 
 # / [Building] Option Heritage accordant que le batiment est de type 'Building' peut être capturer
 ^BuildingCapturable:
-    CapturableProgressBar:
+	CapturableProgressBar:
 	CapturableProgressBlink:
 	Capturable:
-        Types: Building
+		Types: Building
 
 # / [Infantry/Vehicle] Option Heritage accordant la possibilité de capturer un batiment (techbuilding uniquement)
 ^Capture.allBuilding:
@@ -460,14 +519,33 @@
 		ConsumedByCapture: true
 		EnterCursor: capture
 		EnterBlockedCursor: capture-blocked
+		
+# / [Infantry/Vehicle] Option permetant d'etre ciblé par une capacité conferant une condition "Assistance" pour la précision
+^Affect.assist.unit.federation:
+	ExternalCondition@Assist.Inaccuracy:
+		Condition: assist.inaccuracy
+	Targetable@Assist.Inaccuracy:
+		TargetTypes: Assist
+	InaccuracyMultiplier@Assist.Inaccuracy:
+		Modifier: 1
+		RequiresCondition: assist.inaccuracy
+	WithDecoration@Assist:
+		Image: affectdecoy
+		Sequence: accuracy
+		Palette: effect
+		ReferencePoint: Top
+		ValidStances: Ally, Enemy, Neutral
+		RequiresCondition: assist.inaccuracy
+		ZOffset: 256
+
 
 # ///////////////////////////////////// Civilian Building Capacity Inherits Rules //////////////////////////////////////
 
 # / [Building] Option Heritage accordant un bonus de production de 20% (Multiplier : 80)
 ^FactoryOil.Procuction:
-    ProductionCostMultiplier@Factroryoil:
-        Multiplier: 80
-        Prerequisites: Factory.Oil.Active
+	ProductionCostMultiplier@Factroryoil:
+		Multiplier: 80
+		Prerequisites: Factory.Oil.Active
 
 # / [Building] Option Heritage accordant des credit à la premiere capture de la structure et genere des credits supplementaire
 ^DerrickBuilding.Option:
@@ -497,11 +575,11 @@
 	ProvidesPrerequisite@AISpecial:
 		Prerequisite: AIRush.prerequisite
 		RequiresCondition: AIRush
-        
+		
 ^AiCheat.Procuction:
-    ProductionTimeMultiplier@Factroryoil:
-        Multiplier: 80
-        Prerequisites: AIRush.prerequisite
+	ProductionTimeMultiplier@Factroryoil:
+		Multiplier: 80
+		Prerequisites: AIRush.prerequisite
 # ///////////////////////////////////// Generic Inherits Rules //////////////////////////////////////
 
 # / [Building*/Infantry/Vehicle/Aircraft] Option Heritage accordant à l'acteur d'etre dans les statistique Observateur et Replay
@@ -521,24 +599,24 @@
 		BuildDurationModifier: 15
 	Mobile:
 		Speed: 85
-		TurnSpeed: 15
+		TurnSpeed: 12
 		Crushes: gibs, infantry, mine, husk
 	Selectable:
 		Priority: 7
 	Harvester:
 		Capacity: 40
-        HarvestFacings: 8
-        DeliveryBuildings: opproc, arproc, tcproc, fedproc, arproc.seconddeploy
+		HarvestFacings: 8
+		DeliveryBuildings: opproc, arproc, tcproc, fedproc, arproc.seconddeploy
 		Resources: Diast,Diastgems
 		SearchForDeliveryBuildingDelay: 100
 		SearchFromHarvesterRadius: 25
-		BaleLoadDelay: 15
+		BaleLoadDelay: 18
 		BaleUnloadDelay: 0
 		HarvestVoice: Attack
 		DeliverVoice: Action
-    WithDockingAnimation:
-    WithDockingOverlay:
-        Sequence: idle
+	WithDockingAnimation:
+	WithDockingOverlay:
+		Sequence: idle
 	WithHarvestOverlay:
 		LocalOffset: 121,0,0
 		Palette: effect
@@ -667,12 +745,12 @@
 		InvalidTargets: NoAutoTarget, WaterStructure
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-        PauseOnCondition: BaitTargetApply
+		PauseOnCondition: BaitTargetApply
 		ValidTargets: BaitTarget, Infantry, Vehicle, Tank, Water, Underwater, Defense
 		InvalidTargets: NoAutoTarget, WaterStructure
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-        PauseOnCondition: BaitTargetApply
+		PauseOnCondition: BaitTargetApply
 		ValidTargets: BaitTarget, Infantry, Vehicle, Tank, Water, Underwater, Defense, Structure
 		InvalidTargets: NoAutoTarget
 
@@ -700,12 +778,12 @@
 		InvalidTargets: NoAutoTarget, WaterStructure
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything
-        PauseOnCondition: BaitTargetApply
+		PauseOnCondition: BaitTargetApply
 		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Defense, Structure
 		InvalidTargets: NoAutoTarget, WaterStructure
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything
-        PauseOnCondition: BaitTargetApply
+		PauseOnCondition: BaitTargetApply
 		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Structure, Defense
 		InvalidTargets: NoAutoTarget
 
@@ -728,22 +806,22 @@
 		InvalidTargets: NoAutoTarget, WaterStructure
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything && !assault-move  && !mode2
-        PauseOnCondition: BaitTargetApply
+		PauseOnCondition: BaitTargetApply
 		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Defense, Structure
 		InvalidTargets: NoAutoTarget, WaterStructure
 	AutoTargetPriority@ATTACKANYTHING:
 		RequiresCondition: stance-attackanything || assault-move && !mode2
-        PauseOnCondition: BaitTargetApply
+		PauseOnCondition: BaitTargetApply
 		ValidTargets: Infantry, Vehicle, Tank, Water, Underwater, Air, Structure, Defense
 		InvalidTargets: NoAutoTarget
 	AutoTargetPriority@IEM:
 		RequiresCondition: !stance-attackanything && !assault-move  && mode2
-        PauseOnCondition: BaitTargetApply
+		PauseOnCondition: BaitTargetApply
 		ValidTargets: Vehicle, Tank, Water, Underwater, Defense, Structure
 		InvalidTargets: NoAutoTarget, WaterStructure
 	AutoTargetPriority@IEM:
 		RequiresCondition: stance-attackanything || assault-move && mode2
-        PauseOnCondition: BaitTargetApply
+		PauseOnCondition: BaitTargetApply
 		ValidTargets: Vehicle, Tank, Water, Underwater, Structure, Defense
 		InvalidTargets: NoAutoTarget
 	AttackMove:
@@ -754,14 +832,14 @@
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ^PowerReveal.Conclave.Base:
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        ValidRelationships: Enemy
-        Range: 2c0
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        RequiresCondition: Conclave.PowerReveal
-    ExternalCondition@PowerReveal.Conclave: 
-        Condition: Conclave.PowerReveal
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		ValidRelationships: Enemy
+		Range: 2c0
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		RequiresCondition: Conclave.PowerReveal
+	ExternalCondition@PowerReveal.Conclave:
+		Condition: Conclave.PowerReveal
 		
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 # //////////////////////////////////////    Mine Actor Rules   ///////////////////////////////////////
@@ -799,6 +877,58 @@
 	MapEditorData:
 		Categories: System
 
+Spotting.link:
+	Inherits: ^SpriteActor
+	Interactable:
+		Bounds: 1024, 1024
+	WithSpriteBody:
+	HiddenUnderFog:
+	RequiresSpecificOwners:
+		ValidOwnerNames: Neutral
+	Mine:
+		CrushClasses: mine
+		DetonateClasses: mine
+		AvoidFriendly: true
+		BlockFriendly: false
+	Health:
+		HP: 1000
+		NotifyAppliedDamage: false
+	Armor:
+		Type: Mine
+	Cloak:
+		CloakSound:
+		UncloakSound:
+		Palette:
+		CloakTypes: Mine
+		InitialDelay: 0
+	RenderSprites:
+		Image: plasmine
+	Tooltip:
+		Name: Mine
+	Immobile:
+		OccupiesSpace: true
+	HitShape:
+	MapEditorData:
+		Categories: System
+	MindControllable:
+		RevokeControlSounds:
+		FallbackOwner: player
+		Condition: Linked
+	WithMindControlArc:
+		UsePlayerColor: true
+		Offset: 0,0,960
+	Targetable@FriendlyWifi:
+		TargetTypes: Wifi.Link
+		RequiresCondition: !Linked && !permamc
+	Capturable@PERMAMC:
+		Types: permamc
+		ValidRelationships: Ally
+		RequiresCondition: !Linked && !permamc
+	CaptureManager:
+	ExternalCondition@PERMAMC:
+		Condition: permamc
+		
+
 ^baliseMine.system: # ???
 	Inherits: ^SpriteActor
 	WithSpriteBody:
@@ -821,7 +951,7 @@
 	Immobile:
 		OccupiesSpace: true
 	HitShape:
-        
+		
 gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie explose
 	Inherits: ^SpriteActor
 	Interactable:
@@ -866,8 +996,8 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Bounds: 1544, 2509, 0, -289
 	Armor:
 		Type: LightVehicle
-    GrantCondition:
-        Condition: Faction.AR
+	GrantCondition:
+		Condition: Faction.AR
 	BodyOrientation:
 		QuantizedFacings: 0
 		CameraPitch: 113
@@ -881,135 +1011,135 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ^footlight.infantry.move:
-    AmbientSound@MOVE:
-        SoundFiles: inf_mouvfoot01.aud, inf_mouvfoot02.aud, inf_mouvfoot03.aud, inf_mouvfoot04.aud, inf_mouvfoot05.aud
-        Interval: -1
-        RequiresCondition: Sound.Move
-    GrantConditionOnMovement@SoundMove:
-        Condition: Sound.Move
-        ValidMovementTypes: Horizontal, Turn
+	AmbientSound@MOVE:
+		SoundFiles: inf_mouvfoot01.aud, inf_mouvfoot02.aud, inf_mouvfoot03.aud, inf_mouvfoot04.aud, inf_mouvfoot05.aud
+		Interval: -1
+		RequiresCondition: Sound.Move
+	GrantConditionOnMovement@SoundMove:
+		Condition: Sound.Move
+		ValidMovementTypes: Horizontal, Turn
 
 ^Whell.vehicle.move:
-    AmbientSound@MOVE:
-        SoundFiles: whellveh_move01.aud, whellveh_move02.aud, whellveh_move03.aud
-        Interval: -1
-        RequiresCondition: Sound.Move
-    GrantConditionOnMovement@SoundMove:
-        Condition: Sound.Move
-        ValidMovementTypes: Horizontal, Turn
+	AmbientSound@MOVE:
+		SoundFiles: whellveh_move01.aud, whellveh_move02.aud, whellveh_move03.aud
+		Interval: -1
+		RequiresCondition: Sound.Move
+	GrantConditionOnMovement@SoundMove:
+		Condition: Sound.Move
+		ValidMovementTypes: Horizontal, Turn
 
 ^Truck.vehicle.move:
-    AmbientSound@MOVE:
-        SoundFiles: whelltruckveh_move01.aud, whelltruckveh_move02.aud, whelltruckveh_move03.aud
-        Interval: -1
-        RequiresCondition: Sound.Move
-    GrantConditionOnMovement@SoundMove:
-        Condition: Sound.Move
-        ValidMovementTypes: Horizontal, Turn
-        
+	AmbientSound@MOVE:
+		SoundFiles: whelltruckveh_move01.aud, whelltruckveh_move02.aud, whelltruckveh_move03.aud
+		Interval: -1
+		RequiresCondition: Sound.Move
+	GrantConditionOnMovement@SoundMove:
+		Condition: Sound.Move
+		ValidMovementTypes: Horizontal, Turn
+		
 ^Hover.vehicle.move:
-    AmbientSound@MOVE:
-        SoundFiles: hoverveh_move01.aud, hoverveh_move02.aud, hoverveh_move03.aud
-        Interval: -1
-        RequiresCondition: Sound.Move
-    GrantConditionOnMovement@SoundMove:
-        Condition: Sound.Move
-        ValidMovementTypes: Horizontal, Turn
-        
+	AmbientSound@MOVE:
+		SoundFiles: hoverveh_move01.aud, hoverveh_move02.aud, hoverveh_move03.aud
+		Interval: -1
+		RequiresCondition: Sound.Move
+	GrantConditionOnMovement@SoundMove:
+		Condition: Sound.Move
+		ValidMovementTypes: Horizontal, Turn
+		
 ^HoverTech.vehicle.move:
-    AmbientSound@MOVE:
-        SoundFiles: hovertech_move01.aud, hovertech_move02.aud, hovertech_move03.aud
-        Interval: -1
-        RequiresCondition: Sound.Move
-    GrantConditionOnMovement@SoundMove:
-        Condition: Sound.Move
-        ValidMovementTypes: Horizontal, Turn
+	AmbientSound@MOVE:
+		SoundFiles: hovertech_move01.aud, hovertech_move02.aud, hovertech_move03.aud
+		Interval: -1
+		RequiresCondition: Sound.Move
+	GrantConditionOnMovement@SoundMove:
+		Condition: Sound.Move
+		ValidMovementTypes: Horizontal, Turn
 
 ^tracked.vehicle.move:
-    AmbientSound@MOVE:
-        SoundFiles: trackedveh_move01.aud, trackedveh_move02.aud, trackedveh_move03.aud
-        Interval: -1
-        RequiresCondition: Sound.Move
-    GrantConditionOnMovement@SoundMove:
-        Condition: Sound.Move
-        ValidMovementTypes: Horizontal, Turn
-        
+	AmbientSound@MOVE:
+		SoundFiles: trackedveh_move01.aud, trackedveh_move02.aud, trackedveh_move03.aud
+		Interval: -1
+		RequiresCondition: Sound.Move
+	GrantConditionOnMovement@SoundMove:
+		Condition: Sound.Move
+		ValidMovementTypes: Horizontal, Turn
+		
 ^HeavyTracked.vehicle.move:
-    AmbientSound@MOVE:
-        SoundFiles: trackedheavy_move01.aud, trackedheavy_move02.aud, trackedheavy_move03.aud
-        Interval: -1
-        RequiresCondition: Sound.Move
-    GrantConditionOnMovement@SoundMove:
-        Condition: Sound.Move
-        ValidMovementTypes: Horizontal, Turn
-        
+	AmbientSound@MOVE:
+		SoundFiles: trackedheavy_move01.aud, trackedheavy_move02.aud, trackedheavy_move03.aud
+		Interval: -1
+		RequiresCondition: Sound.Move
+	GrantConditionOnMovement@SoundMove:
+		Condition: Sound.Move
+		ValidMovementTypes: Horizontal, Turn
+		
 ^Rotor.aircraft.move:
-    AmbientSound@MOVE:
-        SoundFiles: reactaircraft_move01.aud, reactaircraft_move02.aud, reactaircraft_move03.aud
-        Interval: -1
-        RequiresCondition: Sound.Move
-    GrantConditionOnMovement@SoundMove:
-        Condition: Sound.Move
-        ValidMovementTypes: Horizontal, Turn
+	AmbientSound@MOVE:
+		SoundFiles: reactaircraft_move01.aud, reactaircraft_move02.aud, reactaircraft_move03.aud
+		Interval: -1
+		RequiresCondition: Sound.Move
+	GrantConditionOnMovement@SoundMove:
+		Condition: Sound.Move
+		ValidMovementTypes: Horizontal, Turn
 
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 #//////////////////////////////////////  Trails Effect Rules  /////////////////////////////////////////
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ^Trails.effect.smoke:
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 870,645,-10
-        RequiresCondition: !amphibie
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 4
-        Offsets: 870,-645,-10
-        RequiresCondition: !amphibie
+	LeavesTrails@01:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 870,645,-10
+		RequiresCondition: !amphibie
+	LeavesTrails@02:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 4
+		Offsets: 870,-645,-10
+		RequiresCondition: !amphibie
 
 ^Trails.effect.hover.conclave:
-    LeavesTrails@01:
-        Image: smoke_hovermove
-        Sequences: smoke_hovermove02, smoke_hovermove03, smoke_hovermove04
-        Palette: powereffect
-        Type: CenterPosition
-        MovingInterval: 6
-        Offsets: -20,0,-15
-        
+	LeavesTrails@01:
+		Image: smoke_hovermove
+		Sequences: smoke_hovermove02, smoke_hovermove03, smoke_hovermove04
+		Palette: powereffect
+		Type: CenterPosition
+		MovingInterval: 6
+		Offsets: -20,0,-15
+		
 ^Trails.effect.hover:
-    LeavesTrails@01:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 670,625,-10
-    LeavesTrails@02:
-        Image: smoke_movemin
-        Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
-        Palette: flameeffect30
-        Type: CenterPosition
-        MovingInterval: 5
-        Offsets: 670,-625,-10
+	LeavesTrails@01:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 670,625,-10
+	LeavesTrails@02:
+		Image: smoke_movemin
+		Sequences: smoke_movemin01, smoke_movemin02, smoke_movemin03, smoke_movemin04
+		Palette: flameeffect30
+		Type: CenterPosition
+		MovingInterval: 5
+		Offsets: 670,-625,-10
 
 ^Trails.Walker.effect.smoke:
-    LeavesTrails@01:
-        Image: smoke_walkerlarge
-        Sequences: walk_smoke01, walk_smoke02, walk_smoke03
-        Palette: effectalpha45
-        Type: CenterPosition
-        MovingInterval: 21
-        Offsets: 2070,-625,-10, 2070,625,-10
-        RequiresCondition: !amphibie
-        
-        
+	LeavesTrails@01:
+		Image: smoke_walkerlarge
+		Sequences: walk_smoke01, walk_smoke02, walk_smoke03
+		Palette: effectalpha45
+		Type: CenterPosition
+		MovingInterval: 21
+		Offsets: 2070,-625,-10, 2070,625,-10
+		RequiresCondition: !amphibie
+		
+		
 
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 #////////////////////////////////////// Infantry Default Rules ///////////////////////////////////////
@@ -1021,8 +1151,8 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	Inherits@3: ^InfantryShape
 	Inherits@4: ^ConditioneffetGeneralsUnit
 	Inherits@5: ^ConditionGeneralInfantryBase
-    Inherits@selection: ^SelectableCombatUnit
-    Inherits@footdsound: ^footlight.infantry.move
+	Inherits@selection: ^SelectableCombatUnit
+	Inherits@footdsound: ^footlight.infantry.move
 	Health:
 		Radius: 96
 	Armor:
@@ -1038,10 +1168,10 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Bounds: 482, 1448, 0, -530
 	Targetable@DEFAULT:
 		TargetTypes: Ground, Infantry
-        RequiresCondition: !BaitTargetApply
+		RequiresCondition: !BaitTargetApply
 	Targetable@BAITAPPLY:
 		TargetTypes: BaitTarget
-        RequiresCondition: BaitTargetApply
+		RequiresCondition: BaitTargetApply
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -1054,14 +1184,14 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 			IonDeath: 5
 			PlasmaDeath: 6
 		CrushedSequence: die-crushed
-        CrushedSequencePalette: player
+		CrushedSequencePalette: player
 	AttackMove:
 	ScriptTriggers:
 	HiddenUnderFog:
 	ActorLostNotification:
 	Crushable:
 		CrushClasses: infantry
-        CrushSound: gore_crush01.aud
+		CrushSound: gore_crush01.aud
 		CrushedByFriendlies: false
 	Guardable:
 	MustBeDestroyed:
@@ -1073,7 +1203,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	SpawnActorOnDeath@Gibs:
 		Actor: gibs.impact
 		DeathType: Gibs
-        Probability: 50
+		Probability: 50
 	OwnerLostAction:
 		Action: Kill
 		DeathTypes: DefaultDeath
@@ -1085,12 +1215,12 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		CargoType: Infantry
 		CargoCondition: disable-experience
 		PipType: Green
-    FirepowerMultiplier@GarrisonedInfantry:
-        Modifier: 130
-        RequiresCondition: GarrisonWeaponRange
-    RangeMultiplier@GarrisonedInfantry:
-        Modifier: 150
-        RequiresCondition: GarrisonWeaponRange
+	FirepowerMultiplier@GarrisonedInfantry:
+		Modifier: 130
+		RequiresCondition: GarrisonWeaponRange
+	RangeMultiplier@GarrisonedInfantry:
+		Modifier: 150
+		RequiresCondition: GarrisonWeaponRange
 	Explodes@Gibs:
 		DeathTypes: Gibs
 		Weapon: gibs_part01
@@ -1114,13 +1244,13 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	RenderSprites:
 	MapEditorData:
 		Categories: Infantry
-    RevealOnDeath:
-    RevealOnFire:
+	RevealOnDeath:
+	RevealOnFire:
 	WithIdleOverlay@Shadow:
 		Offset: -100,0,100
 		Sequence: shadow.infantry
 		Palette: effectalpha75
-    ActorStatValues:
+	ActorStatValues:
 
 ^Civilian:
 	Inherits@1: ^Infantry
@@ -1128,7 +1258,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Name: Civilian
 	Voiced:
 		VoiceSet: Civilian
-    ScaredyCat:
+	ScaredyCat:
 	Wanders:
 		MinMoveDelay: 150
 		MaxMoveDelay: 750
@@ -1198,32 +1328,32 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	Inherits@3: ^VehicleShape
 	Inherits@4: ^ConditioneffetGeneralsUnit
 	Inherits@5: ^ConditionGeneralVehicleBase
-    Inherits@selection: ^SelectableCombatUnit
+	Inherits@selection: ^SelectableCombatUnit
 	Inherits@Factory.Production: ^FactoryOil.Procuction
-    Inherits@AiCheatProd.Production: ^AiCheat.Procuction
+	Inherits@AiCheatProd.Production: ^AiCheat.Procuction
 	UpdatesPlayerStatistics:
 	Selectable:
 	SelectionDecorations:
 	WithTextControlGroupDecoration:
-    RevealOnDeath:
-    RevealOnFire:
+	RevealOnDeath:
+	RevealOnFire:
 	AutoTarget:
 		AttackAnythingCondition: stance-attackanything
 		MinimumScanTimeInterval: 10
 		MaximumScanTimeInterval: 10
 	Targetable@DEFAULT:
 		TargetTypes: Ground, Vehicle, Repair, C4
-        RequiresCondition: !BaitTargetApply
+		RequiresCondition: !BaitTargetApply
 	Targetable@BAITAPPLY:
 		TargetTypes: BaitTarget
-        RequiresCondition: BaitTargetApply
+		RequiresCondition: BaitTargetApply
 	Targetable@Repair:
 		RequiresCondition: !parachute &&  damaged
 		TargetTypes: Repair
 	Targetable@Parachute:
 		RequiresCondition: !parachute
 		TargetTypes: GroundActor, Vehicle
-    AttackMove:
+	AttackMove:
 	Passenger:
 		CargoType: Vehicle
 		PipType: Green
@@ -1253,18 +1383,18 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Weapons: SmallDebris, SmallDebris2, SmallDebris3
 		Pieces: 2, 3
 		Range: 0c256, 2c0
-    GrantConditionOnDamageState@Damage:
-        Condition: heavy.damage
-        ValidDamageStates: Heavy
-    LeavesTrails@03:
-        Image: damage_smoke.min
-        Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
-        Type: CenterPosition
-        TrailWhileStationary: true
-        Palette: flameeffect50
-        MovingInterval: 4
-        Offsets: -595,440,600, -525,320,640, -495,380,650, -625,550,620
-        RequiresCondition: heavy.damage
+	GrantConditionOnDamageState@Damage:
+		Condition: heavy.damage
+		ValidDamageStates: Heavy
+	LeavesTrails@03:
+		Image: damage_smoke.min
+		Sequences: smoke_damage01, smoke_damage02, smoke_damage03, smoke_damage04
+		Type: CenterPosition
+		TrailWhileStationary: true
+		Palette: flameeffect50
+		MovingInterval: 4
+		Offsets: -595,440,600, -525,320,640, -495,380,650, -625,550,620
+		RequiresCondition: heavy.damage
 	SmokeParticleEmitter@1:
 		RequiresCondition: dmg_heavy
 		Sequences: smallsmoke
@@ -1274,19 +1404,6 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Gravity: 48
 		Offset: -32,0,192
 		Duration: 38
-	Parachutable:
-		FallRate: 26
-		KilledOnImpassableTerrain: true
-		ParachutingCondition: parachute
-	WithParachute:
-		ShadowImage: null
-		ShadowSequence: idle
-		Image: parachute_vehicle
-		Sequence: idle
-		OpeningSequence: idle
-        ClosingSequence: close
-		Offset: 0,0,200
-		RequiresCondition: parachute
 	Explodes:
 		Weapon: uniteanimexplode
 		EmptyWeapon: uniteanimexplode
@@ -1325,7 +1442,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	Selectable:
 		Bounds: 1024, 1024, 0, 0
 	Mobile:
-        Crushes: Gibs
+		Crushes: Gibs
 		Locomotor: wheeled
 		TurnSpeed: 25
 		Speed: 120
@@ -1343,7 +1460,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Offset: 0,0,-1
 		Sequence: shadow.small
 		Palette: effectalpha30
-    ActorStatValues:
+	ActorStatValues:
 
 ^VoxelVehicleMedium:
 	Inherits: ^VehicleBase
@@ -1370,7 +1487,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Offset: 0,0,-1
 		Sequence: shadow.medium
 		Palette: effectalpha30
-    ActorStatValues:
+	ActorStatValues:
 
 ^VoxelVehicleHeavy:
 	Inherits: ^VehicleBase
@@ -1400,7 +1517,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Offset: 0,0,-1
 		Sequence: shadow.large
 		Palette: effectalpha30
-    ActorStatValues:
+	ActorStatValues:
 		
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 # //////////////////////////////////// Voxel Vehicle Walkers Rules ///////////////////////////////////
@@ -1504,7 +1621,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	BodyOrientation:
 		QuantizedFacings: 64
 		CameraPitch: 95
-    ActorStatValues:
+	ActorStatValues:
 
 ^ShapeVehicleMedium:
 	Inherits: ^VehicleBase
@@ -1525,7 +1642,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		CameraPitch: 95
 	RenderSprites:
 		Scale: 1.0
-    ActorStatValues:
+	ActorStatValues:
 
 ^ShapeVehicleHeavy:
 	Inherits: ^VehicleBase
@@ -1546,7 +1663,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		CameraPitch: 95
 	RenderSprites:
 		Scale: 1.0
-    ActorStatValues:
+	ActorStatValues:
 
 # ////////////////////////////////////////////////////////////////////////////////////////////////////
 # //////////////////////////////////// Shape Vehicle Walkers Rules ///////////////////////////////////
@@ -1625,7 +1742,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	Inherits: ^ShapeVehicleLight
 	Hovers:
 		BobDistance: -25
-        InitialHeight: 120
+		InitialHeight: 120
 	WithShadow:
 		Offset: 320,180, -100
 		ZOffset: -300
@@ -1637,7 +1754,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	Inherits: ^ShapeVehicleMedium
 	Hovers:
 		BobDistance: -25
-        InitialHeight: 120
+		InitialHeight: 120
 	WithShadow:
 		Offset: 320,180, -100
 		ZOffset: -300
@@ -1649,7 +1766,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	Inherits: ^ShapeVehicleHeavy
 	Hovers:
 		BobDistance: -35
-        InitialHeight: 100
+		InitialHeight: 100
 	WithShadow:
 		Offset: 320,180, -100
 		ZOffset: -300
@@ -1663,13 +1780,13 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 
 ^Rallypoint.ProductionBuilding:
 	RallyPoint:
-        Cursor: rallypoint
+		Cursor: rallypoint
 
 ^Building:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^SelectableBuilding
-    Inherits@4: ^ConditionGeneralBuilding
+	Inherits@4: ^ConditionGeneralBuilding
 	Inherits@shape: ^1x1Shape
 	AppearsOnMapPreview:
 	OwnerLostAction:
@@ -1687,9 +1804,9 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	Building:
 		Dimensions: 1,1
 		Footprint: x
-		BuildSounds: 
+		BuildSounds:
 		RequiresBaseProvider: True
-		UndeploySounds: 
+		UndeploySounds:
 		TerrainTypes: Clear, Rough, Road, Concrete
 	ActorPreviewPlaceBuildingPreview:
 		Palette: placefootprint
@@ -1700,7 +1817,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	FrozenUnderFog:
 	SoundOnDamageTransition:
 		DamagedSounds: builddamage01.aud, builddamage02.aud, builddamage03.aud
-		DestroyedSounds: 
+		DestroyedSounds:
 	Capturable:
 		Types: building
 		RequiresCondition: !build-incomplete
@@ -1708,8 +1825,8 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	CapturableProgressBar:
 	CapturableProgressBlink:
 	WithSpriteBody:
-    SmokeParticleEmitter@Damaged:
-        Image: heat_smokeparticle
+	SmokeParticleEmitter@Damaged:
+		Image: heat_smokeparticle
 		Sequences: idle01, idle02
 		RequiresCondition: !build-incomplete && dmg_heavy
 		SpawnFrequency: 5, 6
@@ -1724,9 +1841,9 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Weapon: SmallBuildingExplode
 	RepairableBuilding:
 		RepairingNotification: Repairing
-        RepairInterval: 10
-        RepairStep: 25
-	EngineerRepairable:
+		RepairInterval: 10
+		RepairStep: 25
+	InstantlyRepairable:
 		Types: building
 	SpawnActorsOnSell@Redalliance:
 		ActorTypes: t1_comrade, t1_comrade
@@ -1763,29 +1880,29 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		ReferencePoint: Center
 		Palette: player
 		IsPlayerPalette: True
-    # Demage effect
-    ReloadAmmoPool@damage.debrisCharge:
-        AmmoPool: debris.ammo
-        Count: 1
-        Delay: 75
-        RequiresCondition: !( heavy.damage || critical.damage)
-    AmmoPool@damage.debrisCharge:
-        Name: debris.ammo
-        Ammo: 2
-    GrantConditionOnDamageState@heavy.damage:
-        Condition: heavy.damage
-        ValidDamageStates: Heavy
+	# Demage effect
+	ReloadAmmoPool@damage.debrisCharge:
+		AmmoPool: debris.ammo
+		Count: 1
+		Delay: 75
+		RequiresCondition: !( heavy.damage || critical.damage)
+	AmmoPool@damage.debrisCharge:
+		Name: debris.ammo
+		Ammo: 2
+	GrantConditionOnDamageState@heavy.damage:
+		Condition: heavy.damage
+		ValidDamageStates: Heavy
 	ExplodeWeapon@heavy.damage.debris:
 		Weapon: building.damaged.debris
 		RequiresCondition: heavy.damage
-        AmmoPoolName: debris.ammo
-    AmbientSound@heavy.damage:
-        SoundFiles: vehicle_deathexpl01.aud, vehicle_deathexpl02.aud, vehicle_deathexpl03.aud
-        Interval: -1
-        RequiresCondition: heavy.damage
+		AmmoPoolName: debris.ammo
+	AmbientSound@heavy.damage:
+		SoundFiles: vehicle_deathexpl01.aud, vehicle_deathexpl02.aud, vehicle_deathexpl03.aud
+		Interval: -1
+		RequiresCondition: heavy.damage
 	SmokeParticleEmitter@heavy.damage:
 		RequiresCondition: heavy.damage || critical.damage
-        Image: smoke
+		Image: smoke
 		Sequences: single_smoke_medium01, single_smoke_medium02, single_smoke_medium03, single_smoke_darkmedium01, single_smoke_darkmedium02, single_smoke_darkmedium03
 		Palette: flameeffect
 		SpawnFrequency: 3, 6
@@ -1795,7 +1912,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Duration: 38
 	SmokeParticleEmitter@darkheavy.damage:
 		RequiresCondition: heavy.damage || critical.damage
-        Image: smoke
+		Image: smoke
 		Sequences: single_smoke_darkmedium01, single_smoke_darkmedium02, single_smoke_darkmedium03
 		Palette: flameeffect60
 		SpawnFrequency: 4, 7
@@ -1803,20 +1920,20 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Gravity: 48
 		Offset: -32,0,192
 		Duration: 38
-    GrantConditionOnDamageState@critical.damage:
-        Condition: critical.damage
-        ValidDamageStates: Critical
-    AmbientSound@critical.damage:
-        SoundFiles: vehicle_deathexpl01.aud, vehicle_deathexpl02.aud, vehicle_deathexpl03.aud
-        Interval: -1
-        RequiresCondition: critical.damage
+	GrantConditionOnDamageState@critical.damage:
+		Condition: critical.damage
+		ValidDamageStates: Critical
+	AmbientSound@critical.damage:
+		SoundFiles: vehicle_deathexpl01.aud, vehicle_deathexpl02.aud, vehicle_deathexpl03.aud
+		Interval: -1
+		RequiresCondition: critical.damage
 	ExplodeWeapon@heavy.damage.debris:
 		Weapon: building.damaged.debris
 		RequiresCondition: critical.damage
-        AmmoPoolName: debris.ammo
+		AmmoPoolName: debris.ammo
 	SmokeParticleEmitter@critical.damage:
 		RequiresCondition: critical.damage
-        Image: smoke
+		Image: smoke
 		Sequences: single_smoke_medium01, single_smoke_medium02, single_smoke_medium03
 		Palette: flameeffect
 		SpawnFrequency: 2, 4
@@ -1825,23 +1942,23 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Offset: -1625,-1864,400
 		Duration: 40
 	CaptureManager:
-    
+	
 ^BaseBuilding:
 	Inherits: ^Building
-    Inherits@buildable: ^BuildableSpriteActor
-    Inherits@AiCheatProd.Production: ^AiCheat.Procuction
+	Inherits@buildable: ^BuildableSpriteActor
+	Inherits@AiCheatProd.Production: ^AiCheat.Procuction
 	WithMakeAnimation:
 		Condition: build-incomplete
 	Sellable:
-		SellSounds: 
+		SellSounds:
 		RequiresCondition: !build-incomplete
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 3
 	GivesBuildableArea:
 		AreaTypes: building
-    ActorStatValues:
-        
+	ActorStatValues:
+		
 ^Bridge:
 	Inherits@shape: ^1x1Shape
 	AlwaysVisible:
@@ -1866,7 +1983,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	ShakeOnDeath:
 		Duration: 15
 		Intensity: 6
-        
+		
 ^Rubble:
 	Inherits@1: ^SpriteActor
 	Inherits@shape: ^1x1Shape
@@ -1896,7 +2013,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	-UpdatesPlayerStatistics:
 	-RepairableBuilding:
 	-WithBuildingRepairDecoration:
-	EngineerRepairable:
+	InstantlyRepairable:
 		Types: civilian
 	Health:
 		HP: 1400
@@ -1910,7 +2027,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Name: Civilian Building
 	MapEditorData:
 		Categories: Civilian building
-        
+		
 ^GarrisonableBuilding:
 	Inherits: ^CivBuilding
 	Inherits@AUTOTARGET: ^AutoTargetAll
@@ -1918,10 +2035,10 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Range: 10c0
 		RequiresCondition: loaded
 	ChangeOwnerOnGarrisoner:
-		EnterSound: 
-		ExitSound: 
-		EnterNotification: 
-		ExitNotification: 
+		EnterSound:
+		ExitSound:
+		EnterNotification:
+		ExitNotification:
 	Garrisonable:
 		Types: Garrisoner
 		MaxWeight: 10
@@ -1964,14 +2081,14 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Offset: 0, 0, 0
 		Sequence: garrisoned-visual
 		RequiresCondition: loaded
-        IsPlayerPalette: true
+		IsPlayerPalette: true
 		Palette: cloak
-	EngineerRepairable:
+	InstantlyRepairable:
 		RequiresCondition: damaged
 	GrantConditionOnDamageState@DAMAGED:
 		Condition: damaged
 		ValidDamageStates: Light, Medium, Heavy, Critical
-    
+	
 ^BuildingPlugable:
 	AlwaysVisible:
 	Interactable:
@@ -1985,8 +2102,8 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	RequiresBuildableArea:
 		AreaTypes: building
 	RenderSprites:
-    
-    
+	
+	
 
 ^TechBuilding:
 	Inherits: ^Building
@@ -1999,7 +2116,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Name: Civilian Building
 		GenericVisibility: None
 	FrozenUnderFog:
-    -MustBeDestroyed:
+	-MustBeDestroyed:
 	HitShape:
 	
 ^Spell:
@@ -2043,11 +2160,11 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		DestroyedSounds:
 	Crushable:
 		CrushClasses: wall
-        CrushSound: wallcrush01.aud
+		CrushSound: wallcrush01.aud
 		CrushedByFriendlies: false
 	WithDeathAnimation:
 		CrushedSequence: die-crushed
-        CrushedSequencePalette: flameeffect
+		CrushedSequencePalette: flameeffect
 	LineBuild:
 		Range: 10
 		NodeTypes: wall
@@ -2113,7 +2230,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		RequiredForShortGame: false
 	RenderSprites:
 		Scale: 1.0
-    ActorStatValues:
+	ActorStatValues:
 
 ^Gate:
 	Inherits: ^Building
@@ -2186,11 +2303,11 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	Inherits@4: ^BuildableSpriteActor
 	Inherits@4: ^ConditionGeneralAircraftBase
 	Inherits@Factory.Production: ^FactoryOil.Procuction
-    Inherits@AiCheatProd.Production: ^AiCheat.Procuction
+	Inherits@AiCheatProd.Production: ^AiCheat.Procuction
 	Huntable:
 	UpdatesPlayerStatistics:
-    RevealOnDeath:
-    RevealOnFire:
+	RevealOnDeath:
+	RevealOnFire:
 	AppearsOnRadar:
 		UseLocation: true
 	Targetable@GROUND:
@@ -2208,10 +2325,10 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	SelectionDecorations:
 	Aircraft:
 		AirborneCondition: airborne
-        CruiseAltitude: 5800
-        AltitudeVelocity: 320
+		CruiseAltitude: 5800
+		AltitudeVelocity: 320
 		IdealSeparation: 853
-        LandAltitude: 0c200
+		LandAltitude: 0c200
 	RevealsShroud:
 		Type: GroundPosition
 		MaxHeightDelta: 3
@@ -2225,7 +2342,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	BodyOrientation:
 		QuantizedFacings: 0
 		CameraPitch: 90
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Guard:
 	Guardable:
 	MustBeDestroyed:
@@ -2248,15 +2365,15 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		VTOL: true
 		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
 		Crushes: crate, mine, infantry
-        CruiseAltitude: 4600
+		CruiseAltitude: 4600
 		CanSlide: True
 	RenderSprites:
 	Hovers@CRUISING:
 		RequiresCondition: cruising
 	BodyOrientation:
 		UseClassicFacingFudge: True
-        PauseOnCondition: stunweapons
-    ActorStatValues:
+		PauseOnCondition: stunweapons
+	ActorStatValues:
 
 ^Aircraftshape:
 	Inherits@1: ^ExistsInWorld
@@ -2281,10 +2398,10 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Action: Kill
 	Aircraft:
 		AirborneCondition: airborne
-        CruisingCondition: cruised
+		CruisingCondition: cruised
 		IdealSeparation: 853
-        CruiseAltitude: 5800
-        LandAltitude: 0c200
+		CruiseAltitude: 5800
+		LandAltitude: 0c200
 	Voiced:
 		VoiceSet: GenericVoice
 	RevealsShroud:
@@ -2297,7 +2414,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	BodyOrientation:
 		QuantizedFacings: 0
 		CameraPitch: 90
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	WithFacingSpriteBody:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -2308,33 +2425,32 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 	RenderSprites:
 	RevealOnFire:
 	HitShape:
-    ActorStatValues:
+	ActorStatValues:
 
 ^Helicoptershape:
 	Inherits@1: ^Aircraftshape
 	Aircraft:
-		CanHover: True
+		CanHover: true
 		CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
 		TakeOffOnResupply: true
 		VTOL: true
 		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
 		Crushes: crate, mine, infantry
-		InitialFacing: 224
-        LandAltitude: 0c200
-        CruiseAltitude: 4600
-		CanSlide: True
+		CruiseAltitude: 3c852
+		CanSlide: true
 	Targetable@AIRBORNE:
 		TargetTypes: Air
 	Hovers@CRUISING:
 		RequiresCondition: cruising
-    ActorStatValues:
+		BobDistance: -45
+	ActorStatValues:
 
 ^Helicoptercaryall:
 	Inherits@1: ^Aircraftshape
-    -Selectable:
-    -SelectionDecorations:
-    -WithTextControlGroupDecoration:
+	-Selectable:
+	-SelectionDecorations:
+	-WithTextControlGroupDecoration:
 	-Guard:
 	-Guardable:
 	-RevealOnFire:
@@ -2351,14 +2467,15 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
 		Crushes: crate, mine, infantry
 		InitialFacing: 224
-        LandAltitude: 0c200
-        CruiseAltitude: 4600
+		LandAltitude: 0c200
+		CruiseAltitude: 4600
 		CanSlide: True
 	Targetable@AIRBORNE:
 		TargetTypes: Air
 	Hovers@CRUISING:
 		RequiresCondition: cruising
-    ActorStatValues:
+		BobDistance: -45
+	ActorStatValues:
 
 
 ^AircraftHuskShape:
@@ -2370,7 +2487,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		CanHover: True
 		VTOL: true
 		CanSlide: True
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Health:
 		HP: 28000
 	Armor:
@@ -2385,9 +2502,9 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Explosion: uniteanimexplode
 	HitShape:
 	WithFacingSpriteBody:
-    AmbientSound:
-        SoundFiles: aircraftdie01.aud, aircraftdie02.aud
-        Interval: 5200
+	AmbientSound:
+		SoundFiles: aircraftdie01.aud, aircraftdie02.aud
+		Interval: 5200
 	MapEditorData:
 		Categories: Husk
 	WithShadow:
@@ -2416,8 +2533,8 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Explosion: uniteanimexplode
 		MaximumSpinSpeed: 0
 	HitShape:
-    AmbientSound:
-        SoundFiles: aircraftdie01.aud, aircraftdie02.aud
+	AmbientSound:
+		SoundFiles: aircraftdie01.aud, aircraftdie02.aud
 	WithFacingSpriteBody:
 	WithShadow:
 		Offset: 43, 128, 0
@@ -2481,8 +2598,8 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
 		Crushes: crate, mine, infantry
 		InitialFacing: 224
-        LandAltitude: 0c200
-        CruiseAltitude: 4600
+		LandAltitude: 0c200
+		CruiseAltitude: 4600
 		CanSlide: True
 	WithShadow:
 		Offset: 43, 128, 0
@@ -2555,16 +2672,16 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		RequiresForceFire: true
 	Crushable:
 		CrushClasses: husk
-        CrushSound: crush_veh01.aud
+		CrushSound: crush_veh01.aud
 		CrushedByFriendlies: true
-    LeavesTrails@spark:
-        Image: spark_effect
-        TrailWhileStationary: true
-        Sequences: spark_husk01, spark_husk02, spark_husk03
-        Palette: flameeffect
-        Type: CenterPosition
-        StationaryInterval: 200
-        Offsets: 600,500,100
+	LeavesTrails@spark:
+		Image: spark_effect
+		TrailWhileStationary: true
+		Sequences: spark_husk01, spark_husk02, spark_husk03
+		Palette: flameeffect
+		Type: CenterPosition
+		StationaryInterval: 200
+		Offsets: 600,500,100
 	ChangesHealth:
 		Step: -50
 		StartIfBelow: 101
@@ -2598,16 +2715,7 @@ gibs.impact: # Note: il s'agit que l'effet de particule l'orsque une infanterie 
 		Image: blankicon
 	KillsSelf:
 		RemoveInstead: true
-        
+		
 ^encyclopedia:
 	WithSpriteBody:
 	RenderSprites:
-
-ency.tick.unite:
-	Inherits: ^encyclopedia.info
-	Tooltip:
-		Name: Une news prefab
-	Encyclopedia:
-		Description: Light Infantry are lightly armored foot soldiers, equipped with 9mm RP assault rifles. Light Infantry are effective against other infantry and lightly armored vehicles.\n\nLight Infantry are resistant to missiles and large caliber guns, but very vulnerable to high explosives, fire and bullet weapons.
-		Order: 0
-		Category: information au pif

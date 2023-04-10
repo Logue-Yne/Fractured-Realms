@@ -9,7 +9,7 @@
 		Type: Concrete
 	Health:
 		HP: 800
-        
+		
 # |------------------------------| - LMedium Material Building - |------------------------------|
 #--Stat Unite--
 ^CivilMediumMaterial.stat.Building:
@@ -17,7 +17,7 @@
 		Type: Concrete
 	Health:
 		HP: 1200
-        
+		
 # |------------------------------| - Light Civil Building - |------------------------------|
 #--Stat Unite--
 ^CivilLightBuilding.stat.Building:

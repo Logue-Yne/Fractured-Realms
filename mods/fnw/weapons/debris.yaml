@@ -7,9 +7,9 @@
 		High: true
 		Inaccuracy: 1c0
 		TrailImage: smokeymin
-        TrailInterval: 2
-        TrailPalette: effectalpha55
-        BounceCount: 3
+		TrailInterval: 2
+		TrailPalette: effectalpha55
+		BounceCount: 3
 		Shadow: true
 		Blockable: true
 	Warhead@1Dam: SpreadDamage
@@ -57,14 +57,14 @@ building.damaged.debris:
 	ReloadDelay: 25
 	Range: 6c768
 	Warhead@Spawn.debris01: FireShrapnel
-        Delay: 5
+		Delay: 5
 		Weapon: Debris3
 		Amount: 3
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air
 		ImpactActors: false
 	Warhead@Spawn.debris02: FireShrapnel
-        Delay: 5
+		Delay: 5
 		Weapon: Debris4
 		Amount: 3
 		AllowDirectHit: false
@@ -92,7 +92,7 @@ SmallDebris1.bluetrail:
 		Explosion: debrisexplode
 		ExplosionPalette: effect
 		ValidTargets: Ground, Water, Air
-        
+		
 SmallDebris2.bluetrail:
 	Inherits: SmallDebris2
 	Projectile: Bullet
@@ -102,7 +102,7 @@ SmallDebris2.bluetrail:
 		Explosion: debrisexplode
 		ExplosionPalette: effect
 		ValidTargets: Ground, Water, Air
- 
+
 SmallDebris3.bluetrail:
 	Inherits: SmallDebris3
 	Projectile: Bullet
@@ -112,7 +112,7 @@ SmallDebris3.bluetrail:
 		Explosion: debrisexplode
 		ExplosionPalette: effect
 		ValidTargets: Ground, Water, Air
-     
+	
 Debris:
 	ReloadDelay: 60
 	Range: 2c768
@@ -244,5 +244,5 @@ AircraftExplode:
 			Heavy: 25
 	Warhead@2Eff: CreateEffect
 		Explosion: air_expl01, air_expl02, air_expl03
-        Pallette: flameeffect
+		Pallette: flameeffect
 		ValidTargets: Ground, Water, Air

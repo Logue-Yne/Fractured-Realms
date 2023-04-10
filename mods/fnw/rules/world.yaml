@@ -12,7 +12,7 @@
 	TerrainGeometryOverlay:
 	DebugVisualizations:
 	TerrainRenderer:
-    ScriptTriggers:
+	ScriptTriggers:
 	ShroudRenderer:
 		FogVariants: shroud
 		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
@@ -21,7 +21,7 @@
 		Name: Random
 		InternalName: Random
 		RandomFactionMembers: redalliance, baneslayer, conclave, federation
-		Description: 	
+		Description:
 	Faction@Redalliance:
 		Name: Alliance
 		InternalName: redalliance
@@ -37,7 +37,7 @@
 	Faction@Federation:
 		Name: Federation
 		InternalName: federation
-		Description: ...
+		Description: Terran Federation:\nA faction using a large mass of infantry supported by vehicles ranging from crude tank series to ambush vehicles, the Federation relies primarily on mass as a force, its units are inexpensive and produced quickly, with in exchange mediocre statistics.
 	ResourceRenderer:
 		ResourceTypes:
 			Diast:
@@ -48,10 +48,10 @@
 				Sequences: diast01, diast02, diast03, diast04, diast05
 				Palette: diastgold
 				Name: Gold Diastim
-                
+				
 ^WeatherRollMap:
 	WeatherOverlay:
-        ParticleDensityFactor: 10
+		ParticleDensityFactor: 10
 		ChangingWindLevel: true
 		WindLevels: -5, -3, -2, 0, 2, 3, 5
 		WindTick: 120, 520
@@ -66,7 +66,7 @@
 		ParticleColors: 7D4C1835, 735B4325, 855D4332
 		LineTailAlphaValue: 25
 	GlobalLightingPaletteEffect:
-        ExcludePalettes: player, powereffect60, powereffect, cursor, chrome, colorpicker, fog, shroud, alpha, flameeffect60, flameeffect, effect, greeneffect, flammeeffectblue, powereffect2, light, greenlight, purplelight
+		ExcludePalettes: player, powereffect60, powereffect, cursor, chrome, colorpicker, fog, shroud, alpha, flameeffect60, flameeffect, effect, greeneffect, flammeeffectblue, powereffect2, light, greenlight, purplelight
 		Red: 0.94
 		Green: 0.94
 		Blue: 0.98
@@ -75,8 +75,8 @@
 ^colorpicker.preview:
 	ColorPickerManager:
 		PreviewActor: t2_basilisk.colorpicker
-        HsvSaturationRange: 0.25, 1.0
-        V: 1.0
+		HsvSaturationRange: 0.25, 1.0
+		V: 1.0
 		PresetHues: 0.17, 0, 0.6, 0.3, 0.1, 0.5, 0.75, 0.85, 0.17, 0, 0.6, 0.3, 0.1, 0.5, 0.75, 0.85
 		PresetSaturations: 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45, 0.45
 		FactionPreviewActors:
@@ -84,7 +84,7 @@
 			alliance: t2_basilisk.colorpicker
 			baneslayer: t2_garm.colorpicker
 			conclave: t2_rodeur.colorpicker
-        
+		
 World:
 	Inherits@Base: ^BaseWorld
 	Inherits@Locomotor: ^Locomotor.Base.World
@@ -93,6 +93,8 @@ World:
 	ChatCommands:
 	DevCommands:
 	DebugVisualizationCommands:
+	PathFinderOverlay:
+	HierarchicalPathFinderOverlay:
 	PlayerCommands:
 	TauntCommands:
 	HelpCommand:
@@ -100,7 +102,7 @@ World:
 	BuildingInfluence:
 	ProductionQueueFromSelection:
 		ProductionTabsWidget: PRODUCTION_TABS
-        ProductionPaletteWidget: PRODUCTION_PALETTE
+		ProductionPaletteWidget: PRODUCTION_PALETTE
 	BuildableTerrainLayer:
 	ResourceLayer:
 		RecalculateResourceDensity: true
@@ -109,18 +111,18 @@ World:
 				ResourceIndex: 1
 				TerrainType: Diast
 				AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tree
-                MaxDensity: 70
+				MaxDensity: 70
 			Diastgems:
 				ResourceIndex: 2
 				TerrainType: Diastgems
 				AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tree
-                MaxDensity: 85
+				MaxDensity: 85
+	ResourceClaimLayer:
 	ResourceTwinkleLayer:
 		Image: spark_diast_particle
-        Sequences: diast_spark01, diast_spark02, diast_spark03
+		Sequences: diast_spark01, diast_spark02, diast_spark03
 		Types: Diast, Diastgems
 		Palette: powereffect60
-	ResourceClaimLayer:
 	BridgeLayer:
 	WarheadDebugOverlay:
 	CustomTerrainDebugOverlay:
@@ -157,58 +159,54 @@ World:
 			5: FiveMinutesRemaining
 			10: TenMinutesRemaining
 			20: TwentyMinutesRemaining
-	TintedCellsLayer@RADIATION:
-		Darkest: 32
-		Brightest: 96
-		ZOffset: 0
 	SmudgeLayer@CRATER:
 		Type: Crater
 		Sequence: craters
 		Palette: isotemalpha50
 		SmokeChance: 45
-        SmokeType: smudge_smoke
-        SmokeSequences: idle01, idle02, idle03, idle04
-        SmokePalette: flameeffect60
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
 	SmudgeLayer@CRATER_CLEAR:
 		Type: Crater_clear
 		Sequence: craters_clear
 		Palette: craterpalalpha50
 		SmokeChance: 45
-        SmokeType: smudge_smoke
-        SmokeSequences: idle01, idle02, idle03, idle04
-        SmokePalette: flameeffect60
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
 	SmudgeLayer@LARGECRATER_CLEAR:
 		Type: Largecrater_clear
 		Sequence: largecraters_clear
 		Palette: craterpalalpha50
 		SmokeChance: 45
-        SmokeType: smudge_smoke
-        SmokeSequences: idle01, idle02, idle03, idle04
-        SmokePalette: flameeffect60
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
 	SmudgeLayer@CRATER_CONCRETE:
 		Type: Crater_concrete
 		Sequence: craters_concrete
 		Palette: craterpalalpha50
 		SmokeChance: 45
-        SmokeType: smudge_smoke
-        SmokeSequences: idle01, idle02, idle03, idle04
-        SmokePalette: flameeffect60
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
 	SmudgeLayer@LARGECRATER_CONCRETE:
 		Type: Largecrater_concrete
 		Sequence: largecraters_concrete
 		Palette: craterpalalpha50
 		SmokeChance: 45
-        SmokeType: smudge_smoke
-        SmokeSequences: idle01, idle02, idle03, idle04
-        SmokePalette: flameeffect60
+		SmokeType: smudge_smoke
+		SmokeSequences: idle01, idle02, idle03, idle04
+		SmokePalette: flameeffect60
 	SmudgeLayer@SCORCH:
 		Type: Scorch
 		Sequence: scorchs
 		Palette: schorchalpha85
 		SmokeChance: 1
-        SmokeType: Scorch_flamming
-        SmokeSequences: idle01, idle02, idle03
-        SmokePalette: flameeffect60
+		SmokeType: Scorch_flamming
+		SmokeSequences: idle01, idle02, idle03
+		SmokePalette: flameeffect60
 	SmudgeLayer@GIBS:
 		Type: Gibs
 		Sequence: ghusk
@@ -227,7 +225,7 @@ World:
 			Rough: 90
 			Tree: 95
 			Pilrock: 90
-            Concrete: 100
+			Concrete: 100
 			Diast: 90
 			Diastgems: 90
 	Locomotor@HEAVYFOOT:
@@ -250,14 +248,14 @@ World:
 		TerrainSpeeds:
 			Clear: 100
 			Road: 100
-            Rock: 95
+			Rock: 95
 			Rough: 95
 			Tree: 90
 			Pilrock: 90
-            Concrete: 100
+			Concrete: 100
 			Diast: 90
 			River: 80
-            Beach: 95
+			Beach: 95
 			Diastgems: 90
 			Water: 80
 			Jumpjet: 110
@@ -268,7 +266,7 @@ World:
 			Clear: 100
 			Road: 120
 			Rough: 90
-            Concrete: 100
+			Concrete: 100
 			Tree: 90
 			Diast: 90
 			Diastgems: 90
@@ -279,7 +277,7 @@ World:
 			Clear: 100
 			Road: 115
 			Rough: 90
-            Concrete: 100
+			Concrete: 100
 			Tree: 90
 			Diast: 90
 			Diastgems: 90
@@ -290,7 +288,7 @@ World:
 			Clear: 100
 			Road: 115
 			Rough: 90
-            Concrete: 100
+			Concrete: 100
 			Tree: 90
 			Diast: 90
 			Diastgems: 90
@@ -301,7 +299,7 @@ World:
 			Clear: 100
 			Road: 115
 			Rough: 95
-            Concrete: 100
+			Concrete: 100
 			Tree: 95
 			Diast: 95
 			Diastgems: 95
@@ -312,10 +310,10 @@ World:
 			Clear: 100
 			Road: 110
 			Rough: 90
-            Concrete: 100
+			Concrete: 100
 			Tree: 90
 			River: 80
-            Beach: 95
+			Beach: 95
 			Diast: 90
 			Diastgems: 90
 			Water: 80
@@ -326,7 +324,7 @@ World:
 			Clear: 100
 			Road: 110
 			Rough: 90
-            Concrete: 100
+			Concrete: 100
 			Tree: 90
 			Diast: 90
 			Diastgems: 90
@@ -342,15 +340,15 @@ World:
 			Rough: 90
 			Tree: 90
 			Pilrock: 80
-            Concrete: 100
+			Concrete: 100
 			River: 95
-            Beach: 95
+			Beach: 95
 			Diast: 90
 			Diastgems: 90
 			Water: 95
 	
 ^MpStart.Base.World:
-    StartingUnits@redalliance:
+	StartingUnits@redalliance:
 		Class: none
 		ClassName: MCV only
 		Factions: redalliance
@@ -418,6 +416,7 @@ World:
 		ClassName: MCV only
 		Factions: federation
 		BaseActor: fedcnst
+		SupportActors: t1_stalker
 	StartingUnits@lightfederation:
 		Class: light
 		ClassName: Exploration unit
@@ -439,6 +438,7 @@ World:
 		ClassName: MCV only
 		Factions: federation
 		BaseActor: fedcnst
+		SupportActors: t1_stalker
 	StartingUnits@lightsolarrep:
 		Class: light
 		ClassName: Exploration unit
@@ -467,13 +467,15 @@ EditorWorld:
 				ResourceIndex: 1
 				TerrainType: Diast
 				AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tree
-                MaxDensity: 12
+				MaxDensity: 70
 			Diastgems:
 				ResourceIndex: 2
 				TerrainType: Diastgems
 				AllowedTerrainTypes: Clear, Road, DirtRoad, Rough, Tree
-                MaxDensity: 24
+				MaxDensity: 85
 	EditorSelectionLayer:
 		Palette: placefootprint
 	LoadWidgetAtGameStart:
 	EditorActionManager:
+	BuildableTerrainOverlay:
+		AllowedTerrainTypes: Clear, Road

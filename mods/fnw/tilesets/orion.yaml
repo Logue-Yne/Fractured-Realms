@@ -1,9 +1,9 @@
 General:
 	Name: orion
 	Id: ORION
-    SheetSize: 1024
-    EditorTemplateOrder: Terrain, Water, Concrete, Rouch, Road, Concrete Wall, Divers, Cliff, Forest, Decoy, Beach, Bridge
-    HeightDebugColors: AA0000
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain, Water, Concrete, Rouch, Road, Concrete Wall, Divers, Cliff, Forest, Decoy, Beach, Bridge
+	HeightDebugColors: AA0000
 
 Terrain:
 	TerrainType@Clear:
@@ -1743,8 +1743,8 @@ Templates:
 		Tiles:
 			1: Clear
 			0: Clear
-            
-            
+			
+			
 	Template@401:
 		Id: 401
 		Images: t401.ori
@@ -5336,7 +5336,7 @@ Templates:
 			1: Cliff
 			0: Cliff
 			5: Cliff
-			10: Clear 
+			10: Clear
 	Template@696:
 		Id: 696
 		Images: t696.ori

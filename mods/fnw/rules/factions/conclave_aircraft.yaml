@@ -19,15 +19,15 @@ eclipse:
 	Targetable@AIRBORNE:
 		TargetTypes: NoAircraftTarget
 		RequiresForceFire: false
-    WithRangeCircle@40c0:
-        Color: e748c4
-        Width: 1.5
-        Range: 40c0
-        Visible: Always
-    ProximityExternalCondition@ECLIPSE:
+	WithRangeCircle@40c0:
+		Color: e748c4
+		Width: 1.5
+		Range: 40c0
+		Visible: Always
+	ProximityExternalCondition@ECLIPSE:
 		Condition: Eclipse.shroud
 		Range: 40c0
-        ValidRelationships: Enemy
+		ValidRelationships: Enemy
 		AffectsParent: false
 	RejectsOrders:
 	AttackBomber:
@@ -35,25 +35,25 @@ eclipse:
 	-WithShadow:
 	RenderSprites:
 		Palette: light
-        Scale: 1.90
+		Scale: 1.90
 	Buildable:
 		Description: Used to deliver air strikes.
 	-ExternalCondition@Stase.bubble:
 	-SpeedMultiplier@move.bubble:
 	-PowerMultiplier@Stase.bubble:
 	-DamageMultiplier@Stase.bubble:
-    -GrantCondition@Stase.bubble.Bait:
-    -GrantCondition@Stase.bubble.notmobile.turret:
+	-GrantCondition@Stase.bubble.Bait:
+	-GrantCondition@Stase.bubble.notmobile.turret:
 
 t2_comete:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t2_comete.conclave.stat.unite
-    # / Inherit option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_comete.conclave.stat.unite
+	# / Inherit option Unite /
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@Target: ^AutoTargetAll
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Rotor.aircraft.move
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Rotor.aircraft.move
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 70
@@ -82,7 +82,7 @@ t2_comete:
 		FacingTolerance: 20
 		PersistentTargeting: false
 		AttackType: Hover
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Aircraft:
 		InitialFacing: 192
 		RepulsionSpeed: 40
@@ -99,7 +99,7 @@ t2_comete:
 		IsPlayerPalette: true
 		PauseOnCondition: !(upgrade.Omega.Comete.Conclave)
 	DetectCloaked@Omega:
-        CloakTypes: Cloak, Mine
+		CloakTypes: Cloak, Mine
 		Range: 6c0
 		RequiresCondition: upgrade.Alpha.Comete.Conclave
 	RenderDetectionCircle:
@@ -130,12 +130,12 @@ comete.husk:
 
 t2_zenith:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t2_zenith.conclave.stat.unite
-    # / Inherit Option Unite /
-    Inherits@UnitePlayStat: ^UnitPlayerStat
-    Inherits@CargoPipsVisual: ^CargoPips
-    Inherits@SoundMove: ^Rotor.aircraft.move
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t2_zenith.conclave.stat.unite
+	# / Inherit Option Unite /
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@CargoPipsVisual: ^CargoPips
+	Inherits@SoundMove: ^Rotor.aircraft.move
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 90
@@ -173,7 +173,7 @@ t2_zenith:
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 128
-		AltitudeVelocity: 0c58
+		AltitudeVelocity: 140
 	-AttackMove:
 	Cargo:
 		Types: Infantry, Vehicle
@@ -199,7 +199,6 @@ t2_zenith:
 	GrantConditionOnMovement@EngineMove:
 		Condition: EngineMove
 	RenderSprites:
-		Scale: 0.9
 	SpawnActorOnDeath:
 		Actor: t2_zenith.husk
 
@@ -219,21 +218,21 @@ t2_zenith.husk:
 
 t3_quasar:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
-    Inherits@StatUnite: ^t3_quasar.conclave.stat.unite
-    # / Inherit option Unite /
+	# / Inherit Stat Unite /
+	Inherits@StatUnite: ^t3_quasar.conclave.stat.unite
+	# / Inherit option Unite /
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@Target: ^AutoTargetAir
-    Inherits@UnitePlayStat:^UnitPlayerStat
-    Inherits@SoundMove: ^Rotor.aircraft.move
+	Inherits@UnitePlayStat: ^UnitPlayerStat
+	Inherits@SoundMove: ^Rotor.aircraft.move
 	Buildable:
 		Queue: Vehicle.conclave
 		BuildPaletteOrder: 120
 		Prerequisites: tcholotech.quasar
 		IconPalette: Conclave.Icon
 	SpeedMultiplier:
-        Modifier: 0
-        RequiresCondition: deployed
+		Modifier: 0
+		RequiresCondition: deployed
 	GrantConditionOnAttack@TargetRailgun:
 		ArmamentNames: primary
 		RevokeOnNewTarget: true
@@ -260,66 +259,66 @@ t3_quasar:
 		ArmamentNames: artycharge
 		RevokeOnNewTarget: true
 		RequiredShotsPerInstance: 35
-        RequiresCondition: ChargingArty
+		RequiresCondition: ChargingArty
 		Condition: FireArty
-    #///// Weapons Armament Arty Mode ////
+	#///// Weapons Armament Arty Mode ////
 	Armament@ArtyTargetPrime:
-        Name: artychargePrime
+		Name: artychargePrime
 		Weapon: Quasar.TargetArtyCharge
 		Recoil: 150
 		RecoilRecovery: 15
 		LocalOffset: 2400,0,450
 		MuzzleSequence: muzzledeploy
-        MuzzlePalette: flammeeffectblue
+		MuzzlePalette: flammeeffectblue
 		RequiresCondition: deployed && !FireArty
 	Armament@ArtyTarget:
-        Name: artycharge
+		Name: artycharge
 		Weapon: Quasar.TargetArtyCharge
 		Recoil: 150
 		RecoilRecovery: 15
 		LocalOffset: 2400,0,450
 		RequiresCondition: deployed && !FireArty
 	Armament@ArtyFire:
-        Name: artyfire
+		Name: artyfire
 		Weapon: Quasar.FireArtyCharge
 		Recoil: 150
 		RecoilRecovery: 15
 		LocalOffset: 2400,0,450
 		RequiresCondition: deployed && FireArty
 	WithMuzzleOverlay:
-    #///// Ambient Sound Fire Charge ////
-    AmbientSound@ChargingFire:
-        SoundFiles: quasar_charging01.aud
-        Interval: -1
-        RequiresCondition: ChargingArty
-    #///// Deploy mode Arty trait ////
+	#///// Ambient Sound Fire Charge ////
+	AmbientSound@ChargingFire:
+		SoundFiles: quasar_charging01.aud
+		Interval: -1
+		RequiresCondition: ChargingArty
+	#///// Deploy mode Arty trait ////
 	GrantConditionOnDeploy@artymode:
 		PauseOnCondition: empdisable || being-captured
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		UndeployOnMove: true
 		UndeployOnPickup: true
-        SkipMakeAnimation: true
-        DeploySounds: quasar_deploy.aud
+		SkipMakeAnimation: true
+		DeploySounds: quasar_deploy.aud
 		Facing: 370
 		AllowedTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
 		Voice: Move
-    #///// Sequence mode Arty trait ////
-    GrantConditionAfterDelay:
-        Delay: 120
-        ShowSelectionBar: false
-        Condition: UniteReady
-    #///// Premiere apparition ////
+	#///// Sequence mode Arty trait ////
+	GrantConditionAfterDelay:
+		Delay: 120
+		ShowSelectionBar: false
+		Condition: UniteReady
+	#///// Premiere apparition ////
 	WithFacingSpriteBody:
-        StartSequence: t3_quasarfirstmake
+		StartSequence: t3_quasarfirstmake
 		RequiresCondition: !UniteReady
-    #///// Mode "classic" ////
+	#///// Mode "classic" ////
 	WithFacingSpriteBody@regularbase:
 		RequiresCondition: !deployed && UniteReady
-    #///// Mode "deploy" ////
+	#///// Mode "deploy" ////
 	WithFacingSpriteBody@deployed:
-        StartSequence: make
-        Sequence: deployed
+		StartSequence: make
+		Sequence: deployed
 		RequiresCondition: deployed && !undeployed
 	GrantConditionOnPrerequisite@Omega:
 		Prerequisites: research.Omega.Quasar.Conclave
@@ -331,26 +330,26 @@ t3_quasar:
 		Modifier: 85
 		RequiresCondition: upgrade.Omega.Quasar.Conclave
 	AttackAircraft:
-        Armaments: primary, secondary, artychargePrime, artycharge, artyfire
+		Armaments: primary, secondary, artychargePrime, artycharge, artyfire
 		FacingTolerance: 20
 		PersistentTargeting: false
 		AttackType: Hover
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Aircraft:
 		InitialFacing: 192
 		Speed: 70
 		RepulsionSpeed: 40
 		MaximumPitch: 56
 		LandableTerrainTypes: Clear, Rough, Road, Diast, Beach, Concrete, Tree
-        RequireForceMoveCondition: chronoed
+		RequireForceMoveCondition: chronoed
 	AutoTarget:
 		InitialStance: Defend
 		InitialStanceAI: Defend
 	Selectable:
 		Bounds: 1624, 1624, 0, 0
-    WithFacingSpriteBody@warp:
-        Sequence: idle_warp
-        RequiresCondition: chronoed
+	WithFacingSpriteBody@warp:
+		Sequence: idle_warp
+		RequiresCondition: chronoed
 	Chronoshiftable:
 		ExplodeInstead: false
 		ReturnToOrigin: false
@@ -370,13 +369,13 @@ t3_quasar.husk:
 	RenderSprites:
 		Scale: 0.8
 		Image: t3_quasar
-        
+		
 t4_conclavemothership:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^t3_quasar.conclave.stat.unite
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^t3_quasar.conclave.stat.unite
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
 		Queue: LockedTest.conclave
 		BuildPaletteOrder: 10
@@ -403,7 +402,7 @@ t4_conclavemothership:
 		Offset: 0,0,25
 		Sequence: spot
 		Palette: flammeeffectblue
-    RenderSprites:
+	RenderSprites:
 	SpawnActorOnDeath:
 		Actor: t4_conclavemothership.Husk
 

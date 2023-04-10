@@ -1,10 +1,10 @@
 armcv:
 	Inherits@1: ^ShapeWalkerHeavy
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^gigante.mcv.stat.building
-    Inherits@selection: ^SelectableSupportUnit
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^gigante.mcv.stat.building
+	Inherits@selection: ^SelectableSupportUnit
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
 		Prerequisites: artech
 		Queue: Vehicle.redalliance
@@ -37,15 +37,15 @@ armcv:
 	BaseBuilding:
 	RenderSprites:
 		Scale: 0.75
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: aracnst.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealaracnst
-        Condition: aracnst.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealaracnst
-    # // Icone mobile Building Categorie //
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: aracnst.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealaracnst
+		Condition: aracnst.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealaracnst
+	# // Icone mobile Building Categorie //
 	WithDecoration@IconBuilding:
 		Image: icon_mobile_building
 		Sequence: Building
@@ -56,10 +56,10 @@ armcv:
 
 refinery:
 	Inherits: ^VoxelVehicleMedium
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^proc.redalliance.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^proc.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
 		Queue: Building.redalliance
 		Prerequisites: aracnst
@@ -97,15 +97,15 @@ refinery:
 	RenderVoxels:
 		Scale: 0.75
 	BaseBuilding:
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: arproc.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealarproc
-        Condition: arproc.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealarproc
-    # // Icone mobile Building Categorie //
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arproc.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarproc
+		Condition: arproc.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarproc
+	# // Icone mobile Building Categorie //
 	WithDecoration@IconBuilding:
 		Image: icon_mobile_building
 		Sequence: Proc
@@ -116,10 +116,10 @@ refinery:
 
 refinery.seconddeploy:
 	Inherits: ^VoxelVehicleMedium
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^proc.redalliance.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^proc.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
 		Queue: nope.redalliance
 		Prerequisites: BuildOrderBase.redalliance
@@ -160,15 +160,15 @@ refinery.seconddeploy:
 	BaseBuilding:
 	RenderSprites:
 		Image: refinery
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: arproc.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealarproc
-        Condition: arproc.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealarproc
-    # // Icone mobile Building Categorie //
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arproc.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarproc
+		Condition: arproc.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarproc
+	# // Icone mobile Building Categorie //
 	WithDecoration@IconBuilding:
 		Image: icon_mobile_building
 		Sequence: Proc
@@ -179,10 +179,10 @@ refinery.seconddeploy:
 
 arnahand:
 	Inherits: ^VoxelVehicleHeavyWalker
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^barrack.redalliance.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^barrack.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
 		Queue: Building.redalliance
 		Prerequisites: aracnst
@@ -218,15 +218,15 @@ arnahand:
 	RenderVoxels:
 		Scale: 1.1
 	BaseBuilding:
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: arbarr.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealarbarr
-        Condition: arbarr.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealarbarr
-    # // Icone mobile Building Categorie //
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arbarr.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarbarr
+		Condition: arbarr.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarbarr
+	# // Icone mobile Building Categorie //
 	WithDecoration@IconBuilding:
 		Image: icon_mobile_building
 		Sequence: Infantry
@@ -237,10 +237,10 @@ arnahand:
 
 arnaweap:
 	Inherits: ^VoxelVehicleHeavyWalker
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^factory.redalliance.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^factory.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
 		Queue: Building.redalliance
 		Prerequisites: aracnst, arproc
@@ -274,15 +274,15 @@ arnaweap:
 	RenderVoxels:
 		Scale: 0.75
 	BaseBuilding:
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: arweap.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealarweap
-        Condition: arweap.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealarweap
-    # // Icone mobile Building Categorie //
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arweap.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarweap
+		Condition: arweap.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarweap
+	# // Icone mobile Building Categorie //
 	WithDecoration@IconBuilding:
 		Image: icon_mobile_building
 		Sequence: Weap
@@ -293,10 +293,10 @@ arnaweap:
 
 mobilerelay:
 	Inherits: ^VoxelVehicleHeavy
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^tech2.redalliance.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^tech2.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Selectable:
 		Priority: 4
 		Bounds: 1544, 2509, 0, -289
@@ -333,15 +333,15 @@ mobilerelay:
 	RenderVoxels:
 		Scale: 0.75
 	BaseBuilding:
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: artech.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealartech
-        Condition: artech.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealartech
-    # // Icone mobile Building Categorie //
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: artech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealartech
+		Condition: artech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealartech
+	# // Icone mobile Building Categorie //
 	WithDecoration@IconBuilding:
 		Image: icon_mobile_building
 		Sequence: T2
@@ -352,10 +352,10 @@ mobilerelay:
 
 t1_defence_hq:
 	Inherits: ^VoxelVehicleHeavy
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^spec.redalliance.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^spec.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Selectable:
 		Priority: 4
 		Bounds: 1544, 2509, 0, -289
@@ -387,15 +387,15 @@ t1_defence_hq:
 	RenderSprites:
 	RenderVoxels:
 	BaseBuilding:
-    # Reveal Power Conclave
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: ardeftech.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealardeftech
-        Condition: ardeftech.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealardeftech
-    # // Icone mobile Building Categorie //
+	# Reveal Power Conclave
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: ardeftech.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealardeftech
+		Condition: ardeftech.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealardeftech
+	# // Icone mobile Building Categorie //
 	WithDecoration@IconBuilding:
 		Image: icon_mobile_building
 		Sequence: T2
@@ -406,10 +406,10 @@ t1_defence_hq:
 
 t2_airfield:
 	Inherits: ^VoxelVehicleHeavyHover
-    # / Inherit Stat Unite /
-    Inherits@StatBuilding: ^heliport.redalliance.stat.building
-    # / Inherit specifity /
-    Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
+	# / Inherit Stat Unite /
+	Inherits@StatBuilding: ^heliport.redalliance.stat.building
+	# / Inherit specifity /
+	Inherits@Power.ConbclaveReveal: ^PowerReveal.Conclave.Base
 	Buildable:
 		Queue: Building.redalliance
 		Prerequisites: aracnst, artech
@@ -441,14 +441,14 @@ t2_airfield:
 	RenderVoxels:
 		Scale: 1.15
 	BaseBuilding:
-    RevealsShroud@PowerReveal.Conclave:
-        RequiresCondition: arheli.RevealPowerType
-    GrantConditionOnPrerequisite@PowerReveal.Conclave:
-        Prerequisites: revealarheli
-        Condition: arheli.RevealPowerType
-    ProvidesPrerequisite@PowerReveal.Conclave:
-        Prerequisite: revealarheli
-    # // Icone mobile Building Categorie //
+	RevealsShroud@PowerReveal.Conclave:
+		RequiresCondition: arheli.RevealPowerType
+	GrantConditionOnPrerequisite@PowerReveal.Conclave:
+		Prerequisites: revealarheli
+		Condition: arheli.RevealPowerType
+	ProvidesPrerequisite@PowerReveal.Conclave:
+		Prerequisite: revealarheli
+	# // Icone mobile Building Categorie //
 	WithDecoration@IconBuilding:
 		Image: icon_mobile_building
 		Sequence: Aircraft
@@ -489,7 +489,7 @@ t3_doomtower_mobile:
 t2_predator_mobile:
 	Inherits: ^VoxelVehicleWalker
 	-AutoTarget:
-    -AttackMove:
+	-AttackMove:
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -510,7 +510,7 @@ t2_predator_mobile:
 		Facing: 370
 		TransformSounds: deploy_vehicle_mode.aud
 		NoTransformSounds:
-    WithVoxelTurret:
+	WithVoxelTurret:
 	RenderVoxels:
 		Scale: 1.0
 	Health:
@@ -521,7 +521,7 @@ t2_predator_mobile:
 t2_tarantula_mobile:
 	Inherits@1: ^VoxelVehicleWalker
 	-AutoTarget:
-    -AttackMove:
+	-AttackMove:
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -542,7 +542,7 @@ t2_tarantula_mobile:
 		Facing: 370
 		TransformSounds: deploy_vehicle_mode.aud
 		NoTransformSounds:
-    WithVoxelTurret:
+	WithVoxelTurret:
 	RenderVoxels:
 		Scale: 1.0
 	Health:

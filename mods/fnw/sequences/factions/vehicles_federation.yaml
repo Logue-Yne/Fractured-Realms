@@ -1,137 +1,188 @@
 t1_fedharv:
 	Inherits@Stat: ^StatVehicleEffect
 	idle:
+		Filename: t1_fedharv.shp
 		Facings: 64
-	harvest: harvest_anim
+	harvest:
+		Filename: harvest_anim.shp
 		Length: *
 		BlendMode: Additive
-	dock: t1_fedharv
-	dock-loop: t1_fedharv
-	icon: t1_fedgharvicon
-    
+	dock:
+		Filename: t1_fedharv.shp
+	dock-loop:
+		Filename: t1_fedharv.shp
+	icon:
+		Filename: t1_fedgharvicon.shp
+	
 t1_stalker:
 	Inherits@Stat: ^StatVehicleEffect
 	idle:
+		Filename: t1_stalker.shp
 		Facings: 64
-	icon: t1_stalkericon
+	icon:
+		Filename: t1_stalkericon.shp
 
 t1_tick:
 	Inherits@Stat: ^StatVehicleEffect
-    muzzle: muzzle_60mm
-        Length: *
-        BlendMode: Additive
-	idle:
-		Facings: 64
-	turret: t1_ticktur
-		Facings: 64
-    shield: electricshield
+	muzzle:
+		Filename: muzzle_60mm.shp
 		Length: *
 		BlendMode: Additive
-    barrel: t1_tickbarl
+	idle:
+		Filename: t1_tick.shp
 		Facings: 64
-	icon: t1_tickicon
-    
+	turret:
+		Filename: t1_ticktur.shp
+		Facings: 64
+	shield:
+		Filename: electricshield.shp
+		Length: *
+		BlendMode: Additive
+	barrel:
+		Filename: t1_tickbarl.shp
+		Facings: 64
+	icon:
+		Filename: t1_tickicon.shp
+	
 t1_suricate:
 	Inherits@Stat: ^StatVehicleEffect
-	muzzle: muzzle_riflegun_20mm
+	muzzle:
+		Filename: muzzle_riflegun_20mm.shp
 		Facings: 16
 		Length: 11
 		Tick: 25
 		BlendMode: Additive
 	idle:
+		Filename: t1_suricate.shp
 		Facings: 64
-    shield: electricshield
+	shield:
+		Filename: electricshield.shp
 		Length: *
 		BlendMode: Additive
-	turret: t1_suricatetur
+	turret:
+		Filename: t1_suricatetur.shp
 		Facings: 64
-	icon: t1_surricateicon
-    
+	icon:
+		Filename: t1_surricateicon.shp
+	
 t2_cobra:
 	Inherits@Stat: ^StatVehicleEffect
-	muzzle: muzzle_autogun_small
+	muzzle:
+		Filename: muzzle_autogun_small.shp
 		Length: *
 		BlendMode: Additive
 	idle:
+		Filename: t2_cobra.shp
 		Facings: 64
-	turretair: t2_cobratur
+	turretair:
+		Filename: t2_cobratur.shp
 		Facings: 64
-	turretground: t2_cobraturg
+	turretground:
+		Filename: t2_cobraturg.shp
 		Facings: 64
-    shield: electricshield
+	shield:
+		Filename: electricshield.shp
 		Length: *
 		BlendMode: Additive
-	icon: t2_cobraicon
-    
+	icon:
+		Filename: t2_cobraicon.shp
+	
 t2_lynx:
 	Inherits@Stat: ^StatVehicleEffect
-	muzzle: muzzle_autogun_small
+	muzzle:
+		Filename: muzzle_autogun_small.shp
 		Length: *
 		BlendMode: Additive
 	idle:
+		Filename: t2_lynx.shp
 		Facings: 64
-	turret: t2_lynxtur
+	turret:
+		Filename: t2_lynxtur.shp
 		Facings: 64
-    circle_effet: circle_effet_federation_charge
+	circle_effet:
+		Filename: circle_effet_federation_charge.shp
 		Length: *
-        BlendMode: additive
-    shield: electricshield
+		BlendMode: additive
+	shield:
+		Filename: electricshield.shp
 		Length: *
 		BlendMode: Additive
-	icon: t2_lynxicon
-    
+	icon:
+		Filename: t2_lynxicon.shp
+	
 t3_rhino:
 	Inherits@Stat: ^StatVehicleEffect
-	muzzle: muzzle_80mm01
+	muzzle:
+		Filename: muzzle_80mm01.shp
 		Length: *
 	idle:
+		Filename: t3_rhino.shp
 		Facings: 64
-	turret: t3_rhinotur
+	turret:
+		Filename: t3_rhinotur.shp
 		Facings: 64
-	icon: t3_rhinoicon
-    
+	icon:
+		Filename: t3_rhinoicon.shp
+	
 t3_porcupine:
 	Inherits@Stat: ^StatVehicleEffect
-	muzzle: muzzle_190mm
+	muzzle:
+		Filename: muzzle_190mm.shp
 		Length: *
 	idle:
+		Filename: t3_porcupine.shp
 		Facings: 64
-	turret: t3_porcupinetur
+	turret:
+		Filename: t3_porcupinetur.shp
 		Facings: 64
-	icon: t3_porcupineicon
-    
+	icon:
+		Filename: t3_porcupineicon.shp
+	
 t3_mantis:
 	Inherits@Stat: ^StatVehicleEffect
-	muzzle: muzzle_190mm
+	muzzle:
+		Filename: muzzle_190mm.shp
 		Length: *
 		BlendMode: Additive
 	idle:
+		Filename: t3_mantis.shp
 		Facings: 64
-	empty-idle: t3_mantislaunch
+	empty-idle:
+		Filename: t3_mantislaunch.shp
 		Facings: 64
-	icon: t3_mantisicon
+	icon:
+		Filename: t3_mantisicon.shp
 
 t4_colossus:
 	Inherits@Stat: ^StatVehicleEffect
-	muzzle: muzzle_autogun_small
+	muzzle:
+		Filename: muzzle_autogun_small.shp
 		Length: *
 		BlendMode: Additive
 	idle:
+		Filename: t4_colossus.shp
 		Facings: 64
-	turret: t4_colossustur
+	turret:
+		Filename: t4_colossustur.shp
 		Facings: 64
-	icon: t4_colossusicon
+	icon:
+		Filename: t4_colossusicon.shp
 
 t2_mongoose:
 	Inherits@Stat: ^StatVehicleEffect
 	idle:
-        Facings: 64
-    muzzle: muzzle_60mm
-        Length: *
-        BlendMode: Additive
-    shield: electricshield
+		Filename: t2_mongoose.shp
+		Facings: 64
+	muzzle:
+		Filename: muzzle_60mm.shp
 		Length: *
 		BlendMode: Additive
-	turret: t2_mongoosetur
+	shield:
+		Filename: electricshield.shp
+		Length: *
+		BlendMode: Additive
+	turret:
+		Filename: t2_mongoosetur.shp
 		Facings: 64
-	icon: t2_mongooseicon
+	icon:
+		Filename: t2_mongooseicon.shp

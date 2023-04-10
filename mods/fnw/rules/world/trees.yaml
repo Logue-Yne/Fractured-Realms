@@ -1,7 +1,7 @@
 ^RevisionScaleTreeModel01:
 	RenderSprites:
 		Scale: 0.55
-        
+		
 ^RevisionScaleTreeModel02:
 	RenderSprites:
 		Scale: 0.65
@@ -527,8 +527,8 @@ orga_tree10:
 		Sequence: treeroot
 	HitShape:
 		UseTargetableCellsOffsets: true
+		
 
-        
 toxintree01:
 	Inherits: ^Tree
 	Building:
@@ -541,7 +541,7 @@ toxintree01:
 		Sequence: treeroot
 	HitShape:
 		UseTargetableCellsOffsets: true
-        
+		
 toxintree02:
 	Inherits: ^Tree
 	Building:
@@ -567,7 +567,7 @@ toxintree03:
 		Sequence: treeroot
 	HitShape:
 		UseTargetableCellsOffsets: true
-        
+		
 toxintree04:
 	Inherits: ^Tree
 	Building:
@@ -580,7 +580,7 @@ toxintree04:
 		Sequence: treeroot
 	HitShape:
 		UseTargetableCellsOffsets: true
-        
+		
 toxintree05:
 	Inherits: ^Tree
 	Building:
@@ -593,7 +593,7 @@ toxintree05:
 		Sequence: treeroot
 	HitShape:
 		UseTargetableCellsOffsets: true
-        
+		
 toxintree06:
 	Inherits: ^Tree
 	Building:
@@ -628,8 +628,8 @@ crystal_rockfly02:
 	WithIdleOverlay@effet:
 		Sequence: effect
 		Palette: crystaltreealpha45
-    RenderSprites:
-        Image: crystal_rockfly01
+	RenderSprites:
+		Image: crystal_rockfly01
 	HitShape:
 		UseTargetableCellsOffsets: true
 
@@ -642,8 +642,8 @@ crystal_rockfly03:
 	WithIdleOverlay@effet:
 		Sequence: effect
 		Palette: crystaltreealpha45
-    RenderSprites:
-        Image: crystal_rockfly01
+	RenderSprites:
+		Image: crystal_rockfly01
 	HitShape:
 		UseTargetableCellsOffsets: true
 
@@ -798,7 +798,7 @@ crystal_tree08:
 		Palette: crystaltreealpha25
 	HitShape:
 		UseTargetableCellsOffsets: true
-        
+		
 crystal_prisoners01:
 	Inherits: ^Tree
 	Building:
@@ -831,8 +831,8 @@ crystal_prisoners03:
 		Scale: 1.0
 	HitShape:
 		UseTargetableCellsOffsets: true
-        
-        
+		
+		
 ^bluefaune_default:
 	Inherits: ^Tree
 	Building:
@@ -851,30 +851,30 @@ crystal_prisoners03:
 		Palette: bluefaunealpha45
 	HitShape:
 		UseTargetableCellsOffsets: true
-        
+		
 bluefaune01:
 	Inherits: ^bluefaune_default
-        
+		
 bluefaune02:
 	Inherits: ^bluefaune_default
-        
+		
 bluefaune03:
 	Inherits: ^bluefaune_default
-        
+		
 bluefaune04:
 	Inherits: ^bluefaune_default
-        
+		
 bluefaune05:
 	Inherits: ^bluefaune_default
-        
+		
 bluefaune06:
 	Inherits: ^bluefaune_default
-        
+		
 bluefaune07:
 	Inherits: ^bluefaune_default
-        
+		
 bluefaune08:
 	Inherits: ^bluefaune_default
-        
+		
 bluefaune09:
 	Inherits: ^bluefaune_default

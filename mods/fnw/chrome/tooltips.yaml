@@ -350,7 +350,7 @@ Background@ARMY_TOOLTIP:
 			Height: 2
 			Font: TinyBold
 			VAlign: Top
-            
+			
 Background@ACTOR_ICON_TOOLTIP:
 	Logic: ActorIconTooltipLogic
 	Background: dialog4

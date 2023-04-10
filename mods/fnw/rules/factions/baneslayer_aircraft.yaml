@@ -23,28 +23,26 @@ baneslayerattackaircraft:
 		Name: bombs
 		Weapon: carpet.blast.Aircraft
 		LocalOffset: 0,0,0
-	Buildable:
-		Description: Used to deliver air strikes.
 	-ExternalCondition@Stase.bubble:
 	-SpeedMultiplier@move.bubble:
 	-PowerMultiplier@Stase.bubble:
 	-DamageMultiplier@Stase.bubble:
-    -GrantCondition@Stase.bubble.Bait:
-    -GrantCondition@Stase.bubble.notmobile.turret: 
+	-GrantCondition@Stase.bubble.Bait:
+	-GrantCondition@Stase.bubble.notmobile.turret:
 
 t2_nidhogg:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat & generic Unite /
-    Inherits@StatUnite: ^t2_nidhogg.stat.unite
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t2_nidhogg.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Option - Effect /
+	# / Option - Effect /
 	Inherits@SoundMove: ^Rotor.aircraft.move
 	Inherits@Upgrade: ^Aircraft.Upgrade.baneslayer
-    # / Select - Target type /
+	# / Select - Target type /
 	Inherits@Select: ^SelectableCombatUnit
 	Inherits@Target: ^NidhoggAutoTargetAllAssaultMove
-    # / < Stat Unite Base > /
+	# / < Stat Unite Base > /
 	Buildable:
 		Queue: Aircraft.baneslayer
 		BuildPaletteOrder: 40
@@ -61,7 +59,7 @@ t2_nidhogg:
 		FacingTolerance: 20
 		PersistentTargeting: false
 		AttackType: Hover
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Aircraft:
 		InitialFacing: 192
 		RepulsionSpeed: 40
@@ -87,16 +85,16 @@ t2_nidhogg.Husk:
 
 t3_thor:
 	Inherits: ^Aircraftshape
-    # / Inherit Stat & generic Unite /
-    Inherits@StatUnite: ^t3_thor.stat.unite
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_thor.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Option - Effect /
+	# / Option - Effect /
 	Inherits@Upgrade: ^Aircraft.Upgrade.baneslayer
-    # / Select - Target type /
+	# / Select - Target type /
 	Inherits@Select: ^SelectableCombatUnit
 	Inherits@Target: ^AutoTargetGround
-    # / < Stat Unite Base > /
+	# / < Stat Unite Base > /
 	Buildable:
 		Queue: Aircraft.baneslayer
 		BuildPaletteOrder: 50
@@ -114,7 +112,7 @@ t3_thor:
 	WithMuzzleOverlay:
 	AttackAircraft:
 		FacingTolerance: 25
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	Repairable:
 		Voice: Move
 		RepairActors: opheli
@@ -150,17 +148,17 @@ t3_thor.Husk:
 
 t3_valkyrie:
 	Inherits: ^Helicoptershape
-    # / Inherit Stat & generic Unite /
-    Inherits@StatUnite: ^t3_thor.stat.unite
+	# / Inherit Stat & generic Unite /
+	Inherits@StatUnite: ^t3_thor.stat.unite
 	Inherits@unite.experience: ^GainsExperience
 	Inherits@Unite.stat: ^UnitPlayerStat
-    # / Option - Effect /
+	# / Option - Effect /
 	Inherits@Upgrade: ^Aircraft.Upgrade.baneslayer
 	Inherits@DropAircraft: ^UniteAircraft.drop
-    # / Select - Target type /
+	# / Select - Target type /
 	Inherits@Select: ^SelectableCombatUnit
 	Inherits@Target: ^AutoTargetGround
-    # / < Stat Unite Base > /
+	# / < Stat Unite Base > /
 	Buildable:
 		Queue: Aircraft.baneslayer
 		BuildPaletteOrder: 40
@@ -194,22 +192,22 @@ t3_valkyrie:
 		InitialFacing: 96
 		RealignDelay: 20
 		Offset: 440,0,-150
-        PauseOnCondition: stunweapons
+		PauseOnCondition: stunweapons
 	# Repair Function
 	ProximityExternalCondition@REPAIRAIRCRAFT:
 		Condition: UniteRepairAircraft
 		Range: 4c0
 		AffectsParent: true
-    GrantCondition@Airborne:
+	GrantCondition@Airborne:
 		RequiresCondition: airborne
-        Condition: airborneValid
+		Condition: airborneValid
 	WithIdleOverlay@EngineSPOT:
 		Offset: -15,0,-4250
 		Sequence: pulse_repair
 		Palette: powereffect20
 		RequiresCondition: airborneValid
 	ReloadArmamentsBar:
-        Color: 00CCFF
+		Color: 00CCFF
 	RenderSprites:
 		Scale: 1.00
 	SpawnActorOnDeath:

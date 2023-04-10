@@ -163,6 +163,11 @@ Cursors:
 		goldwrench-blocked:
 			Start: 213
 			Length: 1
+		accuracy_target:
+			Start: 214
+			Length: 5
+		accuracy_target-blocked:
+			Start: 219
 		ioncannon:
 			Start: 357
 			Length: 12

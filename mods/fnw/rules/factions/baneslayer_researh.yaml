@@ -1,13 +1,13 @@
 ^upgrade.survivalkit.baneslayer:
-    Inherits@Upgrade.Stat: ^Upgrade.survivalkit.baneslayer.modifier
+	Inherits@Upgrade.Stat: ^Upgrade.survivalkit.baneslayer.modifier
 	GrantConditionOnPrerequisite@Upgrade.urvivalkit.infantry.baneslayer:
 		Prerequisites: research.survivalkit.infantry.baneslayer
 		Condition: upgrade.survivalkit.infantry.baneslayer
 	ChangesHealth@Upgrade.survivalkit.infantry.baneslayer:
 		RequiresCondition: upgrade.survivalkit.infantry.baneslayer
-        
+		
 ^Upgrade.Repair.Training.Baneslayer:
-    Inherits@Upgrade.Stat: ^Upgrade.Repair.Training.baneslayer.modifier
+	Inherits@Upgrade.Stat: ^Upgrade.Repair.Training.baneslayer.modifier
 	GrantConditionOnPrerequisite@Upgrade.Repair.Training.Baneslayer:
 		Prerequisites: research.Repair.Training.Baneslayer
 		Condition: upgrade.Repair.Training.Baneslayer
@@ -18,17 +18,17 @@
 		Sequence: VehicleRepair
 		Palette: effectalpha55
 		RequiresCondition: upgrade.Repair.Training.Baneslayer
-        
+		
 ^Upgrade.armorpack.Baneslayer:
-    Inherits@Upgrade.Stat: ^Upgrade.armorpack.baneslayer.modifier
+	Inherits@Upgrade.Stat: ^Upgrade.armorpack.baneslayer.modifier
 	GrantConditionOnPrerequisite@upgrade.armorpack.Baneslayer:
 		Prerequisites: research.armorpack.baneslayer
 		Condition: upgrade.armorpack.baneslayer
 	DamageMultiplier@Upgrade.armorpack.Baneslayer:
 		RequiresCondition: upgrade.armorpack.baneslayer
-        
+		
 ^Upgrade.Speed.Plasma.Engine.Baneslayer:
-    Inherits@Upgrade.Stat: ^Upgrade.Plasma.Engine.baneslayer.modifier
+	Inherits@Upgrade.Stat: ^Upgrade.Plasma.Engine.baneslayer.modifier
 	GrantConditionOnPrerequisite@Upgrade.Speed.Plasma.Engine.Baneslayer:
 		Prerequisites: research.speed.plasma.engine.baneslayer
 		Condition: upgrade.speed.plasma.engine.baneslayer
@@ -36,7 +36,7 @@
 		RequiresCondition: upgrade.speed.plasma.engine.baneslayer
 
 ^Upgrade.plasma.Ammo.Baneslayer:
-    Inherits@Upgrade.Stat: ^Upgrade.ammo.plasma.baneslayer.modifier
+	Inherits@Upgrade.Stat: ^Upgrade.ammo.plasma.baneslayer.modifier
 	GrantConditionOnPrerequisite@Upgrade.Plasma.Ammo.Baneslayer:
 		Prerequisites: research.plasma.Ammo.Baneslayer
 		Condition: upgrade.speed.plasma.engine.baneslayer
@@ -47,16 +47,16 @@
 	GrantConditionOnPrerequisite@Doctrine.aircraft:
 		Condition: doctrine.actived
 		Prerequisites: Doctrine.Aircraft.Baneslayer
-    FirepowerMultiplier@BonusDoctrine:
-        Modifier: 120
-        RequiresCondition: doctrine.actived
+	FirepowerMultiplier@BonusDoctrine:
+		Modifier: 120
+		RequiresCondition: doctrine.actived
+		
 
-        
 # Tier 2 Research
 
 upgrade.survivalkit.infantry.baneslayer:
 	Inherits@Research: ^ResearchActor
-    Inherits@Research.stat: ^Upgrade.survivalkit.baneslayer.stat
+	Inherits@Research.stat: ^Upgrade.survivalkit.baneslayer.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 70
@@ -70,7 +70,7 @@ upgrade.survivalkit.infantry.baneslayer:
 
 upgrade.repair.training.baneslayer:
 	Inherits@Research: ^ResearchActor
-    Inherits@Research.stat: ^Upgrade.RepairTraining.baneslayer.stat
+	Inherits@Research.stat: ^Upgrade.RepairTraining.baneslayer.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 80
@@ -84,7 +84,7 @@ upgrade.repair.training.baneslayer:
 
 upgrade.plasma.ammunition.baneslayer:
 	Inherits@Research: ^ResearchActor
-    Inherits@Research.stat: ^Upgrade.ammo.plasma.baneslayer.stat
+	Inherits@Research.stat: ^Upgrade.ammo.plasma.baneslayer.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 30
@@ -95,12 +95,12 @@ upgrade.plasma.ammunition.baneslayer:
 		Image: roquettebaneupgradeicon
 	ProvidesPrerequisite:
 		Prerequisite: research.plasma.ammo.baneslayer
-        
+		
 # Tier 3 Research
 
 upgrade.plasma.engine.baneslayer:
 	Inherits@Research: ^ResearchActor
-    Inherits@Research.stat: ^Upgrade.plasmaEngine.baneslayer.stat
+	Inherits@Research.stat: ^Upgrade.plasmaEngine.baneslayer.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 30
@@ -114,7 +114,7 @@ upgrade.plasma.engine.baneslayer:
 
 upgrade.prism.baneslayer:
 	Inherits@Research: ^ResearchActor
-    Inherits@Research.stat: ^Upgrade.Prism.baneslayer.stat
+	Inherits@Research.stat: ^Upgrade.Prism.baneslayer.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 10
@@ -124,10 +124,10 @@ upgrade.prism.baneslayer:
 		Image: thorupgradeicon
 	ProvidesPrerequisite:
 		Prerequisite: research.Prism.baneslayer
-        
+		
 upgrade.armorpack.baneslayer:
 	Inherits@Research: ^ResearchActor
-    Inherits@Research.stat: ^Upgrade.armorpack.baneslayer.stat
+	Inherits@Research.stat: ^Upgrade.armorpack.baneslayer.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 10
@@ -140,7 +140,7 @@ upgrade.armorpack.baneslayer:
 		Prerequisite: research.armorpack.baneslayer
 
 #////// Protocole Systemes //////
-  
+
 ^Protocole.Base.Baneslayer:
 	Inherits@Research: ^ResearchActor
 	AlwaysVisible:
@@ -157,15 +157,15 @@ upgrade.armorpack.baneslayer:
 		Condition: RemoveProtocol
 	KillsSelf:
 		RemoveInstead: true
-        
+		
 ^Shield.Trait.Protocol:
 	GrantConditionOnPrerequisite@Alpha:
 		Prerequisites: protocole.Shield.Baneslayer
 		Condition: PShield.Activated
-        
+		
 Protocole.Shield.Baneslayer:
 	Inherits@Research: ^Protocole.Base.Baneslayer
-    Inherits@Research.stat: ^Upgrade.armorpack.baneslayer.stat
+	Inherits@Research.stat: ^Upgrade.armorpack.baneslayer.stat
 	AlwaysVisible:
 	Buildable:
 		BuildPaletteOrder: 10
@@ -176,8 +176,8 @@ Protocole.Shield.Baneslayer:
 		Prerequisite: protocole.Shield.Baneslayer
 	KillsSelf:
 		RequiresCondition: !RemoveProtocole
-        
-        
+		
+		
 #Power capacity
 
 ^BuildingGivePower.Baneslayer:
@@ -188,7 +188,7 @@ Protocole.Shield.Baneslayer:
 			1: optech
 		Icons:
 			1: empstrike_icon
-        IconPalette: powereffect
+		IconPalette: powereffect
 		ChargeInterval: 3750
 		Names:
 			1: EMP Strike
@@ -205,7 +205,7 @@ Protocole.Shield.Baneslayer:
 			1: Command center
 		Icons:
 			1: ionstrike_icon
-        IconPalette: powereffect
+		IconPalette: powereffect
 		ChargeInterval: 5750
 		Names:
 			1: Ion Strike
@@ -228,8 +228,8 @@ Protocole.Shield.Baneslayer:
 			1: Airstrike
 		Descriptions:
 			1: Calls 3 close-support aircraft that unload all their ordnance on the designated area
-		SelectTargetSpeechNotification: 
-		IncomingSpeechNotification: 
+		SelectTargetSpeechNotification:
+		IncomingSpeechNotification:
 		UnitTypes:
 			1: baneslayerattackaircraft
 		SquadSizes:
@@ -257,13 +257,13 @@ Protocole.Shield.Baneslayer:
 		ChargeInterval: 2250
 		Icons:
 			1: detecticon
-        IconPalette: powereffect
+		IconPalette: powereffect
 		StartFullyCharged: false
 		Names:
 			1: Radar scan
 		Descriptions:
 			1: Scans and reveals the selected area
 		EffectImage: revealradr
-        EffectSequence: idle
+		EffectSequence: idle
 		DeploySound: spyreveal.aud
-		SelectTargetSpeechNotification: 
+		SelectTargetSpeechNotification:
